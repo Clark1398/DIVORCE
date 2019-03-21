@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: c754bb22aadd6c24cafc44f9e0d4d3e2
+guid: c4e83adf09832ce47b630dd009663c94
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: pCube16
-    400000: //RootNode
-    400002: pCube16
-    2100000: pCube16Mat
-    2300000: pCube16
-    3300000: pCube16
-    4300000: pCube16
+    100000: pCylinder1
+    100002: //RootNode
+    400000: pCylinder1
+    400002: //RootNode
+    2100000: pCylinder1Mat
+    2300000: pCylinder1
+    3300000: pCylinder1
+    4300000: pCylinder1
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -45,6 +45,7 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
+    useSRGBMaterialColor: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
@@ -69,6 +70,9 @@ ModelImporter:
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
