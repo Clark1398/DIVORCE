@@ -4,13 +4,13 @@ ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
-    100002: confTable_LP:conference_Table
+    100002: confTable_withBase_LP:conference_Table
     400000: //RootNode
-    400002: confTable_LP:conference_Table
-    2100000: confTable_LP_conference_TableMat
-    2300000: confTable_LP:conference_Table
-    3300000: confTable_LP:conference_Table
-    4300000: confTable_LP:conference_Table
+    400002: confTable_withBase_LP:conference_Table
+    2100000: confTable_withBase_LP_conference_TableMat
+    2300000: confTable_withBase_LP:conference_Table
+    3300000: confTable_withBase_LP:conference_Table
+    4300000: confTable_withBase_LP:conference_Table
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -45,6 +45,7 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
+    useSRGBMaterialColor: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
@@ -69,6 +70,9 @@ ModelImporter:
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
