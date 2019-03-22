@@ -1,23 +1,16 @@
 fileFormatVersion: 2
-guid: 2393c4495af9d2c4ab263877beb3e595
+guid: bbdbd674ae43d554182541b1f711099d
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: joint1
-    100004: polySurface16
-    100006: polySurface35
-    400000: //RootNode
-    400002: joint1
-    400004: polySurface16
-    400006: polySurface35
-    2100000: lambert1
-    2300000: polySurface16
-    3300000: polySurface16
-    4300000: polySurface35
-    4300002: polySurface16
-    9500000: //RootNode
-    13700000: polySurface35
+    100000: Fan
+    100002: //RootNode
+    400000: Fan
+    400002: //RootNode
+    2100000: FanMat
+    2300000: Fan
+    3300000: Fan
+    4300000: Fan
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -52,6 +45,7 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
+    useSRGBMaterialColor: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
@@ -69,13 +63,16 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 0.01
-    hasPreviousCalculatedGlobalScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
@@ -94,7 +91,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
