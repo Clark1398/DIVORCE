@@ -18,6 +18,7 @@ MonoBehaviour:
   - {fileID: 114780878165442564}
   - {fileID: 114031624498340818}
   - {fileID: 114974921566340670}
+  - {fileID: 114464205611784036}
 --- !u!114 &114031624498340818
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -123,7 +124,7 @@ MonoBehaviour:
     min: 0
   upperHemisphereLuxValue:
     m_OverrideState: 0
-    m_Value: 1
+    m_Value: 0.026945272
     min: 0
   desiredLuxValue:
     m_OverrideState: 0
@@ -139,8 +140,8 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: 0
   hdriSky:
-    m_OverrideState: 0
-    m_Value: {fileID: 0}
+    m_OverrideState: 1
+    m_Value: {fileID: 8900000, guid: 11d3d539617b225429bb624f21716d0c, type: 3}
 --- !u!114 &114520149405782380
 MonoBehaviour:
   m_ObjectHideFlags: 3
