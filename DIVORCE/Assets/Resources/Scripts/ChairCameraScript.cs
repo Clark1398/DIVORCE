@@ -53,8 +53,15 @@ public class ChairCameraScript : MonoBehaviour
             player.SetActive(false);
             dos.enabled = false;
             ins.enabled = false;
-            dos.info.gameObject.SetActive(false);
-            ins.info.gameObject.SetActive(false);
+            if (dosEnabled == true)
+            {
+                dos.info.gameObject.SetActive(false);
+                moonFolderFirst = false;
+            }
+            else
+            {
+                ins.info.gameObject.SetActive(false);
+            }
         }
 
         if (yaw >= -175f && yaw <= -25f)
@@ -92,6 +99,8 @@ public class ChairCameraScript : MonoBehaviour
         //If the ray hits an object
         if (Physics.Raycast(ray, out hit))
         {
+            Debug.Log(hit.collider.gameObject.tag);
+
             //If the object has a Tag of PC then display a message to the player telling them they can "open" this object 
             if (hit.collider.gameObject.tag == "PC" && !moonFolderFirst)
             {

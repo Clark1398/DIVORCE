@@ -416,43 +416,43 @@ public class InteractionScript : MonoBehaviour
             }
             //If the phone is ringing and If the object hit is the phone and the distance to it is less than 2.5 then 
             //show the player a message to allow them to answer the phone
-            else if (phoneScript.isRinging == true && hit.collider.gameObject.tag == "Phone" && dist <= 2.5f && phoneInteractable == true && !holding)
-            {
-                info.text = "Press 'E' to answer";
-                info.gameObject.SetActive(true);
+            //else if (phoneScript.isRinging == true && hit.collider.gameObject.tag == "Phone" && dist <= 2.5f && phoneInteractable == true && !holding)
+            //{
+            //    info.text = "Press 'E' to answer";
+            //    info.gameObject.SetActive(true);
 
-                //If the phone is ringing
-                if (Input.GetKeyDown(KeyCode.E))
-                {
-                    answeredPhone = false;
+            //    //If the phone is ringing
+            //    if (Input.GetKeyDown(KeyCode.E))
+            //    {
+            //        answeredPhone = false;
 
-                    if (phoneScript.calls == 1)
-                    {
-                        info.gameObject.SetActive(false);
-                        answered = true;
-                        phoneScript.newAudio = true;
-                        phoneScript.callMissed = false;
-                        phoneScript.ringTimerActive = false;
-                        phoneScript.isRinging = false;
-                        phonePanel.SetActive(true);
-                        phoneCanvasOn = true;
-                        phoneInteractable = false;
-                    }
-                    else
-                    {
-                        info.gameObject.SetActive(false);
-                        answered = true;
-                        phoneScript.newAudio = true;
-                        phoneScript.callMissed = false;
-                        phoneScript.ringTimerActive = false;
-                        phoneScript.isRinging = false;
-                        phonePanel.SetActive(true);
-                        phoneCanvasOn = true;
-                        phoneInteractable = false;
-                        statsScript.TimeForward();
-                    }
-                }
-            }
+            //        if (phoneScript.calls == 1)
+            //        {
+            //            info.gameObject.SetActive(false);
+            //            answered = true;
+            //            phoneScript.newAudio = true;
+            //            phoneScript.callMissed = false;
+            //            phoneScript.ringTimerActive = false;
+            //            phoneScript.isRinging = false;
+            //            phonePanel.SetActive(true);
+            //            phoneCanvasOn = true;
+            //            phoneInteractable = false;
+            //        }
+            //        else
+            //        {
+            //            info.gameObject.SetActive(false);
+            //            answered = true;
+            //            phoneScript.newAudio = true;
+            //            phoneScript.callMissed = false;
+            //            phoneScript.ringTimerActive = false;
+            //            phoneScript.isRinging = false;
+            //            phonePanel.SetActive(true);
+            //            phoneCanvasOn = true;
+            //            phoneInteractable = false;
+            //            statsScript.TimeForward();
+            //        }
+            //    }
+            //}
             //If the conference call is hit, it is interactable and the distance is less than 2.5, then display info text
             else if (hit.collider.gameObject.tag == "ConferenceCall" && conferenceCallInteractable == true && dist <= 2.5f)
             {

@@ -106,7 +106,7 @@ public class DayOneScript : MonoBehaviour {
 
         Light();
 
-        robotPanel.gameObject.SetActive(true);
+        //robotPanel.gameObject.SetActive(true);
 
         paper = (GameObject)Resources.Load("Policy", typeof(GameObject));
 
@@ -130,7 +130,7 @@ public class DayOneScript : MonoBehaviour {
         }
         else
         {
-            robotDialogueTrigger.TriggerRobotDialogue1();
+            //robotDialogueTrigger.TriggerRobotDialogue1();
         }
     }
 
@@ -413,26 +413,26 @@ public class DayOneScript : MonoBehaviour {
             }
             //If the phone is ringing and If the object hit is the phone and the distance to it is less than 2.5 then 
             //show the player a message to allow them to answer the phone
-            else if (phoneScript.isRinging == true && hit.collider.gameObject.tag == "Phone" && dist <= 2.5f)
-            {
-                info.text = "Press 'E' to answer";
-                info.gameObject.SetActive(true);
+            //else if (phoneScript.isRinging == true && hit.collider.gameObject.tag == "Phone" && dist <= 2.5f)
+            //{
+            //    info.text = "Press 'E' to answer";
+            //    info.gameObject.SetActive(true);
 
-                //If the phone is ringing
-                if (Input.GetKeyDown(KeyCode.E))
-                {
-                    answeredPhone = false;
-                    info.gameObject.SetActive(false);
-                    answered = true;
-                    phoneScript.newAudio = true;
-                    phoneScript.callMissed = false;
-                    phoneScript.ringTimerActive = false;
-                    phoneScript.isRinging = false;
-                    phonePanel.SetActive(true);
-                    phoneCanvasOn = true;
-                    statsScript.TimeForward();
-                }
-            }
+            //    //If the phone is ringing
+            //    if (Input.GetKeyDown(KeyCode.E))
+            //    {
+            //        answeredPhone = false;
+            //        info.gameObject.SetActive(false);
+            //        answered = true;
+            //        phoneScript.newAudio = true;
+            //        phoneScript.callMissed = false;
+            //        phoneScript.ringTimerActive = false;
+            //        phoneScript.isRinging = false;
+            //        phonePanel.SetActive(true);
+            //        phoneCanvasOn = true;
+            //        statsScript.TimeForward();
+            //    }
+            //}
             //If the conference call is hit, it is interactable and the distance is less than 2.5, then display info text
             else if (hit.collider.gameObject.tag == "ConferenceCall" && conferenceCallInteractable == true && dist <= 2.5f)
             {
@@ -514,76 +514,7 @@ public class DayOneScript : MonoBehaviour {
 
     public void Light()
     {
-        if (wbActive)
-        {
-            StartCoroutine(FlashWhiteboard());
-            return;
-        }
-        else
-        {
-            whiteboardLight.GetComponent<Light>().intensity = 0;
-        }
-
-        if (pcActive)
-        {
-            StartCoroutine(FlashPC());
-            return;
-        }
-        else
-        {
-            pcLight.GetComponent<Light>().intensity = 0;
-        }
-
-        if (faxActive)
-        {
-            StartCoroutine(FlashFax());
-            return;
-        }
-        else
-        {
-            faxLight.GetComponent<Light>().intensity = 0;
-            binLight.GetComponent<Light>().intensity = 0;
-        }
-
-        if (phoneLActive)
-        {
-            StartCoroutine(FlashPhone());
-            return;
-        }
-        else
-        {
-            phoneLight.GetComponent<Light>().intensity = 0;
-        }
-
-        if (boardActive)
-        {
-            //StartCoroutine(FlashBoard());
-            return;
-        }
-        else
-        {
-            boardLight.GetComponent<Light>().intensity = 0;
-        }
-
-        if (clockActive)
-        {
-            StartCoroutine(FlashClock());
-            return;
-        }
-        else
-        {
-            clockLight.GetComponent<Light>().intensity = 0;
-        }
-
-        if (policyActive)
-        {
-            StartCoroutine(FlashFolder());
-            return;
-        }
-        else
-        {
-            policyLight.GetComponent<Light>().intensity = 0;
-        }
+        
     }
 
     IEnumerator Whiteboard()
