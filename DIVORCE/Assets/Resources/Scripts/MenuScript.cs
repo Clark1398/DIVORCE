@@ -25,7 +25,7 @@ public class MenuScript : MonoBehaviour {
     public void StartGame()
     {
         loadingPanel.gameObject.SetActive(true);
-        SceneManager.LoadScene("Actual Game");
+        SceneManager.LoadScene("DIVORCE");
         //StartCoroutine(LoadAsynchronously());
     }
 
