@@ -47,7 +47,41 @@ public class DialogueManager : MonoBehaviour {
 
     AudioSource audioSource;
 
-    public AudioClip[] audioClip1, audioClip2, audioClip3, audioClip4, audioClip5, audioClip7, audioClip9;
+    [Header("Day One Audio")]
+
+    public AudioClip[] audioClip1;
+    public AudioClip[] audioClip2;
+    public AudioClip[] audioClip3;
+    public AudioClip[] audioClip4;
+    public AudioClip[] audioClip5;
+    public AudioClip[] audioClip7;
+    public AudioClip[] audioClip9;
+
+    [Header("Day Two Audio")]
+
+    public AudioClip[] audioClip2_1;
+    public AudioClip[] audioClip2_2;
+    public AudioClip[] audioClip2_3;
+    public AudioClip[] audioClip2_4;
+    public AudioClip[] audioClip2_5;
+    public AudioClip[] audioClip2_6;
+    public AudioClip[] audioClip2_7;
+    public AudioClip[] audioClip2_8;
+    public AudioClip[] audioClip2_9;
+    public AudioClip[] audioClip2_10;
+
+    [Header("Day Three Audio")]
+
+    public AudioClip[] audioClip3_1;
+    public AudioClip[] audioClip3_2;
+    public AudioClip[] audioClip3_3;
+    public AudioClip[] audioClip3_4;
+    public AudioClip[] audioClip3_5;
+    public AudioClip[] audioClip3_6;
+    public AudioClip[] audioClip3_7;
+    public AudioClip[] audioClip3_8;
+    public AudioClip[] audioClip3_9;
+    public AudioClip[] audioClip3_10;
 
     public string[] answers1;
     public string[] answers2;
@@ -70,6 +104,17 @@ public class DialogueManager : MonoBehaviour {
     private Queue<string> call2sentences9;
     private Queue<string> call2sentences10;
 
+    private Queue<AudioClip> audio2_1;
+    private Queue<AudioClip> audio2_2;
+    private Queue<AudioClip> audio2_3;
+    private Queue<AudioClip> audio2_4;
+    private Queue<AudioClip> audio2_5;
+    private Queue<AudioClip> audio2_6;
+    private Queue<AudioClip> audio2_7;
+    private Queue<AudioClip> audio2_8;
+    private Queue<AudioClip> audio2_9;
+    private Queue<AudioClip> audio2_10;
+
     private Queue<string> sentences3_1;
     private Queue<string> sentences3_2;
     private Queue<string> sentences3_3;
@@ -80,6 +125,17 @@ public class DialogueManager : MonoBehaviour {
     private Queue<string> sentences3_8;
     private Queue<string> sentences3_9;
     private Queue<string> sentences3_10;
+
+    private Queue<AudioClip> audio3_1;
+    private Queue<AudioClip> audio3_2;
+    private Queue<AudioClip> audio3_3;
+    private Queue<AudioClip> audio3_4;
+    private Queue<AudioClip> audio3_5;
+    private Queue<AudioClip> audio3_6;
+    private Queue<AudioClip> audio3_7;
+    private Queue<AudioClip> audio3_8;
+    private Queue<AudioClip> audio3_9;
+    private Queue<AudioClip> audio3_10;
 
     //bool conferenceDialogue2Visited;
     //bool conferenceDialogue4Visited;
@@ -122,6 +178,17 @@ public class DialogueManager : MonoBehaviour {
         call2sentences9 = new Queue<string>();
         call2sentences10 = new Queue<string>();
 
+        audio2_1 = new Queue<AudioClip>();
+        audio2_2 = new Queue<AudioClip>();
+        audio2_3 = new Queue<AudioClip>();
+        audio2_4 = new Queue<AudioClip>();
+        audio2_5 = new Queue<AudioClip>();
+        audio2_6 = new Queue<AudioClip>();
+        audio2_7 = new Queue<AudioClip>();
+        audio2_8 = new Queue<AudioClip>();
+        audio2_9 = new Queue<AudioClip>();
+        audio2_10 = new Queue<AudioClip>();
+
         sentences3_1 = new Queue<string>();
         sentences3_2 = new Queue<string>();
         sentences3_3 = new Queue<string>();
@@ -132,6 +199,17 @@ public class DialogueManager : MonoBehaviour {
         sentences3_8 = new Queue<string>();
         sentences3_9 = new Queue<string>();
         sentences3_10 = new Queue<string>();
+
+        audio3_1 = new Queue<AudioClip>();
+        audio3_2 = new Queue<AudioClip>();
+        audio3_3 = new Queue<AudioClip>();
+        audio3_4 = new Queue<AudioClip>();
+        audio3_5 = new Queue<AudioClip>();
+        audio3_6 = new Queue<AudioClip>();
+        audio3_7 = new Queue<AudioClip>();
+        audio3_8 = new Queue<AudioClip>();
+        audio3_9 = new Queue<AudioClip>();
+        audio3_10 = new Queue<AudioClip>();
 
         dialogue2Visited = false;
         dialogue4Visited = false;
@@ -189,12 +267,22 @@ public class DialogueManager : MonoBehaviour {
             {
                 call2sentences1.Enqueue(sentence);
             }
+
+            foreach (AudioClip clip in audioClip2_1)
+            {
+                audio2_1.Enqueue(clip);
+            }
         }
         else if (statsScript.day == 3)
         {
             foreach (string sentence in dialogue.sentences3_1)
             {
                 sentences3_1.Enqueue(sentence);
+            }
+
+            foreach (AudioClip clip in audioClip3_1)
+            {
+                audio3_1.Enqueue(clip);
             }
         }
 
@@ -235,6 +323,15 @@ public class DialogueManager : MonoBehaviour {
             string sentence = call2sentences1.Dequeue();
             StopAllCoroutines();
             StartCoroutine(TypeSentence(sentence));
+
+            audioSource.Stop();
+
+            if (audio2_1.Count > 0)
+            {
+                AudioClip audio = audio2_1.Dequeue();
+                audioSource.clip = audio;
+                audioSource.PlayOneShot(audio);
+            }
         }
         else if (statsScript.day == 3)
         {
@@ -247,6 +344,15 @@ public class DialogueManager : MonoBehaviour {
             string sentence = sentences3_1.Dequeue();
             StopAllCoroutines();
             StartCoroutine(TypeSentence(sentence));
+
+            audioSource.Stop();
+
+            if (audio3_1.Count > 0)
+            {
+                AudioClip audio = audio3_1.Dequeue();
+                audioSource.clip = audio;
+                audioSource.PlayOneShot(audio);
+            }
         }
     }
 
@@ -387,12 +493,22 @@ public class DialogueManager : MonoBehaviour {
             {
                 call2sentences2.Enqueue(sentence);
             }
+
+            foreach (AudioClip clip in audioClip2_2)
+            {
+                audio2_2.Enqueue(clip);
+            }
         }
         else if (statsScript.day == 3)
         {
             foreach (string sentence in dialogue.sentences3_2)
             {
                 sentences3_2.Enqueue(sentence);
+            }
+
+            foreach (AudioClip clip in audioClip3_2)
+            {
+                audio3_2.Enqueue(clip);
             }
         }
 
@@ -433,6 +549,15 @@ public class DialogueManager : MonoBehaviour {
             string sentence = call2sentences2.Dequeue();
             StopAllCoroutines();
             StartCoroutine(TypeSentence(sentence));
+
+            audioSource.Stop();
+
+            if (audio2_2.Count > 0)
+            {
+                AudioClip audio = audio2_2.Dequeue();
+                audioSource.clip = audio;
+                audioSource.PlayOneShot(audio);
+            }
         }
         else if (statsScript.day == 3)
         {
@@ -445,6 +570,15 @@ public class DialogueManager : MonoBehaviour {
             string sentence = sentences3_2.Dequeue();
             StopAllCoroutines();
             StartCoroutine(TypeSentence(sentence));
+
+            audioSource.Stop();
+
+            if (audio3_2.Count > 0)
+            {
+                AudioClip audio = audio3_2.Dequeue();
+                audioSource.clip = audio;
+                audioSource.PlayOneShot(audio);
+            }
         }
     }
 
@@ -579,12 +713,22 @@ public class DialogueManager : MonoBehaviour {
             {
                 call2sentences3.Enqueue(sentence);
             }
+
+            foreach (AudioClip clip in audioClip2_3)
+            {
+                audio2_3.Enqueue(clip);
+            }
         }
         else if (statsScript.day == 3)
         {
             foreach (string sentence in dialogue.sentences3_3)
             {
                 call2sentences3.Enqueue(sentence);
+            }
+
+            foreach (AudioClip clip in audioClip3_3)
+            {
+                audio3_3.Enqueue(clip);
             }
         }
 
@@ -625,6 +769,15 @@ public class DialogueManager : MonoBehaviour {
             string sentence = call2sentences3.Dequeue();
             StopAllCoroutines();
             StartCoroutine(TypeSentence(sentence));
+
+            audioSource.Stop();
+
+            if (audio2_3.Count > 0)
+            {
+                AudioClip audio = audio2_3.Dequeue();
+                audioSource.clip = audio;
+                audioSource.PlayOneShot(audio);
+            }
         }
         else if (statsScript.day == 3)
         {
@@ -637,6 +790,15 @@ public class DialogueManager : MonoBehaviour {
             string sentence = sentences3_3.Dequeue();
             StopAllCoroutines();
             StartCoroutine(TypeSentence(sentence));
+
+            audioSource.Stop();
+
+            if (audio3_3.Count > 0)
+            {
+                AudioClip audio = audio3_3.Dequeue();
+                audioSource.clip = audio;
+                audioSource.PlayOneShot(audio);
+            }
         }
     }
 
@@ -739,12 +901,22 @@ public class DialogueManager : MonoBehaviour {
             {
                 call2sentences4.Enqueue(sentence);
             }
+
+            foreach (AudioClip clip in audioClip2_4)
+            {
+                audio2_4.Enqueue(clip);
+            }
         }
         else if (statsScript.day == 3)
         {
             foreach (string sentence in dialogue.sentences3_4)
             {
                 sentences3_4.Enqueue(sentence);
+            }
+
+            foreach (AudioClip clip in audioClip3_4)
+            {
+                audio3_4.Enqueue(clip);
             }
         }
 
@@ -785,6 +957,15 @@ public class DialogueManager : MonoBehaviour {
             string sentence = call2sentences4.Dequeue();
             StopAllCoroutines();
             StartCoroutine(TypeSentence(sentence));
+
+            audioSource.Stop();
+
+            if (audio2_4.Count > 0)
+            {
+                AudioClip audio = audio2_4.Dequeue();
+                audioSource.clip = audio;
+                audioSource.PlayOneShot(audio);
+            }
         }
         else if (statsScript.day == 3)
         {
@@ -797,6 +978,15 @@ public class DialogueManager : MonoBehaviour {
             string sentence = sentences3_4.Dequeue();
             StopAllCoroutines();
             StartCoroutine(TypeSentence(sentence));
+
+            audioSource.Stop();
+
+            if (audio3_4.Count > 0)
+            {
+                AudioClip audio = audio3_4.Dequeue();
+                audioSource.clip = audio;
+                audioSource.PlayOneShot(audio);
+            }
         }
     }
 
@@ -893,12 +1083,22 @@ public class DialogueManager : MonoBehaviour {
             {
                 call2sentences5.Enqueue(sentence);
             }
+
+            foreach (AudioClip clip in audioClip2_5)
+            {
+                audio2_5.Enqueue(clip);
+            }
         }
         else if (statsScript.day == 3)
         {
             foreach (string sentence in dialogue.sentences3_5)
             {
                 sentences3_5.Enqueue(sentence);
+            }
+
+            foreach (AudioClip clip in audioClip3_5)
+            {
+                audio3_5.Enqueue(clip);
             }
         }
 
@@ -939,6 +1139,15 @@ public class DialogueManager : MonoBehaviour {
             string sentence = call2sentences5.Dequeue();
             StopAllCoroutines();
             StartCoroutine(TypeSentence(sentence));
+
+            audioSource.Stop();
+
+            if (audio2_5.Count > 0)
+            {
+                AudioClip audio = audio2_5.Dequeue();
+                audioSource.clip = audio;
+                audioSource.PlayOneShot(audio);
+            }
         }
         else if (statsScript.day == 3)
         {
@@ -951,6 +1160,15 @@ public class DialogueManager : MonoBehaviour {
             string sentence = sentences3_5.Dequeue();
             StopAllCoroutines();
             StartCoroutine(TypeSentence(sentence));
+
+            audioSource.Stop();
+
+            if (audio3_5.Count > 0)
+            {
+                AudioClip audio = audio3_5.Dequeue();
+                audioSource.clip = audio;
+                audioSource.PlayOneShot(audio);
+            }
         }
     }
 
@@ -1013,12 +1231,22 @@ public class DialogueManager : MonoBehaviour {
             {
                 call2sentences6.Enqueue(sentence);
             }
+
+            foreach (AudioClip clip in audioClip2_6)
+            {
+                audio2_6.Enqueue(clip);
+            }
         }
         else if (statsScript.day == 3)
         {
             foreach (string sentence in dialogue.sentences3_6)
             {
                 sentences3_6.Enqueue(sentence);
+            }
+
+            foreach (AudioClip clip in audioClip3_6)
+            {
+                audio3_6.Enqueue(clip);
             }
         }
 
@@ -1038,6 +1266,15 @@ public class DialogueManager : MonoBehaviour {
             string sentence2_6 = call2sentences6.Dequeue();
             StopAllCoroutines();
             StartCoroutine(TypeSentence(sentence2_6));
+
+            audioSource.Stop();
+
+            if (audio2_6.Count > 0)
+            {
+                AudioClip audio = audio2_6.Dequeue();
+                audioSource.clip = audio;
+                audioSource.PlayOneShot(audio);
+            }
         }
         else if (statsScript.day == 3)
         {
@@ -1050,6 +1287,15 @@ public class DialogueManager : MonoBehaviour {
             string sentence = sentences3_6.Dequeue();
             StopAllCoroutines();
             StartCoroutine(TypeSentence(sentence));
+
+            audioSource.Stop();
+
+            if (audio3_6.Count > 0)
+            {
+                AudioClip audio = audio3_6.Dequeue();
+                audioSource.clip = audio;
+                audioSource.PlayOneShot(audio);
+            }
         }
     }
 
@@ -1136,12 +1382,22 @@ public class DialogueManager : MonoBehaviour {
             {
                 call2sentences7.Enqueue(sentence);
             }
+
+            foreach (AudioClip clip in audioClip2_7)
+            {
+                audio2_7.Enqueue(clip);
+            }
         }
         else if (statsScript.day == 3)
         {
             foreach (string sentence in dialogue.sentences3_7)
             {
                 sentences3_7.Enqueue(sentence);
+            }
+
+            foreach (AudioClip clip in audioClip3_7)
+            {
+                audio3_7.Enqueue(clip);
             }
         }
 
@@ -1182,6 +1438,15 @@ public class DialogueManager : MonoBehaviour {
             string sentence = call2sentences7.Dequeue();
             StopAllCoroutines();
             StartCoroutine(TypeSentence(sentence));
+
+            audioSource.Stop();
+
+            if (audio2_7.Count > 0)
+            {
+                AudioClip audio = audio2_7.Dequeue();
+                audioSource.clip = audio;
+                audioSource.PlayOneShot(audio);
+            }
         }
         else if (statsScript.day == 3)
         {
@@ -1194,6 +1459,15 @@ public class DialogueManager : MonoBehaviour {
             string sentence = sentences3_7.Dequeue();
             StopAllCoroutines();
             StartCoroutine(TypeSentence(sentence));
+
+            audioSource.Stop();
+
+            if (audio3_7.Count > 0)
+            {
+                AudioClip audio = audio3_7.Dequeue();
+                audioSource.clip = audio;
+                audioSource.PlayOneShot(audio);
+            }
         }
     }
 
@@ -1319,12 +1593,22 @@ public class DialogueManager : MonoBehaviour {
             {
                 call2sentences8.Enqueue(sentence2_8);
             }
+
+            foreach (AudioClip clip in audio2_8)
+            {
+                audio2_8.Enqueue(clip);
+            }
         }
         else if (statsScript.day == 3)
         {
             foreach (string sentence in dialogue.sentences3_8)
             {
                 sentences3_8.Enqueue(sentence);
+            }
+
+            foreach (AudioClip clip in audio3_8)
+            {
+                audio3_8.Enqueue(clip);
             }
         }
 
@@ -1344,6 +1628,15 @@ public class DialogueManager : MonoBehaviour {
             string sentence2_8 = call2sentences8.Dequeue();
             StopAllCoroutines();
             StartCoroutine(TypeSentence(sentence2_8));
+
+            audioSource.Stop();
+
+            if (audio2_8.Count > 0)
+            {
+                AudioClip audio = audio2_8.Dequeue();
+                audioSource.clip = audio;
+                audioSource.PlayOneShot(audio);
+            }
         }
         else if (statsScript.day == 3)
         {
@@ -1356,6 +1649,15 @@ public class DialogueManager : MonoBehaviour {
             string sentence = sentences3_8.Dequeue();
             StopAllCoroutines();
             StartCoroutine(TypeSentence(sentence));
+
+            audioSource.Stop();
+
+            if (audio3_8.Count > 0)
+            {
+                AudioClip audio = audio3_8.Dequeue();
+                audioSource.clip = audio;
+                audioSource.PlayOneShot(audio);
+            }
         }
     }
 
@@ -1476,12 +1778,22 @@ public class DialogueManager : MonoBehaviour {
             {
                 call2sentences9.Enqueue(sentence);
             }
+
+            foreach (AudioClip clip in audioClip2_9)
+            {
+                audio2_9.Enqueue(clip);
+            }
         }
         else if (statsScript.day == 3)
         {
             foreach (string sentence in dialogue.sentences3_9)
             {
                 call2sentences9.Enqueue(sentence);
+            }
+
+            foreach (AudioClip clip in audioClip3_9)
+            {
+                audio3_9.Enqueue(clip);
             }
         }
 
@@ -1522,6 +1834,15 @@ public class DialogueManager : MonoBehaviour {
             string sentence = call2sentences9.Dequeue();
             StopAllCoroutines();
             StartCoroutine(TypeSentence(sentence));
+
+            audioSource.Stop();
+
+            if (audio2_9.Count > 0)
+            {
+                AudioClip audio = audio2_9.Dequeue();
+                audioSource.clip = audio;
+                audioSource.PlayOneShot(audio);
+            }
         }
         else if (statsScript.day == 3)
         {
@@ -1534,6 +1855,15 @@ public class DialogueManager : MonoBehaviour {
             string sentence = sentences3_9.Dequeue();
             StopAllCoroutines();
             StartCoroutine(TypeSentence(sentence));
+
+            audioSource.Stop();
+
+            if (audio3_9.Count > 0)
+            {
+                AudioClip audio = audio3_9.Dequeue();
+                audioSource.clip = audio;
+                audioSource.PlayOneShot(audio);
+            }
         }
     }
 
@@ -1589,6 +1919,11 @@ public class DialogueManager : MonoBehaviour {
             {
                 call2sentences10.Enqueue(sentence2_10);
             }
+
+            foreach(AudioClip clip in audioClip2_10)
+            {
+                audio2_10.Enqueue(clip);
+            }
         }
         else if (statsScript.day == 3)
         {
@@ -1602,6 +1937,11 @@ public class DialogueManager : MonoBehaviour {
             foreach (string sentence in dialogue.sentences3_10)
             {
                 sentences3_10.Enqueue(sentence);
+            }
+
+            foreach (AudioClip clip in audioClip3_10)
+            {
+                audio3_10.Enqueue(clip);
             }
         }
 
@@ -1621,6 +1961,15 @@ public class DialogueManager : MonoBehaviour {
             string sentence2_10 = call2sentences10.Dequeue();
             StopAllCoroutines();
             StartCoroutine(TypeSentence(sentence2_10));
+
+            audioSource.Stop();
+
+            if (audio2_10.Count > 0)
+            {
+                AudioClip audio = audio2_10.Dequeue();
+                audioSource.clip = audio;
+                audioSource.PlayOneShot(audio);
+            }
         }
         if (statsScript.day == 3)
         {
@@ -1633,6 +1982,15 @@ public class DialogueManager : MonoBehaviour {
             string sentence = sentences3_10.Dequeue();
             StopAllCoroutines();
             StartCoroutine(TypeSentence(sentence));
+
+            audioSource.Stop();
+
+            if (audio3_10.Count > 0)
+            {
+                AudioClip audio = audio3_10.Dequeue();
+                audioSource.clip = audio;
+                audioSource.PlayOneShot(audio);
+            }
         }
     }
 
