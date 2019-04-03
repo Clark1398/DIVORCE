@@ -643,7 +643,7 @@ public class Stats : MonoBehaviour {
 
         }
 
-        if (SceneManager.GetActiveScene().name == "Actual Game")
+        if (SceneManager.GetActiveScene().name == "DIVORCE")
         {
             if (names == null)
             {
