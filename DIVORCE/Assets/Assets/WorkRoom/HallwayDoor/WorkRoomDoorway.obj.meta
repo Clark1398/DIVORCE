@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: 52a26f17c2a0c924db20f1194f1e593a
+guid: 3694fb04b7c8eaa4eba62592c23de57c
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: hallwayDoor_LP:doorway
-    400000: //RootNode
-    400002: hallwayDoor_LP:doorway
-    2100000: hallwayDoor_LP_doorwayMat
-    2300000: hallwayDoor_LP:doorway
-    3300000: hallwayDoor_LP:doorway
-    4300000: hallwayDoor_LP:doorway
+    100000: Doorway_Arch_Test:doorway
+    100002: //RootNode
+    400000: Doorway_Arch_Test:doorway
+    400002: //RootNode
+    2100000: Doorway_Arch_Test_doorwayMat
+    2300000: Doorway_Arch_Test:doorway
+    3300000: Doorway_Arch_Test:doorway
+    4300000: Doorway_Arch_Test:doorway
   externalObjects: {}
   materials:
     importMaterials: 1
