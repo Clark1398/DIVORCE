@@ -66,4 +66,25 @@ public class Dialogue {
     public string[] sentences3_9;
     [TextArea(3, 10)]
     public string[] sentences3_10;
+
+    [TextArea(3, 10)]
+    public string[] sentences4_1;
+    [TextArea(3, 10)]
+    public string[] sentences4_2;
+    [TextArea(3, 10)]
+    public string[] sentences4_3;
+    [TextArea(3, 10)]
+    public string[] sentences4_4;
+    [TextArea(3, 10)]
+    public string[] sentences4_5;
+    [TextArea(3, 10)]
+    public string[] sentences4_6;
+    [TextArea(3, 10)]
+    public string[] sentences4_7;
+    [TextArea(3, 10)]
+    public string[] sentences4_8;
+    [TextArea(3, 10)]
+    public string[] sentences4_9;
+    [TextArea(3, 10)]
+    public string[] sentences4_10;
 }

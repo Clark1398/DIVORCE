@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.16259682, g: 0.16428372, b: 0.16427211, a: 1}
+  m_IndirectSpecularColor: {r: 0.0064534177, g: 0.005760833, b: 0.005005833, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -11593,6 +11593,169 @@ PrefabInstance:
     - target: {fileID: 4177054122275118, guid: 49ca563e5fb2e2c439093b377f51072a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114830054115194458, guid: 49ca563e5fb2e2c439093b377f51072a,
+        type: 3}
+      propertyPath: dialogue.sentences4_1.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114830054115194458, guid: 49ca563e5fb2e2c439093b377f51072a,
+        type: 3}
+      propertyPath: dialogue.sentences4_2.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114830054115194458, guid: 49ca563e5fb2e2c439093b377f51072a,
+        type: 3}
+      propertyPath: dialogue.sentences4_3.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114830054115194458, guid: 49ca563e5fb2e2c439093b377f51072a,
+        type: 3}
+      propertyPath: dialogue.sentences4_4.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114830054115194458, guid: 49ca563e5fb2e2c439093b377f51072a,
+        type: 3}
+      propertyPath: dialogue.sentences4_5.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114830054115194458, guid: 49ca563e5fb2e2c439093b377f51072a,
+        type: 3}
+      propertyPath: dialogue.sentences4_6.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114830054115194458, guid: 49ca563e5fb2e2c439093b377f51072a,
+        type: 3}
+      propertyPath: dialogue.sentences4_7.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114830054115194458, guid: 49ca563e5fb2e2c439093b377f51072a,
+        type: 3}
+      propertyPath: dialogue.sentences4_8.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114830054115194458, guid: 49ca563e5fb2e2c439093b377f51072a,
+        type: 3}
+      propertyPath: dialogue.sentences4_9.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114830054115194458, guid: 49ca563e5fb2e2c439093b377f51072a,
+        type: 3}
+      propertyPath: dialogue.sentences4_10.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114830054115194458, guid: 49ca563e5fb2e2c439093b377f51072a,
+        type: 3}
+      propertyPath: dialogue.sentences4_1.Array.data[0]
+      value: Mr. Prime Moonister, we both knew this call would come.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114830054115194458, guid: 49ca563e5fb2e2c439093b377f51072a,
+        type: 3}
+      propertyPath: dialogue.sentences4_1.Array.data[1]
+      value: Your Independence from the earth was a bold move, and you knew the earth
+        would require some compensation for this insult to our leadership.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114830054115194458, guid: 49ca563e5fb2e2c439093b377f51072a,
+        type: 3}
+      propertyPath: dialogue.sentences4_1.Array.data[2]
+      value: Now that you are independent, we demand that you uphold your end of the
+        deal set by your predecessor.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114830054115194458, guid: 49ca563e5fb2e2c439093b377f51072a,
+        type: 3}
+      propertyPath: dialogue.sentences4_1.Array.data[3]
+      value: Accept that the Moon owes us, and pay the Divorce Bill.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114830054115194458, guid: 49ca563e5fb2e2c439093b377f51072a,
+        type: 3}
+      propertyPath: dialogue.sentences4_2.Array.data[0]
+      value: This payout was promised to us by the previous PM.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114830054115194458, guid: 49ca563e5fb2e2c439093b377f51072a,
+        type: 3}
+      propertyPath: dialogue.sentences4_2.Array.data[1]
+      value: "Fine, we\u2019ll be willing to lower the required amount, but you must
+        accept."
+      objectReference: {fileID: 0}
+    - target: {fileID: 114830054115194458, guid: 49ca563e5fb2e2c439093b377f51072a,
+        type: 3}
+      propertyPath: dialogue.sentences4_3.Array.data[0]
+      value: Mr. Prime Minister, I must insist, this deal was ensured to us.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114830054115194458, guid: 49ca563e5fb2e2c439093b377f51072a,
+        type: 3}
+      propertyPath: dialogue.sentences4_3.Array.data[1]
+      value: If you refuse, you will never be trusted by not only your people but
+        other politicians.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114830054115194458, guid: 49ca563e5fb2e2c439093b377f51072a,
+        type: 3}
+      propertyPath: dialogue.sentences4_3.Array.data[2]
+      value: So what will it be?
+      objectReference: {fileID: 0}
+    - target: {fileID: 114830054115194458, guid: 49ca563e5fb2e2c439093b377f51072a,
+        type: 3}
+      propertyPath: dialogue.sentences4_4.Array.data[0]
+      value: Your audacity and stubbornness are perhaps the only things commendable
+        about your negotiations.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114830054115194458, guid: 49ca563e5fb2e2c439093b377f51072a,
+        type: 3}
+      propertyPath: dialogue.sentences4_4.Array.data[1]
+      value: "The price will be lowered once more, and we will tell the other planets
+        about your \u201Clegendary\u201D skills as a politician."
+      objectReference: {fileID: 0}
+    - target: {fileID: 114830054115194458, guid: 49ca563e5fb2e2c439093b377f51072a,
+        type: 3}
+      propertyPath: dialogue.sentences4_5.Array.data[0]
+      value: No, we refuse to take this any further.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114830054115194458, guid: 49ca563e5fb2e2c439093b377f51072a,
+        type: 3}
+      propertyPath: dialogue.sentences4_5.Array.data[1]
+      value: Pay this bill now.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114830054115194458, guid: 49ca563e5fb2e2c439093b377f51072a,
+        type: 3}
+      propertyPath: dialogue.sentences4_6.Array.data[0]
+      value: Now now, we were ensured this bill would be paid.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114830054115194458, guid: 49ca563e5fb2e2c439093b377f51072a,
+        type: 3}
+      propertyPath: dialogue.sentences4_6.Array.data[1]
+      value: We are not going to let this go that easy.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114830054115194458, guid: 49ca563e5fb2e2c439093b377f51072a,
+        type: 3}
+      propertyPath: dialogue.sentences4_7.Array.data[0]
+      value: We lower the price and yet you still refuse?
+      objectReference: {fileID: 0}
+    - target: {fileID: 114830054115194458, guid: 49ca563e5fb2e2c439093b377f51072a,
+        type: 3}
+      propertyPath: dialogue.sentences4_7.Array.data[1]
+      value: How very dare you, pay this now and we will be done with it!
+      objectReference: {fileID: 0}
+    - target: {fileID: 114830054115194458, guid: 49ca563e5fb2e2c439093b377f51072a,
+        type: 3}
+      propertyPath: dialogue.sentences4_8.Array.data[0]
+      value: We lower the price and yet you still refuse?
+      objectReference: {fileID: 0}
+    - target: {fileID: 114830054115194458, guid: 49ca563e5fb2e2c439093b377f51072a,
+        type: 3}
+      propertyPath: dialogue.sentences4_8.Array.data[1]
+      value: How very dare you! Pay this now and we will be done with it!
+      objectReference: {fileID: 0}
+    - target: {fileID: 114830054115194458, guid: 49ca563e5fb2e2c439093b377f51072a,
+        type: 3}
+      propertyPath: dialogue.sentences4_9.Array.data[0]
+      value: Well Done Prime Moonister, we wish you the best of luck in the future
+        of your Independant Planet.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114830054115194458, guid: 49ca563e5fb2e2c439093b377f51072a,
+        type: 3}
+      propertyPath: dialogue.sentences4_10.Array.data[0]
+      value: "You will regret this Mister, the moon will never receive help from the
+        earth again!\r"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49ca563e5fb2e2c439093b377f51072a, type: 3}
