@@ -107,7 +107,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    rootMotionBoneName: Jnt_Grp_01
+    rootMotionBoneName: Binder_Jnt_01
     hasTranslationDoF: 0
     hasExtraRoot: 1
     skeletonHasParents: 1
