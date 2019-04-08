@@ -1,21 +1,11 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &100100000
-Prefab:
-  m_ObjectHideFlags: 1
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications: []
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1133847479640598}
-  m_IsPrefabAsset: 1
 --- !u!1 &1133847479640598
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4194684474121822}
@@ -29,9 +19,10 @@ GameObject:
   m_IsActive: 1
 --- !u!4 &4194684474121822
 Transform:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1133847479640598}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -42,9 +33,10 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &114056202854650008
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1133847479640598}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -54,44 +46,100 @@ MonoBehaviour:
   panel: {fileID: 0}
   robotDialogueText: {fileID: 0}
   robotClip1:
-  - {fileID: 8300000, guid: c09e3c231d1eb584ebd2a6855e889dd9, type: 3}
-  - {fileID: 8300000, guid: 0b23fece9d61e2448aa352a327cfa664, type: 3}
-  - {fileID: 8300000, guid: fb0cbb09e35f69042a19a94848171c59, type: 3}
+  - {fileID: 8300000, guid: 7d011e7ff2d8ccd4ca2c18625640a49b, type: 3}
+  - {fileID: 8300000, guid: fec58a7ea9335af4f96df2367c87ab57, type: 3}
+  - {fileID: 8300000, guid: 21ceee3aa6e34ae4882812c22af66867, type: 3}
+  - {fileID: 8300000, guid: 1e180450a59f61b4f8d182ef48794b45, type: 3}
   robotClip2:
-  - {fileID: 8300000, guid: e348c5cc8799d0a42b86a68b8c2d1bd0, type: 3}
+  - {fileID: 8300000, guid: 12d9490bb4bb57c41b2c4662886cdeca, type: 3}
+  - {fileID: 8300000, guid: 17f413cb9448372418e93dbe7c53e341, type: 3}
   robotClip3:
-  - {fileID: 8300000, guid: db40dd8fb2208ef429753d84ea367226, type: 3}
-  - {fileID: 8300000, guid: b16ad5d6a504d6f459e12d747ee32abc, type: 3}
-  - {fileID: 8300000, guid: 463c235ab74ac1f4fa37be4b9d072a34, type: 3}
+  - {fileID: 8300000, guid: e29c4e361afe29e4091899ce9b246504, type: 3}
+  - {fileID: 8300000, guid: f3ffc8691cc58cd458e953eff9edfe93, type: 3}
+  - {fileID: 8300000, guid: 21edd5ca57b3d7b44a25d6eb3c6bd40a, type: 3}
+  - {fileID: 8300000, guid: 14c7a1084f4e22a4c9bc98ceacd39517, type: 3}
   robotClip4:
   - {fileID: 8300000, guid: fac1d400e03136d418e751051356e0f3, type: 3}
   robotClip5:
-  - {fileID: 8300000, guid: 7245f9704903ba54bb1ad532effe3775, type: 3}
+  - {fileID: 8300000, guid: ae5b4a3ef9a278447beb9eb4ea08da81, type: 3}
+  - {fileID: 8300000, guid: d7df94ea07fc0ba438e45161cb77baea, type: 3}
+  - {fileID: 8300000, guid: 6f578636860b3ce40960cd730342ff63, type: 3}
   robotClip6:
-  - {fileID: 8300000, guid: 1e389ac8c649cb242950d1c94d253e20, type: 3}
+  - {fileID: 8300000, guid: 1a9b6c831b9375947a1f81e512ce933f, type: 3}
   robotClip7:
-  - {fileID: 8300000, guid: 78996d8d163e19743b9d69a72f99590a, type: 3}
+  - {fileID: 8300000, guid: 51b9233762087ee4e8370f0eb2c781ea, type: 3}
   - {fileID: 0}
   robotClip8:
-  - {fileID: 8300000, guid: 3c1cd550ebcb3694ba79c1da0f3dcd2f, type: 3}
-  - {fileID: 8300000, guid: 01cc0f85e669aac43b36923be725a2fc, type: 3}
+  - {fileID: 8300000, guid: cba59c612292ad447807d57a8a6c9112, type: 3}
+  - {fileID: 8300000, guid: 0809e3ff15433c340a3a6e086c1acfb7, type: 3}
   robotClip9:
-  - {fileID: 8300000, guid: 889917ceddad9fa4fb688b23010086d7, type: 3}
-  - {fileID: 8300000, guid: c56bd7eb249da354393c0fadaeec09ed, type: 3}
+  - {fileID: 8300000, guid: 257f56c825b276046abdf8d4d1a304c6, type: 3}
+  - {fileID: 8300000, guid: 0729cb3556a7dc54db2f082df9a702b2, type: 3}
   robotClip10:
-  - {fileID: 8300000, guid: 9ddeb8651a8dbc843937ce8107616d65, type: 3}
-  - {fileID: 8300000, guid: cccd578addbba2245b521ba89e435838, type: 3}
+  - {fileID: 8300000, guid: eeb5177d875ed1d499c8fdc1732d1a4f, type: 3}
+  - {fileID: 8300000, guid: 79ffeda4f89b84f4c8011063a651b5c9, type: 3}
   robotClip11:
-  - {fileID: 8300000, guid: 870ab6a770b8c4d4e95557beda58f21c, type: 3}
-  - {fileID: 8300000, guid: 79fdd326fe4e3b94c9834f027ea7ff73, type: 3}
+  - {fileID: 8300000, guid: 5ae422e0cde436f49b4783e04ee18b81, type: 3}
+  - {fileID: 8300000, guid: 089c415a74e64d04ca34f8b61b6df248, type: 3}
   robotClip12:
-  - {fileID: 8300000, guid: 9a13cd8c2d8fea7419c8f34709f1279f, type: 3}
-  - {fileID: 8300000, guid: d80bbdc5cad7a5f44b9c479a6d2783e5, type: 3}
+  - {fileID: 8300000, guid: 793a1a7f958c4dd4eada3410aff9bd66, type: 3}
+  - {fileID: 8300000, guid: d88b5f33672b41e41892b9756f01ee70, type: 3}
   robotClip13:
-  - {fileID: 8300000, guid: de22450bb0e1dc749bb6afc40d8c19fb, type: 3}
-  - {fileID: 8300000, guid: 8d5f0827904f3ee409122baa696cf0ec, type: 3}
+  - {fileID: 8300000, guid: 0c6f450c17c4520438e8dd8d482e2d20, type: 3}
+  - {fileID: 8300000, guid: f6ee335c807d5b54eba098018c0d7036, type: 3}
   robotClip14:
-  - {fileID: 8300000, guid: 6e513dd98c82d044f8c7dd9865f334b5, type: 3}
+  - {fileID: 8300000, guid: d544a4a7f9c3e1b41afa6d1912c2ddb8, type: 3}
   - {fileID: 8300000, guid: db1ef5e39bff6314cb733d725948450f, type: 3}
+  robotClip2_1:
+  - {fileID: 8300000, guid: 3f0f4176138303a4784cc39615bb92fe, type: 3}
+  - {fileID: 8300000, guid: 21cb79c232ccac447be54b28eb77429a, type: 3}
+  - {fileID: 8300000, guid: 7689a44ea1a393b44be3603c39eaf41c, type: 3}
+  - {fileID: 8300000, guid: 95d2b8b8a9c27b046acf1855cde8c5da, type: 3}
+  - {fileID: 8300000, guid: 8602204d2c86b924a9c4cffbcd072ebc, type: 3}
+  - {fileID: 8300000, guid: b9f80bd033568494e9127c31cf454b4b, type: 3}
+  - {fileID: 8300000, guid: 4120d68335ed38e42a24215767b47f09, type: 3}
+  - {fileID: 8300000, guid: ed52d8ee56ff1c145beca1666666148c, type: 3}
+  robotClip2_2:
+  - {fileID: 8300000, guid: c278fff59f6117949832eaaee94b7536, type: 3}
+  robotClip2_3:
+  - {fileID: 8300000, guid: 84873cba930cdfe4eb8b0f2f4c354ba6, type: 3}
+  - {fileID: 8300000, guid: b733e2d7af58e9a4fa16494a7dec49af, type: 3}
+  - {fileID: 8300000, guid: 5b3772ae83948ee459ec6a947bc4bf1d, type: 3}
+  - {fileID: 8300000, guid: 20525ab2de5faae49a3a384b7ed0b18f, type: 3}
+  - {fileID: 8300000, guid: 944594232af16734487b9e20a944b799, type: 3}
+  robotClip2_4:
+  - {fileID: 8300000, guid: 624e8c67fd43e834c806f2d478f5d6c5, type: 3}
+  - {fileID: 8300000, guid: 2c4c5a77f224b534ab81b0d01813703c, type: 3}
+  robotClip2_5:
+  - {fileID: 8300000, guid: 51b08ac57d0db2a4d96741282ce5b84c, type: 3}
+  robotClip2_6:
+  - {fileID: 8300000, guid: 20fe9289cd78adf4fb2004b7c086af4c, type: 3}
+  robotClip2_7:
+  - {fileID: 8300000, guid: 26e18a5fe13d6104ba73bf641072ea67, type: 3}
+  robotClip2_8:
+  - {fileID: 8300000, guid: 9948ff9c575432540b217016c7f4b753, type: 3}
+  robotClip2_9:
+  - {fileID: 8300000, guid: 78c6a1382b25a09448ff011c1b12d806, type: 3}
+  robotClip2_10:
+  - {fileID: 8300000, guid: 8b89f97337384c24dba9328f943551b2, type: 3}
+  robotClip2_11: []
+  robotClip2_12: []
+  robotClip2_13: []
+  robotClip2_14: []
+  robotClip2_15: []
+  robotClip3_1: []
+  robotClip3_2: []
+  robotClip3_3: []
+  robotClip3_4: []
+  robotClip3_5: []
+  robotClip3_6: []
+  robotClip4_1: []
+  robotClip4_2: []
+  robotClip4_3: []
+  robotClip4_4: []
+  robotClip4_5: []
+  robotClip5_1: []
+  robotClip5_2: []
   conferencePhoneRing: 0
   statsScript: {fileID: 0}
+  chairCameraScript: {fileID: 0}
