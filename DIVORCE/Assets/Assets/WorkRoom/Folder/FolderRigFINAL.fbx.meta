@@ -1,37 +1,31 @@
 fileFormatVersion: 2
-guid: 11cf53f4f9dd61449be5598eb96b0517
+guid: 09cc5ca973daf054ea9b82031fea1af3
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: Binder_Crtl_01
-    100002: Binder_Crtl_02
-    100004: Binder_Crtl_03
-    100006: Binder_Crtl_04
-    100008: Binder_Jnt_01
-    100010: Binder_Jnt_02
-    100012: Binder_Jnt_03
-    100014: Binder_Jnt_04
-    100016: Curves_Grp_01
-    100018: //RootNode
-    100020: Jnt_Grp_01
-    100022: Lable
-    400000: Binder_Crtl_01
-    400002: Binder_Crtl_02
-    400004: Binder_Crtl_03
-    400006: Binder_Crtl_04
-    400008: Binder_Jnt_01
-    400010: Binder_Jnt_02
-    400012: Binder_Jnt_03
-    400014: Binder_Jnt_04
-    400016: Curves_Grp_01
-    400018: //RootNode
-    400020: Jnt_Grp_01
-    400022: Lable
+    100000: Folder_New:Folder_Ctrl_01
+    100002: Folder_New:Folder_Ctrl_02
+    100004: Folder_New:Folder_Ctrl_03
+    100006: Folder_New:Folder_Jnt_01
+    100008: Folder_New:Folder_Jnt_02
+    100010: Folder_New:Folder_Jnt_03
+    100012: Folder_New:Folder_Jnt_04
+    100014: Folder_New:FolderMeshLP:polySurface1
+    100016: //RootNode
+    400000: Folder_New:Folder_Ctrl_01
+    400002: Folder_New:Folder_Ctrl_02
+    400004: Folder_New:Folder_Ctrl_03
+    400006: Folder_New:Folder_Jnt_01
+    400008: Folder_New:Folder_Jnt_02
+    400010: Folder_New:Folder_Jnt_03
+    400012: Folder_New:Folder_Jnt_04
+    400014: Folder_New:FolderMeshLP:polySurface1
+    400016: //RootNode
     2100000: lambert1
-    2100002: lambert3
-    4300000: Lable
+    4300000: Folder_New:FolderMeshLP:polySurface1
+    7400000: Take 001
     9500000: //RootNode
-    13700000: Lable
+    13700000: Folder_New:FolderMeshLP:polySurface1
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -51,15 +45,43 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
-    importConstraints: 1
-    animationCompression: 3
+    importConstraints: 0
+    animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -107,9 +129,9 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    rootMotionBoneName: Binder_Jnt_01
+    rootMotionBoneName: Folder_New:Folder_Jnt_01
     hasTranslationDoF: 0
-    hasExtraRoot: 1
+    hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 2
