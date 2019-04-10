@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 09cc5ca973daf054ea9b82031fea1af3
+guid: 93b6bafb76a83ff45b97722041cdf406
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -117,7 +117,7 @@ ModelImporter:
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
   importAnimation: 1
-  copyAvatar: 0
+  copyAvatar: 1
   humanDescription:
     serializedVersion: 2
     human: []
@@ -133,7 +133,8 @@ ModelImporter:
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 2c2077f1ca8acd942b5f44dbe13df274,
+    type: 3}
   animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
