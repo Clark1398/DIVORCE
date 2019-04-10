@@ -161,7 +161,7 @@ public class DayOneScript : MonoBehaviour {
             }
             else if (hit.collider.gameObject.tag == "Folder" && policyIntractable)
             {
-                if (hit.collider.transform.parent.transform.parent.gameObject.name == "Earth Folder" && firstFolder)
+                if (hit.collider.transform.parent.gameObject.name == "EarthFolder" && firstFolder)
                 {
                     //If the distance to the object is less than 2.5
                     if (dist <= 2.5f)
@@ -172,15 +172,15 @@ public class DayOneScript : MonoBehaviour {
 
                     if (Input.GetKeyDown(KeyCode.E))
                     {
-                        RotationScript rot = hit.collider.transform.parent.transform.parent.gameObject.GetComponent<RotationScript>();
+                        //RotationScript rot = hit.collider.transform.parent.transform.parent.gameObject.GetComponent<RotationScript>();
 
-                        rot.endPos = GameObject.Find("FolderEndPos").transform;
-                        rot.startTime = Time.time;
-                        rot.journeyLength = Vector3.Distance(rot.startPos.position, rot.endPos.position);
+                        //rot.endPos = GameObject.Find("FolderEndPos").transform;
+                        //rot.startTime = Time.time;
+                        //rot.journeyLength = Vector3.Distance(rot.startPos.position, rot.endPos.position);
 
                         folderCamera = earthCamera;
 
-                        StartCoroutine(FolderOut(rot));
+                        StartCoroutine(FolderOpen());
 
                         marsCanvas.SetActive(false);
                         venusCanvas.SetActive(false);
@@ -207,13 +207,13 @@ public class DayOneScript : MonoBehaviour {
                         rot.startTime = Time.time;
                         rot.journeyLength = Vector3.Distance(rot.startPos.position, rot.endPos.position);
 
-                        if (hit.collider.transform.parent.transform.parent.gameObject.name == "Earth Folder")
+                        if (hit.collider.transform.parent.transform.parent.gameObject.name == "EarthFolder")
                         {
                             folderCamera = earthCamera;
                             marsCanvas.SetActive(false);
                             venusCanvas.SetActive(false);
                         }
-                        else if (hit.collider.transform.parent.transform.parent.gameObject.name == "Mars Folder")
+                        else if (hit.collider.transform.parent.transform.parent.gameObject.name == "MarsFolder")
                         {
                             folderCamera = marsCamera;
                             earthCanvas.SetActive(false);
@@ -226,7 +226,7 @@ public class DayOneScript : MonoBehaviour {
                             marsCanvas.SetActive(false);
                         }
 
-                        StartCoroutine(FolderOut(rot));
+                        StartCoroutine(FolderOpen());
 
                         GameObject.Find("MainCamera").transform.LookAt(hit.collider.gameObject.transform);
                     }
@@ -648,19 +648,21 @@ public class DayOneScript : MonoBehaviour {
 
     #endregion
 
-    IEnumerator FolderOut(RotationScript rot)
+    IEnumerator FolderOpen()
     {
         policyIntractable = false;
 
-        rot.enabled = true;
+        folderScript = folderCamera.GetComponent<FolderScript>();
+        //rot.enabled = true;
+        folderScript.anim.Play("Open");
 
         yield return new WaitForSeconds(1.25f);
 
-        folderScript = folderCamera.GetComponent<FolderScript>();
+        
 
-        rot.endPos = GameObject.Find(folderScript.planet + "FolderStartPos").transform;
+        //rot.endPos = GameObject.Find(folderScript.planet + "FolderStartPos").transform;
 
-        rot.enabled = false;
+        //rot.enabled = false;
         folderScript.enabled = true;
         folder = true;
 
@@ -669,7 +671,7 @@ public class DayOneScript : MonoBehaviour {
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
 
-        folderScript.anim.Play("Open");
+        
 
         this.transform.position = folderScript.playerSpawn.transform.position;
 
