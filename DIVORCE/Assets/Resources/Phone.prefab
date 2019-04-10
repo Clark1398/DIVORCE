@@ -1,0 +1,317 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1165174125204892
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4549893257333304}
+  - component: {fileID: 114416822403404218}
+  - component: {fileID: 82053576743617524}
+  m_Layer: 0
+  m_Name: phone_low_poly:pCube3_phone_low_poly:polySurface3_phone_low_poly:polySurface4_phone_low_poly:polySurface1
+  m_TagString: Phone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4549893257333304
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1165174125204892}
+  m_LocalRotation: {x: -0.0043551624, y: -0.081318915, z: 0.11981092, w: 0.98945117}
+  m_LocalPosition: {x: 2.9739769, y: 1.0638977, z: -1.9907377}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4095029975244466}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 47.987003, y: 32.975002, z: 0.12100001}
+--- !u!114 &114416822403404218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1165174125204892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49a2e0261b9e47a4d9ba2d5228d93819, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  phoneCalls:
+  - "Mars wants you to export your sacred helium to them. \nFax = Revenue + ; Mars
+    Opinion + ;  Public Support - \nTrash = Mars Opinion -  \nPress 'E' to close"
+  - "Venus wants to pass through Moon territory on its way to Earth.\r\nFax = Venus
+    Opinion +  ; System Tension -  ; \rAutonomy -\nTrash = Venus Opinion - \r\nPress
+    'E' to close"
+  - "Your wife asks you to ignore Earth\u2019s call today.\nPress 'E' to close"
+  - "Earth wants to send inspectors to search your nuclear power stations.\nFax =
+    Earth Opinion + ; System Tension - ;  Autonomy - \nTrash = Earth Opinion - ; System
+    Tension + ;  Autonomy +  \nPress 'E' to close"
+  - 'Your wife asks you to leave the office at 5PM to make the dinner reservation
+    on time.
+
+    Press ''E'' to close'
+  - "Mars wants you to help them acquire the right to legally mine on Jupiter\u2019s
+    moon.\nFax = Mars Opinion + ; Revenue + ; System Tension -\nTrash = Mars Opinion
+    - ; Autonomy +  \nPress 'E' to close"
+  - "Earth invites you to attend their Royal Wedding.\nFax = Earth Opinion + ; Public
+    Support - ;  Revenue - ; Autonomy -\nTrash = Earth Opinion - ; Public Support
+    - ;  Autonomy +  \nPress 'E' to close"
+  - 'Your wife asks you to organise travel for Moon citizens to Mars.
+
+    Press ''E'' to close'
+  - "Venus wants you to allow their interplanetary businesses on the Moon to continue
+    acting freely.\nFax = Venus Opinion + ; Public Support - ;  Revenue + ; Autonomy
+    -\nTrash = Venus Opinion - ; Public Support + ;  Revenue -  \nPress 'E' to close"
+  phoneCallText: {fileID: 0}
+  phonecall: 
+  isRinging: 0
+  timeUntilRingTimerActive: 0
+  ringTimerActive: 0
+  stopAudio: 0
+  newAudio: 0
+  firstCall: 0
+  callMissed: 0
+  dayOne: 0
+  phoneIsActive: 0
+  timer: 0
+  ringTimer: 15
+  phoneRing: {fileID: 8300000, guid: 4be638de5ffe78241b16ae2291f1bfa3, type: 3}
+  marsPhoneCall: {fileID: 8300000, guid: f9e6d270032377b4893feccb297a129d, type: 3}
+  earthPhoneCall: {fileID: 8300000, guid: 0bf3ad6796f73c04ab76653873d839de, type: 3}
+  faxChanges: []
+  faxChangedNames: []
+  binChanges: []
+  binChangedNames: []
+  calls: 0
+--- !u!82 &82053576743617524
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1165174125204892}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!1 &1534839860466012
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4095029975244466}
+  - component: {fileID: 82117791711990636}
+  m_Layer: 0
+  m_Name: Phone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4095029975244466
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1534839860466012}
+  m_LocalRotation: {x: 0.36817762, y: 0.37364185, z: -0.18764676, w: 0.83043706}
+  m_LocalPosition: {x: -3.718021, y: 189.01181, z: 0.21514447}
+  m_LocalScale: {x: 0.059708282, y: 0.05970829, z: 0.059708282}
+  m_Children:
+  - {fileID: 4549893257333304}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 48.74, y: 47.011, z: -3.1750002}
+--- !u!82 &82117791711990636
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1534839860466012}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 50
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4

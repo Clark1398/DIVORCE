@@ -125,7 +125,7 @@ public class DayOneScript : MonoBehaviour {
         }
         else
         {
-            //robotDialogueTrigger.TriggerRobotDialogue1();
+            robotDialogueTrigger.TriggerRobotDialogue1();
         }
     }
 
