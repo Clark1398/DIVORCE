@@ -14,7 +14,7 @@ public class FolderScript : MonoBehaviour {
     //bool firstUse = true;
 
     [Header ("Animations")]
-    public Animator anim;
+    public Animator anim, animP1, animP2;
 
     [Header ("Game Objects")]
     public GameObject frontPage, taxPage, tradePage, impPage, expPage, movePage, player, playerSpawn, current, other, canvas1, canvas2, canvas3, lastPage;
@@ -123,13 +123,13 @@ public class FolderScript : MonoBehaviour {
                 //Activate the player
                 player.SetActive(true);
 
-                RotationScript rot = this.transform.parent.GetComponent<RotationScript>();
+                //RotationScript rot = this.transform.parent.GetComponent<RotationScript>();
 
-                rot.endPos = GameObject.Find(planet + "FolderStartPos").transform;
-                rot.startTime = Time.time;
-                rot.journeyLength = Vector3.Distance(rot.startPos.position, rot.endPos.position);
+                //rot.endPos = GameObject.Find(planet + "FolderStartPos").transform;
+                //rot.startTime = Time.time;
+                //rot.journeyLength = Vector3.Distance(rot.startPos.position, rot.endPos.position);
 
-                StartCoroutine(FolderIn(rot));
+                StartCoroutine(FolderIn());
             }
         }
 
@@ -165,6 +165,8 @@ public class FolderScript : MonoBehaviour {
         page2.SetActive(false);
         page3.SetActive(false);
         page4.SetActive(false);
+
+        StartCoroutine(TurnPage(animP1));
     }
 
     public void Trade()
@@ -184,6 +186,8 @@ public class FolderScript : MonoBehaviour {
         pageMain.SetActive(true);
         page1.SetActive(false);
         page2.SetActive(false);
+
+        StartCoroutine(TurnPage(animP1));
     }
 
     public void Import()
@@ -203,6 +207,8 @@ public class FolderScript : MonoBehaviour {
         pageMain.SetActive(true);
         page1.SetActive(false);
         page2.SetActive(false);
+
+        StartCoroutine(TurnPage(animP1));
     }
 
     public void Export()
@@ -222,6 +228,8 @@ public class FolderScript : MonoBehaviour {
         pageMain.SetActive(true);
         page1.SetActive(false);
         page2.SetActive(false);
+
+        StartCoroutine(TurnPage(animP1));
     }
 
     public void Movement()
@@ -243,6 +251,8 @@ public class FolderScript : MonoBehaviour {
         page1.SetActive(false);
         page2.SetActive(false);
         page3.SetActive(false);
+
+        StartCoroutine(TurnPage(animP1));
     }
 
     #endregion
@@ -253,6 +263,8 @@ public class FolderScript : MonoBehaviour {
     {
         pageMain.SetActive(false);
         page1.SetActive(true);
+
+        StartCoroutine(TurnPage(animP2));
     }
 
     public void NoTax()
@@ -275,6 +287,8 @@ public class FolderScript : MonoBehaviour {
     {
         pageMain.SetActive(false);
         page2.SetActive(true);
+
+        StartCoroutine(TurnPage(animP2));
     }
 
     public void LowTax()
@@ -295,6 +309,8 @@ public class FolderScript : MonoBehaviour {
     {
         pageMain.SetActive(false);
         page3.SetActive(true);
+
+        StartCoroutine(TurnPage(animP2));
     }
 
     public void HighTax()
@@ -315,6 +331,8 @@ public class FolderScript : MonoBehaviour {
     {
         pageMain.SetActive(false);
         page4.SetActive(true);
+
+        StartCoroutine(TurnPage(animP2));
     }
 
     public void VeryHighTax()
@@ -341,6 +359,8 @@ public class FolderScript : MonoBehaviour {
         page2.SetActive(false);
         page3.SetActive(false);
         page4.SetActive(false);
+
+        StartCoroutine(TurnBack(animP2));
     }
 
     #endregion
@@ -351,6 +371,8 @@ public class FolderScript : MonoBehaviour {
     {
         pageMain.SetActive(false);
         page1.SetActive(true);
+
+        StartCoroutine(TurnPage(animP2));
     }
 
     public void OpenTrade()
@@ -375,6 +397,8 @@ public class FolderScript : MonoBehaviour {
     {
         pageMain.SetActive(false);
         page2.SetActive(true);
+
+        StartCoroutine(TurnPage(animP2));
     }
 
     public void CloseTrade()
@@ -400,6 +424,8 @@ public class FolderScript : MonoBehaviour {
         pageMain.SetActive(true);
         page1.SetActive(false);
         page2.SetActive(false);
+
+        StartCoroutine(TurnBack(animP2));
     }
 
     #endregion
@@ -410,6 +436,8 @@ public class FolderScript : MonoBehaviour {
     {
         pageMain.SetActive(false);
         page1.SetActive(true);
+
+        StartCoroutine(TurnPage(animP2));
     }
 
     public void OpenImport()
@@ -434,6 +462,8 @@ public class FolderScript : MonoBehaviour {
     {
         pageMain.SetActive(false);
         page2.SetActive(true);
+
+        StartCoroutine(TurnPage(animP2));
     }
 
     public void CloseImport()
@@ -457,6 +487,8 @@ public class FolderScript : MonoBehaviour {
         pageMain.SetActive(true);
         page1.SetActive(false);
         page2.SetActive(false);
+
+        StartCoroutine(TurnBack(animP2));
     }
 
     #endregion
@@ -467,6 +499,8 @@ public class FolderScript : MonoBehaviour {
     {
         pageMain.SetActive(false);
         page1.SetActive(true);
+
+        StartCoroutine(TurnPage(animP2));
     }
 
     public void OpenExport()
@@ -487,6 +521,8 @@ public class FolderScript : MonoBehaviour {
     {
         pageMain.SetActive(false);
         page2.SetActive(true);
+
+        StartCoroutine(TurnPage(animP2));
     }
 
     public void CloseExport()
@@ -508,6 +544,8 @@ public class FolderScript : MonoBehaviour {
         pageMain.SetActive(true);
         page1.SetActive(false);
         page2.SetActive(false);
+
+        StartCoroutine(TurnBack(animP2));
     }
 
     #endregion
@@ -518,6 +556,8 @@ public class FolderScript : MonoBehaviour {
     {
         pageMain.SetActive(false);
         page1.SetActive(true);
+
+        StartCoroutine(TurnPage(animP2));
     }
 
     public void WorkersFree()
@@ -560,6 +600,8 @@ public class FolderScript : MonoBehaviour {
     {
         pageMain.SetActive(false);
         page2.SetActive(true);
+
+        StartCoroutine(TurnPage(animP2));
     }
 
     public void TouristsFree()
@@ -600,6 +642,8 @@ public class FolderScript : MonoBehaviour {
     {
         pageMain.SetActive(false);
         page3.SetActive(true);
+
+        StartCoroutine(TurnPage(animP2));
     }
 
     public void StudentsFree()
@@ -644,6 +688,8 @@ public class FolderScript : MonoBehaviour {
         page1.SetActive(false);
         page2.SetActive(false);
         page3.SetActive(false);
+
+        StartCoroutine(TurnBack(animP2));
     }
 
     #endregion
@@ -651,7 +697,7 @@ public class FolderScript : MonoBehaviour {
     //Called when the player hits the back button on the main pages
     public void Back()
     {
-        Reset();
+        //Reset();
         
         //Sets the current to be deactivated
         current.SetActive(false);
@@ -659,6 +705,8 @@ public class FolderScript : MonoBehaviour {
         current = frontPage;
 
         current.SetActive(true);
+
+        StartCoroutine(TurnBack(animP1));
     }
 
     //Disables the buttons on a page if the player has selected a policy
@@ -730,15 +778,15 @@ public class FolderScript : MonoBehaviour {
         //Activate the player
         player.SetActive(true);
 
-        RotationScript rot = this.transform.parent.GetComponent<RotationScript>();
+        //RotationScript rot = this.transform.parent.GetComponent<RotationScript>();
 
-        rot.endPos = GameObject.Find(planet + "FolderStartPos").transform;
-        rot.startTime = Time.time;
-        rot.journeyLength = Vector3.Distance(rot.startPos.position, rot.endPos.position);
+        //rot.endPos = GameObject.Find(planet + "FolderStartPos").transform;
+        //rot.startTime = Time.time;
+        //rot.journeyLength = Vector3.Distance(rot.startPos.position, rot.endPos.position);
 
-        StartCoroutine(FolderIn(rot));
-
-
+        StartCoroutine(FolderIn());
+        StartCoroutine(TurnBack(animP1));
+        StartCoroutine(TurnBack(animP2));
 
         //Sets the current page active to false
         current.SetActive(false);
@@ -810,16 +858,38 @@ public class FolderScript : MonoBehaviour {
         Reset();
     }
 
-    IEnumerator FolderIn(RotationScript rot)
+    IEnumerator FolderIn()
     {
         anim.Play("Close");
+
         yield return new WaitForSeconds(1f);
-        rot.enabled = true;
-        yield return new WaitForSeconds(1f);
-        rot.endPos = GameObject.Find("FolderEndPos").transform;
-        rot.enabled = false;
 
         //Deactivate the camera for the folder
         gameObject.SetActive(false);
+    }
+
+    IEnumerator TurnPage(Animator animP)
+    {
+        current.SetActive(false);
+
+        animP.Play("Page Turn");
+
+        yield return new WaitForSeconds(0.25f);
+
+        current.SetActive(true);
+
+    }
+
+    IEnumerator TurnBack(Animator animP)
+    {
+        animP.Play("Page Back");
+
+        new WaitForSeconds(0.5f);
+
+        current.SetActive(false);
+
+        yield return new WaitForSeconds(1.0f);
+
+        current.SetActive(true);
     }
 }
