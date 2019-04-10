@@ -178,85 +178,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &123231829
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 123231830}
-  - component: {fileID: 123231832}
-  - component: {fileID: 123231831}
-  m_Layer: 5
-  m_Name: PolicyText
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &123231830
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 123231829}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 522710930}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.2, y: 76}
-  m_SizeDelta: {x: 784.8, y: 56.1}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &123231831
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 123231829}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: Test text
---- !u!222 &123231832
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 123231829}
-  m_CullTransparentMesh: 0
 --- !u!1 &123969428
 GameObject:
   m_ObjectHideFlags: 0
@@ -693,7 +614,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &522710930
 RectTransform:
   m_ObjectHideFlags: 0
@@ -708,9 +629,9 @@ RectTransform:
   - {fileID: 1145337413}
   - {fileID: 1500209078}
   - {fileID: 2081710017}
-  - {fileID: 123231830}
-  - {fileID: 1165173840}
-  - {fileID: 853813813}
+  - {fileID: 2054786701}
+  - {fileID: 738363591}
+  - {fileID: 1283451275}
   - {fileID: 682792911}
   - {fileID: 1572948168}
   - {fileID: 571395679}
@@ -1053,7 +974,7 @@ GameObject:
   - component: {fileID: 680478293}
   - component: {fileID: 680478294}
   m_Layer: 5
-  m_Name: TaskText
+  m_Name: Task1Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1075,8 +996,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.2, y: 117.2}
-  m_SizeDelta: {x: 784.8, y: 56.1}
+  m_AnchoredPosition: {x: -1.2, y: 37.6}
+  m_SizeDelta: {x: 784.8, y: 121.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &680478293
 CanvasRenderer:
@@ -1108,10 +1029,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -1154,8 +1075,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.2, y: -101.2}
-  m_SizeDelta: {x: 784.8, y: 74.4}
+  m_AnchoredPosition: {x: -1.2, y: 23}
+  m_SizeDelta: {x: 784.8, y: 140.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &682792912
 CanvasRenderer:
@@ -1187,11 +1108,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
+    m_MinSize: 2
+    m_MaxSize: 202
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -1199,7 +1120,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Test text
---- !u!1 &748320599
+--- !u!1 &738363590
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1207,129 +1128,42 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 748320600}
-  - component: {fileID: 748320601}
-  - component: {fileID: 748320602}
+  - component: {fileID: 738363591}
+  - component: {fileID: 738363593}
+  - component: {fileID: 738363592}
   m_Layer: 5
-  m_Name: PolicyText
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &748320600
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 748320599}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1921972780}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.2, y: -46.2}
-  m_SizeDelta: {x: 784.8, y: 56.1}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &748320601
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 748320599}
-  m_CullTransparentMesh: 0
---- !u!114 &748320602
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 748320599}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: Test text
---- !u!1 &853813812
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 853813813}
-  - component: {fileID: 853813814}
-  - component: {fileID: 853813815}
-  m_Layer: 5
-  m_Name: Phone2Text
+  m_Name: Task3Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &853813813
+--- !u!224 &738363591
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 853813812}
+  m_GameObject: {fileID: 738363590}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 522710930}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.2, y: -42}
-  m_SizeDelta: {x: 784.8, y: 56.1}
+  m_AnchoredPosition: {x: -1.2, y: 22.99999}
+  m_SizeDelta: {x: 784.8, y: 140.9}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &853813814
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 853813812}
-  m_CullTransparentMesh: 0
---- !u!114 &853813815
+--- !u!114 &738363592
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 853813812}
+  m_GameObject: {fileID: 738363590}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
@@ -1345,11 +1179,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
+    m_MinSize: 2
+    m_MaxSize: 202
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -1357,6 +1191,14 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Test text
+--- !u!222 &738363593
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 738363590}
+  m_CullTransparentMesh: 0
 --- !u!1 &876391772
 GameObject:
   m_ObjectHideFlags: 0
@@ -1387,136 +1229,98 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   noOfTasks: 0
-  A: "horrible! You better do something about it, otherwise you won\u2019t be here
-    for very long! Remember, if the cabinet doesn\u2019t support you, they will replace
-    you!"
-  B: "not that good! Hopefully you\u2019ll do better tomorrow, because if the cabinet
-    doesn\u2019t support you, they might decide to replace you!"
-  C: "good! Keep this up and you\u2019ll prove to be a great PM! Remember, the more
-    daily tasks you complete, the more support you\u2019ll get from the cabinet!"
-  D: brilliant! Keep this up and surely great things will follow for the Moon! The
-    cabinet definitely made the right choice with you and they know it!
-  A_2: "horrible! You need to work on that, otherwise you\u2019ll be out soon! The
-    cabinet will be thinking of alternate options for Prime Minister!"
-  B_2: "not that good! Hopefully you\u2019ll do better tomorrow, cause if the cabinet
-    doesn\u2019t support you, they might decide to replace you!"
-  C_2: "good! Remember, the more daily tasks you complete, the more support you\u2019ll
-    get from the cabinet!"
-  D_2: "brilliant! You\u2019re shaping up to be a great Prime Minister. Things will
-    get harder, so don\u2019t get cocky!"
-  E: did. Keep in mind that denying access to a nuclear inspector might have serious
-    repercussions on both your relationship with them and the overall system tension.
-  F: "didn\u2019t. That was smart thinking although it makes us seem less independent,
-    it keeps the system on our good side!"
-  phone1A: struck a deal with Mars to supply them with high quality helium, which
-    would generate a good amount of revenue for the Moon, but angered the population
-    slightly.
-  phone1B: "declined Mars\u2019 request to sell some of the high quality helium to
-    them, which was a missed opportunity to generate revenue, but a good move to keep
-    the public support on your side!"
-  phone2A: "You allowed Venus\u2019 Attorney General to pass through Moon territory
-    without supervision, which was a clever way to gain their favor and decrease system
-    tension, but slightly reduced our sense of autonomy."
-  phone2B: "You declined Venus\u2019 request to let their Attorney General pass through
-    Moon territory without going through the proper checks, which they probably didn\u2019t
-    like very much, but it was a bold move to retain the sense of autonomy you\u2019re
-    trying to build up!"
-  phone2C: "Venus called but you didn\u2019t answer. Was this a power move? Or did
-    you just not get to the phone in time? Either way, Venus is not too happy about
-    it!"
-  conferenceA: "\u201CWe\u2019re happy to announce the open border with the Moon will
-    be kept as is following their official detachment from us as an independent planetary
-    body! This is a great step forward for both our planets and a brand new process
-    that no planet has been through before. It is clear that the Moon\u2019s future
-    is in good hands and they are off to an excellent start!\u201D"
-  conferenceB: "\u201CAlthough they pushed a hard bargain, we\u2019re happy to announce
-    the open border with the Moon will be kept as is following their official detachment
-    from us as an independent planetary body! This is a great step forward for both
-    our planets and a brand new process that no planet has been through before. It
-    is clear that the Moon\u2019s government is new and inexperienced, however we
-    are confident that in time they will learn to compromise and discover what is
-    truly best for their planet!\u201D"
-  conferenceC: "\u201CDisappointedly, our \u2018friends\u2019 at the Moon are seeking
-    to start this new period of their existence with poor relations, and refuse to
-    remove their new hard border. It is clear that this will cause too many unnecessary
-    issues for both our and their citizens but it seems they are determined to proceed
-    with this nonsense!\u201D"
-  conferenceA_2: "surprisingly well, you accepted their offers to begin new shipments
-    of rare and strong moon metals to the Martians. This will certainly help negotiations
-    with them in the future and has sourced a very good method of regular income for
-    the new planet. However, your population aren\u2019t too happy to hear that Moon
-    metals are being used to manufacture weapons abroad. Mars has a poor reputation
-    for using military grade weapons on protesters, this might flare up some questions
-    from the press."
-  conferenceB_2: "not great, they are very disappointed you didn\u2019t provide them
-    with your valued moon metals. I\u2019m sure some cabinet members won\u2019t be
-    pleased you declined another trade deal with a wealthy planet, but Mars have been
-    receiving bad press recently for being too cruel to their people. So i think the
-    people of the Moon have faith in your decision."
-  policyName:
-  - No Tax
-  - Low Tax
-  - High Tax
-  - Very High Tax
-  - Free Worker Movement
-  - No Worker Movement
-  - Free Tourist Movement
-  - No Tourist Movement
-  - Free Student Movement
-  - No Student Movement
-  - Open Export
-  - Closed Export
-  - Open Import
-  - Closed Import
-  - Open Trade
-  - Closed Trade
-  - Education
-  - Healthcare
-  - National Services
-  - Border Control
-  - Worker Regulations
-  - Wage Increase
-  - Wage Decrease
-  - Pension Increase
-  - Pension Decrease
-  - Tax Increase
-  - Tax Decrease
-  policyDescription:
-  - their citizens will pay no taxes while on the Moon.
-  - their citizens will pay low taxes while on the Moon.
-  - their citizens will pay high taxes while on the Moon.
-  - their citizens will pay very high taxes while on the Moon.
-  - their citizens will have the right to work on the Moon.
-  - their citizens will not have the right to work on the Moon.
-  - their citizens will have the right to visit the Moon as tourists.
-  - their citizens will not have the right to visit the Moon as tourists.
-  - their citizens will have the right to study on the Moon.
-  - their citizens will not have the right to study on the Moon.
-  - the Moon will open the export of trade goods to them.
-  - the Moon will close the export of trade goods to them.
-  - the Moon will open the import of trade goods from there.
-  - the Moon will close the import of trade goods from there.
-  - the Moon will allow trade routes to pass through its territory for them.
-  - the Moon will refuse trade routes to pass through its territory for them.
-  - the Moon will increase spending to schools and universities.
-  - the Moon will increase spending to hospitals.
-  - the Moon will increase spending to Police and other public sectors.
-  - the Moon will increase security around all of our borders.
-  - the Moon will ensure that union workers are guaranteed better rights.
-  - the Moon will increase the minimum wage of all ages.
-  - the Moon will decrease the minimum limit on wages.
-  - the Moon will increase the workplace pension minimum.
-  - the Moon will remove the legally required workplace pension scheme.
-  - the Moon will increase taxes on tobacco and alcohol.
-  - the Moon will decrease taxation on tobacco products and alcohol.
-  taskText: {fileID: 2081710018}
-  taskText_2: {fileID: 680478294}
-  policy1Text: {fileID: 123231831}
-  policyText_2: {fileID: 748320602}
-  phone1Text: {fileID: 1165173842}
-  phone2Text: {fileID: 853813815}
+  task1Complete_1: "Starting off well! You managed to complete the cabinet\u2019s
+    request of improving your relations with Earth and this should have a long-lasting
+    effect for sure! As the closest planet to us, it is crucial that we maintain a
+    good relationship with them, not only are they our allies, but many of our people
+    have jobs and businesses there that will also be affected if this rapport is diminished."
+  task1Fail_1: "Not a great start\u2026 There was a reason the cabinet asked you to
+    improve our rapport with Earth! They are the closest planet to us and many of
+    our people have jobs and run businesses there. Those same people are now being
+    treated badly and with suspicion. It will be difficult to recover from this."
+  task2Complete_1: "Your second task was to raise Mars\u2019 opinion of us, which
+    you managed to do very successfully! Excellent job! A planet like Mars is usually
+    hard to impress as they value power and control. Making a good impression on them
+    on your first day has surely opened the door to a better relationship in the future!"
+  task2Fail_1: "Unfortunately your second task wasn\u2019t a success\u2026 Mars\u2019
+    value power and control, so the fact that you got off on the wrong foot with them
+    is not good. They are the type of people that will remember the first impression
+    for a while, hopefully you can recover from this, but it would have been good
+    get on their good side early on."
+  task3Complete_1: "Independence cannot work out if our people are not united. Luckily,
+    it appears you know what needs getting done to lead us there! The more the people
+    agree with each other, the easier it will be for the Moon to thrive. You\u2019ve
+    done well on this end and you should do your best to keep it up going forward."
+  task3Fail_1: "It is strange how the vote for independence was almost unanimous,
+    yet now the people are beginning to drift apart. The cabinet would definitely
+    not appreciate that and worst of all\u2026 they would blame you. Surely, there
+    are things you can do to fix that? Think what actions would be good to unite the
+    people."
+  task4Complete_1: "A leader is only as good as his following, and you\u2019ve shown
+    you can get people behind you! Good job! It seems like the cabinet made a good
+    choice when they picked you. Although, the public might not always know what is
+    best for them, it is best for you if they like you! And you clearly know how to
+    get them to do that."
+  task4Fail_1: "The fourth task will be a tough one to recover from\u2026 The crowd
+    tends to have a ripple effect that might cause you a lot of trouble. Hopefully,
+    you\u2019ll be able to fix this, but keep in mind that as it stands, the public
+    is not on your side and the cabinet will make note of that."
+  conferenceAccept_1: "The result of your conference call with Earth made headlines
+    as their president made the following announcement on social media: \u201CWe\u2019re
+    happy to announce the open border with the Moon will be kept as is following their
+    official detachment from us as an independent planetary body! This is a great
+    step forward for both our planets and a brand new process that no planet  has
+    been through before.\u201D "
+  conferenceDecline_1: "The result of your conference call with Earth made headlines
+    as their president made the following announcement on social media: \u201CDisappointedly,
+    our \u2018friends\u2019 at the Moon are seeking to start this new period of their
+    existence with poor relations, and refuse to remove their new hard border. It
+    is clear that this will cause too many unnecessary issues for both our and their
+    citizens but it seems they are determined to proceed with this nonsense!\u201D"
+  task1Complete_2: "Your first task for the day was to increase our revenue and you
+    successfully did so! Now, you\u2019ll be able to improve the quality of life for
+    our citizens and fix some long-standing issues within our community. Either way,
+    the generated revenue will definitely come in handy!"
+  task1Fail_2: "Your first task for the day was to increase our revenue, but you were
+    unfortunately not successful in achieving this. Not only will the cabinet be unhappy
+    about this, but it might cause frustration within the public. If you don\u2019t
+    find a way to recover from this, it might result in poverty and crime increase!"
+  task2Complete_2: "In terms of your second task, related to the system tension\u2026
+    you were successful! This one is a bit difficult to control and predict, so good
+    job! Unfortunately, with so many variables, the tension will never will be fully
+    gone, but you\u2019ve certainly proved you know how to diffuse it to an extent!"
+  task2Fail_2: "In terms of your second task, related to the system tension\u2026
+    you were unsuccessful. This one is a bit difficult to control and predict, but
+    beware of the consequences! The raise in system tension has caused blockades to
+    form on trade routes, making life difficult for most everyone. You should certainly
+    look into diffusing it as soon as you can."
+  task3Complete_2: Your third task was tied to our relationship with the Venucians.
+    The cabinet requested you ensure it was above average and you pulled through!
+    Venus is known for its vast network of trade routes across the galaxy, so being
+    on good terms with them can only be beneficial! Great job!
+  task3Fail_2: Your third task was tied to our relationship with the Venucians. The
+    cabinet requested you ensure it was above average but you were unable to complete
+    it. Venus is known for its vast network of trade routes across the galaxy, so
+    we will surely suffer for our lack of rapport with them. It might not seem like
+    it now, but the consequences will make themselves very noticeable if this continues.
+  wifeAccept_2: "Your wife also called today with a strange request\u2026 she asked
+    you to ignore or decline Earth\u2019s phone call today. Having done so, it is
+    important to note that denying access to a nuclear inspector due to personal reasons,
+    will surely have serious repercussions on both your relationship with them and
+    the overall system tension."
+  wifeDecline_2: "Your wife also called today with a strange request\u2026 she asked
+    you to ignore or decline Earth\u2019s phone call today. Good thing you didn\u2019t
+    follow through with that request as denying access to a nuclear inspector would
+    have had serious repercussions. Our autonomy may suffer slightly for it, but this
+    act surely diffuses a lot of the tension within the system."
+  task1_1Text: {fileID: 2081710018}
+  task2_1Text: {fileID: 2054786702}
+  task3_1Text: {fileID: 738363592}
+  task4_1Text: {fileID: 1283451276}
+  task1_2Text: {fileID: 680478294}
+  task2_2Text: {fileID: 1386029238}
+  task3_2Text: {fileID: 1683559567}
   conferenceText: {fileID: 682792913}
-  conferenceText_2: {fileID: 2017838624}
   wifeText: {fileID: 2125202104}
   contactText: {fileID: 1516202672}
   saveButton: {fileID: 571395680}
@@ -1610,85 +1414,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1145337412}
   m_CullTransparentMesh: 0
---- !u!1 &1165173839
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1165173840}
-  - component: {fileID: 1165173841}
-  - component: {fileID: 1165173842}
-  m_Layer: 5
-  m_Name: PhoneText
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1165173840
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1165173839}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 522710930}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.2, y: 19}
-  m_SizeDelta: {x: 784.8, y: 56.1}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &1165173841
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1165173839}
-  m_CullTransparentMesh: 0
---- !u!114 &1165173842
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1165173839}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: Test text
 --- !u!1 &1186513724
 GameObject:
   m_ObjectHideFlags: 0
@@ -1760,6 +1485,85 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1186513724}
+  m_CullTransparentMesh: 0
+--- !u!1 &1283451274
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1283451275}
+  - component: {fileID: 1283451277}
+  - component: {fileID: 1283451276}
+  m_Layer: 5
+  m_Name: Task4Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1283451275
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1283451274}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 522710930}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -1.2, y: 22.99999}
+  m_SizeDelta: {x: 784.8, y: 140.9}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1283451276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1283451274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 20
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 202
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Test text
+--- !u!222 &1283451277
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1283451274}
   m_CullTransparentMesh: 0
 --- !u!1 &1322608840
 GameObject:
@@ -1925,6 +1729,85 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1356893559}
   m_CullTransparentMesh: 0
+--- !u!1 &1386029235
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1386029236}
+  - component: {fileID: 1386029237}
+  - component: {fileID: 1386029238}
+  m_Layer: 5
+  m_Name: Task2Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1386029236
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1386029235}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1921972780}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -1.2, y: 37.6}
+  m_SizeDelta: {x: 784.8, y: 121.2}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &1386029237
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1386029235}
+  m_CullTransparentMesh: 0
+--- !u!114 &1386029238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1386029235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 25
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Test text
 --- !u!1 &1387587660
 GameObject:
   m_ObjectHideFlags: 0
@@ -2321,12 +2204,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1921972780}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.1999512, y: -6.9}
-  m_SizeDelta: {x: 784.8, y: 56.1}
+  m_AnchoredPosition: {x: -1.1999512, y: 35}
+  m_SizeDelta: {x: 784.8, y: 121.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1516202671
 CanvasRenderer:
@@ -2358,10 +2241,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -2578,6 +2461,85 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1622800294}
   m_CullTransparentMesh: 0
+--- !u!1 &1683559564
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1683559565}
+  - component: {fileID: 1683559566}
+  - component: {fileID: 1683559567}
+  m_Layer: 5
+  m_Name: Task3Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1683559565
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1683559564}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1921972780}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -1.2, y: 37.6}
+  m_SizeDelta: {x: 784.8, y: 121.2}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &1683559566
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1683559564}
+  m_CullTransparentMesh: 0
+--- !u!114 &1683559567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1683559564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 25
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Test text
 --- !u!1 &1715894871
 GameObject:
   m_ObjectHideFlags: 0
@@ -2884,10 +2846,10 @@ RectTransform:
   - {fileID: 1186513725}
   - {fileID: 1464909019}
   - {fileID: 680478292}
-  - {fileID: 2125202102}
+  - {fileID: 1386029236}
+  - {fileID: 1683559565}
   - {fileID: 1516202670}
-  - {fileID: 748320600}
-  - {fileID: 2017838622}
+  - {fileID: 2125202102}
   - {fileID: 1475223426}
   - {fileID: 1356893560}
   m_Father: {fileID: 216070442}
@@ -2898,85 +2860,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &2017838621
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2017838622}
-  - component: {fileID: 2017838623}
-  - component: {fileID: 2017838624}
-  m_Layer: 5
-  m_Name: ConferenceText
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &2017838622
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2017838621}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1921972780}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.2, y: -88.1}
-  m_SizeDelta: {x: 784.8, y: 74.4}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &2017838623
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2017838621}
-  m_CullTransparentMesh: 0
---- !u!114 &2017838624
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2017838621}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: Test text
 --- !u!1 &2054610337
 GameObject:
   m_ObjectHideFlags: 0
@@ -3128,6 +3011,85 @@ MonoBehaviour:
       enableFptlForForwardOpaque: 1
       enableBigTilePrepass: 1
       isFptlEnabled: 1
+--- !u!1 &2054786700
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2054786701}
+  - component: {fileID: 2054786703}
+  - component: {fileID: 2054786702}
+  m_Layer: 5
+  m_Name: Task2Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2054786701
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2054786700}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 522710930}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -1.2, y: 22.99999}
+  m_SizeDelta: {x: 784.8, y: 140.9}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2054786702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2054786700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 20
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 202
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Test text
+--- !u!222 &2054786703
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2054786700}
+  m_CullTransparentMesh: 0
 --- !u!1 &2067227616
 GameObject:
   m_ObjectHideFlags: 0
@@ -3216,7 +3178,7 @@ GameObject:
   - component: {fileID: 2081710019}
   - component: {fileID: 2081710018}
   m_Layer: 5
-  m_Name: TaskText
+  m_Name: Task1Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3238,8 +3200,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.2, y: 131.4}
-  m_SizeDelta: {x: 784.8, y: 56.1}
+  m_AnchoredPosition: {x: -1.2, y: 23}
+  m_SizeDelta: {x: 784.8, y: 140.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2081710018
 MonoBehaviour:
@@ -3263,11 +3225,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
+    m_MinSize: 2
+    m_MaxSize: 202
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -3313,12 +3275,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1921972780}
-  m_RootOrder: 3
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.2, y: 54.2}
-  m_SizeDelta: {x: 784.8, y: 56.1}
+  m_AnchoredPosition: {x: -1.2, y: 37.2}
+  m_SizeDelta: {x: 784.8, y: 121.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2125202103
 CanvasRenderer:
@@ -3350,10 +3312,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
