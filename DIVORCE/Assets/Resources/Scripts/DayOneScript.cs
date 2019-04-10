@@ -11,7 +11,6 @@ public class DayOneScript : MonoBehaviour {
     GameObject faxLight;
     GameObject binLight;
     GameObject phoneLight;
-    GameObject boardLight;
     GameObject clockLight;
     GameObject policyLight;
     GameObject paper;
@@ -21,13 +20,11 @@ public class DayOneScript : MonoBehaviour {
     public bool pcActive = false;
     public bool faxActive = false;
     public bool phoneLActive = false;
-    public bool boardActive = false;
     public bool clockActive = false;
     public bool policyActive = false;
 
     public bool pcIntractable = false;
     public bool phoneIntractable = false;
-    public bool boardIntractable = false;
     public bool policyIntractable = false;
     public bool conferenceCallInteractable = false;
 
@@ -46,7 +43,6 @@ public class DayOneScript : MonoBehaviour {
     public Text info;
 
     public GameObject pcCamera, chairCamera;
-    public GameObject boardCamera;
     public GameObject canvas, earthCanvas, marsCanvas, venusCanvas, moonCanvas;
     public GameObject earthCamera, marsCamera, venusCamera, folderCamera;
     public GameObject conferenceCamera;
@@ -94,7 +90,6 @@ public class DayOneScript : MonoBehaviour {
         faxLight = GameObject.Find("Highlight Fax");
         binLight = GameObject.Find("Highlight Bin");
         phoneLight = GameObject.Find("Highlight Phone");
-        boardLight = GameObject.Find("Highlight Board");
         clockLight = GameObject.Find("Highlight Clock");
         policyLight = GameObject.Find("Highlight Folder");
         robotPanel = GameObject.Find("RobotPanel");
@@ -164,21 +159,6 @@ public class DayOneScript : MonoBehaviour {
                     }
                 }
             }
-            else if (hit.collider.gameObject.tag == "Board" && boardIntractable)
-            {
-                //If the distance to the object is less than 2.5
-                if (dist <= 2.5f)
-                {
-                    info.text = "Press 'E' to open";
-                    info.gameObject.SetActive(true);
-                }
-
-                if (Input.GetKeyDown(KeyCode.E))
-                {
-                    boardCamera.SetActive(true);
-                    gameObject.SetActive(false);
-                }
-            }
             else if (hit.collider.gameObject.tag == "Folder" && policyIntractable)
             {
                 if (hit.collider.transform.parent.transform.parent.gameObject.name == "Earth Folder" && firstFolder)
@@ -208,7 +188,7 @@ public class DayOneScript : MonoBehaviour {
                         GameObject.Find("MainCamera").transform.LookAt(hit.collider.gameObject.transform);
                     }
 
-                    
+
                 }
                 else if (!firstFolder)
                 {
@@ -227,7 +207,7 @@ public class DayOneScript : MonoBehaviour {
                         rot.startTime = Time.time;
                         rot.journeyLength = Vector3.Distance(rot.startPos.position, rot.endPos.position);
 
-                        if(hit.collider.transform.parent.transform.parent.gameObject.name == "Earth Folder")
+                        if (hit.collider.transform.parent.transform.parent.gameObject.name == "Earth Folder")
                         {
                             folderCamera = earthCamera;
                             marsCanvas.SetActive(false);
@@ -276,7 +256,7 @@ public class DayOneScript : MonoBehaviour {
                         folderScript.type = policyScript.type;
 
                         policyChoices.movementChoice = policyScript.movement;
-                        policyChoices.planetType = policyScript.pfm;                        
+                        policyChoices.planetType = policyScript.pfm;
 
                         folderScript.DisableButton();
                         statsScript.UpdateScreen();
@@ -297,7 +277,7 @@ public class DayOneScript : MonoBehaviour {
                         {
                             statsScript.phonecallAccept.Add(phoneScript.phonecall);
                             holdingPhone = false;
-                        }                      
+                        }
 
                         if (firstPolicy)
                         {
@@ -319,7 +299,7 @@ public class DayOneScript : MonoBehaviour {
                         if (uses == 2)
                         {
                             phoneActive = true;
-                            phoneScript.firstCall = false;                            
+                            phoneScript.firstCall = false;
                             uses = 0;
                         }
 
@@ -570,24 +550,6 @@ public class DayOneScript : MonoBehaviour {
         yield return null;
     }
 
-    IEnumerator Board()
-    {
-        while (boardLight.GetComponent<Light>().intensity > 0)
-        {
-            boardLight.GetComponent<Light>().intensity -= Time.deltaTime;
-            yield return null;
-        }
-
-        if (boardLight.GetComponent<Light>().intensity <= 0)
-        {
-            boardLight.GetComponent<Light>().intensity = maxIntensity;
-
-            yield return null;
-        }
-
-        yield return null;
-    }
-
     IEnumerator Clock()
     {
         while (clockLight.GetComponent<Light>().intensity > 0)
@@ -659,13 +621,6 @@ public class DayOneScript : MonoBehaviour {
     IEnumerator FlashFax()
     {
         StartCoroutine(FaxAndBin());
-        yield return new WaitForSeconds(1.25f);
-        Light();
-    }
-
-    IEnumerator FlashBoard()
-    {
-        StartCoroutine(Board());
         yield return new WaitForSeconds(1.25f);
         Light();
     }

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 //[RequireComponent(typeof(Phone))]
 
@@ -10,12 +11,12 @@ public class InteractionScript : MonoBehaviour
     public GameObject prefab;
     public Transform spawnPos;
     public GameObject phonePanel;
-    public TextMesh info;
+    public Text info;
     GameObject es;
     GameObject paper;
 
     [Header("Cameras")]
-    public GameObject pcCamera, chairCamera, boardCamera;
+    public GameObject pcCamera, chairCamera;
     public GameObject conferenceCamera;
 
     [Header("Canvas")]
@@ -164,6 +165,8 @@ public class InteractionScript : MonoBehaviour
 
             if (hit.collider.gameObject.tag == "Chair" && !holding && chairInteractable)
             {
+                Debug.Log("Hit");
+
                 //If the distance to the object is less than 2.5
                 if (dist <= 2.5f)
                 {
@@ -175,21 +178,6 @@ public class InteractionScript : MonoBehaviour
                         info.gameObject.SetActive(false);
                         chairCamera.SetActive(true);
                     }
-                }
-            }
-            else if (hit.collider.gameObject.tag == "Board")
-            {
-                //If the distance to the object is less than 2.5
-                if (dist <= 2.5f)
-                {
-                    info.text = "Press 'E' to open";
-                    info.gameObject.SetActive(true);
-                }
-
-                if (Input.GetKeyDown(KeyCode.E))
-                {
-                    boardCamera.SetActive(true);
-                    gameObject.SetActive(false);
                 }
             }
             else if (hit.collider.gameObject.tag == "Folder" && !holding && folderInteractable)

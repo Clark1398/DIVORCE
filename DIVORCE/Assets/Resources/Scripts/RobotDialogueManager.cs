@@ -513,9 +513,6 @@ public class RobotDialogueManager : MonoBehaviour {
 
     public void StartRobotDialogue4(RobotDialogue robotDialogue)
     {
-        dayOneScript.boardActive = true;
-        //dayOneScript.Light();
-
         dialogue4 = true;
         panel.SetActive(true);
         robotSentences3.Clear();
@@ -558,8 +555,6 @@ public class RobotDialogueManager : MonoBehaviour {
 
     public void EndRobotDialogue4()
     {
-        dayOneScript.boardIntractable = true;
-
         timer3 = true;
         dialogue4 = false;
         panel.SetActive(false);
