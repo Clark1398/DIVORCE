@@ -6,13 +6,55 @@ public class DoorScript : MonoBehaviour
 {
     public Animator anim;
 
+    public bool lift;
+    public bool up;
+
     public void OnTriggerEnter(Collider other)
     {
-        anim.Play("Open");
+        Debug.Log("Enter");
+
+        if (lift)
+        {
+            if (up)
+            {
+                anim.Play("Down");
+                other.enabled = false;
+                StartCoroutine(SwitchOn(other));
+            }
+            else
+            {
+                anim.Play("Open");
+            }
+        }
+        else
+        {
+            anim.Play("Open");
+        }
     }
 
     public void OnTriggerExit(Collider other)
     {
-        anim.Play("Close");
+        if (lift)
+        {
+            if (up)
+            {
+                up = false;
+            }
+            else
+            {           
+                up = true;
+            }
+        }
+        else
+        {
+            anim.Play("Close");
+        }
+    }
+
+    IEnumerator SwitchOn(Collider col)
+    {
+        yield return new WaitForSeconds(5.0f);
+
+        col.enabled = true;
     }
 }
