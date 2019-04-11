@@ -144,6 +144,8 @@ public class DayOneScript : MonoBehaviour {
             //Get the distance to the object from the current position
             float dist = Vector3.Distance(transform.position, hit.collider.gameObject.transform.position);
 
+            Debug.Log(hit.collider.gameObject.name);
+
             if (hit.collider.gameObject.tag == "Chair" && pcIntractable)
             {
                 //If the distance to the object is less than 2.5
