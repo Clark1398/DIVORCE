@@ -39,7 +39,7 @@ public class Phone : MonoBehaviour
 
     public int calls = 0;
 
-    AudioSource audioSource;
+    public AudioSource audioSource;
 
     GameObject playerObj;
 
@@ -64,8 +64,6 @@ public class Phone : MonoBehaviour
         }
 
         //robotDialogueTrigger = FindObjectOfType<RobotDialogueTrigger>();
-
-        audioSource = GameObject.FindGameObjectWithTag("Phone").GetComponent<AudioSource>();
 
         //timeUntilRingTimerActive = true;
         ringTimerActive = false;
