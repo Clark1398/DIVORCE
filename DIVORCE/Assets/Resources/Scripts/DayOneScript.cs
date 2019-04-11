@@ -234,7 +234,9 @@ public class DayOneScript : MonoBehaviour {
             }
             else if (hit.collider.gameObject.tag == "Fax" && holding)
             {
-                if (dist <= 1.25f)
+                Debug.Log(dist);
+
+                if (dist <= 2.5f)
                 {
                     info.text = "Press 'E' to enact";
                     info.gameObject.SetActive(true);
