@@ -397,7 +397,6 @@ public class DayOneScript : MonoBehaviour {
             //show the player a message to allow them to answer the phone
             else if (phoneScript.isRinging == true && hit.collider.gameObject.tag == "Phone" && dist <= 2.5f)
             {
-                Debug.Log(dist);
                 info.text = "Press 'E' to answer";
                 info.gameObject.SetActive(true);
 

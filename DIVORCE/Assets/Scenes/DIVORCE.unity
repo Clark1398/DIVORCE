@@ -18181,6 +18181,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 84dc1b14aea9ad646bc63764bf137cbe, type: 3}
+--- !u!1 &448664383 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: d45db6c3c91f4d240a2afbb7045206e1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1124510860}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &448664387
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 448664383}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.08426701, y: 0.175947, z: 0.047582}
+  m_Center: {x: 0.4616646, y: 0.9139405, z: 0.026958998}
 --- !u!1 &454316762
 GameObject:
   m_ObjectHideFlags: 0
@@ -18956,6 +18975,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -3.1750002
       objectReference: {fileID: 0}
+    - target: {fileID: 1165174125204892, guid: 0317bf0cd41460945a3b84f1f2f28eb1, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 114416822403404218, guid: 0317bf0cd41460945a3b84f1f2f28eb1,
+        type: 3}
+      propertyPath: phoneCallText
+      value: 
+      objectReference: {fileID: 1492762175}
+    - target: {fileID: 114416822403404218, guid: 0317bf0cd41460945a3b84f1f2f28eb1,
+        type: 3}
+      propertyPath: phoneRing
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114416822403404218, guid: 0317bf0cd41460945a3b84f1f2f28eb1,
+        type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 562628983}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0317bf0cd41460945a3b84f1f2f28eb1, type: 3}
 --- !u!1 &468159035
@@ -22574,6 +22612,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 562333264}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &562628983 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 82053576743617524, guid: 0317bf0cd41460945a3b84f1f2f28eb1,
+    type: 3}
+  m_PrefabInstance: {fileID: 466644773}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &564728783
 GameObject:
   m_ObjectHideFlags: 0
@@ -25846,6 +25890,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 624186832}
   m_CullTransparentMesh: 0
+--- !u!1 &627052442 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1736603681176538, guid: 49ca563e5fb2e2c439093b377f51072a,
+    type: 3}
+  m_PrefabInstance: {fileID: 822026001}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &629217075
 GameObject:
   m_ObjectHideFlags: 0
@@ -26883,6 +26933,10 @@ PrefabInstance:
       value: BinBase
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: c6aa08a37cddd4c4fb5617e646c1cb6e, type: 3}
+      propertyPath: m_TagString
+      value: Bin
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: c6aa08a37cddd4c4fb5617e646c1cb6e, type: 3}
       propertyPath: m_TagString
       value: Bin
       objectReference: {fileID: 0}
@@ -46262,6 +46316,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PhoneLP
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d45db6c3c91f4d240a2afbb7045206e1, type: 3}
+      propertyPath: m_TagString
+      value: Phone
+      objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: d45db6c3c91f4d240a2afbb7045206e1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.5037497
@@ -60862,6 +60920,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1165944474}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1492762175 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3096847875976378945, guid: a075bfde3e153924eabb450910db09d8,
+    type: 3}
+  m_PrefabInstance: {fileID: 8567674825119663437}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1495720910
 GameObject:
   m_ObjectHideFlags: 0
@@ -75590,6 +75660,12 @@ RectTransform:
   m_AnchoredPosition: {x: -505.0008, y: -379.99988}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1862914982 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4314851971606436361, guid: f40f21c0f7d3db24baa4a25711978885,
+    type: 3}
+  m_PrefabInstance: {fileID: 4315710062741142015}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1864523204
 GameObject:
   m_ObjectHideFlags: 0
@@ -88361,6 +88437,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 803946455}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2128875529 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1654014546819282, guid: 49ca563e5fb2e2c439093b377f51072a,
+    type: 3}
+  m_PrefabInstance: {fileID: 822026001}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2130508090 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8102005737374766779, guid: 87a1144dec1227c42b7125216d321179,
@@ -91299,6 +91381,16 @@ PrefabInstance:
       propertyPath: chairInteractable
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6562494467472765972, guid: a075bfde3e153924eabb450910db09d8,
+        type: 3}
+      propertyPath: conferenceCamera
+      value: 
+      objectReference: {fileID: 2128875529}
+    - target: {fileID: 6562494467472765972, guid: a075bfde3e153924eabb450910db09d8,
+        type: 3}
+      propertyPath: conferenceCanvas
+      value: 
+      objectReference: {fileID: 627052442}
     - target: {fileID: 6696310552782871696, guid: a075bfde3e153924eabb450910db09d8,
         type: 3}
       propertyPath: info
@@ -91369,6 +91461,21 @@ PrefabInstance:
       propertyPath: spawnPos
       value: 
       objectReference: {fileID: 6508545578008483462}
+    - target: {fileID: 6696310552782871696, guid: a075bfde3e153924eabb450910db09d8,
+        type: 3}
+      propertyPath: phonePanel
+      value: 
+      objectReference: {fileID: 1335934628}
+    - target: {fileID: 6696310552782871696, guid: a075bfde3e153924eabb450910db09d8,
+        type: 3}
+      propertyPath: robotPanel
+      value: 
+      objectReference: {fileID: 1862914982}
+    - target: {fileID: 6696310552782871696, guid: a075bfde3e153924eabb450910db09d8,
+        type: 3}
+      propertyPath: conferenceCamera
+      value: 
+      objectReference: {fileID: 2128875529}
     - target: {fileID: 8567674824686337472, guid: a075bfde3e153924eabb450910db09d8,
         type: 3}
       propertyPath: m_LocalPosition.x
