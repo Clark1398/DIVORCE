@@ -144,8 +144,6 @@ public class DayOneScript : MonoBehaviour {
             //Get the distance to the object from the current position
             float dist = Vector3.Distance(transform.position, hit.collider.gameObject.transform.position);
 
-            Debug.Log(hit.collider.gameObject.name);
-
             if (hit.collider.gameObject.tag == "Chair" && pcIntractable)
             {
                 //If the distance to the object is less than 2.5
@@ -174,15 +172,16 @@ public class DayOneScript : MonoBehaviour {
 
                     if (Input.GetKeyDown(KeyCode.E))
                     {
-                        //RotationScript rot = hit.collider.transform.parent.transform.parent.gameObject.GetComponent<RotationScript>();
+                        RotationScript rot = hit.collider.transform.parent.gameObject.GetComponent<RotationScript>();
 
-                        //rot.endPos = GameObject.Find("FolderEndPos").transform;
-                        //rot.startTime = Time.time;
-                        //rot.journeyLength = Vector3.Distance(rot.startPos.position, rot.endPos.position);
+                        rot.startPos = GameObject.Find("EarthStartPos").transform;
+                        rot.endPos = GameObject.Find("EndPos").transform;
+                        rot.startTime = Time.time;
+                        rot.journeyLength = Vector3.Distance(rot.startPos.position, rot.endPos.position);
 
                         folderCamera = earthCamera;
 
-                        StartCoroutine(FolderOpen());
+                        StartCoroutine(FolderOpen(rot));
 
                         marsCanvas.SetActive(false);
                         venusCanvas.SetActive(false);
@@ -203,41 +202,43 @@ public class DayOneScript : MonoBehaviour {
 
                     if (Input.GetKeyDown(KeyCode.E))
                     {
-                        RotationScript rot = hit.collider.transform.parent.transform.parent.gameObject.GetComponent<RotationScript>();
+                        RotationScript rot = hit.collider.transform.parent.gameObject.GetComponent<RotationScript>();
 
-                        rot.endPos = GameObject.Find("FolderEndPos").transform;
-                        rot.startTime = Time.time;
-                        rot.journeyLength = Vector3.Distance(rot.startPos.position, rot.endPos.position);
+                        rot.endPos = GameObject.Find("EndPos").transform;
 
-                        if (hit.collider.transform.parent.transform.parent.gameObject.name == "EarthFolder")
+                        if (hit.collider.transform.parent.gameObject.name == "EarthFolder")
                         {
+                            rot.startPos = GameObject.Find("EarthStartPos").transform;
                             folderCamera = earthCamera;
                             marsCanvas.SetActive(false);
                             venusCanvas.SetActive(false);
                         }
-                        else if (hit.collider.transform.parent.transform.parent.gameObject.name == "MarsFolder")
+                        else if (hit.collider.transform.parent.gameObject.name == "MarsFolder")
                         {
+                            rot.startPos = GameObject.Find("MarsStartPos").transform;
                             folderCamera = marsCamera;
                             earthCanvas.SetActive(false);
                             venusCanvas.SetActive(false);
                         }
-                        else
+                        else if(hit.collider.transform.parent.gameObject.name == "VenusFolder")
                         {
+                            rot.startPos = GameObject.Find("VenusStartPos").transform;
                             folderCamera = venusCamera;
                             earthCanvas.SetActive(false);
                             marsCanvas.SetActive(false);
                         }
 
-                        StartCoroutine(FolderOpen());
+                        rot.startTime = Time.time;
+                        rot.journeyLength = Vector3.Distance(rot.startPos.position, rot.endPos.position);
+
+                        StartCoroutine(FolderOpen(rot));
 
                         GameObject.Find("MainCamera").transform.LookAt(hit.collider.gameObject.transform);
                     }
                 }
             }
             else if (hit.collider.gameObject.tag == "Fax" && holding)
-            {
-                Debug.Log(dist);
-
+            { 
                 if (dist <= 2.5f)
                 {
                     info.text = "Press 'E' to enact";
@@ -341,6 +342,13 @@ public class DayOneScript : MonoBehaviour {
                         {
                             statsScript.phonecallDecline.Add(phoneScript.phonecall);
                             holdingPhone = false;
+
+                            if (firstCallEnacted)
+                            {
+                                robotDialogueTrigger.TriggerRobotDialogue12();
+                                statsScript.phone1Accept = false;
+                                firstCallEnacted = false;
+                            }
                         }
 
                         policyIntractable = true;
@@ -369,12 +377,7 @@ public class DayOneScript : MonoBehaviour {
                             policy = false;
                         }
 
-                        if (firstCallEnacted)
-                        {
-                            robotDialogueTrigger.TriggerRobotDialogue12();
-                            statsScript.phone1Accept = false;
-                            firstCallEnacted = false;
-                        }
+
 
                         if (uses == 2)
                         {
@@ -652,21 +655,16 @@ public class DayOneScript : MonoBehaviour {
 
     #endregion
 
-    IEnumerator FolderOpen()
+    IEnumerator FolderOpen(RotationScript rot)
     {
         policyIntractable = false;
 
         folderScript = folderCamera.GetComponent<FolderScript>();
-        //rot.enabled = true;
-        folderScript.anim.Play("Open");
+        rot.enabled = true;     
 
         yield return new WaitForSeconds(1.25f);
 
-        
-
-        //rot.endPos = GameObject.Find(folderScript.planet + "FolderStartPos").transform;
-
-        //rot.enabled = false;
+        rot.enabled = false;
         folderScript.enabled = true;
         folder = true;
 
@@ -675,7 +673,7 @@ public class DayOneScript : MonoBehaviour {
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
 
-        
+        folderScript.anim.Play("Open");
 
         this.transform.position = folderScript.playerSpawn.transform.position;
 

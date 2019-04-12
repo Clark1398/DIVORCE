@@ -98,9 +98,7 @@ public class ChairCameraScript : MonoBehaviour
 
         //If the ray hits an object
         if (Physics.Raycast(ray, out hit))
-        {
-            Debug.Log(hit.collider.gameObject.tag);
-
+        { 
             //If the object has a Tag of PC then display a message to the player telling them they can "open" this object 
             if (hit.collider.gameObject.tag == "PC" && !moonFolderFirst)
             {

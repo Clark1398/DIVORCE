@@ -20,7 +20,6 @@ public class InteractionScript : MonoBehaviour
     public GameObject conferenceCamera;
 
     [Header("Canvas")]
-    public GameObject canvas;
     public GameObject conferenceCanvas;
 
     Phone phoneScript;
@@ -190,31 +189,35 @@ public class InteractionScript : MonoBehaviour
 
                     if (Input.GetKeyDown(KeyCode.E))
                     {
-                        RotationScript rot = hit.collider.transform.parent.transform.parent.gameObject.GetComponent<RotationScript>();
+                        RotationScript rot = hit.collider.transform.parent.gameObject.GetComponent<RotationScript>();
 
-                        rot.endPos = GameObject.Find("FolderEndPos").transform;
-                        rot.startTime = Time.time;
-                        rot.journeyLength = Vector3.Distance(rot.startPos.position, rot.endPos.position);
+                        rot.endPos = GameObject.Find("EndPos").transform;
 
-                        if (hit.collider.transform.parent.transform.parent.gameObject.name == "Earth Folder")
+
+                        if (hit.collider.transform.parent.gameObject.name == "EarthFolder")
                         {
+                            rot.startPos = GameObject.Find("EarthStartPos").transform;
                             folderCamera = earthCamera;
                             marsCanvas.SetActive(false);
                             venusCanvas.SetActive(false);
                         }
-                        else if (hit.collider.transform.parent.transform.parent.gameObject.name == "Mars Folder")
+                        else if (hit.collider.transform.parent.gameObject.name == "MarsFolder")
                         {
+                            rot.startPos = GameObject.Find("MarsStartPos").transform;
                             folderCamera = marsCamera;
                             earthCanvas.SetActive(false);
                             venusCanvas.SetActive(false);
                         }
-                        else
+                        else if (hit.collider.transform.parent.gameObject.name == "VenusFolder")
                         {
+                            rot.startPos = GameObject.Find("VenusStartPos").transform;
                             folderCamera = venusCamera;
                             earthCanvas.SetActive(false);
                             marsCanvas.SetActive(false);
                         }
 
+                        rot.startTime = Time.time;
+                        rot.journeyLength = Vector3.Distance(rot.startPos.position, rot.endPos.position);
                         StartCoroutine(FolderOut(rot));
                         folderCamera.GetComponent<FolderScript>().enabled = true;
                         GameObject.Find("MainCamera").transform.LookAt(hit.collider.gameObject.transform);
@@ -742,8 +745,6 @@ public class InteractionScript : MonoBehaviour
         yield return new WaitForSeconds(1.25f);
 
         folderScript = folderCamera.GetComponent<FolderScript>();
-
-        rot.endPos = GameObject.Find(folderScript.planet + "FolderStartPos").transform;
 
         rot.enabled = false;
         folder = true;

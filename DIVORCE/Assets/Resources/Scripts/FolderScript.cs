@@ -123,13 +123,13 @@ public class FolderScript : MonoBehaviour {
                 //Activate the player
                 player.SetActive(true);
 
-                //RotationScript rot = this.transform.parent.GetComponent<RotationScript>();
+                RotationScript rot = this.transform.parent.GetComponent<RotationScript>();
 
-                //rot.endPos = GameObject.Find(planet + "FolderStartPos").transform;
-                //rot.startTime = Time.time;
-                //rot.journeyLength = Vector3.Distance(rot.startPos.position, rot.endPos.position);
+                rot.endPos = GameObject.Find(planet + "StartPos").transform;
+                rot.startTime = Time.time;
+                rot.journeyLength = Vector3.Distance(rot.startPos.position, rot.endPos.position);
 
-                StartCoroutine(FolderIn());
+                StartCoroutine(FolderIn(rot));
             }
         }
 
@@ -778,13 +778,14 @@ public class FolderScript : MonoBehaviour {
         //Activate the player
         player.SetActive(true);
 
-        //RotationScript rot = this.transform.parent.GetComponent<RotationScript>();
+        RotationScript rot = this.transform.parent.GetComponent<RotationScript>();
 
-        //rot.endPos = GameObject.Find(planet + "FolderStartPos").transform;
-        //rot.startTime = Time.time;
-        //rot.journeyLength = Vector3.Distance(rot.startPos.position, rot.endPos.position);
+        rot.startPos = GameObject.Find("EndPos").transform;
+        rot.endPos = GameObject.Find(planet + "StartPos").transform;
+        rot.startTime = Time.time;
+        rot.journeyLength = Vector3.Distance(rot.startPos.position, rot.endPos.position);
 
-        StartCoroutine(FolderIn());
+        StartCoroutine(FolderIn(rot));
         StartCoroutine(TurnBack(animP1));
         StartCoroutine(TurnBack(animP2));
 
@@ -858,11 +859,18 @@ public class FolderScript : MonoBehaviour {
         Reset();
     }
 
-    IEnumerator FolderIn()
+    IEnumerator FolderIn(RotationScript rot)
     {
         anim.Play("Close");
 
         yield return new WaitForSeconds(1f);
+
+        rot.Run();
+        rot.enabled = true;
+
+        yield return new WaitForSeconds(1.25f);
+
+        rot.enabled = false;
 
         //Deactivate the camera for the folder
         gameObject.SetActive(false);

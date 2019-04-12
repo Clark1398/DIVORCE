@@ -490,9 +490,9 @@ public class Stats : MonoBehaviour {
         if (time <= 0)
         {
             GameObject.Find("GameInfoObject").name = "GameInfoObject DDL";
-            GameObject.Find("Earth Folder").name = "Earth Folder DDL";
-            GameObject.Find("Mars Folder").name = "Mars Folder DDL";
-            GameObject.Find("Venus Folder").name = "Venus Folder DDL";
+            GameObject.Find("EarthFolder").name = "Earth Folder DDL";
+            GameObject.Find("MarsFolder").name = "Mars Folder DDL";
+            GameObject.Find("VenusFolder").name = "Venus Folder DDL";
 
             DontDestroyOnLoad(GameObject.Find("GameInfoObject DDL"));
             DontDestroyOnLoad(GameObject.Find("Earth Folder DDL"));
