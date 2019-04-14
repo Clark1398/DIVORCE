@@ -514,7 +514,7 @@ public class EndOfDayScript : MonoBehaviour
             statsScript.conferenceAccept = false;
             statsScript.conferenceAcceptWithHaggle = false;
             loadingPanel.gameObject.SetActive(true);
-            SceneManager.LoadScene("Actual Game");
+            SceneManager.LoadScene("DIVORCE");
         }
     }
 

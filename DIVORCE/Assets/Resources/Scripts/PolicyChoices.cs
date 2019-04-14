@@ -26,13 +26,9 @@ public class PolicyChoices : MonoBehaviour {
         vs = GameObject.Find("Venus Folder DDL");
 
         gio.name = "GameInfoObject";
-        es.name = "Earth Folder";
-        ms.name = "Mars Folder";
-        vs.name = "Venus Folder";
-
-        ints.earthCamera = ec;
-        ints.marsCamera = mc;
-        ints.venusCamera = vc;
+        es.name = "EarthFolder";
+        ms.name = "MarsFolder";
+        vs.name = "VenusFolder";
     }
 
 }

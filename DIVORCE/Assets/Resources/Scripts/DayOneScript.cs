@@ -101,8 +101,6 @@ public class DayOneScript : MonoBehaviour {
 
         Light();
 
-        //robotPanel.gameObject.SetActive(true);
-
         paper = (GameObject)Resources.Load("Policy", typeof(GameObject));
 
         if (GameObject.Find("GameInfoObject DDL") != null)
@@ -716,9 +714,9 @@ public class DayOneScript : MonoBehaviour {
 
         if (GameObject.Find("GameInfoObject DDL"))
         {
-            GameObject.Destroy(GameObject.Find("Earth Folder"));
-            GameObject.Destroy(GameObject.Find("Mars Folder"));
-            GameObject.Destroy(GameObject.Find("Venus Folder"));
+            GameObject.Destroy(GameObject.Find("EarthFolder"));
+            GameObject.Destroy(GameObject.Find("MarsFolder"));
+            GameObject.Destroy(GameObject.Find("VenusFolder"));
             GameObject.Destroy(GameObject.Find("GameInfoObject"));
 
             policyChoices.UpdatePolicies();

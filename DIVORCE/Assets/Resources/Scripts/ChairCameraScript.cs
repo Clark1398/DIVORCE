@@ -123,8 +123,7 @@ public class ChairCameraScript : MonoBehaviour
                     statsScript.UpdateScreen();
                     canvas.SetActive(false);
 
-                    pcAudio.clip = typingFX;
-                    pcAudio.PlayOneShot(typingFX);
+                    
                     gameObject.SetActive(false);
 
                     pcCamera.GetComponent<CameraScript>().earthCanvas.SetActive(false);
@@ -140,6 +139,9 @@ public class ChairCameraScript : MonoBehaviour
                     {
                         ins.enabled = false;
                     }
+
+                    pcAudio.clip = typingFX;
+                    pcAudio.PlayOneShot(typingFX);
                 }
             }
             else if (hit.collider.gameObject.tag == "MoonFolder" && statsScript.day > 1)

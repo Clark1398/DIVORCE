@@ -87,7 +87,6 @@ public class FolderScript : MonoBehaviour {
 
         if(statsScript == null)
         {
-            //policyChoices = GameObject.Find("GameInfoObject").GetComponent<PolicyChoices>();
             statsScript = GameObject.Find("GameInfoObject").GetComponent<Stats>();
         }
 
