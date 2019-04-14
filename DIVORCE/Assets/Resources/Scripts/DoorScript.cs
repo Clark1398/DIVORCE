@@ -11,15 +11,12 @@ public class DoorScript : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Enter");
-
         if (lift)
         {
             if (up)
             {
                 anim.Play("Down");
-                other.enabled = false;
-                StartCoroutine(SwitchOn(other));
+                StartCoroutine(SwitchOn(this.GetComponent<Collider>()));
             }
             else
             {
@@ -36,12 +33,8 @@ public class DoorScript : MonoBehaviour
     {
         if (lift)
         {
-            if (up)
-            {
-                up = false;
-            }
-            else
-            {           
+            if (!up)
+            {       
                 up = true;
             }
         }
@@ -53,7 +46,11 @@ public class DoorScript : MonoBehaviour
 
     IEnumerator SwitchOn(Collider col)
     {
-        yield return new WaitForSeconds(5.0f);
+        col.enabled = false;
+
+        yield return new WaitForSeconds(5f);
+
+        up = false;
 
         col.enabled = true;
     }
