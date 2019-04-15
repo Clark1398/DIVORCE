@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2ac7821e112675047a3c228bd6340cee
+guid: 1f0735d66ae55984caf5ea3ceb313aed
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -100,13 +100,13 @@ ModelImporter:
     100188: Spine_Jnt_2
     100190: Spine_Jnt_3
     100192: Spine_Jnt_4
-    100194: Venus_BaseHead
-    100196: Venus_BaseMesh
-    100198: Venus_BaseMeshBase
-    100200: Venus_BlendShapes
-    100202: Venus_FacialBlends
-    100204: Venus_Mesh
-    100206: //RootNode
+    100194: //RootNode
+    100196: Venus_BaseHead
+    100198: Venus_BaseMesh
+    100200: Venus_BaseMeshBase
+    100202: Venus_BlendShapes
+    100204: Venus_FacialBlends
+    100206: Venus_Mesh
     400000: Centre_Ctrl
     400002: Character_IK
     400004: Character_Rig
@@ -204,13 +204,13 @@ ModelImporter:
     400188: Spine_Jnt_2
     400190: Spine_Jnt_3
     400192: Spine_Jnt_4
-    400194: Venus_BaseHead
-    400196: Venus_BaseMesh
-    400198: Venus_BaseMeshBase
-    400200: Venus_BlendShapes
-    400202: Venus_FacialBlends
-    400204: Venus_Mesh
-    400206: //RootNode
+    400194: //RootNode
+    400196: Venus_BaseHead
+    400198: Venus_BaseMesh
+    400200: Venus_BaseMeshBase
+    400202: Venus_BlendShapes
+    400204: Venus_FacialBlends
+    400206: Venus_Mesh
     2100000: lambert2
     2100002: fingers_defaultMat1
     2100004: lambert3
@@ -226,7 +226,7 @@ ModelImporter:
     4300006: Venus_Mesh
     4300008: Venus_BaseMesh
     4300010: Venus_BaseMeshBase
-    7400000: Venus Idle
+    7400000: Venus Disapointed
     9500000: //RootNode
     13700000: Venus_BaseHead
     13700002: Venus_BaseMesh
@@ -249,9 +249,10 @@ ModelImporter:
     animationImportErrors: 
     animationImportWarnings: "\nClip 'Take 001' has import animation warnings that
       might lower retargeting quality:\nNote: Activate translation DOF on avatar to
-      improve retargeting quality.\n\t'Jaw_Jnt_1' has translation animation that will
-      be discarded.\n\t'Clav_Jnt' has translation animation that will be discarded.\n\t'Clav_Jnt1'
-      has translation animation that will be discarded.\n"
+      improve retargeting quality.\n\t'Spine_Jnt_3' has translation animation that
+      will be discarded.\n\t'Jaw_Jnt_1' has translation animation that will be discarded.\n\t'Clav_Jnt'
+      has translation animation that will be discarded.\n\t'Clav_Jnt1' has translation
+      animation that will be discarded.\n"
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
@@ -265,17 +266,17 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Venus Idle
+      name: Venus Disapointed
       takeName: Take 001
       firstFrame: 1
-      lastFrame: 120
+      lastFrame: 150
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 1
       loopBlendPositionY: 1

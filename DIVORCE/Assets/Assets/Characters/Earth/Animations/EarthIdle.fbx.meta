@@ -252,7 +252,7 @@ ModelImporter:
     4300004: pSphere2
     4300006: Earth_BaseMesh
     4300008: Earth_BaseMeshBase
-    7400000: Take 001
+    7400000: Earth Idle
     9500000: //RootNode
     13700000: Earth_BaseMesh
     13700002: earth_leader:Group2
@@ -290,7 +290,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Take 001
+      name: Earth Idle
       takeName: Take 001
       firstFrame: 1
       lastFrame: 240

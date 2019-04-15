@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2ac7821e112675047a3c228bd6340cee
+guid: 5e9d46d0364439e47aa3ea26c57e3a4c
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -226,7 +226,7 @@ ModelImporter:
     4300006: Venus_Mesh
     4300008: Venus_BaseMesh
     4300010: Venus_BaseMeshBase
-    7400000: Venus Idle
+    7400000: Venus Confused
     9500000: //RootNode
     13700000: Venus_BaseHead
     13700002: Venus_BaseMesh
@@ -249,9 +249,11 @@ ModelImporter:
     animationImportErrors: 
     animationImportWarnings: "\nClip 'Take 001' has import animation warnings that
       might lower retargeting quality:\nNote: Activate translation DOF on avatar to
-      improve retargeting quality.\n\t'Jaw_Jnt_1' has translation animation that will
-      be discarded.\n\t'Clav_Jnt' has translation animation that will be discarded.\n\t'Clav_Jnt1'
-      has translation animation that will be discarded.\n"
+      improve retargeting quality.\n\t'Spine_Jnt_4' has translation animation that
+      will be discarded.\n\t'Neck_Jnt' has translation animation that will be discarded.\n\t'Head_Jnt'
+      has translation animation that will be discarded.\n\t'Jaw_Jnt_1' has translation
+      animation that will be discarded.\n\t'Clav_Jnt' has translation animation that
+      will be discarded.\n\t'Clav_Jnt1' has translation animation that will be discarded.\n"
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
@@ -265,17 +267,17 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Venus Idle
+      name: Venus Confused
       takeName: Take 001
       firstFrame: 1
-      lastFrame: 120
+      lastFrame: 230
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 1
       loopBlendPositionY: 1
