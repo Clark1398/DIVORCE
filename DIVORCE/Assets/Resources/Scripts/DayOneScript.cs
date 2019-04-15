@@ -432,7 +432,8 @@ public class DayOneScript : MonoBehaviour {
                     Cursor.lockState = CursorLockMode.None;
                     Cursor.visible = true;
                     dialogueManager.speakerPanel.SetActive(true);
-                    femaleHologram.SetActive(true);
+                    info.gameObject.SetActive(false);
+                    //femaleHologram.SetActive(true);
                     robotDialogueManager.conferencePhoneRing = false;
                     dialogueTrigger.TriggerDialogue();
                     folder = true;
