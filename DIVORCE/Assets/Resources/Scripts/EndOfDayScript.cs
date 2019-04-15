@@ -108,10 +108,6 @@ public class EndOfDayScript : MonoBehaviour
 
         noOfTasks = 0;
 
-        task1_1Text.gameObject.SetActive(true);
-        task2_1Text.gameObject.SetActive(false);
-        task3_1Text.gameObject.SetActive(false);
-        task4_1Text.gameObject.SetActive(false);
         wifeText.gameObject.SetActive(false);
         contactText.gameObject.SetActive(false);
         conferenceText.gameObject.SetActive(false);
@@ -129,6 +125,11 @@ public class EndOfDayScript : MonoBehaviour
             day1Panel.gameObject.SetActive(true);
             day2Panel.gameObject.SetActive(false);
 
+            task1_1Text.gameObject.SetActive(true);
+            task2_1Text.gameObject.SetActive(false);
+            task3_1Text.gameObject.SetActive(false);
+            task4_1Text.gameObject.SetActive(false);
+
             CheckTasks();
             CheckConferenceCall();
         }
@@ -136,6 +137,10 @@ public class EndOfDayScript : MonoBehaviour
         {
             day1Panel.gameObject.SetActive(false);
             day2Panel.gameObject.SetActive(true);
+
+            task1_2Text.gameObject.SetActive(true);
+            task2_2Text.gameObject.SetActive(false);
+            task3_2Text.gameObject.SetActive(false);
 
             CheckTasks();
             CheckWife();
@@ -461,47 +466,67 @@ public class EndOfDayScript : MonoBehaviour
     {
         if (task1)
         {
-            task1_1Text.gameObject.SetActive(false);
-            task2_1Text.gameObject.SetActive(true);
+            if (statsScript.day - 1 == 1)
+            {
+                task1_1Text.gameObject.SetActive(false);
+                task2_1Text.gameObject.SetActive(true);
+            }
+            else if (statsScript.day - 1 == 2)
+            {
+                task1_2Text.gameObject.SetActive(false);
+                task2_2Text.gameObject.SetActive(true);
+            }
+
             task2 = true;
             task1 = false;
         }
         else if (task2)
         {
-            task2_1Text.gameObject.SetActive(false);
-            task3_1Text.gameObject.SetActive(true);
+            if (statsScript.day - 1 == 1)
+            {
+                task2_1Text.gameObject.SetActive(false);
+                task3_1Text.gameObject.SetActive(true);
+            }
+            else if (statsScript.day - 1 == 2)
+            {
+                task2_2Text.gameObject.SetActive(false);
+                task3_2Text.gameObject.SetActive(true);
+            }
+
             task3 = true;
             task2 = false;
         }
         else if (task3)
         {
-            task3_1Text.gameObject.SetActive(false);
-            task4_1Text.gameObject.SetActive(true);
+            if (statsScript.day - 1 == 1)
+            {
+                task3_1Text.gameObject.SetActive(false);
+                task4_1Text.gameObject.SetActive(true);
+            }
+            else if (statsScript.day - 1 == 2)
+            {
+                task3_2Text.gameObject.SetActive(false);
+                contactText.gameObject.SetActive(true);
+            }
+
             task4 = true;
             task3 = false;
         }
         else if (task4)
         {
-            task4_1Text.gameObject.SetActive(false);
-
             if (statsScript.day - 1 == 1)
             {
+                task4_1Text.gameObject.SetActive(false);
                 conferenceText.gameObject.SetActive(true);
-                lastCheck = true;
             }
             else if (statsScript.day - 1 == 2)
             {
-                contactText.gameObject.SetActive(true);
-                wife = true;
+                contactText.gameObject.SetActive(false);
+                wifeText.gameObject.SetActive(true);
             }
-            task4 = false;
-        }
-        else if (wife)
-        {
-            contactText.gameObject.SetActive(false);
-            wifeText.gameObject.SetActive(true);
+
             lastCheck = true;
-            wife = false;
+            task4 = false;
         }
         else if (lastCheck)
         {

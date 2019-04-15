@@ -76,6 +76,12 @@ public class InteractionScript : MonoBehaviour
 
     public AudioClip trashFX, faxFX, typingFX, conferenceCallFX;
 
+    Color red = Color.red;
+    Color green = Color.green;
+
+    public Light doorLight1;
+    public Light doorLight2;
+
     //Used to setup the objects
     void Start()
     {
@@ -110,6 +116,9 @@ public class InteractionScript : MonoBehaviour
         paper = (GameObject)Resources.Load("Policy", typeof(GameObject));
 
         FolderOn();
+
+        doorLight1.color = red;
+        doorLight2.color = red;
 
         if (statsScript.day > 1)
         {
@@ -455,6 +464,7 @@ public class InteractionScript : MonoBehaviour
                     conferenceCamera.SetActive(true);
                     Cursor.lockState = CursorLockMode.None;
                     Cursor.visible = true;
+                    info.gameObject.SetActive(false);
                     dialogueManager.speakerPanel.SetActive(true);
                     //femaleHologram.SetActive(true);
                     robotDialogueManager.conferencePhoneRing = false;
@@ -628,6 +638,8 @@ public class InteractionScript : MonoBehaviour
                     conferenceCallInteractable = true;
                     conferenceCallAudio.clip = conferenceCallFX;
                     conferenceCallAudio.Play();
+                    doorLight1.color = green;
+                    doorLight2.color = green;
                     chairInteractable = false;
                     folderInteractable = false;
                     triggerOnce3 = false;
@@ -672,6 +684,8 @@ public class InteractionScript : MonoBehaviour
                     folderInteractable = false;
                     chairInteractable = false;
                     conferenceCallAudio.Play();
+                    doorLight1.color = green;
+                    doorLight2.color = green;
                     robotDialogueTrigger.TriggerRobotDialogue3_6();
                     triggerOnce4 = false;
                 }
@@ -704,6 +718,8 @@ public class InteractionScript : MonoBehaviour
                     conferenceCallInteractable = true;
                     conferenceCallAudio.clip = conferenceCallFX;
                     conferenceCallAudio.Play();
+                    doorLight1.color = green;
+                    doorLight2.color = green;
                     chairInteractable = false;
                     folderInteractable = false;
                     triggerOnce3 = false;

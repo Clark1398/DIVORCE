@@ -57,6 +57,15 @@ public class DayOneScript : MonoBehaviour {
 
     float maxIntensity = 2.0f;
 
+    //Color green = new Color(131, 255, 76, 255);
+    //Color orange = new Color(255, 177, 76, 255);
+
+    Color red = Color.red;
+    Color green = Color.green;
+
+    public Light doorLight1;
+    public Light doorLight2;
+
     public int uses = 0;
 
     Stats statsScript;
@@ -98,6 +107,9 @@ public class DayOneScript : MonoBehaviour {
         faxAudio = GameObject.FindGameObjectWithTag("Fax").GetComponent<AudioSource>();
         pcAudio = GameObject.FindGameObjectWithTag("Fax").GetComponent<AudioSource>();
         conferenceCallAudio = GameObject.FindGameObjectWithTag("ConferenceCall").GetComponent<AudioSource>();
+
+        doorLight1.color = red;
+        doorLight2.color = red;
 
         Light();
 
@@ -314,6 +326,8 @@ public class DayOneScript : MonoBehaviour {
                             conferenceCallAudio.Play();
                             phoneScript.calls = 0;
                             phoneScript.dayOne = false;
+                            doorLight1.color = green;
+                            doorLight2.color = green;
                         }
                     }
                 }
@@ -392,6 +406,8 @@ public class DayOneScript : MonoBehaviour {
                             conferenceCallAudio.Play();
                             phoneScript.calls = 0;
                             phoneScript.dayOne = false;
+                            doorLight1.color = green;
+                            doorLight2.color = green;
                         }
                     }
                 }
