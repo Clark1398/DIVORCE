@@ -456,7 +456,7 @@ public class InteractionScript : MonoBehaviour
                     Cursor.lockState = CursorLockMode.None;
                     Cursor.visible = true;
                     dialogueManager.speakerPanel.SetActive(true);
-                    femaleHologram.SetActive(true);
+                    //femaleHologram.SetActive(true);
                     robotDialogueManager.conferencePhoneRing = false;
                     folder = true;
                     FolderOn();

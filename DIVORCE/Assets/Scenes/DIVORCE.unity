@@ -19884,6 +19884,59 @@ PrefabInstance:
       propertyPath: audioSource
       value: 
       objectReference: {fileID: 562628983}
+    - target: {fileID: 114416822403404218, guid: 0317bf0cd41460945a3b84f1f2f28eb1,
+        type: 3}
+      propertyPath: phoneCalls.Array.data[0]
+      value: "Mars wants you to export your sacred helium to them. \nFax = Revenue
+        \u2191     Mars Opinion \u2191     Public Support \u2193 \nTrash = Mars Opinion
+        \u2193  \nPress 'E' to close"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114416822403404218, guid: 0317bf0cd41460945a3b84f1f2f28eb1,
+        type: 3}
+      propertyPath: phoneCalls.Array.data[1]
+      value: "Venus wants to pass through Moon territory on its way to Earth.\r\nFax
+        = Venus Opinion \u2191     System Tension \u2193     \rAutonomy \u2193\nTrash
+        = Venus Opinion \u2193 \r\nPress 'E' to close"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114416822403404218, guid: 0317bf0cd41460945a3b84f1f2f28eb1,
+        type: 3}
+      propertyPath: phoneCalls.Array.data[3]
+      value: "Earth wants to send inspectors to search your nuclear power stations.\nFax
+        = Earth Opinion \u2191    System Tension \u2193     Autonomy \u2193 \nTrash
+        = Earth Opinion \u2193    System Tension \u2191     Autonomy \u2191  \nPress
+        'E' to close"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114416822403404218, guid: 0317bf0cd41460945a3b84f1f2f28eb1,
+        type: 3}
+      propertyPath: phoneCalls.Array.data[5]
+      value: "Mars wants you to help them acquire the right to legally mine on Jupiter\u2019s
+        moon.\nFax = Mars Opinion \u2191    Revenue \u2191    System Tension \u2193\nTrash
+        = Mars Opinion \u2193    Autonomy \u2191  \nPress 'E' to close"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114416822403404218, guid: 0317bf0cd41460945a3b84f1f2f28eb1,
+        type: 3}
+      propertyPath: phoneCalls.Array.data[6]
+      value: "Earth invites you to attend their Royal Wedding.\nFax = Earth Opinion
+        \u2191    Public Support \u2193     Revenue \u2193    Autonomy -\nTrash =
+        Earth Opinion \u2193    Public Support \u2193     Autonomy \u2191 \nPress
+        'E' to close"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114416822403404218, guid: 0317bf0cd41460945a3b84f1f2f28eb1,
+        type: 3}
+      propertyPath: phoneCalls.Array.data[8]
+      value: "Earth invites you to attend their Royal Wedding.\nFax = Earth Opinion
+        \u2191     Public Support \u2193      Revenue \u2193    Autonomy \u2193\nTrash
+        = Earth Opinion \u2193     Public Support \u2193      Autonomy \u2191 \nPress
+        'E' to close"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114416822403404218, guid: 0317bf0cd41460945a3b84f1f2f28eb1,
+        type: 3}
+      propertyPath: phoneCalls.Array.data[7]
+      value: "Earth invites you to attend their Royal Wedding.\nFax = Earth Opinion
+        \u2191    Public Support \u2193     Revenue \u2193    Autonomy \u2193\nTrash
+        = Earth Opinion \u2193    Public Support \u2193     Autonomy \u2191 \nPress
+        'E' to close"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0317bf0cd41460945a3b84f1f2f28eb1, type: 3}
 --- !u!1 &468159035
@@ -34299,7 +34352,7 @@ PrefabInstance:
     - target: {fileID: 224972146591501548, guid: 49ca563e5fb2e2c439093b377f51072a,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 100
+      value: 123.6
       objectReference: {fileID: 0}
     - target: {fileID: 224972146591501548, guid: 49ca563e5fb2e2c439093b377f51072a,
         type: 3}
@@ -34309,7 +34362,7 @@ PrefabInstance:
     - target: {fileID: 224972146591501548, guid: 49ca563e5fb2e2c439093b377f51072a,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 59
+      value: 72.2
       objectReference: {fileID: 0}
     - target: {fileID: 224523883221628538, guid: 49ca563e5fb2e2c439093b377f51072a,
         type: 3}
@@ -34436,10 +34489,65 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.x
       value: 7.8
       objectReference: {fileID: 0}
+    - target: {fileID: 224751794794924916, guid: 49ca563e5fb2e2c439093b377f51072a,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 141.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 224751794794924916, guid: 49ca563e5fb2e2c439093b377f51072a,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 521.5
+      objectReference: {fileID: 0}
     - target: {fileID: 20819881742952392, guid: 49ca563e5fb2e2c439093b377f51072a,
         type: 3}
       propertyPath: m_AllowMSAA
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224741322096172474, guid: 49ca563e5fb2e2c439093b377f51072a,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 224741322096172474, guid: 49ca563e5fb2e2c439093b377f51072a,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -200.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 224741322096172474, guid: 49ca563e5fb2e2c439093b377f51072a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224741322096172474, guid: 49ca563e5fb2e2c439093b377f51072a,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 270.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 224741322096172474, guid: 49ca563e5fb2e2c439093b377f51072a,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 38.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 224164657649858812, guid: 49ca563e5fb2e2c439093b377f51072a,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -10.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 224164657649858812, guid: 49ca563e5fb2e2c439093b377f51072a,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -3.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 224164657649858812, guid: 49ca563e5fb2e2c439093b377f51072a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224164657649858812, guid: 49ca563e5fb2e2c439093b377f51072a,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 747
       objectReference: {fileID: 0}
     - target: {fileID: 114819384451781032, guid: 49ca563e5fb2e2c439093b377f51072a,
         type: 3}

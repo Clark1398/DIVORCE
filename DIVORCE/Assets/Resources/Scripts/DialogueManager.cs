@@ -2364,7 +2364,7 @@ public class DialogueManager : MonoBehaviour {
         if (statsScript.day == 1)
         {
             dayOneScript.conferenceCallInteractable = false;
-            dayOneScript.femaleHologram.SetActive(false);
+            //dayOneScript.femaleHologram.SetActive(false);
             robotDialogueTrigger.TriggerRobotDialogue14();
             statsScript.conferenceAccept = false;
             statsScript.connferenceCallDecline.Add("Earth Moonpath");
@@ -2374,7 +2374,7 @@ public class DialogueManager : MonoBehaviour {
             statsScript.conferenceAccept = true;
             statsScript.connferenceCallAccept.Add("Mars Moon Metals");
             interactionScript.conferenceCallInteractable = false;
-            interactionScript.femaleHologram.SetActive(false);
+            //interactionScript.femaleHologram.SetActive(false);
             robotDialogueTrigger.TriggerRobotDialogue2_15();
         }
         else if (statsScript.day == 3)
@@ -2382,14 +2382,14 @@ public class DialogueManager : MonoBehaviour {
             statsScript.conferenceAccept = true;
             statsScript.connferenceCallAccept.Add("Venus Gun Trade");
             interactionScript.conferenceCallInteractable = false;
-            interactionScript.femaleHologram.SetActive(false);
+            //interactionScript.femaleHologram.SetActive(false);
             statsScript.time--;
         }
         else if (statsScript.day == 4)
         {
             statsScript.conferenceAccept = true;
             statsScript.connferenceCallAccept.Add("Earth Moon Bill");
-            interactionScript.conferenceCallInteractable = false;
+            //interactionScript.conferenceCallInteractable = false;
             interactionScript.femaleHologram.SetActive(false);
             statsScript.time--;
         }
@@ -2532,7 +2532,7 @@ public class DialogueManager : MonoBehaviour {
     {
         statsScript.conferenceAccept = false;
         conferenceCall.SetActive(false);
-        interactionScript.femaleHologram.SetActive(false);
+        //interactionScript.femaleHologram.SetActive(false);
         player.SetActive(true);
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
