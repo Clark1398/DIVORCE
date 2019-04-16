@@ -77,14 +77,14 @@ public class Stats : MonoBehaviour {
 
         bigHand = GameObject.Find("Small Hand");
 
-        //auto = GameObject.Find("AutSlider").GetComponent<Slider>();
-        //rev = GameObject.Find("RevenueSlider").GetComponent<Slider>();
-        //pubs = GameObject.Find("PopSlider").GetComponent<Slider>();
-        //cabs = GameObject.Find("CabinetSlider").GetComponent<Slider>();
-        //syst = GameObject.Find("SystemSlider").GetComponent<Slider>();
-        //earth = GameObject.Find("EarthSlider").GetComponent<Slider>();
-        //mars = GameObject.Find("MarsSlider").GetComponent<Slider>();
-        //venus = GameObject.Find("VenusSlider").GetComponent<Slider>();
+        auto = GameObject.Find("AutonomySlider").GetComponent<Slider>();
+        rev = GameObject.Find("RevenueSlider").GetComponent<Slider>();
+        pubs = GameObject.Find("PublicSupportSlider").GetComponent<Slider>();
+        cabs = GameObject.Find("CabinetSupportSlider").GetComponent<Slider>();
+        syst = GameObject.Find("SystemTensionSlider").GetComponent<Slider>();
+        earth = GameObject.Find("EarthRelationshipSlider").GetComponent<Slider>();
+        mars = GameObject.Find("MarsRelationshipSlider").GetComponent<Slider>();
+        venus = GameObject.Find("VenusRelationshipSlider").GetComponent<Slider>();
     }
 
     //Sets up the PC Screen initally to display the stats on screen
@@ -332,13 +332,14 @@ public class Stats : MonoBehaviour {
             workVenus.text = wVText;
         }
 
-        //auto.value = stats[0];
-        //pubs.value = stats[2];
-        //cabs.value = stats[3];
-        //syst.value = stats[4];
-        //earth.value = stats[5];
-        //mars.value = stats[6];
-        //venus.value = stats[7];
+        auto.value = stats[0];
+        rev.value = stats[1];
+        pubs.value = stats[2];
+        cabs.value = stats[3];
+        syst.value = stats[4];
+        earth.value = stats[5];
+        mars.value = stats[6];
+        venus.value = stats[7];
 
         //erOld = stats[5] - erNew + erOld;
         //stOld = stats[4] - stNew + stOld;
@@ -822,19 +823,19 @@ public class Stats : MonoBehaviour {
                 pcCamera.SetActive(false);
             }
 
-            //if (auto == null)
-            //{
-            //    auto = GameObject.Find("AutSlider").GetComponent<Slider>();
-            //    rev = GameObject.Find("RevenueSlider").GetComponent<Slider>();
-            //    pubs = GameObject.Find("PopSlider").GetComponent<Slider>();
-            //    cabs = GameObject.Find("CabinetSlider").GetComponent<Slider>();
-            //    syst = GameObject.Find("SystemSlider").GetComponent<Slider>();
-            //    earth = GameObject.Find("EarthSlider").GetComponent<Slider>();
-            //    mars = GameObject.Find("MarsSlider").GetComponent<Slider>();
-            //    venus = GameObject.Find("VenusSlider").GetComponent<Slider>();
+            if (auto == null)
+            {
+                auto = GameObject.Find("AutonomySlider").GetComponent<Slider>();
+                rev = GameObject.Find("RevenueSlider").GetComponent<Slider>();
+                pubs = GameObject.Find("PublicSupportSlider").GetComponent<Slider>();
+                cabs = GameObject.Find("CabinetSupportSlider").GetComponent<Slider>();
+                syst = GameObject.Find("SystemTensionSlider").GetComponent<Slider>();
+                earth = GameObject.Find("EarthRelationshipSlider").GetComponent<Slider>();
+                mars = GameObject.Find("MarsRelationshipSlider").GetComponent<Slider>();
+                venus = GameObject.Find("VenusRelationshipSlider").GetComponent<Slider>();
 
-            //    UpdateScreen();
-            //}
+                UpdateScreen();
+            }
 
             if (whiteboardText == null)
             {
