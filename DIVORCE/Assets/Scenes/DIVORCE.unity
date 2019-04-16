@@ -38,7 +38,11 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
+<<<<<<< HEAD
   m_IndirectSpecularColor: {r: 0.040314633, g: 0.058058556, b: 0.091133386, a: 1}
+=======
+  m_IndirectSpecularColor: {r: 0.0064534177, g: 0.005760833, b: 0.005005833, a: 1}
+>>>>>>> parent of ac149b3... Update DIVORCE.unity
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -10995,6 +10999,8 @@ Transform:
   m_PrefabInstance: {fileID: 388662294}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &248231440
+<<<<<<< HEAD
+=======
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -11124,6 +11130,7 @@ CanvasRenderer:
   m_GameObject: {fileID: 248231440}
   m_CullTransparentMesh: 0
 --- !u!1 &248772375
+>>>>>>> parent of ac149b3... Update DIVORCE.unity
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -44612,6 +44619,8 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1027864493}
   m_CullTransparentMesh: 0
+<<<<<<< HEAD
+=======
 --- !u!1 &1028265495
 GameObject:
   m_ObjectHideFlags: 0
@@ -44741,6 +44750,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1028265495}
   m_CullTransparentMesh: 0
+>>>>>>> parent of ac149b3... Update DIVORCE.unity
 --- !u!4 &1030131803 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 84dc1b14aea9ad646bc63764bf137cbe,
