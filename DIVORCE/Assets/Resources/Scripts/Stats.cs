@@ -40,7 +40,7 @@ public class Stats : MonoBehaviour {
     public float[] contactDecline = new float[8];
     int conNum = 0;
     public Text healthEarth, travelEarth, workEarth, healthMars, travelMars, workMars, healthVenus, travelVenus, workVenus;
-    public string hEText, tEText, wEText, hMText, tMText, wMText, hVText, tVText, wVText;
+    public string hEText, tEText, wEText, hMText, tMText, wMText, hVText, tVText, wVText, actionsText;
 
     public bool conferenceAccept = false;
     public bool conferenceAcceptWithHaggle = false;
@@ -458,7 +458,6 @@ public class Stats : MonoBehaviour {
     //    }
     //}
 
-
     public void TimeForward()
     {
         if(bigHand == null)
@@ -855,10 +854,10 @@ public class Stats : MonoBehaviour {
             }
         }
 
-		//if(day == 1)
-		//{
-		//	moonCanvas.SetActive(false);
-		//}
+		if(day == 1)
+		{
+			moonCanvas.SetActive(false);
+		}
     }
 
     public void Submitted()
