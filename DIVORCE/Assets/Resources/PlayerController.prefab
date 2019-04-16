@@ -218,6 +218,8 @@ MonoBehaviour:
   robotPanel: {fileID: 0}
   femaleHologram: {fileID: 0}
   spawnPos: {fileID: 0}
+  doorLight1: {fileID: 0}
+  doorLight2: {fileID: 0}
   uses: 0
   interactionScript: {fileID: 0}
   conferenceCallAudio: {fileID: 0}
@@ -245,7 +247,6 @@ MonoBehaviour:
   pcCamera: {fileID: 0}
   chairCamera: {fileID: 0}
   conferenceCamera: {fileID: 0}
-  canvas: {fileID: 0}
   conferenceCanvas: {fileID: 0}
   statsScript: {fileID: 0}
   folderScript: {fileID: 0}
@@ -285,6 +286,8 @@ MonoBehaviour:
   faxFX: {fileID: 0}
   typingFX: {fileID: 0}
   conferenceCallFX: {fileID: 0}
+  doorLight1: {fileID: 0}
+  doorLight2: {fileID: 0}
 --- !u!1 &8567674824686297574
 GameObject:
   m_ObjectHideFlags: 0

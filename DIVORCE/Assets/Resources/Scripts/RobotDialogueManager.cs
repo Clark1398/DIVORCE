@@ -223,6 +223,9 @@ public class RobotDialogueManager : MonoBehaviour {
     DayOneScript dayOneScript;
     InteractionScript interactionScript;
     Phone phoneScript;
+    LookAtScript LookAtScript;
+
+    GameObject mc, lc;
 
     float timerForDialogue = 5f;
 
@@ -233,6 +236,7 @@ public class RobotDialogueManager : MonoBehaviour {
         dayOneScript = FindObjectOfType<DayOneScript>();
         interactionScript = FindObjectOfType<InteractionScript>();
         phoneScript = FindObjectOfType<Phone>();
+        LookAtScript = FindObjectOfType<LookAtScript>();
 
         robotAudioSource = GameObject.Find("Robot").GetComponent<AudioSource>();
         statsScript = GameObject.Find("GameInfoObject").GetComponent<Stats>();
@@ -340,7 +344,10 @@ public class RobotDialogueManager : MonoBehaviour {
 
     void Start()
     {
-        
+        mc = GameObject.Find("MainCamera");
+        lc = GameObject.Find("LookAtCamera");
+
+        lc.SetActive(false);
     }
 
     #region DayOne
@@ -435,6 +442,10 @@ public class RobotDialogueManager : MonoBehaviour {
             return;
         }
 
+        mc.SetActive(false);
+        lc.SetActive(true);
+        LookAtScript.target = GameObject.FindGameObjectWithTag("Whiteboard");
+
         string robotSentence2 = robotSentences2.Dequeue();
         StopAllCoroutines();
         StartCoroutine(TypeSentence(robotSentence2));
@@ -455,6 +466,10 @@ public class RobotDialogueManager : MonoBehaviour {
         robotAudioSource.Stop();
         panel.SetActive(false);
         timer1 = true;
+        LookAtScript.target = null;
+        lc.SetActive(false);
+        LookAtScript.target = null;
+        mc.SetActive(true);
     }
 
     public void StartRobotDialogue3(RobotDialogue robotDialogue)
@@ -495,6 +510,13 @@ public class RobotDialogueManager : MonoBehaviour {
 
         robotAudioSource.Stop();
 
+        if(robotSentences3.Count == 1)
+        {
+            mc.SetActive(false);
+            lc.SetActive(true);
+            LookAtScript.target = GameObject.FindGameObjectWithTag("Chair");
+        }
+
         if (robotAudio3.Count > 0)
         {
             AudioClip robotAudio = robotAudio3.Dequeue();
@@ -509,6 +531,9 @@ public class RobotDialogueManager : MonoBehaviour {
         dialogue3 = false;
         panel.SetActive(false);
         robotAudioSource.Stop();
+        lc.SetActive(false);
+        LookAtScript.target = null;
+        mc.SetActive(true);
     }
 
     public void StartRobotDialogue4(RobotDialogue robotDialogue)
@@ -598,6 +623,13 @@ public class RobotDialogueManager : MonoBehaviour {
 
         robotAudioSource.Stop();
 
+        if (robotSentences5.Count == 1)
+        {
+            mc.SetActive(false);
+            lc.SetActive(true);
+            LookAtScript.target = GameObject.FindGameObjectWithTag("Fax");
+        }
+
         if (robotAudio5.Count > 0)
         {
             AudioClip robotAudio = robotAudio5.Dequeue();
@@ -612,6 +644,9 @@ public class RobotDialogueManager : MonoBehaviour {
         panel.SetActive(false);
         robotAudioSource.Stop();
         timer2 = true;
+        mc.SetActive(true);
+        LookAtScript.target = null;
+        lc.SetActive(false);
     }
 
     public void StartRobotDialogue6(RobotDialogue robotDialogue)

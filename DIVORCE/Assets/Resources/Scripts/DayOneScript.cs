@@ -230,7 +230,7 @@ public class DayOneScript : MonoBehaviour {
                             earthCanvas.SetActive(false);
                             venusCanvas.SetActive(false);
                         }
-                        else if(hit.collider.transform.parent.gameObject.name == "VenusFolder")
+                        else if (hit.collider.transform.parent.gameObject.name == "VenusFolder")
                         {
                             rot.startPos = GameObject.Find("VenusStartPos").transform;
                             folderCamera = venusCamera;
@@ -248,7 +248,7 @@ public class DayOneScript : MonoBehaviour {
                 }
             }
             else if (hit.collider.gameObject.tag == "Fax" && holding)
-            { 
+            {
                 if (dist <= 2.5f)
                 {
                     info.text = "Press 'E' to enact";
@@ -485,7 +485,7 @@ public class DayOneScript : MonoBehaviour {
                 phonePanel.SetActive(false);
 
                 phoneScript.stopAudio = true;
-                 
+
                 prefab = Instantiate(paper, spawnPos.position, GameObject.Find("MainCamera").transform.rotation);
                 prefab.transform.parent = GameObject.Find("SpawnPos").transform;
                 holding = true;
