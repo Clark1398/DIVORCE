@@ -5,10 +5,11 @@ using UnityEngine.UI;
 
 public class CameraScript : MonoBehaviour {
 
-    public GameObject player, chairCamera, canvas, homePage, statsPage, ocPage, currentPage, lastPage, backButton, ocHomePage, earthPage, marsPage, venusPage, moonCanvas, earthCanvas, marsCanvas, venusCanvas, es;
+    public GameObject player, chairCamera, canvas, homePage, statsPage, ocPage, currentPage, lastPage, backButton, ocHomePage, earthPage, marsPage, venusPage, actionsPage, moonCanvas, earthCanvas, marsCanvas, venusCanvas, es;
     GameObject prefab;
 
     public bool firstPCUse;
+    Text actions;
 
     InteractionScript interactionScript;
     RobotDialogueTrigger robotDialogueTrigger;
@@ -51,6 +52,7 @@ public class CameraScript : MonoBehaviour {
         homePage.SetActive(true);
         statsPage.SetActive(false);
         ocPage.SetActive(false);
+        actionsPage.SetActive(false);
 
         backButton.SetActive(true);
 
@@ -216,6 +218,20 @@ public class CameraScript : MonoBehaviour {
         venusPage.SetActive(false);
 
         currentPage = ocHomePage;
+    }
+
+    public void Actions()
+    {
+        currentPage.SetActive(false);
+
+        lastPage = homePage;
+
+        currentPage = actionsPage;
+
+        currentPage.SetActive(true);
+
+        actions = GameObject.Find("ActionsText").GetComponent<Text>();
+        actions.text = statsScript.actionsText;
     }
 
 

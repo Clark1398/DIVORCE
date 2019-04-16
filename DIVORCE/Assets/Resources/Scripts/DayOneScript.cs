@@ -285,12 +285,19 @@ public class DayOneScript : MonoBehaviour {
                         {
                             statsScript.chosenPolicies.Add(policyScript.chosenPolicy);
                             statsScript.chosenPlanets.Add(policyScript.planet);
+
+                            statsScript.actionsText = statsScript.actionsText + "\n" + policyScript.chosenPolicy + " for " + policyScript.planet;
+                            Debug.Log(statsScript.actionsText);
+
                             uses++;
                             policy = false;
                         }
                         else if (holdingPhone)
                         {
                             statsScript.phonecallAccept.Add(phoneScript.phonecall);
+
+                            statsScript.actionsText = statsScript.actionsText + "\n" + "Phone call from " + phoneScript.phonecall + " accepted";
+
                             holdingPhone = false;
                         }
 
@@ -353,6 +360,9 @@ public class DayOneScript : MonoBehaviour {
                         if (holdingPhone)
                         {
                             statsScript.phonecallDecline.Add(phoneScript.phonecall);
+
+                            statsScript.actionsText = statsScript.actionsText + "\n" + "Phone call from " + phoneScript.phonecall + " declined";
+
                             holdingPhone = false;
 
                             if (firstCallEnacted)

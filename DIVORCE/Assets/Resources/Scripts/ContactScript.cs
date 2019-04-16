@@ -66,6 +66,8 @@ public class ContactScript : MonoBehaviour {
         statsScript.contactNames.Add(cName);
         statsScript.contactPlanets.Add(planet);
 
+        statsScript.actionsText = statsScript.actionsText + "\n" + cName + " for citizens on " + planet + " submitted";
+
         cameraScript.DisableButton();
 
         for(int i = 0; i < app.Length; i++)

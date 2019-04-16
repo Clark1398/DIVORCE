@@ -414,10 +414,14 @@ public class EndOfDayScript : MonoBehaviour
             if (statsScript.wifeCounter == 1)
             {
                 wifeText.text = wifeAccept_2;
+
+                statsScript.actionsText = statsScript.actionsText + "\n" + "Wife's requested accepted";
             }
             else
             {
                 wifeText.text = wifeDecline_2;
+
+                statsScript.actionsText = statsScript.actionsText + "\n" + "Wife's requested declined";
             }
         }
     }

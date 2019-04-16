@@ -292,6 +292,7 @@ public class DialogueManager : MonoBehaviour {
         if (statsScript.day == 1 || statsScript.day == 4)
         {
             planetText.text = dialogue.planet1;
+            
         }
         else if (statsScript.day == 2)
         {
@@ -302,6 +303,8 @@ public class DialogueManager : MonoBehaviour {
             planetText.text = dialogue.planet3;
         }
         continueButton.onClick.AddListener(DisplayNextSentence);
+
+        statsScript.actionsText = statsScript.actionsText + "\n" + "Had conference call with " + planetText.text;
 
         sentences.Clear();
         audio1.Clear();

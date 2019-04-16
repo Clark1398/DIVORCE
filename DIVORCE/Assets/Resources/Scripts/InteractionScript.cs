@@ -280,6 +280,8 @@ public class InteractionScript : MonoBehaviour
                                 statsScript.chosenPolicies.Add(policyScript.chosenPolicy);
                                 statsScript.chosenPlanets.Add(policyScript.planet);
 
+                                statsScript.actionsText = statsScript.actionsText + "\n" + policyScript.chosenPolicy + " for " + policyScript.planet;
+
                                 if (statsScript.day == 2)
                                 {
                                     if (uses == 1)
@@ -317,6 +319,8 @@ public class InteractionScript : MonoBehaviour
                             }
 
                             statsScript.phonecallAccept.Add(phoneScript.phonecall);
+
+                            statsScript.actionsText = statsScript.actionsText + "\n" + "Phone call from " + phoneScript.phonecall + " accepted";
 
                             if (statsScript.day == 2)
                             {
@@ -368,6 +372,8 @@ public class InteractionScript : MonoBehaviour
                             }
 
                             statsScript.phonecallDecline.Add(phoneScript.phonecall);
+
+                            statsScript.actionsText = statsScript.actionsText + "\n" + "Phone call from " + phoneScript.phonecall + " declined";
 
                             if (statsScript.day == 2)
                             {
