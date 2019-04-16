@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//https://docs.unity3d.com/ScriptReference/Vector3.RotateTowards.html
+
 public class LookAtScript : MonoBehaviour
 {
     public GameObject target;

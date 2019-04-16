@@ -452,8 +452,6 @@ public class DayOneScript : MonoBehaviour {
                 {
                     conferenceCallAudio.Stop();
                     conferenceCamera.SetActive(true);
-                    Cursor.lockState = CursorLockMode.None;
-                    Cursor.visible = true;
                     dialogueManager.speakerPanel.SetActive(true);
                     info.gameObject.SetActive(false);
                     //femaleHologram.SetActive(true);
