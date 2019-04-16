@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.16270676, g: 0.16439463, b: 0.16438511, a: 1}
+  m_IndirectSpecularColor: {r: 0.0064534177, g: 0.005760833, b: 0.005005833, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -13399,7 +13399,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &308827817
 Transform:
   m_ObjectHideFlags: 0
@@ -30616,6 +30616,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 8567674825119663437}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &707486893 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8567674824692306950, guid: a075bfde3e153924eabb450910db09d8,
+    type: 3}
+  m_PrefabInstance: {fileID: 8567674825119663437}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 707486889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81c9795a96c094f4cbde4d65546aa9b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!20 &708077199 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 8567674824684790722, guid: a075bfde3e153924eabb450910db09d8,
@@ -57131,6 +57143,16 @@ PrefabInstance:
       propertyPath: robotClip5.Array.data[1]
       value: 
       objectReference: {fileID: 8300000, guid: 7aa039bdfa24b12409cb57e3450cecaa, type: 3}
+    - target: {fileID: 114056202854650008, guid: dbaa2973eff7b904fa37c7419cff9038,
+        type: 3}
+      propertyPath: fpc
+      value: 
+      objectReference: {fileID: 707486893}
+    - target: {fileID: 114056202854650008, guid: dbaa2973eff7b904fa37c7419cff9038,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 707486889}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dbaa2973eff7b904fa37c7419cff9038, type: 3}
 --- !u!1 &1302872427
@@ -99404,6 +99426,19 @@ MonoBehaviour:
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
   m_AfterStackBundles: []
+--- !u!114 &8567674825119663445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8567674825119663438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 385ce1b1ecd700c439e3f920a3d14daf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
 --- !u!1001 &9141684077894867860
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityStandardAssets.Characters.FirstPerson;
 
 public class RobotDialogueManager : MonoBehaviour {
 
@@ -227,6 +228,9 @@ public class RobotDialogueManager : MonoBehaviour {
 
     GameObject mc, lc;
 
+    public GameObject player;
+    public RigidbodyFirstPersonController fpc;
+
     float timerForDialogue = 5f;
 
     // Use this for initialization
@@ -347,7 +351,7 @@ public class RobotDialogueManager : MonoBehaviour {
         mc = GameObject.Find("MainCamera");
         lc = GameObject.Find("LookAtCamera");
 
-        lc.SetActive(false);
+        //lc.SetActive(false);
     }
 
     #region DayOne
@@ -442,8 +446,11 @@ public class RobotDialogueManager : MonoBehaviour {
             return;
         }
 
-        mc.SetActive(false);
-        lc.SetActive(true);
+        //mc.SetActive(false);
+        //lc.SetActive(true);
+        //LookAtScript.target = GameObject.FindGameObjectWithTag("Whiteboard");
+
+        fpc.enabled = false;
         LookAtScript.target = GameObject.FindGameObjectWithTag("Whiteboard");
 
         string robotSentence2 = robotSentences2.Dequeue();
@@ -467,9 +474,7 @@ public class RobotDialogueManager : MonoBehaviour {
         panel.SetActive(false);
         timer1 = true;
         LookAtScript.target = null;
-        lc.SetActive(false);
-        LookAtScript.target = null;
-        mc.SetActive(true);
+        fpc.enabled = true;
     }
 
     public void StartRobotDialogue3(RobotDialogue robotDialogue)
@@ -512,8 +517,7 @@ public class RobotDialogueManager : MonoBehaviour {
 
         if(robotSentences3.Count == 1)
         {
-            mc.SetActive(false);
-            lc.SetActive(true);
+            fpc.enabled = false;
             LookAtScript.target = GameObject.FindGameObjectWithTag("Chair");
         }
 
@@ -531,9 +535,8 @@ public class RobotDialogueManager : MonoBehaviour {
         dialogue3 = false;
         panel.SetActive(false);
         robotAudioSource.Stop();
-        lc.SetActive(false);
         LookAtScript.target = null;
-        mc.SetActive(true);
+        fpc.enabled = true;
     }
 
     public void StartRobotDialogue4(RobotDialogue robotDialogue)
@@ -625,9 +628,12 @@ public class RobotDialogueManager : MonoBehaviour {
 
         if (robotSentences5.Count == 1)
         {
-            mc.SetActive(false);
-            lc.SetActive(true);
+            fpc.enabled = false;
             LookAtScript.target = GameObject.FindGameObjectWithTag("Fax");
+        }
+        else if (robotSentences5.Count == 0)
+        {
+            LookAtScript.target = GameObject.FindGameObjectWithTag("Bin");
         }
 
         if (robotAudio5.Count > 0)
@@ -644,15 +650,17 @@ public class RobotDialogueManager : MonoBehaviour {
         panel.SetActive(false);
         robotAudioSource.Stop();
         timer2 = true;
-        mc.SetActive(true);
         LookAtScript.target = null;
-        lc.SetActive(false);
+        fpc.enabled = true;
     }
 
     public void StartRobotDialogue6(RobotDialogue robotDialogue)
     {
         dayOneScript.clockActive = true;
         dayOneScript.Light();
+
+        fpc.enabled = false;
+        LookAtScript.target = GameObject.Find("Clock");
 
         dialogue6 = true;
         panel.SetActive(true);
@@ -699,6 +707,9 @@ public class RobotDialogueManager : MonoBehaviour {
         dialogue6 = false;
         panel.SetActive(false);
         robotAudioSource.Stop();
+
+        LookAtScript.target = null;
+        fpc.enabled = true;
 
         dayOneScript.clockActive = false;
         robotDialogueTrigger.TriggerRobotDialogue7();
@@ -755,12 +766,17 @@ public class RobotDialogueManager : MonoBehaviour {
         dialogue7 = false;
         panel.SetActive(false);
         robotAudioSource.Stop();
+        LookAtScript.target = null;
+        fpc.enabled = true;
     }
 
     public void StartRobotDialogue8(RobotDialogue robotDialogue)
     {
         dayOneScript.policyActive = false;
         dayOneScript.Light();
+
+        fpc.enabled = false;
+        LookAtScript.target = GameObject.Find("MarsFolder");
 
         dialogue8 = true;
         panel.SetActive(true);
@@ -807,6 +823,8 @@ public class RobotDialogueManager : MonoBehaviour {
         dialogue8 = false;
         panel.SetActive(false);
         robotAudioSource.Stop();
+        LookAtScript.target = null;
+        fpc.enabled = true;
     }
 
     public void StartRobotDialogue9(RobotDialogue robotDialogue)
@@ -863,6 +881,9 @@ public class RobotDialogueManager : MonoBehaviour {
         dayOneScript.phoneLActive = true;
         dayOneScript.Light();
 
+        fpc.enabled = false;
+        LookAtScript.target = GameObject.FindGameObjectWithTag("Phone");
+
         dialogue10 = true;
         panel.SetActive(true);
         robotSentences9.Clear();
@@ -908,6 +929,8 @@ public class RobotDialogueManager : MonoBehaviour {
         dialogue10 = false;
         panel.SetActive(false);
         robotAudioSource.Stop();
+        LookAtScript.target = null;
+        fpc.enabled = true;
     }
 
     public void StartRobotDialogue11(RobotDialogue robotDialogue)
@@ -1015,6 +1038,9 @@ public class RobotDialogueManager : MonoBehaviour {
 
     public void StartRobotDialogue13(RobotDialogue robotDialogue)
     {
+        fpc.enabled = false;
+        LookAtScript.target = GameObject.Find("Area Light");
+
         dialogue13 = true;
         panel.SetActive(true);
         robotSentences12.Clear();
@@ -1061,6 +1087,8 @@ public class RobotDialogueManager : MonoBehaviour {
         dialogue13 = false;
         panel.SetActive(false);
         robotAudioSource.Stop();
+        LookAtScript.target = null;
+        fpc.enabled = true;
     }
 
     public void StartRobotDialogue14(RobotDialogue robotDialogue)
