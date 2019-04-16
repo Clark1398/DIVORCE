@@ -57,6 +57,9 @@ public class DayOneScript : MonoBehaviour {
 
     float maxIntensity = 2.0f;
 
+    //Color green = new Color(131, 255, 76, 255);
+    //Color orange = new Color(255, 177, 76, 255);
+
     Color red = Color.red;
     Color green = Color.green;
 
@@ -452,6 +455,8 @@ public class DayOneScript : MonoBehaviour {
                 {
                     conferenceCallAudio.Stop();
                     conferenceCamera.SetActive(true);
+                    Cursor.lockState = CursorLockMode.None;
+                    Cursor.visible = true;
                     dialogueManager.speakerPanel.SetActive(true);
                     info.gameObject.SetActive(false);
                     //femaleHologram.SetActive(true);
