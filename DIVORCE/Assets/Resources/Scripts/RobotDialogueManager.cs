@@ -546,6 +546,9 @@ public class RobotDialogueManager : MonoBehaviour {
         robotSentences3.Clear();
         robotAudio3.Clear();
 
+        fpc.enabled = false;
+        LookAtScript.target = GameObject.Find("monitors");
+
         foreach (string sentence in robotDialogue.robotSentences4)
         {
             robotSentences4.Enqueue(sentence);
@@ -587,6 +590,8 @@ public class RobotDialogueManager : MonoBehaviour {
         dialogue4 = false;
         panel.SetActive(false);
         robotAudioSource.Stop();
+        LookAtScript.target = null;
+        fpc.enabled = true;
     }
 
     public void StartRobotDialogue5(RobotDialogue robotDialogue)
@@ -708,9 +713,6 @@ public class RobotDialogueManager : MonoBehaviour {
         panel.SetActive(false);
         robotAudioSource.Stop();
 
-        LookAtScript.target = null;
-        fpc.enabled = true;
-
         dayOneScript.clockActive = false;
         robotDialogueTrigger.TriggerRobotDialogue7();
     }
@@ -724,6 +726,8 @@ public class RobotDialogueManager : MonoBehaviour {
         panel.SetActive(true);
         robotSentences6.Clear();
         robotAudio6.Clear();
+
+        LookAtScript.target = GameObject.Find("EarthFolder");
 
         foreach (string sentence in robotDialogue.robotSentences7)
         {
@@ -775,9 +779,6 @@ public class RobotDialogueManager : MonoBehaviour {
         dayOneScript.policyActive = false;
         dayOneScript.Light();
 
-        fpc.enabled = false;
-        LookAtScript.target = GameObject.Find("MarsFolder");
-
         dialogue8 = true;
         panel.SetActive(true);
         robotSentences7.Clear();
@@ -823,8 +824,6 @@ public class RobotDialogueManager : MonoBehaviour {
         dialogue8 = false;
         panel.SetActive(false);
         robotAudioSource.Stop();
-        LookAtScript.target = null;
-        fpc.enabled = true;
     }
 
     public void StartRobotDialogue9(RobotDialogue robotDialogue)
