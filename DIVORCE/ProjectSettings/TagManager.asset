@@ -12,6 +12,7 @@ TagManager:
   - Phone
   - Chair
   - MoonFolder
+  - Whiteboard
   layers:
   - Default
   - TransparentFX
