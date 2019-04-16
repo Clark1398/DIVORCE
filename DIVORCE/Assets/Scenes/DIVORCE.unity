@@ -41,7 +41,11 @@ RenderSettings:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_IndirectSpecularColor: {r: 0.040314633, g: 0.058058556, b: 0.091133386, a: 1}
+=======
+  m_IndirectSpecularColor: {r: 0.0064534177, g: 0.005760833, b: 0.005005833, a: 1}
+>>>>>>> parent of ac149b3... Update DIVORCE.unity
 =======
   m_IndirectSpecularColor: {r: 0.0064534177, g: 0.005760833, b: 0.005005833, a: 1}
 >>>>>>> parent of ac149b3... Update DIVORCE.unity
@@ -11010,8 +11014,11 @@ Transform:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> parent of ac149b3... Update DIVORCE.unity
 =======
 >>>>>>> parent of ac149b3... Update DIVORCE.unity
 GameObject:
@@ -11144,6 +11151,9 @@ CanvasRenderer:
   m_CullTransparentMesh: 0
 --- !u!1 &248772375
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of ac149b3... Update DIVORCE.unity
+=======
 >>>>>>> parent of ac149b3... Update DIVORCE.unity
 =======
 >>>>>>> parent of ac149b3... Update DIVORCE.unity
@@ -11191,6 +11201,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   m_GameObject: {fileID: 248231440}
@@ -11323,6 +11334,8 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+=======
+>>>>>>> parent of ac149b3... Update DIVORCE.unity
 =======
 >>>>>>> parent of ac149b3... Update DIVORCE.unity
 =======
@@ -44720,6 +44733,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1027864496}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -44855,6 +44869,8 @@ MonoBehaviour:
 >>>>>>> parent of ac149b3... Update DIVORCE.unity
 =======
 >>>>>>> parent of ac149b3... Update DIVORCE.unity
+=======
+>>>>>>> parent of ac149b3... Update DIVORCE.unity
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -44910,8 +44926,11 @@ CanvasRenderer:
   m_CullTransparentMesh: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> parent of ac149b3... Update DIVORCE.unity
 =======
+=======
+>>>>>>> parent of ac149b3... Update DIVORCE.unity
 =======
 >>>>>>> parent of ac149b3... Update DIVORCE.unity
 --- !u!1 &1028265495
@@ -45044,6 +45063,9 @@ CanvasRenderer:
   m_GameObject: {fileID: 1028265495}
   m_CullTransparentMesh: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of ac149b3... Update DIVORCE.unity
+=======
 >>>>>>> parent of ac149b3... Update DIVORCE.unity
 =======
 >>>>>>> parent of ac149b3... Update DIVORCE.unity
