@@ -226,8 +226,6 @@ public class RobotDialogueManager : MonoBehaviour {
     Phone phoneScript;
     LookAtScript LookAtScript;
 
-    GameObject mc, lc;
-
     public GameObject player;
     public RigidbodyFirstPersonController fpc;
 
@@ -350,8 +348,6 @@ public class RobotDialogueManager : MonoBehaviour {
 
     void Start()
     {
-        mc = GameObject.Find("MainCamera");
-        lc = GameObject.Find("LookAtCamera");
     }
 
     #region DayOne
@@ -542,6 +538,8 @@ public class RobotDialogueManager : MonoBehaviour {
         panel.SetActive(true);
         robotSentences3.Clear();
         robotAudio3.Clear();
+        fpc.enabled = false;
+        LookAtScript.target = GameObject.Find("monitors");
         screens.material.SetFloat("Vector1_B78C4234", 0.5f);
         screens2.material.SetFloat("Vector1_B78C4234", 0.5f);
 
@@ -586,6 +584,8 @@ public class RobotDialogueManager : MonoBehaviour {
         dialogue4 = false;
         panel.SetActive(false);
         robotAudioSource.Stop();
+        LookAtScript.target = null;
+        fpc.enabled = true;
         StartCoroutine(ScreenHighlight());
     }
 
@@ -723,7 +723,7 @@ public class RobotDialogueManager : MonoBehaviour {
     {
         dayOneScript.policyActive = true;
         fpc.enabled = false;
-        LookAtScript.target = GameObject.Find("MarsFolder");
+        LookAtScript.target = GameObject.Find("EarthFolder");
         folder.material.SetFloat("Vector1_B78C4234", 0.5f);
 
         dialogue7 = true;
@@ -929,6 +929,7 @@ public class RobotDialogueManager : MonoBehaviour {
     public void EndRobotDialogue10()
     {
         dialogue10 = false;
+        dayOneScript.phoneIntractable = true;
         panel.SetActive(false);
         robotAudioSource.Stop();
         LookAtScript.target = null;
@@ -1422,6 +1423,7 @@ public class RobotDialogueManager : MonoBehaviour {
         dialogue2_3 = false;
         robotAudioSource.Stop();
         statsScript.Family();
+        interactionScript.chairInteractable = true;
         chairCameraScript.moonFolderFirst = true;
         panel.SetActive(false);
     }
@@ -1630,6 +1632,7 @@ public class RobotDialogueManager : MonoBehaviour {
         panel.SetActive(true);
         robotSentences2_7.Clear();
         robotAudio2_8.Clear();
+        interactionScript.chairInteractable = false;
 
         foreach (string sentence in robotDialogue.robotSentences2_8)
         {
@@ -1671,6 +1674,7 @@ public class RobotDialogueManager : MonoBehaviour {
         dialogue2_8 = false;
         robotAudioSource.Stop();
         panel.SetActive(false);
+        interactionScript.chairInteractable = true;
     }
 
     public void StartRobotDialogue2_9(RobotDialogue robotDialogue)

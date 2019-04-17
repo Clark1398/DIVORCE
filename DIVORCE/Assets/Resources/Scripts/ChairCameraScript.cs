@@ -19,7 +19,7 @@ public class ChairCameraScript : MonoBehaviour
     public GameObject pcCamera, moonCamera, player;
     public GameObject canvas;
 
-    AudioSource pcAudio;
+    public AudioSource pcAudio;
     public AudioClip typingFX;
 
     public Text info;
@@ -33,8 +33,6 @@ public class ChairCameraScript : MonoBehaviour
         ins = player.GetComponentInParent<InteractionScript>();
         statsScript = GameObject.Find("GameInfoObject").GetComponent<Stats>();
         rdt = FindObjectOfType<RobotDialogueTrigger>();
-
-        pcAudio = GameObject.FindGameObjectWithTag("PC").GetComponent<AudioSource>();
 
         if(dos.enabled)
         {

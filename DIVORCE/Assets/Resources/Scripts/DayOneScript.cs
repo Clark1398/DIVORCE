@@ -69,9 +69,9 @@ public class DayOneScript : MonoBehaviour {
 
     AudioSource trashAudio, faxAudio;
 
-    public AudioSource conferenceCallAudio, pcAudio;
+    public AudioSource conferenceCallAudio;
 
-    public AudioClip trashFX, faxFX, typingFX, conferenceCallFX;
+    public AudioClip trashFX, faxFX, conferenceCallFX;
 
     public Renderer chair, folderR, phone, conf;
 
@@ -87,7 +87,6 @@ public class DayOneScript : MonoBehaviour {
 
         trashAudio = GameObject.FindGameObjectWithTag("Bin").GetComponent<AudioSource>();
         faxAudio = GameObject.FindGameObjectWithTag("Fax").GetComponent<AudioSource>();
-        pcAudio = GameObject.FindGameObjectWithTag("Fax").GetComponent<AudioSource>();
         conferenceCallAudio = GameObject.FindGameObjectWithTag("ConferenceCall").GetComponent<AudioSource>();
 
         doorLight1.color = red;
@@ -306,6 +305,7 @@ public class DayOneScript : MonoBehaviour {
 
                         if (uses == 2)
                         {
+                            phoneIntractable = true;
                             phoneActive = true;
                             phoneScript.firstCall = false;
                             uses = 0;
@@ -389,6 +389,7 @@ public class DayOneScript : MonoBehaviour {
 
                         if (uses == 2)
                         {
+                            phoneIntractable = true;
                             phoneActive = true;
                             phoneScript.firstCall = false;
                             uses = 0;
@@ -410,7 +411,7 @@ public class DayOneScript : MonoBehaviour {
             }
             //If the phone is ringing and If the object hit is the phone and the distance to it is less than 2.5 then 
             //show the player a message to allow them to answer the phone
-            else if (phoneScript.isRinging == true && hit.collider.gameObject.tag == "Phone" && dist <= 2.5f)
+            else if (phoneScript.isRinging == true && hit.collider.gameObject.tag == "Phone" && dist <= 2.5f && phoneIntractable == true)
             {
                 info.text = "Press 'E' to answer";
                 info.gameObject.SetActive(true);
@@ -429,6 +430,7 @@ public class DayOneScript : MonoBehaviour {
                     phoneCanvasOn = true;
                     statsScript.TimeForward();
                     phone.material.SetFloat("Vector1_B78C4234", 100f);
+                    phoneIntractable = false;
                 }
             }
             //If the conference call is hit, it is interactable and the distance is less than 2.5, then display info text
@@ -442,8 +444,6 @@ public class DayOneScript : MonoBehaviour {
                 {
                     conferenceCallAudio.Stop();
                     conferenceCamera.SetActive(true);
-                    Cursor.lockState = CursorLockMode.None;
-                    Cursor.visible = true;
                     dialogueManager.speakerPanel.SetActive(true);
                     info.gameObject.SetActive(false);
                     //femaleHologram.SetActive(true);

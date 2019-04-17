@@ -99,7 +99,6 @@ public class CameraScript : MonoBehaviour {
             chairCamera.SetActive(true);
             gameObject.SetActive(false);
             canvas.SetActive(true);
-            dayOneScript.pcAudio.Stop();
 
             if (statsScript.day == 1 && firstPCUse == true)
             {

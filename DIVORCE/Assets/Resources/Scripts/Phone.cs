@@ -28,8 +28,24 @@ public class Phone : MonoBehaviour
 
     [Header("Audio")]
     public AudioClip phoneRing;
+
+    [Header("Day 1 Audio")]
     public AudioClip marsPhoneCall;
+    public AudioClip venusPhoneCall;
+
+    [Header("Day 2 Audio")]
+    public AudioClip wifePhoneCall;
     public AudioClip earthPhoneCall;
+
+    [Header("Day 3 Audio")]
+    public AudioClip wifePhoneCallHappy;
+    public AudioClip wifePhoneCallAngry;
+    public AudioClip marsPhoneCall2;
+
+    [Header("Day 4 Audio")]
+    public AudioClip wifePhoneCallHappy2;
+    public AudioClip wifePhoneCallAngry2;
+    public AudioClip venusPhoneCall2;
 
     public List<float> faxChanges = new List<float>();
     public List<string> faxChangedNames = new List<string>();
@@ -365,8 +381,8 @@ public class Phone : MonoBehaviour
                 }
                 else
                 {
-                    audioSource.clip = earthPhoneCall;
-                    audioSource.PlayOneShot(earthPhoneCall);
+                    audioSource.clip = venusPhoneCall;
+                    audioSource.PlayOneShot(venusPhoneCall);
                 }
                 newAudio = false;
                 dayOneScript.phoneActive = false;
@@ -392,6 +408,62 @@ public class Phone : MonoBehaviour
                 interactionScript.answered = false;
                 phoneIsActive = false;
                 newAudio = false;
+
+                if (statsScript.day == 2)
+                {
+                    if (calls == 1)
+                    {
+                        audioSource.clip = wifePhoneCall;
+                        audioSource.PlayOneShot(wifePhoneCall);
+                    }
+                    else if (calls == 2)
+                    {
+                        audioSource.clip = earthPhoneCall;
+                        audioSource.PlayOneShot(earthPhoneCall);
+                    }
+                }
+                else if (statsScript.day == 3)
+                {
+                    if (calls == 1)
+                    {
+                        if (statsScript.wifeCounter > 0)
+                        {
+                            audioSource.clip = wifePhoneCallHappy;
+                            audioSource.PlayOneShot(wifePhoneCallHappy);
+                        }
+                        else
+                        {
+                            audioSource.clip = wifePhoneCallAngry;
+                            audioSource.PlayOneShot(wifePhoneCallAngry);
+                        }
+                    }
+                    else if (calls == 2)
+                    {
+                        audioSource.clip = marsPhoneCall2;
+                        audioSource.PlayOneShot(marsPhoneCall2);
+                    }
+                }
+                else if (statsScript.day == 4)
+                {
+                    if (calls == 1)
+                    {
+                        if (statsScript.wifeCounter > 0)
+                        {
+                            audioSource.clip = wifePhoneCallHappy2;
+                            audioSource.PlayOneShot(wifePhoneCallHappy2);
+                        }
+                        else
+                        {
+                            audioSource.clip = wifePhoneCallAngry2;
+                            audioSource.PlayOneShot(wifePhoneCallAngry2);
+                        }
+                    }
+                    else if (calls == 2)
+                    {
+                        audioSource.clip = venusPhoneCall2;
+                        audioSource.PlayOneShot(venusPhoneCall2);
+                    }
+                }
             }
         }
 

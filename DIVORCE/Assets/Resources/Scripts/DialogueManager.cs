@@ -176,6 +176,17 @@ public class DialogueManager : MonoBehaviour {
     //bool conferenceDialogue2Visited;
     //bool conferenceDialogue4Visited;
 
+    bool dialogue1;
+    bool dialogue2;
+    bool dialogue3;
+    bool dialogue4;
+    bool dialogue5;
+    bool dialogue6;
+    bool dialogue7;
+    bool dialogue8;
+    bool dialogue9;
+    bool dialogue10;
+
     // Use this for initialization
     void Awake ()
     {
@@ -273,6 +284,17 @@ public class DialogueManager : MonoBehaviour {
         dialogue4Visited = false;
         dialogue5Visited = false;
         dialogue10Visited = false;
+
+        dialogue1 = false;
+        dialogue2 = false;
+        dialogue3 = false;
+        dialogue4 = false;
+        dialogue5 = false;
+        dialogue6 = false;
+        dialogue7 = false;
+        dialogue8 = false;
+        dialogue9 = false;
+        dialogue10 = false;
     }
 
     void Start()
@@ -285,6 +307,50 @@ public class DialogueManager : MonoBehaviour {
         if(statsScript == null)
         {
             statsScript = GameObject.Find("GameInfoObject").GetComponent<Stats>();
+        }
+
+        if (Input.GetKeyDown(KeyCode.E) || Input.GetMouseButtonDown(0))
+        {
+            if (dialogue1)
+            {
+                DisplayNextSentence();
+            }
+            else if (dialogue2)
+            {
+                DisplayNextSentence2();
+            }
+            else if (dialogue3)
+            {
+                DisplayNextSentence3();
+            }
+            else if (dialogue4)
+            {
+                DisplayNextSentence4();
+            }
+            else if (dialogue5)
+            {
+                DisplayNextSentence5();
+            }
+            else if (dialogue6)
+            {
+                DisplayNextSentence6();
+            }
+            else if (dialogue7)
+            {
+                DisplayNextSentence7();
+            }
+            else if (dialogue8)
+            {
+                DisplayNextSentence8();
+            }
+            else if (dialogue9)
+            {
+                DisplayNextSentence9();
+            }
+            else if (dialogue10)
+            {
+                DisplayNextConferenceSentence10();
+            }
         }
     }
 
@@ -303,7 +369,7 @@ public class DialogueManager : MonoBehaviour {
         {
             planetText.text = dialogue.planet3;
         }
-        continueButton.onClick.AddListener(DisplayNextSentence);
+        dialogue1 = true;
 
         statsScript.actionsText = statsScript.actionsText + "\n" + "Had conference call with " + planetText.text;
 
@@ -464,6 +530,9 @@ public class DialogueManager : MonoBehaviour {
     {
         speakerPanel.SetActive(false);
         answerPanel.SetActive(true);
+        dialogue1 = false;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
 
         option1.GetComponentInChildren<Text>().text = answers1[0];
         option2.GetComponentInChildren<Text>().text = answers1[1];
@@ -587,8 +656,9 @@ public class DialogueManager : MonoBehaviour {
         dialogue2Visited = true;
         speakerPanel.SetActive(true);
         answerPanel.SetActive(false);
-        continueButton.onClick.RemoveAllListeners();
-        continueButton.onClick.AddListener(DisplayNextSentence2);
+        dialogue2 = true;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
 
         sentences2.Clear();
         call2sentences2.Clear();
@@ -738,6 +808,9 @@ public class DialogueManager : MonoBehaviour {
     {
         speakerPanel.SetActive(false);
         answerPanel.SetActive(true);
+        dialogue2 = false;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
 
         option1.GetComponentInChildren<Text>().text = answers2[0];
         option2.GetComponentInChildren<Text>().text = answers2[1];
@@ -869,8 +942,9 @@ public class DialogueManager : MonoBehaviour {
 
         speakerPanel.SetActive(true);
         answerPanel.SetActive(false);
-        continueButton.onClick.RemoveAllListeners();
-        continueButton.onClick.AddListener(DisplayNextSentence3);
+        dialogue3 = true;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
 
         sentences3.Clear();
         call2sentences3.Clear();
@@ -1020,6 +1094,10 @@ public class DialogueManager : MonoBehaviour {
     {
         speakerPanel.SetActive(false);
         answerPanel.SetActive(true);
+        dialogue3 = false;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+
         option1.GetComponentInChildren<Text>().text = answers1[0];
         option2.gameObject.SetActive(false);
         option3.GetComponentInChildren<Text>().text = answers1[2];
@@ -1094,8 +1172,9 @@ public class DialogueManager : MonoBehaviour {
         dialogue4Visited = true;
         speakerPanel.SetActive(true);
         answerPanel.SetActive(false);
-        continueButton.onClick.RemoveAllListeners();
-        continueButton.onClick.AddListener(DisplayNextSentence4);
+        dialogue4 = true;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
 
         sentences4.Clear();
         call2sentences4.Clear();
@@ -1243,6 +1322,8 @@ public class DialogueManager : MonoBehaviour {
 
     public void EndDialogue4()
     {
+        dialogue4 = false;
+
         if (statsScript.day == 1)
         {
             conferenceCall.SetActive(false);
@@ -1257,6 +1338,8 @@ public class DialogueManager : MonoBehaviour {
         {
             speakerPanel.SetActive(false);
             answerPanel.SetActive(true);
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
 
             option1.GetComponentInChildren<Text>().text = answers1[0];
             option2.gameObject.SetActive(false);
@@ -1324,8 +1407,9 @@ public class DialogueManager : MonoBehaviour {
         dialogue5Visited = true;
         speakerPanel.SetActive(true);
         answerPanel.SetActive(false);
-        continueButton.onClick.RemoveAllListeners();
-        continueButton.onClick.AddListener(DisplayNextSentence5);
+        dialogue5 = true;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
 
         sentences5.Clear();
         call2sentences5.Clear();
@@ -1475,6 +1559,10 @@ public class DialogueManager : MonoBehaviour {
     {
         speakerPanel.SetActive(false);
         answerPanel.SetActive(true);
+        dialogue5 = false;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+
         option1.GetComponentInChildren<Text>().text = answers1[0];
         option2.gameObject.SetActive(false);
         option3.GetComponentInChildren<Text>().text = answers1[2];
@@ -1524,7 +1612,9 @@ public class DialogueManager : MonoBehaviour {
             statsScript.stats[5] -= 5;
         }
 
-        continueButton.onClick.AddListener(DisplayNextSentence6);
+        dialogue6 = true;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
 
         call2sentences6.Clear();
 
@@ -1639,6 +1729,9 @@ public class DialogueManager : MonoBehaviour {
     {
         speakerPanel.SetActive(false);
         answerPanel.SetActive(true);
+        dialogue6 = false;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
 
         option1.GetComponentInChildren<Text>().text = answers1[0];
         option2.GetComponentInChildren<Text>().text = answers1[1];
@@ -1709,8 +1802,9 @@ public class DialogueManager : MonoBehaviour {
 
         speakerPanel.SetActive(true);
         answerPanel.SetActive(false);
-        continueButton.onClick.RemoveAllListeners();
-        continueButton.onClick.AddListener(DisplayNextSentence7);
+        dialogue7 = true;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
 
         sentences7.Clear();
         call2sentences7.Clear();
@@ -1860,6 +1954,9 @@ public class DialogueManager : MonoBehaviour {
     {
         speakerPanel.SetActive(false);
         answerPanel.SetActive(true);
+        dialogue7 = false;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
 
         if (statsScript.day == 1)
         {
@@ -1972,6 +2069,9 @@ public class DialogueManager : MonoBehaviour {
     {
         speakerPanel.SetActive(true);
         answerPanel.SetActive(false);
+        dialogue8 = true;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
 
         if (statsScript.day == 2)
         {
@@ -1985,9 +2085,6 @@ public class DialogueManager : MonoBehaviour {
         {
             statsScript.stats[5] -= 10;
         }
-
-        continueButton.onClick.RemoveAllListeners();
-        continueButton.onClick.AddListener(DisplayNextSentence8);
 
         call2sentences8.Clear();
 
@@ -2102,6 +2199,9 @@ public class DialogueManager : MonoBehaviour {
     {
         speakerPanel.SetActive(false);
         answerPanel.SetActive(true);
+        dialogue8 = false;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
 
         option1.GetComponentInChildren<Text>().text = answers1[0];
         option2.gameObject.SetActive(false);
@@ -2212,8 +2312,9 @@ public class DialogueManager : MonoBehaviour {
 
         speakerPanel.SetActive(true);
         answerPanel.SetActive(false);
-        continueButton.onClick.RemoveAllListeners();
-        continueButton.onClick.AddListener(DisplayNextSentence9);
+        dialogue9 = true;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
 
         sentences9.Clear();
         call2sentences9.Clear();
@@ -2363,8 +2464,7 @@ public class DialogueManager : MonoBehaviour {
     {
         conferenceCall.SetActive(false);
         player.SetActive(true);
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        dialogue9 = false;
         if (statsScript.day == 1)
         {
             dayOneScript.conferenceCallInteractable = false;
@@ -2404,8 +2504,9 @@ public class DialogueManager : MonoBehaviour {
         speakerPanel.SetActive(true);
         answerPanel.SetActive(false);
 
-        continueButton.onClick.RemoveAllListeners();
-        continueButton.onClick.AddListener(DisplayNextConferenceSentence10);
+        dialogue10 = true;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
 
         if (statsScript.day == 2)
         {
@@ -2534,6 +2635,7 @@ public class DialogueManager : MonoBehaviour {
 
     public void EndConferenceDialogue10()
     {
+        dialogue10 = false;
         statsScript.conferenceAccept = false;
         conferenceCall.SetActive(false);
         //interactionScript.femaleHologram.SetActive(false);

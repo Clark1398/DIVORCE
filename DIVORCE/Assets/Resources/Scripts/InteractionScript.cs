@@ -536,9 +536,6 @@ public class InteractionScript : MonoBehaviour
                         phoneScript.stopAudio = true;
                         robotDialogueTrigger.TriggerRobotDialogue2_3();
                         phoneCanvasOn = false;
-
-                        chairInteractable = true;
-                        folderInteractable = true;
                     }
                     else if (phoneScript.calls == 2)
                     {
