@@ -48,11 +48,6 @@ public class DayOneScript : MonoBehaviour {
 
     public Transform spawnPos;
 
-    float maxIntensity = 2.0f;
-
-    //Color green = new Color(131, 255, 76, 255);
-    //Color orange = new Color(255, 177, 76, 255);
-
     Color red = Color.red;
     Color green = Color.green;
 
@@ -82,7 +77,6 @@ public class DayOneScript : MonoBehaviour {
 
     void Start()
     {
-
         robotDialogueTrigger = FindObjectOfType<RobotDialogueTrigger>();
         robotDialogueManager = FindObjectOfType<RobotDialogueManager>();
         phoneScript = FindObjectOfType<Phone>();

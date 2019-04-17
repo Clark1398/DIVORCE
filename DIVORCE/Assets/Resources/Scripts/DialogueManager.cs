@@ -14,6 +14,7 @@ public class DialogueManager : MonoBehaviour {
 
     public GameObject speakerPanel;
     public GameObject answerPanel;
+    public GameObject pause;
 
     public Stats statsScript;
     DialogueTrigger dialogueTrigger;

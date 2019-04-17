@@ -107,8 +107,7 @@ public class LoadGame : MonoBehaviour {
 
         DontDestroyOnLoad(this);
 
-        SceneManager.LoadScene("Actual Game");
-
+        SceneManager.LoadScene("DIVORCE");
     }
 
     public void UpdateObjects(MoonFolderScript mfs, CameraScript cs, FolderScript efs, FolderScript mafs, FolderScript vfs)
@@ -578,6 +577,6 @@ public class LoadGame : MonoBehaviour {
             cs.Load();
         }
 
-        Destroy(this);
+        Destroy(this.gameObject);
     }
 }

@@ -61,7 +61,7 @@ public class MoonFolderScript : MonoBehaviour {
 
     void Update()
     {
-        if(canvas1.active == true)
+        if(canvas1.activeInHierarchy)
         {
             canvas1.SetActive(false);
             canvas2.SetActive(false);

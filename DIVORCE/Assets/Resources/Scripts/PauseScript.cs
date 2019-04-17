@@ -15,5 +15,9 @@ public class PauseScript : MonoBehaviour
     {
         Time.timeScale = 1;
         SceneManager.LoadScene("MainMenuScene");
+        Destroy(GameObject.Find("GameInfoObject"));
+        Destroy(GameObject.Find("EarthFolder"));
+        Destroy(GameObject.Find("MarsFolder"));
+        Destroy(GameObject.Find("VenusFolder"));
     }
 }

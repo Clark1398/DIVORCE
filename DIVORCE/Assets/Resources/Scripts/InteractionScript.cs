@@ -158,8 +158,15 @@ public class InteractionScript : MonoBehaviour
             statsScript.newDay = false;
         }
 
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        if (GameObject.Find("Pause") == null)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
+        else
+        {
+            es.SetActive(true);
+        }
 
         //Sets up a raycast for the position of the mouse
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);

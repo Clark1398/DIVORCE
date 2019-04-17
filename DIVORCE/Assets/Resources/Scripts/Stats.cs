@@ -88,38 +88,6 @@ public class Stats : MonoBehaviour {
 
         pause = GameObject.Find("Pause");
         pause.SetActive(false);
-    }
-
-    //Sets up the PC Screen initally to display the stats on screen
-    void Start()
-    {
-        for (int i = 0; i < statDisplay.Length; i++)
-        {
-            statDisplay[i] = statNames[i] + "(%)";
-        }
-
-        statDisplay[1] = statNames[1] + "(Billion_Moon_Bucks)";
-
-        hEText = "Open";
-        tEText = "Open";
-        wEText = "Open";
-
-        hMText = "Open";
-        tMText = "Open";
-        wMText = "Open";
-
-        hVText = "Open";
-        tVText = "Open";
-        wVText = "Open";
-
-        gameOverText[0] = "Your decisions and actions have torn the people apart. Constant disagreements result in a civil war erupting that overtakes the entirety of the Moon. It is just a matter of time before this conflict destroys the civilization that has been built over the past few decades";
-        gameOverText[1] = "Your actions have drained the Moon’s resources dry. The constant spending resulted in a short period of prosperity, but what followed was horror. Poverty rose to an all time high… emergency services shut down soon after and it all ended with starvation, which lead to violence and crime roaming the streets.";
-        gameOverText[2] = "Although your intentions were good, the result of your actions wasn’t. The people did not appreciate the way you ran things, yet you did not change your approach. Soon the riots began, people raging in the streets requesting your resignation. What followed was a bit more civilized than expected as a petition to remove you from office was put together, which eventually ended your political career.";
-        gameOverText[3] = "You did your best, but unfortunately the cabinet decided they had made the wrong choice with you. A few days after you came into office you were forcefully brought out of it. Such an event can cause even the best of political careers to end…";
-        gameOverText[4] = "Your unwillingness to compromise and co-operate with the other planets within the Solar System caused too much tension. This tension only grew as time progressed and eventually exploded into a galactic war that made the entire system unsafe. Your actions were the cause of countless unneeded deaths… if only you had considered what their consequences might be…";
-        gameOverText[5] = "It appears the independence vote was not a good idea after all. Not only did it anger Earth initially, but your actions pushed them over the ledge, resulting in them declaring war on the Moon. As a newly established planetary body, you have no hope of winning, which would result in a forceful colonization or domination.";
-        gameOverText[6] = "Not relying on others is one thing, but completely disregarding them is another. Your actions have caused Mars, a planet with an established aggressive demeanor and violent history, to declare war on the Moon. That’s when hope was lost… a newly established planetary body stood no chance against the firepower of a planet that has been pouring resources in its military for centuries.";
-        gameOverText[7] = "You made history! Never before had Venus declared war on anyone, but you got them to finally do it! And although that is not something they specialize in, you still had no chance against an established planet of that size… The independent Moon was short lived due to your poor decision making.";
 
         if (GameObject.Find("LoadObject") != null)
         {
@@ -189,6 +157,38 @@ public class Stats : MonoBehaviour {
 
             loadScript.UpdateObjects(moonCam.GetComponent<MoonFolderScript>(), pcCamera.GetComponent<CameraScript>(), earthCam.GetComponent<FolderScript>(), marsCam.GetComponent<FolderScript>(), venusCam.GetComponent<FolderScript>());
         }
+    }
+
+    //Sets up the PC Screen initally to display the stats on screen
+    void Start()
+    {
+        for (int i = 0; i < statDisplay.Length; i++)
+        {
+            statDisplay[i] = statNames[i] + "(%)";
+        }
+
+        statDisplay[1] = statNames[1] + "(Billion_Moon_Bucks)";
+
+        hEText = "Open";
+        tEText = "Open";
+        wEText = "Open";
+
+        hMText = "Open";
+        tMText = "Open";
+        wMText = "Open";
+
+        hVText = "Open";
+        tVText = "Open";
+        wVText = "Open";
+
+        gameOverText[0] = "Your decisions and actions have torn the people apart. Constant disagreements result in a civil war erupting that overtakes the entirety of the Moon. It is just a matter of time before this conflict destroys the civilization that has been built over the past few decades";
+        gameOverText[1] = "Your actions have drained the Moon’s resources dry. The constant spending resulted in a short period of prosperity, but what followed was horror. Poverty rose to an all time high… emergency services shut down soon after and it all ended with starvation, which lead to violence and crime roaming the streets.";
+        gameOverText[2] = "Although your intentions were good, the result of your actions wasn’t. The people did not appreciate the way you ran things, yet you did not change your approach. Soon the riots began, people raging in the streets requesting your resignation. What followed was a bit more civilized than expected as a petition to remove you from office was put together, which eventually ended your political career.";
+        gameOverText[3] = "You did your best, but unfortunately the cabinet decided they had made the wrong choice with you. A few days after you came into office you were forcefully brought out of it. Such an event can cause even the best of political careers to end…";
+        gameOverText[4] = "Your unwillingness to compromise and co-operate with the other planets within the Solar System caused too much tension. This tension only grew as time progressed and eventually exploded into a galactic war that made the entire system unsafe. Your actions were the cause of countless unneeded deaths… if only you had considered what their consequences might be…";
+        gameOverText[5] = "It appears the independence vote was not a good idea after all. Not only did it anger Earth initially, but your actions pushed them over the ledge, resulting in them declaring war on the Moon. As a newly established planetary body, you have no hope of winning, which would result in a forceful colonization or domination.";
+        gameOverText[6] = "Not relying on others is one thing, but completely disregarding them is another. Your actions have caused Mars, a planet with an established aggressive demeanor and violent history, to declare war on the Moon. That’s when hope was lost… a newly established planetary body stood no chance against the firepower of a planet that has been pouring resources in its military for centuries.";
+        gameOverText[7] = "You made history! Never before had Venus declared war on anyone, but you got them to finally do it! And although that is not something they specialize in, you still had no chance against an established planet of that size… The independent Moon was short lived due to your poor decision making.";
 
         UpdateScreen();
         NewDay();
@@ -694,7 +694,11 @@ public class Stats : MonoBehaviour {
             if (player == null)
             {
                 player = GameObject.Find("PlayerController");
-                pause = GameObject.Find("Pause");
+            }
+
+            if (pause == null)
+            {
+                pause = GameObject.Find("DialogueManager").GetComponent<DialogueManager>().pause;
                 pause.SetActive(false);
             }
 
