@@ -127,8 +127,11 @@ public class DayOneScript : MonoBehaviour {
 
     void Update()
     {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        if (GameObject.Find("Pause") == null)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
 
         //Sets up a raycast for the position of the mouse
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
