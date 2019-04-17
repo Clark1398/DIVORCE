@@ -6,13 +6,6 @@ using UnityEngine.UI;
 
 public class DayOneScript : MonoBehaviour {
 
-    GameObject whiteboardLight;
-    GameObject pcLight;
-    GameObject faxLight;
-    GameObject binLight;
-    GameObject phoneLight;
-    GameObject clockLight;
-    GameObject policyLight;
     GameObject paper;
     GameObject gameInfoObject;
 
@@ -85,6 +78,8 @@ public class DayOneScript : MonoBehaviour {
 
     public AudioClip trashFX, faxFX, typingFX, conferenceCallFX;
 
+    public Renderer chair, folderR, phone, conf;
+
     void Start()
     {
 
@@ -94,13 +89,6 @@ public class DayOneScript : MonoBehaviour {
         dialogueTrigger = FindObjectOfType<DialogueTrigger>();
         dialogueManager = FindObjectOfType<DialogueManager>();
 
-        whiteboardLight = GameObject.Find("Highlight Whiteboard");
-        pcLight = GameObject.Find("Highlight PC");
-        faxLight = GameObject.Find("Highlight Fax");
-        binLight = GameObject.Find("Highlight Bin");
-        phoneLight = GameObject.Find("Highlight Phone");
-        clockLight = GameObject.Find("Highlight Clock");
-        policyLight = GameObject.Find("Highlight Folder");
         robotPanel = GameObject.Find("RobotPanel");
 
         trashAudio = GameObject.FindGameObjectWithTag("Bin").GetComponent<AudioSource>();
@@ -110,8 +98,6 @@ public class DayOneScript : MonoBehaviour {
 
         doorLight1.color = red;
         doorLight2.color = red;
-
-        Light();
 
         paper = (GameObject)Resources.Load("Policy", typeof(GameObject));
 
@@ -166,6 +152,7 @@ public class DayOneScript : MonoBehaviour {
                     {
                         info.gameObject.SetActive(false);
                         chairCamera.SetActive(true);
+                        chair.material.SetFloat("Vector1_B78C4234", 100f);
                     }
                 }
             }
@@ -195,6 +182,8 @@ public class DayOneScript : MonoBehaviour {
 
                         marsCanvas.SetActive(false);
                         venusCanvas.SetActive(false);
+
+                        folderR.material.SetFloat("Vector1_B78C4234", 100f);
 
                         GameObject.Find("MainCamera").transform.LookAt(hit.collider.gameObject.transform);
                     }
@@ -442,6 +431,7 @@ public class DayOneScript : MonoBehaviour {
                     phonePanel.SetActive(true);
                     phoneCanvasOn = true;
                     statsScript.TimeForward();
+                    phone.material.SetFloat("Vector1_B78C4234", 100f);
                 }
             }
             //If the conference call is hit, it is interactable and the distance is less than 2.5, then display info text
@@ -466,6 +456,7 @@ public class DayOneScript : MonoBehaviour {
                     FolderOn();
                     statsScript.TimeForward();
                     gameObject.SetActive(false);
+                    conf.material.SetFloat("Vector1_B78C4234", 100f);
                 }
             }
             //Any other object remove the info
@@ -521,164 +512,6 @@ public class DayOneScript : MonoBehaviour {
             }
         }
     }
-
-    #region Lights
-
-    public void Light()
-    {
-        
-    }
-
-    IEnumerator Whiteboard()
-    {
-        while (whiteboardLight.GetComponent<Light>().intensity <= 0)
-        {
-            whiteboardLight.GetComponent<Light>().intensity = 3f;
-            yield return null;
-        }
-
-        while (whiteboardLight.GetComponent<Light>().intensity > 0)
-        {
-            whiteboardLight.GetComponent<Light>().intensity -= Time.deltaTime;
-            yield return null;
-        }
-
-        yield return null;
-    }
-
-    IEnumerator PC()
-    {
-        while (pcLight.GetComponent<Light>().intensity > 0)
-        {
-            pcLight.GetComponent<Light>().intensity -= Time.deltaTime;
-            yield return null;
-        }
-
-        if (pcLight.GetComponent<Light>().intensity <= 0)
-        {
-            pcLight.GetComponent<Light>().intensity = maxIntensity;
-            yield return null;
-        }
-
-        yield return null;
-    }
-
-    IEnumerator FaxAndBin()
-    {
-        while (faxLight.GetComponent<Light>().intensity > 0)
-        {
-            faxLight.GetComponent<Light>().intensity -= Time.deltaTime;
-            binLight.GetComponent<Light>().intensity -= Time.deltaTime;
-            yield return null;
-        }
-
-        if (faxLight.GetComponent<Light>().intensity <= 0)
-        {
-            faxLight.GetComponent<Light>().intensity = maxIntensity;
-            binLight.GetComponent<Light>().intensity = maxIntensity;
-            yield return null;
-        }
-
-        yield return null;
-    }
-
-    IEnumerator Clock()
-    {
-        while (clockLight.GetComponent<Light>().intensity > 0)
-        {
-            clockLight.GetComponent<Light>().intensity -= Time.deltaTime;
-            yield return null;
-        }
-
-        if (clockLight.GetComponent<Light>().intensity <= 0)
-        {
-            clockLight.GetComponent<Light>().intensity = 3f;
-
-            yield return null;
-        }
-
-        yield return null;
-    }
-
-    IEnumerator Folder()
-    {
-        while (policyLight.GetComponent<Light>().intensity > 0)
-        {
-            policyLight.GetComponent<Light>().intensity -= Time.deltaTime;
-            yield return null;
-        }
-
-        if (policyLight.GetComponent<Light>().intensity <= 0)
-        {
-            policyLight.GetComponent<Light>().intensity = maxIntensity;
-
-            yield return null;
-        }
-
-        yield return null;
-    }
-
-    IEnumerator Phone()
-    {
-        while (phoneLight.GetComponent<Light>().intensity > 0)
-        {
-            phoneLight.GetComponent<Light>().intensity -= Time.deltaTime;
-            yield return null;
-        }
-
-        if (phoneLight.GetComponent<Light>().intensity <= 0)
-        {
-            phoneLight.GetComponent<Light>().intensity = maxIntensity;
-
-            yield return null;
-        }
-
-        yield return null;
-    }
-
-    IEnumerator FlashWhiteboard()
-    {
-        StartCoroutine(Whiteboard());
-        yield return new WaitForSeconds(0.25f);
-        Light();
-    }
-
-    IEnumerator FlashPC()
-    {
-        StartCoroutine(PC());
-        yield return new WaitForSeconds(1f);
-        Light();
-    }
-
-    IEnumerator FlashFax()
-    {
-        StartCoroutine(FaxAndBin());
-        yield return new WaitForSeconds(1.25f);
-        Light();
-    }
-
-    IEnumerator FlashClock()
-    {
-        StartCoroutine(Clock());
-        yield return new WaitForSeconds(1.25f);
-        Light();
-    }
-
-    IEnumerator FlashFolder()
-    {
-        StartCoroutine(Folder());
-        yield return new WaitForSeconds(1.25f);
-        Light();
-    }
-
-    IEnumerator FlashPhone()
-    {
-        StartCoroutine(Phone());
-        yield return new WaitForSeconds(1.25f);
-        Light();
-    }
-
-    #endregion
 
     IEnumerator FolderOpen(RotationScript rot)
     {

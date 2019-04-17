@@ -233,6 +233,8 @@ public class RobotDialogueManager : MonoBehaviour {
 
     float timerForDialogue = 5f;
 
+    public Renderer whiteboard, chair, screens, screens2, fax, bin, clock, folder, phone, doorL, doorR, conf;
+
     // Use this for initialization
     void Awake ()
     {
@@ -350,8 +352,6 @@ public class RobotDialogueManager : MonoBehaviour {
     {
         mc = GameObject.Find("MainCamera");
         lc = GameObject.Find("LookAtCamera");
-
-        //lc.SetActive(false);
     }
 
     #region DayOne
@@ -418,7 +418,6 @@ public class RobotDialogueManager : MonoBehaviour {
     public void StartRobotDialogue2(RobotDialogue robotDialogue)
     {
         dayOneScript.wbActive = true;
-        dayOneScript.Light();
 
         dialogue2 = true;
         panel.SetActive(true);
@@ -446,12 +445,9 @@ public class RobotDialogueManager : MonoBehaviour {
             return;
         }
 
-        //mc.SetActive(false);
-        //lc.SetActive(true);
-        //LookAtScript.target = GameObject.FindGameObjectWithTag("Whiteboard");
-
         fpc.enabled = false;
         LookAtScript.target = GameObject.FindGameObjectWithTag("Whiteboard");
+        whiteboard.material.SetFloat("Vector1_B78C4234", 0.5f);
 
         string robotSentence2 = robotSentences2.Dequeue();
         StopAllCoroutines();
@@ -475,13 +471,13 @@ public class RobotDialogueManager : MonoBehaviour {
         timer1 = true;
         LookAtScript.target = null;
         fpc.enabled = true;
+        whiteboard.material.SetFloat("Vector1_B78C4234", 100f);
     }
 
     public void StartRobotDialogue3(RobotDialogue robotDialogue)
     {
         dayOneScript.wbActive = false;
         dayOneScript.pcActive = true;
-        dayOneScript.Light();
 
         dialogue3 = true;
         panel.SetActive(true);
@@ -519,6 +515,7 @@ public class RobotDialogueManager : MonoBehaviour {
         {
             fpc.enabled = false;
             LookAtScript.target = GameObject.FindGameObjectWithTag("Chair");
+            chair.material.SetFloat("Vector1_B78C4234", 0.5f);
         }
 
         if (robotAudio3.Count > 0)
@@ -545,6 +542,8 @@ public class RobotDialogueManager : MonoBehaviour {
         panel.SetActive(true);
         robotSentences3.Clear();
         robotAudio3.Clear();
+        screens.material.SetFloat("Vector1_B78C4234", 0.5f);
+        screens2.material.SetFloat("Vector1_B78C4234", 0.5f);
 
         foreach (string sentence in robotDialogue.robotSentences4)
         {
@@ -587,12 +586,12 @@ public class RobotDialogueManager : MonoBehaviour {
         dialogue4 = false;
         panel.SetActive(false);
         robotAudioSource.Stop();
+        StartCoroutine(ScreenHighlight());
     }
 
     public void StartRobotDialogue5(RobotDialogue robotDialogue)
     {
         dayOneScript.faxActive = true;
-        dayOneScript.Light();
 
         dialogue5 = true;
         panel.SetActive(true);
@@ -630,10 +629,12 @@ public class RobotDialogueManager : MonoBehaviour {
         {
             fpc.enabled = false;
             LookAtScript.target = GameObject.FindGameObjectWithTag("Fax");
+            fax.material.SetFloat("Vector1_B78C4234", 0.5f);
         }
         else if (robotSentences5.Count == 0)
         {
             LookAtScript.target = GameObject.FindGameObjectWithTag("Bin");
+            bin.material.SetFloat("Vector1_B78C4234", 0.5f);
         }
 
         if (robotAudio5.Count > 0)
@@ -652,15 +653,17 @@ public class RobotDialogueManager : MonoBehaviour {
         timer2 = true;
         LookAtScript.target = null;
         fpc.enabled = true;
+        fax.material.SetFloat("Vector1_B78C4234", 100f);
+        bin.material.SetFloat("Vector1_B78C4234", 100f);
     }
 
     public void StartRobotDialogue6(RobotDialogue robotDialogue)
     {
         dayOneScript.clockActive = true;
-        dayOneScript.Light();
 
         fpc.enabled = false;
         LookAtScript.target = GameObject.Find("Clock");
+        clock.material.SetFloat("Vector1_B78C4234", 0.5f);
 
         dialogue6 = true;
         panel.SetActive(true);
@@ -713,12 +716,15 @@ public class RobotDialogueManager : MonoBehaviour {
 
         dayOneScript.clockActive = false;
         robotDialogueTrigger.TriggerRobotDialogue7();
+        clock.material.SetFloat("Vector1_B78C4234", 100f);
     }
 
     public void StartRobotDialogue7(RobotDialogue robotDialogue)
     {
         dayOneScript.policyActive = true;
-        dayOneScript.Light();
+        fpc.enabled = false;
+        LookAtScript.target = GameObject.Find("MarsFolder");
+        folder.material.SetFloat("Vector1_B78C4234", 0.5f);
 
         dialogue7 = true;
         panel.SetActive(true);
@@ -773,10 +779,6 @@ public class RobotDialogueManager : MonoBehaviour {
     public void StartRobotDialogue8(RobotDialogue robotDialogue)
     {
         dayOneScript.policyActive = false;
-        dayOneScript.Light();
-
-        fpc.enabled = false;
-        LookAtScript.target = GameObject.Find("MarsFolder");
 
         dialogue8 = true;
         panel.SetActive(true);
@@ -879,10 +881,10 @@ public class RobotDialogueManager : MonoBehaviour {
     public void StartRobotDialogue10(RobotDialogue robotDialogue)
     {
         dayOneScript.phoneLActive = true;
-        dayOneScript.Light();
 
         fpc.enabled = false;
         LookAtScript.target = GameObject.FindGameObjectWithTag("Phone");
+        phone.material.SetFloat("Vector1_B78C4234", 0.5f);
 
         dialogue10 = true;
         panel.SetActive(true);
@@ -1040,6 +1042,9 @@ public class RobotDialogueManager : MonoBehaviour {
     {
         fpc.enabled = false;
         LookAtScript.target = GameObject.Find("Area Light");
+        doorL.material.SetFloat("Vector1_B78C4234", 0.5f);
+        doorR.material.SetFloat("Vector1_B78C4234", 0.5f);
+        conf.material.SetFloat("Vector1_B78C4234", 0.5f);
 
         dialogue13 = true;
         panel.SetActive(true);
@@ -1089,6 +1094,8 @@ public class RobotDialogueManager : MonoBehaviour {
         robotAudioSource.Stop();
         LookAtScript.target = null;
         fpc.enabled = true;
+        doorL.material.SetFloat("Vector1_B78C4234", 100f);
+        doorR.material.SetFloat("Vector1_B78C4234", 100f);
     }
 
     public void StartRobotDialogue14(RobotDialogue robotDialogue)
@@ -3024,5 +3031,13 @@ public class RobotDialogueManager : MonoBehaviour {
         //        timerForDialogue = 5f;
         //    }
         //}
+    }
+
+    IEnumerator ScreenHighlight()
+    {
+        new WaitForSeconds(3f);
+        screens.material.SetFloat("Vector1_B78C4234", 100f);
+        screens2.material.SetFloat("Vector1_B78C4234", 100f);
+        yield return new WaitForSeconds(0f);
     }
 }

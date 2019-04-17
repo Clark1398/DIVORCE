@@ -48,6 +48,8 @@ public class Phone : MonoBehaviour
     DayOneScript dayOneScript;
     //RobotDialogueTrigger robotDialogueTrigger;
 
+    public Renderer rend;
+
     void Start()
     {
         playerObj = GameObject.FindGameObjectWithTag("Player");
@@ -118,6 +120,8 @@ public class Phone : MonoBehaviour
                 }
                 else if (!firstCall)
                 {
+                    rend.material.SetFloat("Vector1_B78C4234", 0.5f);
+
                     phoneCallText.GetComponent<Text>().text = phoneCalls[1];
                     ringTimerActive = true;
 
@@ -146,6 +150,7 @@ public class Phone : MonoBehaviour
             audioSource.Play();
             isRinging = true;
             calls++;
+            rend.material.SetFloat("Vector1_B78C4234", 0.5f);
 
             if (statsScript.day == 2)
             {

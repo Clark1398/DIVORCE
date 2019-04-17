@@ -108,11 +108,6 @@ public class CameraScript : MonoBehaviour {
                 dayOneScript.pcActive = false;
             }
 
-            if (statsScript.day == 1 && dayOneScript.pcIntractable == true)
-            {
-                dayOneScript.Light();
-            }
-
             if (interactionScript.pcActive == true)
             {
                 interactionScript.pcActive = false;
