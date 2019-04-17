@@ -43943,6 +43943,11 @@ PrefabInstance:
       propertyPath: continueButton
       value: 
       objectReference: {fileID: 822026007}
+    - target: {fileID: 114700646298782018, guid: a96c07b1be1f31c40ad5bc66d57204cd,
+        type: 3}
+      propertyPath: pause
+      value: 
+      objectReference: {fileID: 1953248180}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a96c07b1be1f31c40ad5bc66d57204cd, type: 3}
 --- !u!1 &911422144
@@ -107225,6 +107230,11 @@ PrefabInstance:
       propertyPath: conf
       value: 
       objectReference: {fileID: 1869120853}
+    - target: {fileID: 6696310552782871696, guid: a075bfde3e153924eabb450910db09d8,
+        type: 3}
+      propertyPath: pause
+      value: 
+      objectReference: {fileID: 1953248180}
     - target: {fileID: 8567674824692306950, guid: a075bfde3e153924eabb450910db09d8,
         type: 3}
       propertyPath: mouseLook.clampVerticalRotation
