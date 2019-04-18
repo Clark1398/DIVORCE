@@ -18289,37 +18289,38 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   noOfTasks: 0
   task1Complete_1: "Starting off well! You managed to complete the cabinet\u2019s
-    request of improving your relations with Earth and this should have a long-lasting
+    first task of improving your relations with Earth and this should have a long-lasting
     effect for sure! As the closest planet to us, it is crucial that we maintain a
     good relationship with them, not only are they our allies, but many of our people
     have jobs and businesses there that will also be affected if this rapport is diminished."
-  task1Fail_1: "Not a great start\u2026 There was a reason the cabinet asked you to
-    improve our rapport with Earth! They are the closest planet to us and many of
-    our people have jobs and run businesses there. Those same people are now being
-    treated badly and with suspicion. It will be difficult to recover from this."
+  task1Fail_1: "Not a great start\u2026 There was a reason the cabinet gave you the
+    task to to improve our rapport with Earth! They are the closest planet to us and
+    many of our people have jobs and run businesses there. Those same people are now
+    being treated badly and with suspicion. It will be difficult to recover from this."
   task2Complete_1: "Your second task was to raise Mars\u2019 opinion of us, which
     you managed to do very successfully! Excellent job! A planet like Mars is usually
     hard to impress as they value power and control. Making a good impression on them
     on your first day has surely opened the door to a better relationship in the future!"
-  task2Fail_1: "Unfortunately your second task wasn\u2019t a success\u2026 Mars\u2019
+  task2Fail_1: "Unfortunately your second task wasn\u2019t a success\u2026 The Martians
     value power and control, so the fact that you got off on the wrong foot with them
     is not good. They are the type of people that will remember the first impression
     for a while, hopefully you can recover from this, but it would have been good
     get on their good side early on."
-  task3Complete_1: "Independence cannot work out if our people are not united. Luckily,
-    it appears you know what needs getting done to lead us there! The more the people
-    agree with each other, the easier it will be for the Moon to thrive. You\u2019ve
-    done well on this end and you should do your best to keep it up going forward."
+  task3Complete_1: "Your third task was regarding the people\u2019s autonomy and independence
+    cannot work if our people are not united. Luckily, it appears you know what needs
+    getting done to lead us there! The more the people agree with each other, the
+    easier it will be for the Moon to thrive. You\u2019ve done well on this end and
+    you should do your best to keep it up going forward."
   task3Fail_1: "It is strange how the vote for independence was almost unanimous,
     yet now the people are beginning to drift apart. The cabinet would definitely
-    not appreciate that and worst of all\u2026 they would blame you. Surely, there
-    are things you can do to fix that? Think what actions would be good to unite the
-    people."
-  task4Complete_1: "A leader is only as good as his following, and you\u2019ve shown
-    you can get people behind you! Good job! It seems like the cabinet made a good
-    choice when they picked you. Although, the public might not always know what is
-    best for them, it is best for you if they like you! And you clearly know how to
-    get them to do that."
+    not appreciate the fact your third task didn\u2019t get completed and worst of
+    all\u2026 they would blame you. Surely, there are things you can do to fix that?
+    Think what actions would be good to unite the people."
+  task4Complete_1: "Your last task for the day was to get the public\u2019s support
+    and a leader is only as good as his following! You\u2019ve shown you can get people
+    behind you! Good job! It seems like the cabinet made a good choice when they picked
+    you. Although, the public might not always know what is best for them, it is best
+    for you if they like you! And you clearly know how to get them to do that."
   task4Fail_1: "The fourth task will be a tough one to recover from\u2026 The crowd
     tends to have a ripple effect that might cause you a lot of trouble. Hopefully,
     you\u2019ll be able to fix this, but keep in mind that as it stands, the public
@@ -18328,14 +18329,14 @@ MonoBehaviour:
     as their president made the following announcement on social media: \u201CWe\u2019re
     happy to announce the open border with the Moon will be kept as is following their
     official detachment from us as an independent planetary body! This is a great
-    step forward for both our planets and a brand new process that no planet  has
-    been through before.\u201D "
+    step forward for both our planets and a brand new process that no planet \rhas
+    been through before.\r\n"
   conferenceDecline_1: "The result of your conference call with Earth made headlines
     as their president made the following announcement on social media: \u201CDisappointedly,
     our \u2018friends\u2019 at the Moon are seeking to start this new period of their
     existence with poor relations, and refuse to remove their new hard border. It
     is clear that this will cause too many unnecessary issues for both our and their
-    citizens but it seems they are determined to proceed with this nonsense!\u201D"
+    citizens but it seems they are determined to proceed with this nonsense!"
   task1Complete_2: "Your first task for the day was to increase our revenue and you
     successfully did so! Now, you\u2019ll be able to improve the quality of life for
     our citizens and fix some long-standing issues within our community. Either way,
@@ -18362,36 +18363,149 @@ MonoBehaviour:
     it. Venus is known for its vast network of trade routes across the galaxy, so
     we will surely suffer for our lack of rapport with them. It might not seem like
     it now, but the consequences will make themselves very noticeable if this continues.
-  wifeAccept_1: 
-  wifeDecline_1: 
-  conferenceAccept_2: 
-  conferenceDecline_2: 
-  task1Complete_3: 
-  task1Fail_3: 
-  task2Complete_3: 
-  task2Fail_3: 
-  task3Complete_3: 
-  task3Fail_3: 
-  task4Complete_3: 
-  task4Fail_3: 
-  wifeAccept_2: 
-  wifeDecline_2: 
-  conferenceAccept_3: 
-  conferenceDecline_3: 
-  conferenceIgnore: 
-  task1Complete_4: 
-  task1Fail_4: 
-  task2Complete_4: 
-  task2Fail_4: 
-  task3Complete_4: 
-  task3Fail_4: 
-  contactAccept: 
-  contactDecline: 
-  contactNotSubmitted: 
-  wifeAccept_3: 
-  wifeDecline_3: 
-  conferenceAccept_4: 
-  conferenceDecline_4: 
+  wifeAccept_1: "Your wife also called today with a strange request\u2026 she asked
+    you to ignore or decline Earth\u2019s phone call today. Having done so, it is
+    important to note that denying access to a nuclear inspector due to personal reasons,
+    will surely have serious repercussions on both your relationship with them and
+    the overall system tension."
+  wifeDecline_1: "Your wife also called today with a strange request\u2026 she asked
+    you to ignore or decline Earth\u2019s phone call today. Good thing you didn\u2019t
+    follow through with that request as denying access to a nuclear inspector would
+    have had serious repercussions. Our autonomy may suffer slightly for it, but this
+    act surely diffuses a lot of the tension within the system."
+  conferenceAccept_2: "The result of your conference call with Mars today certainly
+    improved their opinion of us, however it might have had a negative impact on the
+    population\u2019s opinion of you. The public generally dislikes that our moonmetals
+    are being used to manufacture weapons abroad. Mars has a poor reputation for using
+    military grade weapons on protesters, this might flare up some questions from
+    the press."
+  conferenceDecline_2: "The result of your conference call with Mars today left them
+    very disappointed. Some of the cabinet members certainly won\u2019t be pleased
+    you declined such a profitable deal, however most of the population will support
+    this decision. Mars have been receiving bad press recently for being too cruel
+    to their people so keeping the strong moonmetals out of their hands was probably
+    the right call."
+  task1Complete_3: The outcome of your first task today was a positive one! Getting
+    the Martians to like someone is not an easy thing to do, and definitely requires
+    some sacrifices, but you are clearly on the right path. This advancement is not
+    only beneficial to our external relations, but will make Mars more likely to approve
+    any requests you send them. Great job!
+  task1Fail_3: "The outcome of your first task today was not a good one\u2026 The
+    Martians are known to be very self-sufficient, but it would do us good to have
+    them see us in a good light. Remember, the better your relationship with them
+    is, the higher the chance they\u2019ll approve any requests you send them."
+  task2Complete_3: "As for your second task, getting the people on your side, it seems
+    like you know how to do that! The statistics are showing that you are better liked
+    than the old PM, which is quite the accomplishment, given the fact you\u2019ve
+    been in office only 3 days! Keep this up and you\u2019ll make history!"
+  task2Fail_3: "As for your second task, getting the people on your side, you might
+    want to work on that one a bit more\u2026  You are here to enact the people\u2019s
+    wishes and if you fail to do so, you will be replaced. It is a difficult time
+    for the Moon and it would do us good to have leadership that everyone trusts in."
+  task3Complete_3: "The cabinet also requested you get the Venucians to like us too
+    and you did so brilliantly! As one of the major trade forces in the Solar System,
+    we definitely want to be in their good graces. Having an ally that is connected
+    as well as them will definitely be good for our future, but Mars may not be too
+    happy with us given their long feud\u2026"
+  task3Fail_3: "The cabinet also requested you get the Venucians to like us too but
+    you were unable to sort that out unfortunately\u2026 As one of the major trade
+    forces in the Solar System, we would definitely want to be in their good graces.
+    The Martians might back us up for being on bad terms with Venus, but having an
+    ally that is as connected as them would have definitely been good for future too."
+  task4Complete_3: "The cabinet\u2019s final request for the day was to decrease the
+    tension in the system again and to the benefit of all - you have succeeded! Keeping
+    the tension low is an incredibly good move as it ensures the other planets won\u2019t
+    be busy being at each other\u2019s throats all the time and therefore you\u2019ll
+    get your chance to establish some good relations. Well done!"
+  task4Fail_3: "The cabinet\u2019s final request for the day was to decrease the tension
+    in the system again, but you were did not manage to do so\u2026 With the tension
+    being this high, most of the big planets are wary and tend to avoid building external
+    relations which will definitely cause us trouble later on\u2026"
+  wifeAccept_2: "Your wife called with an unprofessional request again\u2026 Asking
+    you to leave early is all fine, but the fact that you did is troublesome. Not
+    only will the cabinet not approve of this, but you bailed on the scheduled conference
+    call you had with Venus\u2019 leader! Because of this our relationship with them
+    will undoubtedly suffer\u2026 Let\u2019s just hope we can recover from this\u2026\u2019"
+  wifeDecline_2: "Your wife called with an unprofessional request again\u2026 Asking
+    you to leave early was a bit of a stretch, and good thing you did not listen to
+    her, otherwise the cabinet would have been furious! Not only that, but you would
+    have missed the conference call you had scheduled with Venus\u2019 leader! That
+    would have been unreasonably disrespectful and surely remembered."
+  conferenceAccept_3: "The result of your conference call with Venus today certainly
+    improved our relationship with them! Strangely enough, the call itself wasn\u2019t
+    a trade deal, contrary to what was expected seeing as how that\u2019s what they
+    are known for! Instead, they contacted you regarding their desire to spread peace
+    through the galaxy. Having accepted their request, a blockade is now being formed
+    that will prevent most trade between Earth and Mars from being conducted. This
+    will surely anger them, but given that most of their business is related to weapons,
+    this is definitely a good thing for the solar system."
+  conferenceDecline_3: "The result of your conference call with Venus today might
+    have had a negative impact on their opinion of us\u2026 However, your decision
+    was certainly understandable as their accepting their request would have angered
+    both Earth and Mars and this is the last thing we want as a newly independent
+    planet. Sure, they will continue their weapons trades, but at least they won\u2019t
+    have the incentive to use them on us!"
+  conferenceIgnore: "Skipping such important matters for a family outing is not how
+    a Prime Minister should act! Venus has gone out of their way to spread the news
+    of this around the galaxy, which sheds a bad light on the whole Moon, not just
+    yourself! You should be more responsible going forward, or you won\u2019t be in
+    office for very long!"
+  task1Complete_4: "Your first task for today was to improve our relationship with
+    Earth and the fact that you managed to accomplish it will certainly come in handy
+    tomorrow when the independence bill passes! As they are considered our \u2018parent
+    planet\u2019, being on their good side will definitely serve us well."
+  task1Fail_4: "Your first task for today was to improve our relationship with Earth
+    and the fact that you didn\u2019t manage to complete it will most likely bite
+    us back tomorrow when the independence bill passes! As they are considered our
+    \u2018parent planet, it would definitely have served us well if we were on their
+    good side."
+  task2Complete_4: "Secondly, the cabinet tasked you with increasing our revenue,
+    which you successfully accomplished! A steady stream of cash coming our way means
+    we\u2019ll have a stronger economy for when the independence bill passes tomorrow!"
+  task2Fail_4: "Secondly, the cabinet tasked you with increasing our revenue, which
+    you did not manage to accomplish. It would have been good to have a steady stream
+    of cash coming our way for when the independence bill passes tomorrow, but it
+    seems the economy is something we\u2019ll try to fix later\u2026"
+  task3Complete_4: "The third task of the day was about the people\u2019s sense of
+    autonomy, which is more important for our people now than ever before! And you
+    have made sure the majority of our people stay united and are prepared for tomorrow!"
+  task3Fail_4: "The third task of the day was about the people\u2019s sense of autonomy,
+    which is more important for our people now than ever before! Unfortunately though,
+    you have been unable to get even half of our people on the same page, which will
+    most likely after our future significantly after tomorrow!"
+  contactAccept: Your final task for the day was also related to Earth. The cabinet
+    asked you to arrange for our people to be able to go there without needing a Visa
+    and thanks to your skills as a politician, Earth has accepted the request! This
+    will make it much easier for all those folk who work there to travel in the mornings
+    and will improve our overall relationship with the earthlings further!
+  contactDecline: "Your final task for the day was also related to Earth. The cabinet
+    asked you to arrange for our people to be able to go there without needing a Visa,
+    however Earth denied your request for it. This is probably due to the poor relationship
+    we have had with them since our independence vote. Our people will not be happy
+    about this, but isn\u2019t much we can do at this point\u2026"
+  contactNotSubmitted: "Your final task for the day was also related to Earth. The
+    cabinet asked you to arrange for our people to be able to go there without needing
+    a Visa, however you did not even send a request for it. I can assure you neither
+    the cabinet, nor the people will be happy about this\u2026"
+  wifeAccept_3: "Your wife also gave you a call today, asking you to arrange for travel
+    to Mars without a Visa, so it would be easier for your son to go to college there.
+    After sending the request, it was accepted by the Martians, so that\u2019s good!
+    However, drafting the request and faxing it took substantial time out of your
+    schedule, which could have been used to complete one of your tasks from the cabinet\u2026"
+  wifeDecline_3: "Your wife also gave you a call today, asking you to arrange for
+    travel to Mars without a Visa, so it would be easier for your son to go to college
+    there. You didn\u2019t quite manage to get that done however, so be prepared for
+    an argument when you get home!"
+  conferenceAccept_4: "Your conference call today was about the DIVORCE bill promised
+    to Earth by the previous PM. Having to live up to someone else\u2019s promises
+    is never easy, but you held your own very well! After accepting to pay the bill,
+    Earth should be pretty happy with us and the word will surely spread quickly through
+    the system of your reputable nature!"
+  conferenceDecline_4: "Your conference call today was about the DIVORCE bill promised
+    to Earth by the previous PM. Having to live up to someone else\u2019s promises
+    is never easy and you did your best, but the requested sum was far too big. Earth
+    will most likely be unhappy with this decision, but at least it won\u2019t send
+    our economy into a downwards spiral."
   task1_1Text: {fileID: 2081710018}
   task2_1Text: {fileID: 2054786702}
   task3_1Text: {fileID: 738363592}
@@ -27087,7 +27201,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: 6f72f54a3a17fdc4db83f67e9ee88384, type: 3}
 --- !u!4 &1324420438 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 400000, guid: 6f72f54a3a17fdc4db83f67e9ee88384,
+  m_CorrespondingSourceObject: {fileID: 400002, guid: 6f72f54a3a17fdc4db83f67e9ee88384,
     type: 3}
   m_PrefabInstance: {fileID: 1324420437}
   m_PrefabAsset: {fileID: 0}
@@ -31855,8 +31969,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: 93fb1cff223298a449d1f6734f820647, type: 3}
 --- !u!4 &1543230331 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 400000, guid: 93fb1cff223298a449d1f6734f820647,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 1543230330}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1551677695
