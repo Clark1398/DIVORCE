@@ -28,6 +28,11 @@ public class RobotDialogueTrigger : MonoBehaviour {
         robotDialogueManager.StartRobotDialogue3(robotDialogue);
     }
 
+    public void TriggerRobotDialogue3point5()
+    {
+        robotDialogueManager.StartRobotDialogue3point5(robotDialogue);
+    }
+
     public void TriggerRobotDialogue4()
     {
         robotDialogueManager.StartRobotDialogue4(robotDialogue);

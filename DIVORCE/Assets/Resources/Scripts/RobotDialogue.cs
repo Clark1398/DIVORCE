@@ -12,6 +12,7 @@ public class RobotDialogue {
     public string[] robotSentences1;
     public string[] robotSentences2;
     public string[] robotSentences3;
+    public string[] robotSentences3point5;
     public string[] robotSentences4;
     public string[] robotSentences5;
     public string[] robotSentences6;
@@ -23,7 +24,6 @@ public class RobotDialogue {
     public string[] robotSentences12;
     public string[] robotSentences13;
     public string[] robotSentences14;
-    //public string[] robotSentences15;
     //public string[] robotSentences16;
 
     #endregion

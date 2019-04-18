@@ -14,6 +14,7 @@ public class RobotDialogueManager : MonoBehaviour {
     private Queue<string> robotSentences1;
     private Queue<string> robotSentences2;
     private Queue<string> robotSentences3;
+    private Queue<string> robotSentences3point5;
     private Queue<string> robotSentences4;
     private Queue<string> robotSentences5;
     private Queue<string> robotSentences6;
@@ -25,7 +26,6 @@ public class RobotDialogueManager : MonoBehaviour {
     private Queue<string> robotSentences12;
     private Queue<string> robotSentences13;
     private Queue<string> robotSentences14;
-    //private Queue<string> robotSentences15;
     //private Queue<string> robotSentences16;
 
     private Queue<string> robotSentences2_1;
@@ -66,6 +66,7 @@ public class RobotDialogueManager : MonoBehaviour {
     public AudioClip[] robotClip1;
     public AudioClip[] robotClip2;
     public AudioClip[] robotClip3;
+    public AudioClip[] robotClip3point5;
     public AudioClip[] robotClip4;
     public AudioClip[] robotClip5;
     public AudioClip[] robotClip6;
@@ -117,6 +118,7 @@ public class RobotDialogueManager : MonoBehaviour {
     private Queue<AudioClip> robotAudio1;
     private Queue<AudioClip> robotAudio2;
     private Queue<AudioClip> robotAudio3;
+    private Queue<AudioClip> robotAudio3point5;
     private Queue<AudioClip> robotAudio4;
     private Queue<AudioClip> robotAudio5;
     private Queue<AudioClip> robotAudio6;
@@ -128,7 +130,6 @@ public class RobotDialogueManager : MonoBehaviour {
     private Queue<AudioClip> robotAudio12;
     private Queue<AudioClip> robotAudio13;
     private Queue<AudioClip> robotAudio14;
-    //private Queue<AudioClip> robotAudio15;
     //private Queue<AudioClip> robotAudio16;
 
     private Queue<AudioClip> robotAudio2_1;
@@ -166,6 +167,7 @@ public class RobotDialogueManager : MonoBehaviour {
     bool dialogue1;
     bool dialogue2;
     bool dialogue3;
+    bool dialogue3point5;
     bool dialogue4;
     bool dialogue5;
     bool dialogue6;
@@ -177,7 +179,6 @@ public class RobotDialogueManager : MonoBehaviour {
     bool dialogue12;
     bool dialogue13;
     bool dialogue14;
-    //bool dialogue15;
     //bool dialogue16;
 
     bool dialogue2_1;
@@ -249,6 +250,7 @@ public class RobotDialogueManager : MonoBehaviour {
         robotSentences1 = new Queue<string>();
         robotSentences2 = new Queue<string>();
         robotSentences3 = new Queue<string>();
+        robotSentences3point5 = new Queue<string>();
         robotSentences4 = new Queue<string>();
         robotSentences5 = new Queue<string>();
         robotSentences6 = new Queue<string>();
@@ -260,7 +262,6 @@ public class RobotDialogueManager : MonoBehaviour {
         robotSentences12 = new Queue<string>();
         robotSentences13 = new Queue<string>();
         robotSentences14 = new Queue<string>();
-        //robotSentences15 = new Queue<string>();
         //robotSentences16 = new Queue<string>();
 
         robotSentences2_1 = new Queue<string>();
@@ -299,6 +300,7 @@ public class RobotDialogueManager : MonoBehaviour {
         robotAudio1 = new Queue<AudioClip>();
         robotAudio2 = new Queue<AudioClip>();
         robotAudio3 = new Queue<AudioClip>();
+        robotAudio3point5 = new Queue<AudioClip>();
         robotAudio4 = new Queue<AudioClip>();
         robotAudio5 = new Queue<AudioClip>();
         robotAudio6 = new Queue<AudioClip>();
@@ -310,7 +312,6 @@ public class RobotDialogueManager : MonoBehaviour {
         robotAudio12 = new Queue<AudioClip>();
         robotAudio13 = new Queue<AudioClip>();
         robotAudio14 = new Queue<AudioClip>();
-        //robotAudio15 = new Queue<AudioClip>();
         //robotAudio16 = new Queue<AudioClip>();
 
         robotAudio2_1 = new Queue<AudioClip>();
@@ -530,6 +531,55 @@ public class RobotDialogueManager : MonoBehaviour {
         robotAudioSource.Stop();
         LookAtScript.target = null;
         fpc.enabled = true;
+    }
+
+    public void StartRobotDialogue3point5(RobotDialogue robotDialogue)
+    {
+        panel.SetActive(true);
+        dialogue3point5 = true;
+        robotSentences3.Clear();
+        robotAudio3.Clear();
+
+        foreach (string sentence in robotDialogue.robotSentences3point5)
+        {
+            robotSentences3point5.Enqueue(sentence);
+        }
+
+        foreach (AudioClip clip in robotClip3point5)
+        {
+            robotAudio3point5.Enqueue(clip);
+        }
+
+        DisplayNextRobotSentence3point5();
+    }
+
+    public void DisplayNextRobotSentence3point5()
+    {
+        if (robotSentences3point5.Count == 0)
+        {
+            EndRobotDialogue3point5();
+            return;
+        }
+
+        string robotSentence = robotSentences3point5.Dequeue();
+        StopAllCoroutines();
+        StartCoroutine(TypeSentence(robotSentence));
+
+        robotAudioSource.Stop();
+
+        if (robotAudio3point5.Count > 0)
+        {
+            AudioClip robotAudio = robotAudio3point5.Dequeue();
+            robotAudioSource.clip = robotAudio;
+            robotAudioSource.PlayOneShot(robotAudio);
+        }
+    }
+
+    public void EndRobotDialogue3point5()
+    {
+        dialogue3point5 = false;
+        panel.SetActive(false);
+        robotAudioSource.Stop();
     }
 
     public void StartRobotDialogue4(RobotDialogue robotDialogue)
@@ -1151,74 +1201,7 @@ public class RobotDialogueManager : MonoBehaviour {
         phoneScript.firstCall = true;
 
         statsScript.time--;
-
-        //GameObject.Find("GameInfoObject").name = "GameInfoObject DDL";
-        //GameObject.Find("Earth Folder").name = "Earth Folder DDL";
-        //GameObject.Find("Mars Folder").name = "Mars Folder DDL";
-        //GameObject.Find("Venus Folder").name = "Venus Folder DDL";
-
-        //DontDestroyOnLoad(GameObject.Find("GameInfoObject DDL"));
-        //DontDestroyOnLoad(GameObject.Find("Earth Folder DDL"));
-        //DontDestroyOnLoad(GameObject.Find("Mars Folder DDL"));
-        //DontDestroyOnLoad(GameObject.Find("Venus Folder DDL"));
-
-        //Cursor.lockState = CursorLockMode.None;
-        //Cursor.visible = true;
-        //phoneScript.dayOne = false;
-        //statsScript.time = 10;
-        //statsScript.day++;
-        //SceneManager.LoadScene("End Of Day");
-        //statsScript.newDay = true;
     }
-
-    //public void StartRobotDialogue15(RobotDialogue robotDialogue)
-    //{
-    //    dialogue15 = true;
-    //    robotSentences14.Clear();
-    //    robotAudio14.Clear();
-
-    //    foreach (string sentence in robotDialogue.robotSentences15)
-    //    {
-    //        robotSentences15.Enqueue(sentence);
-    //    }
-
-    //    foreach (AudioClip clip in robotClip15)
-    //    {
-    //        robotAudio15.Enqueue(clip);
-    //    }
-
-    //    DisplayNextRobotSentence15();
-    //}
-
-    //public void DisplayNextRobotSentence15()
-    //{
-    //    if (robotSentences15.Count == 0)
-    //    {
-    //        EndRobotDialogue15();
-    //        return;
-    //    }
-
-    //    string robotSentence = robotSentences15.Dequeue();
-    //    StopAllCoroutines();
-    //    StartCoroutine(TypeSentence(robotSentence));
-
-    //    robotAudioSource.Stop();
-
-    //    if (robotAudio15.Count > 0)
-    //    {
-    //        AudioClip robotAudio = robotAudio15.Dequeue();
-    //        robotAudioSource.clip = robotAudio;
-    //        robotAudioSource.PlayOneShot(robotAudio);
-    //    }
-    //}
-
-    //public void EndRobotDialogue15()
-    //{
-    //    dialogue15 = false;
-    //    panel.SetActive(false);
-    //    robotAudioSource.Stop();
-    //    robotDialogueTrigger.TriggerRobotDialogue16();
-    //}
 
     //public void StartRobotDialogue16(RobotDialogue robotDialogue)
     //{
@@ -2714,6 +2697,10 @@ public class RobotDialogueManager : MonoBehaviour {
             else if (dialogue3)
             {
                 DisplayNextRobotSentence3();
+            }
+            else if (dialogue3point5)
+            {
+                DisplayNextRobotSentence3point5();
             }
             else if (dialogue4)
             {

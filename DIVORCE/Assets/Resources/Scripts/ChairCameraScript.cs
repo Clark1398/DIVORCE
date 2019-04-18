@@ -26,6 +26,8 @@ public class ChairCameraScript : MonoBehaviour
 
     bool dosEnabled;
     public bool moonFolderFirst = false;
+    bool firstUse;
+    bool firstUse2;
 
     void Start()
     {
@@ -41,6 +43,17 @@ public class ChairCameraScript : MonoBehaviour
         else if (ins.enabled)
         {
             dosEnabled = false;
+        }
+
+        if (statsScript.day == 1)
+        {
+            firstUse = true;
+            firstUse2 = true;
+        }
+        else
+        {
+            firstUse = false;
+            firstUse2 = false;
         }
     }
 
@@ -140,6 +153,15 @@ public class ChairCameraScript : MonoBehaviour
 
                     pcAudio.clip = typingFX;
                     pcAudio.PlayOneShot(typingFX);
+
+                    if (statsScript.day == 1)
+                    {
+                        if (firstUse)
+                        {
+                            rdt.TriggerRobotDialogue3point5();
+                            firstUse = false;
+                        }
+                    }
                 }
             }
             else if (hit.collider.gameObject.tag == "MoonFolder" && statsScript.day > 1)
@@ -195,6 +217,15 @@ public class ChairCameraScript : MonoBehaviour
                 else
                 {
                     ins.enabled = true;
+                }
+
+                if (statsScript.day == 1)
+                {
+                    if (firstUse2)
+                    {
+                        rdt.TriggerRobotDialogue4();
+                        firstUse2 = true;
+                    }
                 }
 
                 player.SetActive(true);
