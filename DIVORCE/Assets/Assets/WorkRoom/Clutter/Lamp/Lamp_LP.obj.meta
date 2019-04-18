@@ -3,14 +3,14 @@ guid: 6f72f54a3a17fdc4db83f67e9ee88384
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: pCube16
-    400000: //RootNode
-    400002: pCube16
-    2100000: pCube16Mat
-    2300000: pCube16
-    3300000: pCube16
-    4300000: pCube16
+    100000: lamp
+    100002: //RootNode
+    400000: lamp
+    400002: //RootNode
+    2100000: lampMat
+    2300000: lamp
+    3300000: lamp
+    4300000: lamp
   externalObjects: {}
   materials:
     importMaterials: 1

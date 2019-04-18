@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: 93fb1cff223298a449d1f6734f820647
+guid: 77d28b79d5638124fb9c599327740213
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: pTorus2
-    400000: //RootNode
-    400002: pTorus2
-    2100000: pTorus2Mat
-    2300000: pTorus2
-    3300000: pTorus2
-    4300000: pTorus2
+    100000: mouse_low_poly_pTorus2
+    100002: //RootNode
+    400000: mouse_low_poly_pTorus2
+    400002: //RootNode
+    2100000: mouse_low_poly_pTorus2Mat
+    2300000: mouse_low_poly_pTorus2
+    3300000: mouse_low_poly_pTorus2
+    4300000: mouse_low_poly_pTorus2
   externalObjects: {}
   materials:
     importMaterials: 1
