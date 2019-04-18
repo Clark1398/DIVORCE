@@ -9,7 +9,8 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: ConfFloor
   m_Shader: {fileID: 4800000, guid: 6e4ae4064600d784cac1e41a9e6f2e59, type: 3}
-  m_ShaderKeywords: _DOUBLESIDED_ON _MAPPING_PLANAR _MASKMAP _NORMALMAP _NORMALMAP_TANGENT_SPACE
+  m_ShaderKeywords: _DOUBLESIDED_ON _MAPPING_PLANAR _MASKMAP _MATERIAL_FEATURE_CLEAR_COAT
+    _NORMALMAP _NORMALMAP_TANGENT_SPACE
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 1
@@ -29,8 +30,8 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseColorMap:
-        m_Texture: {fileID: 2800000, guid: 04e2b851e91ae744bad48fc5445e7cd3, type: 3}
-        m_Scale: {x: 1, y: 1}
+        m_Texture: {fileID: 2800000, guid: 96396a71e7310394a98657d80d77aa0a, type: 3}
+        m_Scale: {x: 2, y: 2}
         m_Offset: {x: 0, y: 0}
     - _BentNormalMap:
         m_Texture: {fileID: 0}
@@ -69,7 +70,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 04e2b851e91ae744bad48fc5445e7cd3, type: 3}
+        m_Texture: {fileID: 2800000, guid: 96396a71e7310394a98657d80d77aa0a, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskMap:
@@ -120,7 +121,7 @@ Material:
     - _AlphaCutoffShadow: 0.5
     - _Anisotropy: 0
     - _BlendMode: 0
-    - _CoatMask: 0
+    - _CoatMask: 0.021
     - _CullMode: 0
     - _CullModeForward: 0
     - _Cutoff: 0.5
@@ -169,13 +170,13 @@ Material:
     - _HeightTessAmplitude: 2
     - _HeightTessCenter: 0.5
     - _InitialBend: 1
-    - _InvTilingScale: 1
+    - _InvTilingScale: 0.5
     - _Ior: 1
     - _IridescenceMask: 1
     - _IridescenceThickness: 1
     - _LinkDetailsWithBase: 1
     - _MaterialID: 1
-    - _Metallic: 0.912
+    - _Metallic: 0.678
     - _NormalMapSpace: 0
     - _NormalScale: 1
     - _PPDLodThreshold: 5
@@ -190,7 +191,7 @@ Material:
     - _ShiverDirectionality: 0.5
     - _ShiverDrag: 0.2
     - _Smoothness: 0.5
-    - _SmoothnessRemapMax: 0.81204814
+    - _SmoothnessRemapMax: 0.6115469
     - _SmoothnessRemapMin: 0
     - _SpecularAAScreenSpaceVariance: 0.1
     - _SpecularAAThreshold: 0.2

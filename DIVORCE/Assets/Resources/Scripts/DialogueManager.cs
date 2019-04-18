@@ -16,6 +16,10 @@ public class DialogueManager : MonoBehaviour {
     public GameObject answerPanel;
     public GameObject pause;
 
+    public Animator earthAnimator;
+    public Animator marsAnimator;
+    public Animator venusAnimator;
+
     public Stats statsScript;
     DialogueTrigger dialogueTrigger;
     RobotDialogueTrigger robotDialogueTrigger;
@@ -639,8 +643,9 @@ public class DialogueManager : MonoBehaviour {
 
     public void StartDialogue2(Dialogue dialogue)
     {
-        if (statsScript.day == 1 || statsScript.day == 4)
+        if (statsScript.day == 1)
         {
+            earthAnimator.Play("Earth Confused");
             statsScript.stats[5] -= 5;
         }
         else if (statsScript.day == 2)
@@ -650,6 +655,10 @@ public class DialogueManager : MonoBehaviour {
         else if (statsScript.day == 3)
         {
             statsScript.stats[7] -= 5;
+        }
+        else if (statsScript.day == 4)
+        {
+            statsScript.stats[5] -= 5;
         }
 
         statsScript.conferenceAcceptWithHaggle = true;
@@ -924,6 +933,8 @@ public class DialogueManager : MonoBehaviour {
     {
         if (statsScript.day == 1)
         {
+            earthAnimator.Play("Earth Angry");
+
             statsScript.stats[5] -= 5;
             dialogue2Visited = true;
         }
@@ -1124,6 +1135,8 @@ public class DialogueManager : MonoBehaviour {
     {
         if (statsScript.day == 1)
         {
+            earthAnimator.Play("Earth Happy");
+
             if (dialogue2Visited)
             {
                 statsScript.stats[5] += 15;
@@ -1389,6 +1402,7 @@ public class DialogueManager : MonoBehaviour {
     {
         if (statsScript.day == 1)
         {
+            earthAnimator.Play("Earth Disappointed");
             statsScript.stats[5] -= 5;
         }
         else if (statsScript.day == 2)
@@ -1785,6 +1799,7 @@ public class DialogueManager : MonoBehaviour {
     {
         if (statsScript.day == 1)
         {
+            earthAnimator.Play("Earth Disappointed");
             statsScript.stats[5] -= 10;
         }
         else if (statsScript.day == 2)
@@ -2218,6 +2233,8 @@ public class DialogueManager : MonoBehaviour {
     {
         if (statsScript.day == 1)
         {
+            earthAnimator.Play("Earth Angry");
+
             if (dialogue5Visited)
             {
                 statsScript.stats[5] -= 10;
