@@ -107,7 +107,11 @@ public class FolderScript : MonoBehaviour {
 
                 canvas1.SetActive(true);
                 canvas2.SetActive(true);
-                canvas3.SetActive(true);
+
+                if (canvas3 != null)
+                {
+                    canvas3.SetActive(true);
+                }
 
                 //Sets the current page active to false
                 current.SetActive(false);
@@ -277,7 +281,6 @@ public class FolderScript : MonoBehaviour {
 
         buttonClicked = "No Tax";
 
-        Reset();
         ReturnToPlayer();
     }
 
@@ -299,7 +302,6 @@ public class FolderScript : MonoBehaviour {
 
         buttonClicked = "Low Tax";
 
-        Reset();
         ReturnToPlayer();
     }
 
@@ -321,7 +323,6 @@ public class FolderScript : MonoBehaviour {
 
         buttonClicked = "High Tax";
 
-        Reset();
         ReturnToPlayer();
     }
 
@@ -345,14 +346,12 @@ public class FolderScript : MonoBehaviour {
 
         buttonClicked = "Very High Tax";
 
-        Reset();
         ReturnToPlayer();
     }
 
     public void TaxBack()
     {
-        Reset();
-
+        pageMain.SetActive(true);
         page1.SetActive(false);
         page2.SetActive(false);
         page3.SetActive(false);
@@ -387,7 +386,6 @@ public class FolderScript : MonoBehaviour {
 
         buttonClicked = "Open Trade";
 
-        Reset();
         ReturnToPlayer();
     }
 
@@ -413,7 +411,6 @@ public class FolderScript : MonoBehaviour {
 
         buttonClicked = "Closed Trade";
 
-        Reset();
         ReturnToPlayer();
     }
 
@@ -452,7 +449,6 @@ public class FolderScript : MonoBehaviour {
 
         buttonClicked = "Open Import";
 
-        Reset();
         ReturnToPlayer();
     }
 
@@ -476,7 +472,6 @@ public class FolderScript : MonoBehaviour {
 
         buttonClicked = "Closed Import";
 
-        Reset();
         ReturnToPlayer();
     }
 
@@ -511,7 +506,6 @@ public class FolderScript : MonoBehaviour {
 
         buttonClicked = "Open Export";
 
-        Reset();
         ReturnToPlayer();
     }
 
@@ -533,7 +527,6 @@ public class FolderScript : MonoBehaviour {
 
         buttonClicked = "Closed Export";
 
-        Reset();
         ReturnToPlayer();
     }
 
@@ -694,15 +687,15 @@ public class FolderScript : MonoBehaviour {
 
     //Called when the player hits the back button on the main pages
     public void Back()
-    {
-        //Reset();
-        
+    {      
         //Sets the current to be deactivated
         current.SetActive(false);
 
         current = frontPage;
 
         current.SetActive(true);
+
+        Reset();
 
         StartCoroutine(TurnBack(animP1));
     }
@@ -754,14 +747,6 @@ public class FolderScript : MonoBehaviour {
         if (page4 != null)
         {
             page4.SetActive(true);
-        }
-
-        canvas1.SetActive(true);
-        canvas2.SetActive(true);
-
-        if (canvas3 != null)
-        {
-            canvas3.SetActive(true);
         }
     }
 
@@ -853,6 +838,14 @@ public class FolderScript : MonoBehaviour {
         //Clears the lists onced they have been used
         changedNames.Clear();
         changes.Clear();
+
+        canvas1.SetActive(true);
+        canvas2.SetActive(true);
+
+        if (canvas3 != null)
+        {
+            canvas3.SetActive(true);
+        }
 
         Reset();
     }
