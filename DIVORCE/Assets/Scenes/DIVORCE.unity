@@ -13977,6 +13977,12 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.600002, y: 3.6707938, z: 0.70332}
   m_Center: {x: 0, y: 4.451102, z: -0.19}
+--- !u!95 &269587935 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 9500000, guid: 5be734b674bd74c4e8791aeec5291972,
+    type: 3}
+  m_PrefabInstance: {fileID: 672193327}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &269592448 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 84dc1b14aea9ad646bc63764bf137cbe,
@@ -44307,6 +44313,21 @@ PrefabInstance:
       propertyPath: animator
       value: 
       objectReference: {fileID: 931110008}
+    - target: {fileID: 114700646298782018, guid: a96c07b1be1f31c40ad5bc66d57204cd,
+        type: 3}
+      propertyPath: venusAnimator
+      value: 
+      objectReference: {fileID: 269587935}
+    - target: {fileID: 114700646298782018, guid: a96c07b1be1f31c40ad5bc66d57204cd,
+        type: 3}
+      propertyPath: marsAnimator
+      value: 
+      objectReference: {fileID: 1389503225}
+    - target: {fileID: 114700646298782018, guid: a96c07b1be1f31c40ad5bc66d57204cd,
+        type: 3}
+      propertyPath: earthAnimator
+      value: 
+      objectReference: {fileID: 931110008}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a96c07b1be1f31c40ad5bc66d57204cd, type: 3}
 --- !u!1 &911422144
@@ -66240,6 +66261,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1388719827}
   m_CullTransparentMesh: 0
+--- !u!95 &1389503225 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 9500000, guid: 1592ce6fc2bd507448fb82b8d3f2e7d7,
+    type: 3}
+  m_PrefabInstance: {fileID: 211485289}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1390198294
 GameObject:
   m_ObjectHideFlags: 0
