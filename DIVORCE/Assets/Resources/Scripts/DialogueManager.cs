@@ -650,14 +650,17 @@ public class DialogueManager : MonoBehaviour {
         }
         else if (statsScript.day == 2)
         {
+            //marsAnimator.Play("Mars Confused");
             statsScript.stats[6] -= 5;
         }
         else if (statsScript.day == 3)
         {
+            venusAnimator.Play("Venus Confused");
             statsScript.stats[7] -= 5;
         }
         else if (statsScript.day == 4)
         {
+            earthAnimator.Play("Earth Confused");
             statsScript.stats[5] -= 5;
         }
 
@@ -940,14 +943,17 @@ public class DialogueManager : MonoBehaviour {
         }
         else if (statsScript.day == 2)
         {
+            //marsAnimator.Play("Mars Angry");
             statsScript.stats[6] -= 5;
         }
         else if (statsScript.day == 3)
         {
+            venusAnimator.Play("Venus Angry");
             statsScript.stats[7] -= 5;
         }
         else if (statsScript.day == 4)
         {
+            earthAnimator.Play("Earth Angry");
             statsScript.stats[5] -= 5;
         }
 
@@ -1171,14 +1177,17 @@ public class DialogueManager : MonoBehaviour {
         }
         else if (statsScript.day == 2)
         {
+            //marsAnimator.Play("Mars Confused");
             statsScript.stats[6] -= 5;
         }
         else if (statsScript.day == 3)
         {
+            venusAnimator.Play("Mars Confused");
             statsScript.stats[7] -= 5;
         }
         else if (statsScript.day == 4)
         {
+            earthAnimator.Play("Earth Confused");
             statsScript.stats[5] -= 5;
         }
 
@@ -1402,19 +1411,22 @@ public class DialogueManager : MonoBehaviour {
     {
         if (statsScript.day == 1)
         {
-            earthAnimator.Play("Earth Disappointed");
+            earthAnimator.Play("Earth Angry");
             statsScript.stats[5] -= 5;
         }
         else if (statsScript.day == 2)
         {
+            //marsAnimator.Play("Mars Angry");
             statsScript.stats[6] -= 5;
         }
         else if (statsScript.day == 3)
         {
+            venusAnimator.Play("Earth Angry");
             statsScript.stats[7] -= 5;
         }
         else if (statsScript.day == 4)
         {
+            earthAnimator.Play("Earth Angry");
             statsScript.stats[5] -= 5;
         }
 
@@ -1615,14 +1627,17 @@ public class DialogueManager : MonoBehaviour {
 
         if (statsScript.day == 2)
         {
+            //marsAnimator.Play("Mars Disappointed");
             statsScript.stats[6] -= 5;
         }
         else if (statsScript.day == 3)
         {
+            venusAnimator.Play("Venus Disappointed");
             statsScript.stats[7] -= 5;
         }
         else if (statsScript.day == 4)
         {
+            earthAnimator.Play("Earth Disappointed");
             statsScript.stats[5] -= 5;
         }
 
@@ -1804,14 +1819,17 @@ public class DialogueManager : MonoBehaviour {
         }
         else if (statsScript.day == 2)
         {
+            //marsAnimator.Play("Mars Disappointed");
             statsScript.stats[6] -= 5;
         }
         else if (statsScript.day == 3)
         {
+            venusAnimator.Play("Venus Disappointed");
             statsScript.stats[7] -= 5;
         }
         else if (statsScript.day == 4)
         {
+            earthAnimator.Play("Earth Disappointed");
             statsScript.stats[5] -= 5;
         }
 
@@ -2090,14 +2108,17 @@ public class DialogueManager : MonoBehaviour {
 
         if (statsScript.day == 2)
         {
+            //marsAnimator.Play("Mars Disappointed");
             statsScript.stats[6] -= 5;
         }
         else if (statsScript.day == 3)
         {
+            venusAnimator.Play("Venus Disappointed");
             statsScript.stats[7] -= 5;
         }
         else if (statsScript.day == 4)
         {
+            earthAnimator.Play("Earth Disappointed");
             statsScript.stats[5] -= 10;
         }
 
@@ -2253,6 +2274,8 @@ public class DialogueManager : MonoBehaviour {
 
         else if (statsScript.day == 2)
         {
+            //marsAnimator.Play("Mars Happy");
+
             statsScript.stats[4] += 10;
 
             if (dialogue2Visited && dialogue4Visited)
@@ -2276,6 +2299,7 @@ public class DialogueManager : MonoBehaviour {
         }
         else if (statsScript.day == 3)
         {
+            //venusAnimator.Play("Venus Happy");
             statsScript.stats[5] -= 10;
 
             if (dialogue2Visited && dialogue4Visited)
@@ -2302,8 +2326,10 @@ public class DialogueManager : MonoBehaviour {
                 statsScript.stats[4] += 10;
             }
         }
-        else if (statsScript.day == 3)
+        else if (statsScript.day == 4)
         {
+            earthAnimator.Play("Earth Happy");
+
             if (dialogue2Visited && dialogue4Visited)
             {
                 statsScript.stats[5] += 10;
@@ -2527,6 +2553,8 @@ public class DialogueManager : MonoBehaviour {
 
         if (statsScript.day == 2)
         {
+            //marsAnimator.Play("Mars Angry");
+
             statsScript.stats[6] -= 15;
             statsScript.stats[0] += 10;
             statsScript.stats[2] += 10;
@@ -2545,6 +2573,8 @@ public class DialogueManager : MonoBehaviour {
         }
         else if (statsScript.day == 3)
         {
+            venusAnimator.Play("Venus Angry");
+
             statsScript.stats[5] += 5;
             statsScript.stats[6] += 5;
             statsScript.stats[7] -= 10;
@@ -2564,6 +2594,8 @@ public class DialogueManager : MonoBehaviour {
         }
         else if (statsScript.day == 4)
         {
+            earthAnimator.Play("Earth Angry");
+
             statsScript.stats[2] += 10;
             statsScript.stats[5] -= 10;
 

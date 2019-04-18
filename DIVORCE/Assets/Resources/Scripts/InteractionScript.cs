@@ -502,7 +502,8 @@ public class InteractionScript : MonoBehaviour
 
                 if (Input.GetKeyDown(KeyCode.E))
                 {
-                    statsScript.wifeCounter++;
+                    statsScript.conferenceIgnore = true;
+                    statsScript.wifeCounter2++;
                     statsScript.time -= 2;
                     door = false;
                 }

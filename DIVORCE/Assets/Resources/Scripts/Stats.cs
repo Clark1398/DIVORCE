@@ -43,6 +43,7 @@ public class Stats : MonoBehaviour {
     public string hEText, tEText, wEText, hMText, tMText, wMText, hVText, tVText, wVText, actionsText;
 
     public bool conferenceAccept = false;
+    public bool conferenceIgnore = false; 
     public bool conferenceAcceptWithHaggle = false;
 
     public bool phone1Answered = false;
@@ -60,6 +61,8 @@ public class Stats : MonoBehaviour {
     public int day;
 
     public int wifeCounter;
+    public int wifeCounter2;
+
     public int policyCounter;
 
     public string[] gameOverText = new string[8];

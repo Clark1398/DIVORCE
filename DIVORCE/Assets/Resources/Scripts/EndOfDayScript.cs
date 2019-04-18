@@ -12,28 +12,112 @@ public class EndOfDayScript : MonoBehaviour
     public int noOfTasks = 0;
 
     [Header("Day One")]
+    [TextArea(3, 154)]
     public string task1Complete_1;
+    [TextArea(3, 154)]
     public string task1Fail_1;
+    [TextArea(3, 154)]
     public string task2Complete_1;
+    [TextArea(3, 154)]
     public string task2Fail_1;
+    [TextArea(3, 154)]
     public string task3Complete_1;
+    [TextArea(3, 154)]
     public string task3Fail_1;
+    [TextArea(3, 154)]
     public string task4Complete_1;
+    [TextArea(3, 154)]
     public string task4Fail_1;
 
+    [TextArea(3, 154)]
     public string conferenceAccept_1;
+    [TextArea(3, 154)]
     public string conferenceDecline_1;
 
     [Header("Day Two")]
+    [TextArea(3, 154)]
     public string task1Complete_2;
+    [TextArea(3, 154)]
     public string task1Fail_2;
+    [TextArea(3, 154)]
     public string task2Complete_2;
+    [TextArea(3, 154)]
     public string task2Fail_2;
+    [TextArea(3, 154)]
     public string task3Complete_2;
+    [TextArea(3, 154)]
     public string task3Fail_2;
 
+    [TextArea(3, 154)]
+    public string wifeAccept_1;
+    [TextArea(3, 154)]
+    public string wifeDecline_1;
+
+    [TextArea(3, 154)]
+    public string conferenceAccept_2;
+    [TextArea(3, 154)]
+    public string conferenceDecline_2;
+
+    [Header("Day Three")]
+    [TextArea(3, 154)]
+    public string task1Complete_3;
+    [TextArea(3, 154)]
+    public string task1Fail_3;
+    [TextArea(3, 154)]
+    public string task2Complete_3;
+    [TextArea(3, 154)]
+    public string task2Fail_3;
+    [TextArea(3, 154)]
+    public string task3Complete_3;
+    [TextArea(3, 154)]
+    public string task3Fail_3;
+    [TextArea(3, 154)]
+    public string task4Complete_3;
+    [TextArea(3, 154)]
+    public string task4Fail_3;
+
+    [TextArea(3, 154)]
     public string wifeAccept_2;
+    [TextArea(3, 154)]
     public string wifeDecline_2;
+
+    [TextArea(3, 154)]
+    public string conferenceAccept_3;
+    [TextArea(3, 154)]
+    public string conferenceDecline_3;
+    [TextArea(3, 154)]
+    public string conferenceIgnore;
+
+    [Header("Day Four")]
+    [TextArea(3, 154)]
+    public string task1Complete_4;
+    [TextArea(3, 154)]
+    public string task1Fail_4;
+    [TextArea(3, 154)]
+    public string task2Complete_4;
+    [TextArea(3, 154)]
+    public string task2Fail_4;
+    [TextArea(3, 154)]
+    public string task3Complete_4;
+    [TextArea(3, 154)]
+    public string task3Fail_4;
+
+    [TextArea(3, 154)]
+    public string contactAccept;
+    [TextArea(3, 154)]
+    public string contactDecline;
+    [TextArea(3, 154)]
+    public string contactNotSubmitted;
+
+    [TextArea(3, 154)]
+    public string wifeAccept_3;
+    [TextArea(3, 154)]
+    public string wifeDecline_3;
+
+    [TextArea(3, 154)]
+    public string conferenceAccept_4;
+    [TextArea(3, 154)]
+    public string conferenceDecline_4;
 
     //public string A_2;
     //public string B_2;
@@ -51,6 +135,7 @@ public class EndOfDayScript : MonoBehaviour
     //public string[] policyDescription;
     //List<int> description = new List<int>();
 
+    [Header("Text Areas")]
     public Text task1_1Text;
     public Text task2_1Text;
     public Text task3_1Text;
@@ -60,23 +145,40 @@ public class EndOfDayScript : MonoBehaviour
     public Text task2_2Text;
     public Text task3_2Text;
 
+    public Text task1_3Text;
+    public Text task2_3Text;
+    public Text task3_3Text;
+    public Text task4_3Text;
+
+    public Text task1_4Text;
+    public Text task2_4Text;
+    public Text task3_4Text;
+
     //public Text policy1Text;
     //public Text policyText_2;
 
     //public Text phone1Text;
     //public Text phone2Text;
 
-    public Text conferenceText;
-    //public Text conferenceText_2;
+    public Text conference1Text;
+    public Text conference2Text;
+    public Text conference3Text;
+    public Text conference4Text;
 
-    public Text wifeText;
+    public Text wife1Text;
+    public Text wife2Text;
+    public Text wife3Text;
 
     public Text contactText;
+    public Text contact2Text;
 
+    [Header("UI")]
     public Button saveButton;
 
     public GameObject day1Panel;
     public GameObject day2Panel;
+    public GameObject day3Panel;
+    public GameObject day4Panel;
 
     public GameObject loadingPanel;
     public GameObject savePanel;
@@ -108,10 +210,6 @@ public class EndOfDayScript : MonoBehaviour
 
         noOfTasks = 0;
 
-        wifeText.gameObject.SetActive(false);
-        contactText.gameObject.SetActive(false);
-        conferenceText.gameObject.SetActive(false);
-
         task1 = true;
         task2 = false;
         task3 = false;
@@ -124,11 +222,15 @@ public class EndOfDayScript : MonoBehaviour
         {
             day1Panel.gameObject.SetActive(true);
             day2Panel.gameObject.SetActive(false);
+            day3Panel.gameObject.SetActive(false);
+            day4Panel.gameObject.SetActive(false);
 
             task1_1Text.gameObject.SetActive(true);
             task2_1Text.gameObject.SetActive(false);
             task3_1Text.gameObject.SetActive(false);
             task4_1Text.gameObject.SetActive(false);
+
+            conference1Text.gameObject.SetActive(false);
 
             CheckTasks();
             CheckConferenceCall();
@@ -137,14 +239,60 @@ public class EndOfDayScript : MonoBehaviour
         {
             day1Panel.gameObject.SetActive(false);
             day2Panel.gameObject.SetActive(true);
+            day3Panel.gameObject.SetActive(false);
+            day4Panel.gameObject.SetActive(false);
 
             task1_2Text.gameObject.SetActive(true);
             task2_2Text.gameObject.SetActive(false);
             task3_2Text.gameObject.SetActive(false);
 
+            wife1Text.gameObject.SetActive(false);
+            contactText.gameObject.SetActive(false);
+            conference2Text.gameObject.SetActive(false);
+
             CheckTasks();
             CheckWife();
             CheckContacts();
+            CheckConferenceCall();
+        }
+        else if (statsScript.day - 1 == 3)
+        {
+            day1Panel.gameObject.SetActive(false);
+            day2Panel.gameObject.SetActive(false);
+            day3Panel.gameObject.SetActive(true);
+            day4Panel.gameObject.SetActive(false);
+
+            task1_3Text.gameObject.SetActive(true);
+            task2_3Text.gameObject.SetActive(false);
+            task3_3Text.gameObject.SetActive(false);
+            task4_3Text.gameObject.SetActive(false);
+
+            wife2Text.gameObject.SetActive(false);
+            conference3Text.gameObject.SetActive(false);
+
+            CheckTasks();
+            CheckWife();
+            CheckConferenceCall();
+        }
+        else if (statsScript.day - 1 == 4)
+        {
+            day1Panel.gameObject.SetActive(false);
+            day2Panel.gameObject.SetActive(false);
+            day3Panel.gameObject.SetActive(false);
+            day4Panel.gameObject.SetActive(true);
+
+            task1_4Text.gameObject.SetActive(true);
+            task2_4Text.gameObject.SetActive(false);
+            task3_4Text.gameObject.SetActive(false);
+
+            wife3Text.gameObject.SetActive(false);
+            contact2Text.gameObject.SetActive(false);
+            conference4Text.gameObject.SetActive(false);
+
+            CheckTasks();
+            CheckWife();
+            CheckContacts();
+            CheckConferenceCall();
         }
     }
 
@@ -222,44 +370,67 @@ public class EndOfDayScript : MonoBehaviour
         {
             if (statsScript.stats[6] >= 65)
             {
-                noOfTasks++;
+                task1_3Text.text = task1Complete_3;
+            }
+            else
+            {
+                task1_3Text.text = task1Fail_3;
             }
 
             if (statsScript.stats[7] >= 65)
             {
-                noOfTasks++;
+                task2_3Text.text = task2Complete_3;
+            }
+            else
+            {
+                task2_3Text.text = task2Fail_3;
             }
 
             if (statsScript.stats[2] >= 65)
             {
-                noOfTasks++;
+                task3_3Text.text = task3Complete_3;
+            }
+            else
+            {
+                task3_3Text.text = task3Fail_3;
             }
 
             if (statsScript.stats[4] >= 15)
             {
-                noOfTasks++;
+                task4_3Text.text = task4Complete_3;
+            }
+            else
+            {
+                task4_3Text.text = task4Fail_3;
             }
         }
         else if (statsScript.day - 1 == 4)
         {
             if (statsScript.stats[5] >= 70)
             {
-                noOfTasks++;
+                task1_4Text.text = task1Complete_4;
+            }
+            else
+            {
+                task1_4Text.text = task1Fail_4;
             }
 
             if (statsScript.stats[1] >= 2.6)
             {
-                noOfTasks++;
+                task2_4Text.text = task2Complete_4;
+            }
+            else
+            {
+                task2_4Text.text = task2Fail_4;
             }
 
             if (statsScript.stats[0] >= 50)
             {
-                noOfTasks++;
+                task3_4Text.text = task3Complete_4;
             }
-
-            if (statsScript.tEText == "Approved")
+            else
             {
-                noOfTasks++;
+                task3_4Text.text = task3Fail_4;
             }
         }
     }
@@ -387,23 +558,49 @@ public class EndOfDayScript : MonoBehaviour
             //Checks if player chose to open or close the border during the conference call
             if (statsScript.conferenceAccept == true)
             {
-                conferenceText.text = conferenceAccept_1;
+                conference1Text.text = conferenceAccept_1;
             }
             else if (statsScript.conferenceAccept == false)
             {
-                conferenceText.text = conferenceDecline_1;
+                conference1Text.text = conferenceDecline_1;
             }
         }
         else if (statsScript.day - 1 == 2)
         {
-            //if (statsScript.conferenceAccept == true)
-            //{
-            //    conferenceText_2.text = "Your negotiations with the Martians went " + conferenceA_2;
-            //}
-            //else
-            //{
-            //    conferenceText_2.text = "Your negotiations with the Martians went " + conferenceB_2;
-            //}
+            if (statsScript.conferenceAccept == true)
+            {
+                conference2Text.text = conferenceAccept_2;
+            }
+            else if (statsScript.conferenceAccept == false)
+            {
+                conference2Text.text = conferenceDecline_2;
+            }
+        }
+        else if (statsScript.day - 1 == 3)
+        {
+            if (statsScript.conferenceIgnore == true)
+            {
+                conference3Text.text = conferenceIgnore;
+            }
+            else if (statsScript.conferenceAccept == true)
+            {
+                conference3Text.text = conferenceAccept_3;
+            }
+            else if (statsScript.conferenceAccept == false)
+            {
+                conference3Text.text = conferenceDecline_3;
+            }
+        }
+        else if (statsScript.day - 1 == 4)
+        {
+            if (statsScript.conferenceAccept == true)
+            {
+                conference4Text.text = conferenceAccept_4;
+            }
+            else if (statsScript.conferenceAccept == false)
+            {
+                conference4Text.text = conferenceDecline_4;
+            }
         }
     }
 
@@ -411,15 +608,46 @@ public class EndOfDayScript : MonoBehaviour
     {
         if (statsScript.day - 1 == 2)
         {
-            if (statsScript.wifeCounter == 1)
+            if (statsScript.wifeCounter > 0)
             {
-                wifeText.text = wifeAccept_2;
+                wife1Text.text = wifeAccept_1;
 
                 statsScript.actionsText = statsScript.actionsText + "\n" + "Wife's requested accepted";
             }
             else
             {
-                wifeText.text = wifeDecline_2;
+                wife1Text.text = wifeDecline_1;
+
+                statsScript.actionsText = statsScript.actionsText + "\n" + "Wife's requested declined";
+            }
+        }
+        if (statsScript.day - 1 == 3)
+        {
+            if (statsScript.wifeCounter2 > 0)
+            {
+                wife2Text.text = wifeAccept_2;
+
+                statsScript.actionsText = statsScript.actionsText + "\n" + "Wife's requested accepted";
+            }
+            else
+            {
+                wife2Text.text = wifeDecline_2;
+
+                statsScript.actionsText = statsScript.actionsText + "\n" + "Wife's requested declined";
+            }
+        }
+
+        if (statsScript.day - 1 == 4)
+        {
+            if (statsScript.tMText == "Approved")
+            {
+                wife3Text.text = wifeAccept_3;
+
+                statsScript.actionsText = statsScript.actionsText + "\n" + "Wife's requested accepted";
+            }
+            else
+            {
+                wife3Text.text = wifeDecline_3;
 
                 statsScript.actionsText = statsScript.actionsText + "\n" + "Wife's requested declined";
             }
@@ -464,6 +692,22 @@ public class EndOfDayScript : MonoBehaviour
                 contactText.text = "As for the healthcare matter, unfortunately none of the requests you sent for it got accepted, which is bad… Not only will the cabinet disapprove, but the people won’t be happy about it too. For future reference, when you send an outbound contact to a planet, you might want to ensure your relationship with them is decent at the end of the day.";
             }
         }
+
+        if (statsScript.day - 1 == 2)
+        {
+            if (statsScript.tEText == "Approved")
+            {
+                contact2Text.text = contactAccept;
+            }
+            else if (statsScript.tEText == "Declined")
+            {
+                contact2Text.text = contactDecline;
+            }
+            else
+            {
+                contact2Text.text = contactNotSubmitted;
+            }
+        }
     }
     
     public void Continue()
@@ -479,6 +723,16 @@ public class EndOfDayScript : MonoBehaviour
             {
                 task1_2Text.gameObject.SetActive(false);
                 task2_2Text.gameObject.SetActive(true);
+            }
+            else if (statsScript.day - 1 == 3)
+            {
+                task1_3Text.gameObject.SetActive(false);
+                task2_3Text.gameObject.SetActive(true);
+            }
+            else if (statsScript.day - 1 == 4)
+            {
+                task1_4Text.gameObject.SetActive(false);
+                task2_4Text.gameObject.SetActive(true);
             }
 
             task2 = true;
@@ -496,6 +750,16 @@ public class EndOfDayScript : MonoBehaviour
                 task2_2Text.gameObject.SetActive(false);
                 task3_2Text.gameObject.SetActive(true);
             }
+            else if (statsScript.day - 1 == 3)
+            {
+                task2_3Text.gameObject.SetActive(false);
+                task3_3Text.gameObject.SetActive(true);
+            }
+            else if (statsScript.day - 1 == 4)
+            {
+                task2_4Text.gameObject.SetActive(false);
+                task3_4Text.gameObject.SetActive(true);
+            }
 
             task3 = true;
             task2 = false;
@@ -512,6 +776,16 @@ public class EndOfDayScript : MonoBehaviour
                 task3_2Text.gameObject.SetActive(false);
                 contactText.gameObject.SetActive(true);
             }
+            else if (statsScript.day - 1 == 3)
+            {
+                task3_3Text.gameObject.SetActive(false);
+                task4_3Text.gameObject.SetActive(true);
+            }
+            else if (statsScript.day - 1 == 4)
+            {
+                task3_4Text.gameObject.SetActive(false);
+                contact2Text.gameObject.SetActive(true);
+            }
 
             task4 = true;
             task3 = false;
@@ -521,16 +795,49 @@ public class EndOfDayScript : MonoBehaviour
             if (statsScript.day - 1 == 1)
             {
                 task4_1Text.gameObject.SetActive(false);
-                conferenceText.gameObject.SetActive(true);
+                conference1Text.gameObject.SetActive(true);
+                lastCheck = true;
             }
             else if (statsScript.day - 1 == 2)
             {
                 contactText.gameObject.SetActive(false);
-                wifeText.gameObject.SetActive(true);
+                wife1Text.gameObject.SetActive(true);
+                wife = true;
+            }
+            else if (statsScript.day - 1 == 3)
+            {
+                task4_1Text.gameObject.SetActive(false);
+                wife2Text.gameObject.SetActive(true);
+                wife = true;
+            }
+            else if (statsScript.day - 1 == 3)
+            {
+                contact2Text.gameObject.SetActive(false);
+                wife3Text.gameObject.SetActive(true);
+                wife = true;
+            }
+            task4 = false;
+        }
+        else if (wife)
+        {
+            if (statsScript.day - 1 == 2)
+            {
+                wife1Text.gameObject.SetActive(false);
+                conference2Text.gameObject.SetActive(true);
+            }
+            if (statsScript.day - 1 == 2)
+            {
+                wife2Text.gameObject.SetActive(false);
+                conference3Text.gameObject.SetActive(true);
+            }
+            if (statsScript.day - 1 == 2)
+            {
+                wife3Text.gameObject.SetActive(false);
+                conference4Text.gameObject.SetActive(true);
             }
 
             lastCheck = true;
-            task4 = false;
+            wife = false;
         }
         else if (lastCheck)
         {

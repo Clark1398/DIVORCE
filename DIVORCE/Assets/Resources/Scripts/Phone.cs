@@ -447,7 +447,7 @@ public class Phone : MonoBehaviour
                 {
                     if (calls == 1)
                     {
-                        if (statsScript.wifeCounter > 0)
+                        if (statsScript.wifeCounter2 > 0)
                         {
                             audioSource.clip = wifePhoneCallHappy2;
                             audioSource.PlayOneShot(wifePhoneCallHappy2);
