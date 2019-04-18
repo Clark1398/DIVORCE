@@ -980,7 +980,7 @@ ModelImporter:
     - name: R_Hip_Jnt
       parentName: Pelv_Jnt
       position: {x: 1.5698477, y: -2.4673214, z: -10.2032}
-      rotation: {x: 0.8783891, y: -0.47719172, z: -0.017931266, w: -0.019976197}
+      rotation: {x: 0.8783892, y: -0.47719172, z: -0.017931268, w: -0.019976197}
       scale: {x: 1, y: 1, z: 1}
     - name: R_Knee_Jnt
       parentName: R_Hip_Jnt
@@ -1055,7 +1055,7 @@ ModelImporter:
     - name: L_Index_Jnt_2
       parentName: L_Index_Jnt_1
       position: {x: -3.7405221, y: -7.8576277e-16, z: 0.6068806}
-      rotation: {x: -0.0039587603, y: -0.020121684, z: 0.029039893, w: 0.99936783}
+      rotation: {x: -0.0039587608, y: -0.020121686, z: 0.029039895, w: 0.9993679}
       scale: {x: 1, y: 1, z: 1}
     - name: L_Index_Jnt_3
       parentName: L_Index_Jnt_2
@@ -1090,7 +1090,7 @@ ModelImporter:
     - name: L_Ring_Jnt_1
       parentName: L_Wrist_Jnt
       position: {x: -1.5212814, y: -7.4593377, z: 0.7974025}
-      rotation: {x: 0.4646482, y: 0.5251608, z: 0.43123797, w: 0.5677519}
+      rotation: {x: 0.46464813, y: 0.52516073, z: 0.4312379, w: 0.5677518}
       scale: {x: 1, y: 1, z: 1}
     - name: L_Ring_Jnt_2
       parentName: L_Ring_Jnt_1
@@ -1215,7 +1215,7 @@ ModelImporter:
     - name: R_Thumb_Jnt_2
       parentName: R_Thumb_Jnt_1
       position: {x: 2.256968, y: -0.08932183, z: 1.4779998}
-      rotation: {x: 0.023607278, y: -0.18876846, z: 0.0035116961, w: 0.98173153}
+      rotation: {x: 0.02360728, y: -0.18876848, z: 0.0035116964, w: 0.9817316}
       scale: {x: 1, y: 1, z: 1}
     - name: R_Thumb_Jnt_3
       parentName: R_Thumb_Jnt_2
