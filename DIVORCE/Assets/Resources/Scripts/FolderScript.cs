@@ -8,10 +8,7 @@ public class FolderScript : MonoBehaviour {
     InteractionScript interactionScript;
     DayOneScript dayOneScript;
     RobotDialogueTrigger dialogueTrigger;
-    //PolicyChoices policyChoices;
     public Stats statsScript;
-
-    //bool firstUse = true;
 
     [Header ("Animations")]
     public Animator anim, animP1, animP2;
@@ -129,6 +126,8 @@ public class FolderScript : MonoBehaviour {
                 rot.journeyLength = Vector3.Distance(rot.startPos.position, rot.endPos.position);
 
                 StartCoroutine(FolderIn(rot));
+                StartCoroutine(TurnBack(animP1));
+                StartCoroutine(TurnBack(animP2));
             }
         }
 

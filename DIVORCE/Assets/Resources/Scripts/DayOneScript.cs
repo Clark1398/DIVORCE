@@ -75,6 +75,8 @@ public class DayOneScript : MonoBehaviour {
 
     public Renderer chair, folderR, phone, conf;
 
+    public Animator bin;
+
     void Start()
     {
         robotDialogueTrigger = FindObjectOfType<RobotDialogueTrigger>();
@@ -342,6 +344,7 @@ public class DayOneScript : MonoBehaviour {
                     {
                         Destroy(prefab);
                         holding = !holding;
+                        bin.Play("Bin");
 
                         if (holdingPhone)
                         {

@@ -82,6 +82,8 @@ public class InteractionScript : MonoBehaviour
     public Light doorLight1;
     public Light doorLight2;
 
+    public Animator bin;
+
     //Used to setup the objects
     void Start()
     {
@@ -365,6 +367,7 @@ public class InteractionScript : MonoBehaviour
                     {
                         Destroy(prefab);
                         holding = !holding;
+                        bin.Play("Bin");
 
                         statsScript.TimeForward();
 
