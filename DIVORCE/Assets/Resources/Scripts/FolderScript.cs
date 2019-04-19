@@ -121,6 +121,7 @@ public class FolderScript : MonoBehaviour {
                 current.SetActive(true);
 
                 //Activate the player
+                interactionScript.folder = false;
                 player.SetActive(true);
 
                 RotationScript rot = this.transform.parent.GetComponent<RotationScript>();

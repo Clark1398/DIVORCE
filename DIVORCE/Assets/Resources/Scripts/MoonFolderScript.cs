@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class MoonFolderScript : MonoBehaviour {
 
     public InteractionScript interactionScript;
-    public DayOneScript dayOneScript;
     RobotDialogueTrigger dialogueTrigger;
     Stats statsScript;
 
@@ -32,6 +31,8 @@ public class MoonFolderScript : MonoBehaviour {
     {
         statsScript = GameObject.Find("GameInfoObject").GetComponent<Stats>();
         dialogueTrigger = FindObjectOfType<RobotDialogueTrigger>();
+
+        Load();
     }
 
     void Awake()
@@ -75,6 +76,7 @@ public class MoonFolderScript : MonoBehaviour {
         {
             player = GameObject.Find("PlayerController");
             interactionScript = player.GetComponent<InteractionScript>();
+            interactionScript.folder = true;
         }
 
         if (statsScript == null)
@@ -104,6 +106,9 @@ public class MoonFolderScript : MonoBehaviour {
 
             es.SetActive(false);
 
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+
             //Close the folder
             anim.Play("Close");
             gameObject.SetActive(false);
@@ -111,6 +116,8 @@ public class MoonFolderScript : MonoBehaviour {
             canvas1.SetActive(true);
             canvas2.SetActive(true);
             canvas3.SetActive(true);
+
+            interactionScript.folder = false;
 
             //Activate the player
             chair.SetActive(true);
@@ -523,6 +530,58 @@ public class MoonFolderScript : MonoBehaviour {
         if (interactionScript.uses == 0)
         {
             dialogueTrigger.TriggerRobotDialogue2_6();
+        }
+    }
+
+    void Load()
+    {
+        for (int i = 0; i < statsScript.chosenPlanets.Count; i++)
+        {
+            if (statsScript.chosenPlanets[i] == "Moon")
+            {
+                buttonClicked = statsScript.chosenPolicies[i];
+
+                if (statsScript.chosenPolicies[i] == "Tax Decrease" || statsScript.chosenPolicies[i] == "Tax Increase" || statsScript.chosenPolicies[i] == "Pension Decrease" || statsScript.chosenPolicies[i] == "Pension Increase" || statsScript.chosenPolicies[i] == "Wage Decrease" || statsScript.chosenPolicies[i] == "Wage Increase")
+                {
+                    type = "PopFunds";
+                    buttons = 3;
+                    lastPage = fundsPage;
+
+                    DisableButton();
+                }
+                else
+                {
+                    buttons = 1;
+
+                    if (statsScript.chosenPolicies[i] == "Education")
+                    {
+                        type = "Education";
+                        lastPage = eduPage;
+                    }
+                    else if (statsScript.chosenPolicies[i] == "Healthcare")
+                    {
+                        type = "Healthcare";
+                        lastPage = healPage;
+                    }
+                    else if (statsScript.chosenPolicies[i] == "National Services")
+                    {
+                        type = "National Services";
+                        lastPage = nsPage;
+                    }
+                    else if (statsScript.chosenPolicies[i] == "Border Control")
+                    {
+                        type = "Border Control";
+                        lastPage = bcPage;
+                    }
+                    else if (statsScript.chosenPolicies[i] == "Worker Regualtions")
+                    {
+                        type = "Worker Regulations";
+                        lastPage = wrPage;
+                    }
+                    DisableButton();
+                }
+
+            }
         }
     }
 }

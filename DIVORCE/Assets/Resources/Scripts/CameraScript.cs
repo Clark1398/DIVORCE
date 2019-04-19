@@ -33,44 +33,54 @@ public class CameraScript : MonoBehaviour {
         interactionScript = player.GetComponent<InteractionScript>();
         dayOneScript = player.GetComponent<DayOneScript>();
         robotDialogueTrigger = FindObjectOfType<RobotDialogueTrigger>();
+
+        statNames.Add("Autonomy");
+        statNames.Add("Public_Support");
+
+        firstPCUse = true;      
+
+        es.SetActive(true);
+
+    }
+
+    void Start()
+    {
         statsScript = GameObject.Find("GameInfoObject").GetComponent<Stats>();
+
+        statsScript.PCnames = GameObject.Find("Text_Name_PC").GetComponent<Text>();
+        statsScript.PCnums = GameObject.Find("Text_Numbers_PC").GetComponent<Text>();
+        statsScript.names = GameObject.Find("Text_Name").GetComponent<Text>();
+        statsScript.nums = GameObject.Find("Text_Numbers").GetComponent<Text>();
 
         earthCanvas = GameObject.Find("Earth Folder Canvas");
         marsCanvas = GameObject.Find("Mars Folder Canvas");
         venusCanvas = GameObject.Find("Venus Folder Canvas");
 
-        statNames.Add("Autonomy");
-        statNames.Add("Public_Support");
-
-        statsScript.PCnames = GameObject.Find("Text_Name_PC").GetComponent<Text>();
-        statsScript.PCnums = GameObject.Find("Text_Numbers_PC").GetComponent<Text>();
-
-        firstPCUse = true;
-
-        es.SetActive(true);
-
-        homePage.SetActive(true);
-        statsPage.SetActive(false);
-        ocPage.SetActive(false);
-        actionsPage.SetActive(false);
-
-        backButton.SetActive(true);
-
-        currentPage = homePage;
-
         if (statsScript.day == 1)
         {
             homePage.SetActive(false);
             statsPage.SetActive(true);
+            ocPage.SetActive(false);
+            actionsPage.SetActive(false);
 
             currentPage = statsPage;
 
             backButton.SetActive(false);
         }
-    }
+        else
+        {
+            homePage.SetActive(true);
+            statsPage.SetActive(false);
+            ocPage.SetActive(false);
+            actionsPage.SetActive(false);
 
-    void Start()
-    {
+            backButton.SetActive(true);
+
+            currentPage = homePage;
+        }
+
+        initalLoad();
+
         gameObject.SetActive(false);
     }
 
@@ -121,21 +131,6 @@ public class CameraScript : MonoBehaviour {
             venusCanvas.SetActive(true);
         }
 	}
-
-    public void CheckScript()
-    {
-        currentPage.SetActive(false);
-
-        backButton.SetActive(true);
-
-        homePage.SetActive(true);
-
-        currentPage = homePage;
-
-        earthCanvas = GameObject.Find("Earth Folder Canvas");
-        marsCanvas = GameObject.Find("Mars Folder Canvas");
-        venusCanvas = GameObject.Find("Venus Folder Canvas");
-    }
 
     public void Stats()
     {
@@ -398,6 +393,58 @@ public class CameraScript : MonoBehaviour {
     public void Load()
     {
         selected.GetComponent<Button>().interactable = false;
+    }
+
+    void initalLoad()
+    {
+        for (int i = 0; i < statsScript.contactPlanets.Count; i++)
+        {
+            if (statsScript.contactPlanets[i] == "Earth")
+            {
+                if (statsScript.contactNames[i] == "Healthcare")
+                {
+                    earthButtons[0].GetComponent<Button>().interactable = false;
+                }
+                else if (statsScript.contactNames[i] == "Travel")
+                { 
+                    earthButtons[1].GetComponent<Button>().interactable = false;
+                }
+                else if (statsScript.contactNames[i] == "Worker Rights")
+                {
+                    earthButtons[2].GetComponent<Button>().interactable = false;
+                }
+            }
+            else if (statsScript.contactPlanets[i] == "Mars")
+            {
+                if (statsScript.contactNames[i] == "Healthcare")
+                {
+                    marsButtons[0].GetComponent<Button>().interactable = false;
+                }
+                else if (statsScript.contactNames[i] == "Travel")
+                {
+                    marsButtons[1].GetComponent<Button>().interactable = false;
+                }
+                else if (statsScript.contactNames[i] == "Worker Rights")
+                {
+                    marsButtons[2].GetComponent<Button>().interactable = false;
+                }
+            }
+            else if (statsScript.contactPlanets[i] == "Venus")
+            {
+                if (statsScript.contactNames[i] == "Healthcare")
+                {
+                    venusButtons[0].GetComponent<Button>().interactable = false;
+                }
+                else if (statsScript.contactNames[i] == "Travel")
+                {
+                    venusButtons[1].GetComponent<Button>().interactable = false;
+                }
+                else if (statsScript.contactNames[i] == "Worker Rights")
+                {
+                    venusButtons[2].GetComponent<Button>().interactable = false;
+                }
+            }
+        }
     }
 
     //Returns the player to the player object with a paper with the crooect details to be faxed or binned

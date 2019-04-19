@@ -64,6 +64,7 @@ public class ChairCameraScript : MonoBehaviour
             player.SetActive(false);
             dos.enabled = false;
             ins.enabled = false;
+
             if (dosEnabled == true)
             {
                 dos.info.gameObject.SetActive(false);

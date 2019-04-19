@@ -1913,6 +1913,7 @@ public class RobotDialogueManager : MonoBehaviour {
         panel.SetActive(true);
         robotSentences2_13.Clear();
         robotAudio2_14.Clear();
+        conf.material.SetFloat("Vector1_B78C4234", 0.5f);
 
         foreach (string sentence in robotDialogue.robotSentences2_14)
         {
@@ -2269,6 +2270,7 @@ public class RobotDialogueManager : MonoBehaviour {
         panel.SetActive(true);
         robotSentences3_6.Clear();
         robotAudio3_6.Clear();
+        conf.material.SetFloat("Vector1_B78C4234", 0.5f);
 
         foreach (string sentence in robotDialogue.robotSentences3_6)
         {

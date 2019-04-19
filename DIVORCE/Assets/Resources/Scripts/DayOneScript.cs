@@ -100,7 +100,7 @@ public class DayOneScript : MonoBehaviour {
         {
             gameInfoObject = GameObject.Find("GameInfoObject DDL");
             pcCamera.GetComponent<CameraScript>().statsScript = GameObject.Find("GameInfoObject DDL").GetComponent<Stats>();
-            pcCamera.GetComponent<CameraScript>().CheckScript();
+            //pcCamera.GetComponent<CameraScript>().CheckScript();
         }
         else
         {
@@ -182,8 +182,6 @@ public class DayOneScript : MonoBehaviour {
                         venusCanvas.SetActive(false);
 
                         folderR.material.SetFloat("Vector1_B78C4234", 100f);
-
-                        GameObject.Find("MainCamera").transform.LookAt(hit.collider.gameObject.transform);
                     }
 
 
@@ -229,8 +227,6 @@ public class DayOneScript : MonoBehaviour {
                         rot.journeyLength = Vector3.Distance(rot.startPos.position, rot.endPos.position);
 
                         StartCoroutine(FolderOpen(rot));
-
-                        GameObject.Find("MainCamera").transform.LookAt(hit.collider.gameObject.transform);
                     }
                 }
             }
@@ -445,6 +441,11 @@ public class DayOneScript : MonoBehaviour {
                 //If the player presses E, start conference call
                 if (Input.GetKeyDown(KeyCode.E))
                 {
+                    earthCanvas.SetActive(false);
+                    marsCanvas.SetActive(false);
+                    venusCanvas.SetActive(false);
+                    moonCanvas.SetActive(false);
+
                     conferenceCallAudio.Stop();
                     conferenceCamera.SetActive(true);
                     dialogueManager.speakerPanel.SetActive(true);
@@ -470,8 +471,6 @@ public class DayOneScript : MonoBehaviour {
         {
             info.gameObject.SetActive(false);
         }
-
-
 
         //If the phone canvas is active i.e. the user has picked up the phone
         if (phoneCanvasOn)
@@ -510,6 +509,14 @@ public class DayOneScript : MonoBehaviour {
                     statsScript.phone2Answered = true;
                 }
             }
+        }
+
+        if(GameObject.Find("SpeakerPanel") == null && GameObject.Find("AnswerPanel") == null && !earthCanvas.activeInHierarchy && !folder)
+        {
+            earthCanvas.SetActive(true);
+            marsCanvas.SetActive(true);
+            venusCanvas.SetActive(true);
+            moonCanvas.SetActive(true);
         }
     }
 

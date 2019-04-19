@@ -193,7 +193,6 @@ public class Stats : MonoBehaviour {
         gameOverText[6] = "Not relying on others is one thing, but completely disregarding them is another. Your actions have caused Mars, a planet with an established aggressive demeanor and violent history, to declare war on the Moon. That’s when hope was lost… a newly established planetary body stood no chance against the firepower of a planet that has been pouring resources in its military for centuries.";
         gameOverText[7] = "You made history! Never before had Venus declared war on anyone, but you got them to finally do it! And although that is not something they specialize in, you still had no chance against an established planet of that size… The independent Moon was short lived due to your poor decision making.";
 
-        UpdateScreen();
         NewDay();
     }
 
@@ -304,16 +303,22 @@ public class Stats : MonoBehaviour {
         names.text = statDisplay[0] + "\n";
         nums.text = stats[0] + "\n";
 
-        PCnames.text = statDisplay[0] + "\n";
-        PCnums.text = stats[0] + "\n";
+        if (PCnames != null)
+        {
+            PCnames.text = statDisplay[0] + "\n";
+            PCnums.text = stats[0] + "\n";
+        }
 
         for (int i = 1; i < statNames.Length; i++)
         {
             names.text = names.text + "\n" + statDisplay[i] + "\n";
-            PCnames.text = PCnames.text + "\n" + statDisplay[i] + "\n";
-
             nums.text = nums.text + "\n" + stats[i] + "\n";
-            PCnums.text = PCnums.text + "\n" + stats[i] + "\n";
+
+            if (PCnames != null)
+            {
+                PCnames.text = PCnames.text + "\n" + statDisplay[i] + "\n";
+                PCnums.text = PCnums.text + "\n" + stats[i] + "\n";
+            }
         }
 
         if (healthEarth != null)

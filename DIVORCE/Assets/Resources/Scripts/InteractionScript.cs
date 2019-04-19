@@ -84,6 +84,8 @@ public class InteractionScript : MonoBehaviour
 
     public Animator bin;
 
+    public Renderer phone, confCall;
+
     //Used to setup the objects
     void Start()
     {
@@ -91,7 +93,6 @@ public class InteractionScript : MonoBehaviour
         {
             statsScript = GameObject.Find("GameInfoObject DDL").GetComponent<Stats>();
             pcCamera.GetComponent<CameraScript>().statsScript = GameObject.Find("GameInfoObject DDL").GetComponent<Stats>();
-            pcCamera.GetComponent<CameraScript>().CheckScript();
         }
         else
         {
@@ -209,6 +210,8 @@ public class InteractionScript : MonoBehaviour
 
                         rot.endPos = GameObject.Find("EndPos").transform;
 
+                        info.gameObject.SetActive(false);
+
                         if (hit.collider.transform.parent.gameObject.name == "EarthFolder")
                         {
                             rot.startPos = GameObject.Find("EarthStartPos").transform;
@@ -231,12 +234,12 @@ public class InteractionScript : MonoBehaviour
                             marsCanvas.SetActive(false);
                         }
 
+                        folder = true;
                         rot.startTime = Time.time;
                         rot.journeyLength = Vector3.Distance(rot.startPos.position, rot.endPos.position);
                         folderCamera.GetComponent<FolderScript>().playerSpawn = GameObject.Find("PlayerPoint");
                         StartCoroutine(FolderOut(rot));
                         folderCamera.GetComponent<FolderScript>().enabled = true;
-                        GameObject.Find("MainCamera").transform.LookAt(hit.collider.gameObject.transform);
                     }
                 }
             }
@@ -440,6 +443,8 @@ public class InteractionScript : MonoBehaviour
                 {
                     answeredPhone = false;
 
+                    phone.material.SetFloat("Vector1_B78C4234", 100f);
+
                     if (phoneScript.calls == 1)
                     {
                         info.gameObject.SetActive(false);
@@ -476,16 +481,21 @@ public class InteractionScript : MonoBehaviour
                 //If the player presses F, start conference call
                 if (Input.GetKeyDown(KeyCode.E))
                 {
+                    confCall.material.SetFloat("Vector1_B78C4234", 100f);
+
+                    earthCanvas.SetActive(false);
+                    marsCanvas.SetActive(false);
+                    venusCanvas.SetActive(false);
+                    moonCanvas.SetActive(false);
+
                     conferenceCallAudio.Stop();
                     conferenceCamera.SetActive(true);
                     Cursor.lockState = CursorLockMode.None;
                     Cursor.visible = true;
                     info.gameObject.SetActive(false);
                     dialogueManager.speakerPanel.SetActive(true);
-                    //femaleHologram.SetActive(true);
                     robotDialogueManager.conferencePhoneRing = false;
-                    folder = true;
-                    FolderOn();
+                    es.SetActive(true);
                     statsScript.TimeForward();
                     gameObject.SetActive(false);
                     dialogueTrigger.TriggerDialogue();
@@ -520,7 +530,13 @@ public class InteractionScript : MonoBehaviour
             info.gameObject.SetActive(false);
         }
 
-
+        if (GameObject.Find("SpeakerPanel") == null && GameObject.Find("AnswerPanel") == null && !earthCanvas.activeInHierarchy && !folder)
+        {
+            earthCanvas.SetActive(true);
+            marsCanvas.SetActive(true);
+            venusCanvas.SetActive(true);
+            moonCanvas.SetActive(true);
+        }
 
         //If the phone canvas is active i.e. the user has picked up the phone
         if (phoneCanvasOn)
@@ -769,6 +785,7 @@ public class InteractionScript : MonoBehaviour
     IEnumerator FolderOut(RotationScript rot)
     {
         rot.enabled = true;
+        folderInteractable = false;
 
         yield return new WaitForSeconds(1.25f);
 
@@ -789,6 +806,7 @@ public class InteractionScript : MonoBehaviour
         folderCamera.SetActive(true);
         folderScript.enabled = true;
         gameObject.SetActive(false);
+        folderInteractable = true;
     }
 
 }
