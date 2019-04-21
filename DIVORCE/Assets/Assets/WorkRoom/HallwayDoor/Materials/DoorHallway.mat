@@ -33,10 +33,13 @@ Material:
         m_Texture: {fileID: 2800000, guid: 831ba290af28b9348bef05fc0e8832b4, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+<<<<<<< HEAD
     - Texture2D_598CDF6A:
         m_Texture: {fileID: 2800000, guid: 920a21ec464534645a7ec407f4046bd4, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+=======
+>>>>>>> parent of f9d301b... Shader fixes
     - Texture2D_E24379BE:
         m_Texture: {fileID: 2800000, guid: c0b538c2814acff46b2bd9937eda2fe8, type: 3}
         m_Scale: {x: 1, y: 1}
