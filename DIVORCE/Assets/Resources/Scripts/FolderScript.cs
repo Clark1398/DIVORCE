@@ -272,9 +272,9 @@ public class FolderScript : MonoBehaviour {
 
     public void NoTax()
     {
-        changes.Add(-0.3f);
-        changes.Add(-5f);
-        changes.Add(10f);
+        changes.Add(-0.5f);
+        changes.Add(-10f);
+        changes.Add(15f);
 
         changedNames.Add("Revenue");
         changedNames.Add("System_Tension");
@@ -295,8 +295,8 @@ public class FolderScript : MonoBehaviour {
 
     public void LowTax()
     {
-        changes.Add(-0.1f);
-        changes.Add(5f);
+        changes.Add(-0.3f);
+        changes.Add(10f);
 
         changedNames.Add("Revenue");
         changedNames.Add(planet + "_Relationship");
@@ -316,8 +316,8 @@ public class FolderScript : MonoBehaviour {
 
     public void HighTax()
     {
-        changes.Add(0.1f);
-        changes.Add(-5f);
+        changes.Add(0.3f);
+        changes.Add(-10f);
 
         changedNames.Add("Revenue");
         changedNames.Add(planet + "_Relationship");
@@ -337,9 +337,9 @@ public class FolderScript : MonoBehaviour {
 
     public void VeryHighTax()
     {
-        changes.Add(0.3f);
+        changes.Add(0.5f);
         changes.Add(-5f);
-        changes.Add(-10f);
+        changes.Add(-15f);
 
         changedNames.Add("Revenue");
         changedNames.Add("System_Tension");
@@ -375,10 +375,10 @@ public class FolderScript : MonoBehaviour {
 
     public void OpenTrade()
     {
+        changes.Add(-10f);
+        changes.Add(0.2f);
         changes.Add(-5f);
-        changes.Add(0.1f);
-        changes.Add(-5f);
-        changes.Add(5f);
+        changes.Add(10f);
 
         changedNames.Add("Autonomy");
         changedNames.Add("Revenue");
@@ -400,10 +400,10 @@ public class FolderScript : MonoBehaviour {
 
     public void CloseTrade()
     {
+        changes.Add(10f);
+        changes.Add(-0.2f);
         changes.Add(5f);
-        changes.Add(-0.1f);
-        changes.Add(5f);
-        changes.Add(-5f);
+        changes.Add(-10f);
 
         changedNames.Add("Autonomy");
         changedNames.Add("Revenue");
@@ -438,10 +438,10 @@ public class FolderScript : MonoBehaviour {
 
     public void OpenImport()
     {
-        changes.Add(-5f);
+        changes.Add(-10f);
         changes.Add(-0.2f);
-        changes.Add(5f);
-        changes.Add(5f);
+        changes.Add(10f);
+        changes.Add(10f);
 
         changedNames.Add("Autonomy");
         changedNames.Add("Revenue");
@@ -463,9 +463,9 @@ public class FolderScript : MonoBehaviour {
 
     public void CloseImport()
     {
-        changes.Add(5f);
+        changes.Add(10f);
         changes.Add(0.2f);
-        changes.Add(-5f);
+        changes.Add(-10f);
 
         changedNames.Add("Autonomy");
         changedNames.Add("Revenue");
@@ -499,8 +499,8 @@ public class FolderScript : MonoBehaviour {
 
     public void OpenExport()
     {
-        changes.Add(0.1f);
-        changes.Add(5f);
+        changes.Add(0.4f);
+        changes.Add(10f);
 
         changedNames.Add("Revenue");
         changedNames.Add(planet + "_Relationship");
@@ -521,10 +521,12 @@ public class FolderScript : MonoBehaviour {
     public void CloseExport()
     {
         changes.Add(10f);
-        changes.Add(-5f);
+        changes.Add(-10f);
+        changes.Add(-0.2f);
 
         changedNames.Add("Autonomy");
         changedNames.Add(planet + "_Relationship");
+        changedNames.Add("Revenue");
 
         buttonClicked = "Closed Export";
 

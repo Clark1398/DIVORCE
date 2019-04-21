@@ -21046,15 +21046,16 @@ PrefabInstance:
         type: 3}
       propertyPath: phoneCalls.Array.data[0]
       value: "Martian Representative requests new helium trade deal.\n\nFax = Revenue
-        \u2191\tMars Relationship \u2191\tPublic Support \u2193 \n\nTrash = Mars Relationship
-        \u2193  \n\nClick to close"
+        \u2191\tMars Relationship \u2191\tPublic Support \u2193 \n\nTrash = Autonomy
+        \u2191\tMars Relationship \u2193  \n\nClick to close"
       objectReference: {fileID: 0}
     - target: {fileID: 114416822403404218, guid: 0317bf0cd41460945a3b84f1f2f28eb1,
         type: 3}
       propertyPath: phoneCalls.Array.data[1]
       value: "Venus Official requests faster passage to transit to Earth through Moon
         territory.\r\n\nFax = Venus Relationship \u2191\tSystem Tension \u2193\tAutonomy
-        \u2193\n\nTrash = Venus Relationship \u2193 \r\n\nClick to close"
+        \u2193\n\nTrash = Public Support \u2191\tVenus Relationship \u2193 \r\n\nClick
+        to close"
       objectReference: {fileID: 0}
     - target: {fileID: 114416822403404218, guid: 0317bf0cd41460945a3b84f1f2f28eb1,
         type: 3}
@@ -21069,8 +21070,8 @@ PrefabInstance:
       propertyPath: phoneCalls.Array.data[5]
       value: "Mars Union Workers ask that you to help them acquire the right to legally
         mine on Jupiter\u2019s moon.\n\nFax = Mars Relationship \u2191\tRevenue \u2191
-        \  System Tension \u2193\n\nTrash = Mars Relationship \u2193\tAutonomy \u2191\n\nClick
-        to close"
+        \  System Tension \u2193\n\nTrash = Mars Relationship \u2193\tAutonomy \u2191\tSystem
+        Tension \u2193\n\nClick to close"
       objectReference: {fileID: 0}
     - target: {fileID: 114416822403404218, guid: 0317bf0cd41460945a3b84f1f2f28eb1,
         type: 3}
@@ -21085,8 +21086,9 @@ PrefabInstance:
       propertyPath: phoneCalls.Array.data[8]
       value: "Venus requests you to allow their interplanetary and independent businesses
         on the Moon to continue acting freely.\n\nFax = Venus Relationship \u2191\tRevenue
-        \u2191 \tPublic Support \u2193\n\nTrash = Venus Relationship \u2193\tRevenue
-        \u2193\tPublic Support \u2191\n\nClick to close"
+        \u2191 \tPublic Support \u2193\tAutonomy \u2193\n\nTrash = Venus Relationship
+        \u2193\tRevenue \u2193\tPublic Support \u2191\tAutonomy \u2191\n\nClick to
+        close"
       objectReference: {fileID: 0}
     - target: {fileID: 114416822403404218, guid: 0317bf0cd41460945a3b84f1f2f28eb1,
         type: 3}
@@ -106034,7 +106036,12 @@ PrefabInstance:
     - target: {fileID: 3478931628261354164, guid: c503ce7b30369954d9410f26c340a7b7,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -430
+      value: -52
+      objectReference: {fileID: 0}
+    - target: {fileID: 3478931628261354164, guid: c503ce7b30369954d9410f26c340a7b7,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 1245718540898435326, guid: c503ce7b30369954d9410f26c340a7b7,
         type: 3}
@@ -106044,8 +106051,29 @@ PrefabInstance:
     - target: {fileID: 1245718540898435326, guid: c503ce7b30369954d9410f26c340a7b7,
         type: 3}
       propertyPath: m_FontData.m_FontSize
-      value: 63
+      value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 1245718540898435326, guid: c503ce7b30369954d9410f26c340a7b7,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1245718540898435326, guid: c503ce7b30369954d9410f26c340a7b7,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.53333336
+      objectReference: {fileID: 0}
+    - target: {fileID: 1245718540898435326, guid: c503ce7b30369954d9410f26c340a7b7,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1245718540898435326, guid: c503ce7b30369954d9410f26c340a7b7,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 1f7bb52d9b658a64b8eeef1a04ab1bd7,
+        type: 3}
     - target: {fileID: 2048475033346149938, guid: c503ce7b30369954d9410f26c340a7b7,
         type: 3}
       propertyPath: m_IsActive
@@ -106055,6 +106083,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Text
       value: Press "F" to quit
+      objectReference: {fileID: 0}
+    - target: {fileID: 1096437361906534895, guid: c503ce7b30369954d9410f26c340a7b7,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1096437361906534895, guid: c503ce7b30369954d9410f26c340a7b7,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.53333336
+      objectReference: {fileID: 0}
+    - target: {fileID: 1096437361906534895, guid: c503ce7b30369954d9410f26c340a7b7,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9175108290567421916, guid: c503ce7b30369954d9410f26c340a7b7,
         type: 3}
@@ -106075,6 +106118,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Center.z
       value: -0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6954830680951479959, guid: c503ce7b30369954d9410f26c340a7b7,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6954830680951479959, guid: c503ce7b30369954d9410f26c340a7b7,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -283
+      objectReference: {fileID: 0}
+    - target: {fileID: 6954830680951479959, guid: c503ce7b30369954d9410f26c340a7b7,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 152
+      objectReference: {fileID: 0}
+    - target: {fileID: 4292694456405741193, guid: c503ce7b30369954d9410f26c340a7b7,
+        type: 3}
+      propertyPath: m_CullTransparentMesh
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c503ce7b30369954d9410f26c340a7b7, type: 3}
@@ -106138,6 +106201,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: PC
+      objectReference: {fileID: 0}
+    - target: {fileID: 2800507107323632295, guid: e404baa40e53c964aac7325725e51fda,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5576439678171448046, guid: e404baa40e53c964aac7325725e51fda,
         type: 3}

@@ -119,7 +119,7 @@ public class Phone : MonoBehaviour
                 {                  
                     phoneCallText.GetComponent<Text>().text = phoneCalls[0];
 
-                    faxChanges.Add(0.2f);
+                    faxChanges.Add(0.4f);
                     faxChanges.Add(10);
                     faxChanges.Add(-5);
 
@@ -128,8 +128,10 @@ public class Phone : MonoBehaviour
                     faxChangedNames.Add("Public_Support");
 
                     binChanges.Add(-10);
+                    binChanges.Add(10);
 
                     binChangedNames.Add("Mars_Relationship");
+                    binChangedNames.Add("Autonomy");
 
                     phonecall = "Mars Helium";
 
@@ -150,8 +152,10 @@ public class Phone : MonoBehaviour
                     faxChangedNames.Add("Autonomy");
 
                     binChanges.Add(-10);
+                    binChanges.Add(10);
 
                     binChangedNames.Add("Venus_Relationship");
+                    binChangedNames.Add("Public_Support");
 
                     phonecall = "Venus Moon Territory";
                 }
@@ -180,7 +184,7 @@ public class Phone : MonoBehaviour
                     ringTimerActive = true;
 
                     faxChanges.Add(10);
-                    faxChanges.Add(-15);
+                    faxChanges.Add(-10);
                     faxChanges.Add(-10);
 
                     faxChangedNames.Add("Earth_Relationship");
@@ -209,8 +213,8 @@ public class Phone : MonoBehaviour
                     phoneCallText.GetComponent<Text>().text = phoneCalls[5];
                     ringTimerActive = true;
 
-                    faxChanges.Add(10);
-                    faxChanges.Add(0.2f);
+                    faxChanges.Add(15);
+                    faxChanges.Add(0.5f);
                     faxChanges.Add(10);
 
                     faxChangedNames.Add("Mars_Relationship");
@@ -218,10 +222,12 @@ public class Phone : MonoBehaviour
                     faxChangedNames.Add("System_Tension");
 
                     binChanges.Add(-10);
-                    binChanges.Add(-5);
+                    binChanges.Add(-10);
+                    binChanges.Add(-10);
 
                     binChangedNames.Add("Mars_Relationship");
                     binChangedNames.Add("Autonomy");
+                    binChangedNames.Add("System_Tension");
 
                     phonecall = "Mars Mining";
                 }
@@ -232,7 +238,7 @@ public class Phone : MonoBehaviour
 
                     faxChanges.Add(10);
                     faxChanges.Add(5);
-                    faxChanges.Add(-0.2f);
+                    faxChanges.Add(-0.3f);
                     faxChanges.Add(-10);
 
                     faxChangedNames.Add("Earth_Relationship");
@@ -263,20 +269,24 @@ public class Phone : MonoBehaviour
                     ringTimerActive = true;
 
                     faxChanges.Add(10);
-                    faxChanges.Add(0.2f);
+                    faxChanges.Add(0.5f);
+                    faxChanges.Add(-10);
                     faxChanges.Add(-10);
 
                     faxChangedNames.Add("Venus_Relationship");
                     faxChangedNames.Add("Revenue");
                     faxChangedNames.Add("Public_Support");
+                    faxChangedNames.Add("Autonomy");
 
                     binChanges.Add(-10);
-                    binChanges.Add(-0.2f);
+                    binChanges.Add(-0.5f);
+                    binChanges.Add(10);
                     binChanges.Add(10);
 
                     binChangedNames.Add("Venus_Relationship");
                     binChangedNames.Add("Revenue");
                     binChangedNames.Add("Public_Support");
+                    binChangedNames.Add("Autonomy");
 
                     phonecall = "Venus Interplanetary Businesses";
                 }
