@@ -2686,7 +2686,8 @@ public class RobotDialogueManager : MonoBehaviour {
             statsScript = GameObject.Find("GameInfoObject").GetComponent<Stats>();
         }
 
-        if (Input.GetKeyDown(KeyCode.E) || Input.GetMouseButtonDown(0))
+        //if (Input.GetKeyDown(KeyCode.E) || Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0))
         {
             if (dialogue1)
             {

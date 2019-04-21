@@ -247,7 +247,7 @@ public class InteractionScript : MonoBehaviour
             {
                 if (dist <= 2.5f)
                 {
-                    info.text = "Press 'E' to enact";
+                    info.text = "Press 'E' to fax";
                     info.gameObject.SetActive(true);
 
                     //If the player hits E then Destroy the Policy, descrease the time and the stats, 
@@ -360,7 +360,7 @@ public class InteractionScript : MonoBehaviour
                 //If the distance to the bin is less than 1
                 if (dist <= 2.5f)
                 {
-                    info.text = "Press 'E' to scrap";
+                    info.text = "Press 'E' to bin";
                     info.gameObject.SetActive(true);
 
                     //If the player hits F then Destroy the Policy, descrease the time, 
@@ -478,7 +478,7 @@ public class InteractionScript : MonoBehaviour
                 info.text = "Press 'E' to start call";
                 info.gameObject.SetActive(true);
 
-                //If the player presses F, start conference call
+                //If the player presses E, start conference call
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     confCall.material.SetFloat("Vector1_B78C4234", 100f);
@@ -547,6 +547,7 @@ public class InteractionScript : MonoBehaviour
             }
 
             if ((Input.GetKeyDown(KeyCode.E) || Input.GetMouseButtonDown(0)) && answeredPhone)
+            //if ((Input.GetMouseButtonDown(0)) && answeredPhone)
             {
                 if (statsScript.day == 2)
                 {
