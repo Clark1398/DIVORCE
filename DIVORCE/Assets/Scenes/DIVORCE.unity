@@ -15342,7 +15342,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.8235294, b: 0, a: 1}
+  m_Color: {r: 0, g: 0.532712, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -15351,7 +15351,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 1f7bb52d9b658a64b8eeef1a04ab1bd7, type: 3}
-    m_FontSize: 35
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 3
@@ -15362,7 +15362,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Press 'E' to open
+  m_Text: Press 'E' to interact
 --- !u!222 &332667643
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -15387,7 +15387,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -240}
+  m_AnchoredPosition: {x: 0, y: -75}
   m_SizeDelta: {x: 500, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &332890973
@@ -21045,55 +21045,56 @@ PrefabInstance:
     - target: {fileID: 114416822403404218, guid: 0317bf0cd41460945a3b84f1f2f28eb1,
         type: 3}
       propertyPath: phoneCalls.Array.data[0]
-      value: "Mars wants you to export your sacred helium to them. \nFax = Revenue
-        \u2191     Mars Opinion \u2191     Public Support \u2193 \nTrash = Mars Opinion
-        \u2193  \nPress 'E' to close"
+      value: "Martian Representative requests new helium trade deal.\n\nFax = Revenue
+        \u2191\tMars Relationship \u2191\tPublic Support \u2193 \n\nTrash = Mars Relationship
+        \u2193  \n\nClick to close"
       objectReference: {fileID: 0}
     - target: {fileID: 114416822403404218, guid: 0317bf0cd41460945a3b84f1f2f28eb1,
         type: 3}
       propertyPath: phoneCalls.Array.data[1]
-      value: "Venus wants to pass through Moon territory on its way to Earth.\r\nFax
-        = Venus Opinion \u2191     System Tension \u2193     \rAutonomy \u2193\nTrash
-        = Venus Opinion \u2193 \r\nPress 'E' to close"
+      value: "Venus Official requests faster passage to transit to Earth through Moon
+        territory.\r\n\nFax = Venus Relationship \u2191\tSystem Tension \u2193\tAutonomy
+        \u2193\n\nTrash = Venus Relationship \u2193 \r\n\nClick to close"
       objectReference: {fileID: 0}
     - target: {fileID: 114416822403404218, guid: 0317bf0cd41460945a3b84f1f2f28eb1,
         type: 3}
       propertyPath: phoneCalls.Array.data[3]
-      value: "Earth wants to send inspectors to search your nuclear power stations.\nFax
-        = Earth Opinion \u2191    System Tension \u2193     Autonomy \u2193 \nTrash
-        = Earth Opinion \u2193    System Tension \u2191     Autonomy \u2191  \nPress
+      value: "Earth Inspectors seek to search your nuclear power stations.\n\nFax
+        = Earth Relationship \u2191\tSystem Tension \u2193\tAutonomy \u2193 \n\nTrash
+        = Earth Relationship \u2193\tSystem Tension \u2191\tAutonomy \u2191  \n\nPress
         'E' to close"
       objectReference: {fileID: 0}
     - target: {fileID: 114416822403404218, guid: 0317bf0cd41460945a3b84f1f2f28eb1,
         type: 3}
       propertyPath: phoneCalls.Array.data[5]
-      value: "Mars wants you to help them acquire the right to legally mine on Jupiter\u2019s
-        moon.\nFax = Mars Opinion \u2191    Revenue \u2191    System Tension \u2193\nTrash
-        = Mars Opinion \u2193    Autonomy \u2191  \nPress 'E' to close"
+      value: "Mars Union Workers ask that you to help them acquire the right to legally
+        mine on Jupiter\u2019s moon.\n\nFax = Mars Relationship \u2191\tRevenue \u2191
+        \  System Tension \u2193\n\nTrash = Mars Relationship \u2193\tAutonomy \u2191\n\nClick
+        to close"
       objectReference: {fileID: 0}
     - target: {fileID: 114416822403404218, guid: 0317bf0cd41460945a3b84f1f2f28eb1,
         type: 3}
       propertyPath: phoneCalls.Array.data[6]
-      value: "Earth invites you to attend their Royal Wedding.\nFax = Earth Opinion
-        \u2191    Public Support \u2193     Revenue \u2193    Autonomy -\nTrash =
-        Earth Opinion \u2193    Public Support \u2193     Autonomy \u2191 \nPress
-        'E' to close"
+      value: "Earth invites you to attend their Royal Wedding.\n\nFax = Earth Relationship
+        \u2191   Public Support \u2193     Revenue \u2193    Autonomy \u2193\nTrash
+        = Earth Relationship \u2193    Public Support \u2193     Autonomy \u2191 \n\nClick
+        to close"
       objectReference: {fileID: 0}
     - target: {fileID: 114416822403404218, guid: 0317bf0cd41460945a3b84f1f2f28eb1,
         type: 3}
       propertyPath: phoneCalls.Array.data[8]
-      value: "Earth invites you to attend their Royal Wedding.\nFax = Earth Opinion
-        \u2191     Public Support \u2193      Revenue \u2193    Autonomy \u2193\nTrash
-        = Earth Opinion \u2193     Public Support \u2193      Autonomy \u2191 \nPress
-        'E' to close"
+      value: "Venus requests you to allow their interplanetary and independent businesses
+        on the Moon to continue acting freely.\n\nFax = Venus Relationship \u2191\tRevenue
+        \u2191 \tPublic Support \u2193\n\nTrash = Venus Relationship \u2193\tRevenue
+        \u2193\tPublic Support \u2191\n\nClick to close"
       objectReference: {fileID: 0}
     - target: {fileID: 114416822403404218, guid: 0317bf0cd41460945a3b84f1f2f28eb1,
         type: 3}
       propertyPath: phoneCalls.Array.data[7]
-      value: "Earth invites you to attend their Royal Wedding.\nFax = Earth Opinion
-        \u2191    Public Support \u2193     Revenue \u2193    Autonomy \u2193\nTrash
-        = Earth Opinion \u2193    Public Support \u2193     Autonomy \u2191 \nPress
-        'E' to close"
+      value: 'Your wife requests that you organise travel for Moon citizens to Mars.
+
+
+        Click to close'
       objectReference: {fileID: 0}
     - target: {fileID: 114416822403404218, guid: 0317bf0cd41460945a3b84f1f2f28eb1,
         type: 3}
@@ -21149,7 +21150,25 @@ PrefabInstance:
         type: 3}
       propertyPath: venusPhoneCall2
       value: 
-      objectReference: {fileID: 8300000, guid: 1bdc6b592ec86cb469a6d392b30dd97a, type: 3}
+      objectReference: {fileID: 8300000, guid: 2b2f24f6fb59d534abd12c6fd50e1555, type: 3}
+    - target: {fileID: 114416822403404218, guid: 0317bf0cd41460945a3b84f1f2f28eb1,
+        type: 3}
+      propertyPath: phoneCalls.Array.data[2]
+      value: 'Your wife requests that you do not answer the phone call from Earth
+        today.
+
+
+        Click to close'
+      objectReference: {fileID: 0}
+    - target: {fileID: 114416822403404218, guid: 0317bf0cd41460945a3b84f1f2f28eb1,
+        type: 3}
+      propertyPath: phoneCalls.Array.data[4]
+      value: 'Your wife asks you to leave the office at 5PM to make the dinner reservation
+        on time.
+
+
+        Click to close'
+      objectReference: {fileID: 0}
     - target: {fileID: 82053576743617524, guid: 0317bf0cd41460945a3b84f1f2f28eb1,
         type: 3}
       propertyPath: m_Volume
