@@ -63286,7 +63286,7 @@ PrefabInstance:
     - target: {fileID: 114056202854650008, guid: dbaa2973eff7b904fa37c7419cff9038,
         type: 3}
       propertyPath: robotClip4.Array.size
-      value: 8
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114056202854650008, guid: dbaa2973eff7b904fa37c7419cff9038,
         type: 3}
@@ -63331,6 +63331,11 @@ PrefabInstance:
     - target: {fileID: 114056202854650008, guid: dbaa2973eff7b904fa37c7419cff9038,
         type: 3}
       propertyPath: robotClip5_1.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 114056202854650008, guid: dbaa2973eff7b904fa37c7419cff9038,
+        type: 3}
+      propertyPath: robotClip3point5.Array.size
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 114056202854650008, guid: dbaa2973eff7b904fa37c7419cff9038,
@@ -63607,7 +63612,7 @@ PrefabInstance:
         type: 3}
       propertyPath: robotClip4.Array.data[0]
       value: 
-      objectReference: {fileID: 8300000, guid: b95377a46a6933e4b80bf0b39f4fc082, type: 3}
+      objectReference: {fileID: 8300000, guid: 9453374e5e7325045af4a942ef08521c, type: 3}
     - target: {fileID: 114056202854650008, guid: dbaa2973eff7b904fa37c7419cff9038,
         type: 3}
       propertyPath: robotClip5.Array.data[0]
@@ -63908,6 +63913,41 @@ PrefabInstance:
       propertyPath: robotClip5_1.Array.data[6]
       value: 
       objectReference: {fileID: 8300000, guid: 3e46b378dbca72147a01ff76edfd3040, type: 3}
+    - target: {fileID: 114056202854650008, guid: dbaa2973eff7b904fa37c7419cff9038,
+        type: 3}
+      propertyPath: robotClip3point5.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: b95377a46a6933e4b80bf0b39f4fc082, type: 3}
+    - target: {fileID: 114056202854650008, guid: dbaa2973eff7b904fa37c7419cff9038,
+        type: 3}
+      propertyPath: robotClip3point5.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: a7e4336dd64847c4f9f6e273bc6bf0cc, type: 3}
+    - target: {fileID: 114056202854650008, guid: dbaa2973eff7b904fa37c7419cff9038,
+        type: 3}
+      propertyPath: robotClip3point5.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 9450fce0afb685c4cb1bf68942f262b8, type: 3}
+    - target: {fileID: 114056202854650008, guid: dbaa2973eff7b904fa37c7419cff9038,
+        type: 3}
+      propertyPath: robotClip3point5.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: dcd516adf88c0b34a908290a1a6d07b5, type: 3}
+    - target: {fileID: 114056202854650008, guid: dbaa2973eff7b904fa37c7419cff9038,
+        type: 3}
+      propertyPath: robotClip3point5.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 162b462b09233c94d8fb5d7e2520c938, type: 3}
+    - target: {fileID: 114056202854650008, guid: dbaa2973eff7b904fa37c7419cff9038,
+        type: 3}
+      propertyPath: robotClip3point5.Array.data[5]
+      value: 
+      objectReference: {fileID: 8300000, guid: fec308c67cc7acd4fa96255a37fcd102, type: 3}
+    - target: {fileID: 114056202854650008, guid: dbaa2973eff7b904fa37c7419cff9038,
+        type: 3}
+      propertyPath: robotClip3point5.Array.data[6]
+      value: 
+      objectReference: {fileID: 8300000, guid: f727b2edbca95b14c880ebefc5956378, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dbaa2973eff7b904fa37c7419cff9038, type: 3}
 --- !u!1 &1302872427
@@ -105455,13 +105495,14 @@ PrefabInstance:
     - target: {fileID: 4211800657732463003, guid: f40f21c0f7d3db24baa4a25711978885,
         type: 3}
       propertyPath: robotDialogue.robotSentences13.Array.data[0]
-      value: "That\u2019s the conference call now, boss! Let\u2019s get up to the
-        board room."
+      value: "That\u2019s the conference call now, boss! You should follow the green
+        lights to get up to the board room."
       objectReference: {fileID: 0}
     - target: {fileID: 4211800657732463003, guid: f40f21c0f7d3db24baa4a25711978885,
         type: 3}
       propertyPath: robotDialogue.robotSentences13.Array.data[1]
-      value: Just go down the hall, and up the lift.
+      value: "Just go down the hall, and up the lift. You\u2019ll need to answer it
+        from the control panel. "
       objectReference: {fileID: 0}
     - target: {fileID: 4211800657732463003, guid: f40f21c0f7d3db24baa4a25711978885,
         type: 3}
@@ -105557,6 +105598,30 @@ PrefabInstance:
       value: Keep in mind that all your decisions will affect them, so think before
         you act!
       objectReference: {fileID: 0}
+    - target: {fileID: 4211800657732463003, guid: f40f21c0f7d3db24baa4a25711978885,
+        type: 3}
+      propertyPath: robotDialogue.robotSentences6.Array.data[0]
+      value: "Remember, you\u2019re only working until 6PM, so keep an eye on the
+        clock above the door. Now let\u2019s get on with it! "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4211800657732463003, guid: f40f21c0f7d3db24baa4a25711978885,
+        type: 3}
+      propertyPath: robotDialogue.robotSentences9.Array.data[1]
+      value: "Now, let\u2019s enact it! To do so, go and fax it. For future policies,
+        if you change your mind after picking them, you can throw them in the trash
+        bin. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4211800657732463003, guid: f40f21c0f7d3db24baa4a25711978885,
+        type: 3}
+      propertyPath: robotDialogue.robotSentences10.Array.data[0]
+      value: "Hey, that\u2019s the phone ringing! It\u2019s right behind you, on the
+        side of that table."
+      objectReference: {fileID: 0}
+    - target: {fileID: 4211800657732463003, guid: f40f21c0f7d3db24baa4a25711978885,
+        type: 3}
+      propertyPath: robotDialogue.robotSentences10.Array.data[1]
+      value: 'Lets answer and hear what they want! '
+      objectReference: {fileID: 0}
     - target: {fileID: 4105529404903687197, guid: f40f21c0f7d3db24baa4a25711978885,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -105638,6 +105703,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Color.b
       value: 0.91076815
+      objectReference: {fileID: 0}
+    - target: {fileID: 4211936731889548719, guid: f40f21c0f7d3db24baa4a25711978885,
+        type: 3}
+      propertyPath: m_Text
+      value: Click to continue...
       objectReference: {fileID: 0}
     - target: {fileID: 4106414861963653655, guid: f40f21c0f7d3db24baa4a25711978885,
         type: 3}
