@@ -63320,7 +63320,7 @@ PrefabInstance:
     - target: {fileID: 114056202854650008, guid: dbaa2973eff7b904fa37c7419cff9038,
         type: 3}
       propertyPath: robotClip3_1.Array.size
-      value: 6
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114056202854650008, guid: dbaa2973eff7b904fa37c7419cff9038,
         type: 3}
@@ -63330,17 +63330,17 @@ PrefabInstance:
     - target: {fileID: 114056202854650008, guid: dbaa2973eff7b904fa37c7419cff9038,
         type: 3}
       propertyPath: robotClip3_3.Array.size
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114056202854650008, guid: dbaa2973eff7b904fa37c7419cff9038,
         type: 3}
       propertyPath: robotClip4_1.Array.size
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114056202854650008, guid: dbaa2973eff7b904fa37c7419cff9038,
         type: 3}
       propertyPath: robotClip4_2.Array.size
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 114056202854650008, guid: dbaa2973eff7b904fa37c7419cff9038,
         type: 3}
@@ -63361,6 +63361,31 @@ PrefabInstance:
         type: 3}
       propertyPath: robotClip2_7.Array.size
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114056202854650008, guid: dbaa2973eff7b904fa37c7419cff9038,
+        type: 3}
+      propertyPath: robotClip3_4.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114056202854650008, guid: dbaa2973eff7b904fa37c7419cff9038,
+        type: 3}
+      propertyPath: robotClip3_5.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114056202854650008, guid: dbaa2973eff7b904fa37c7419cff9038,
+        type: 3}
+      propertyPath: robotClip3_6.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114056202854650008, guid: dbaa2973eff7b904fa37c7419cff9038,
+        type: 3}
+      propertyPath: robotClip4_4.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114056202854650008, guid: dbaa2973eff7b904fa37c7419cff9038,
+        type: 3}
+      propertyPath: robotClip4_5.Array.size
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114056202854650008, guid: dbaa2973eff7b904fa37c7419cff9038,
         type: 3}
@@ -63821,12 +63846,12 @@ PrefabInstance:
         type: 3}
       propertyPath: robotClip3_2.Array.data[0]
       value: 
-      objectReference: {fileID: 8300000, guid: caa7c4b99b332574fb1b77dfe616b4dc, type: 3}
+      objectReference: {fileID: 8300000, guid: aee7bfe1981308b48b05162ba033d950, type: 3}
     - target: {fileID: 114056202854650008, guid: dbaa2973eff7b904fa37c7419cff9038,
         type: 3}
       propertyPath: robotClip3_3.Array.data[0]
       value: 
-      objectReference: {fileID: 8300000, guid: 5fd3277f71c360b4e89c95a40f8bfe4f, type: 3}
+      objectReference: {fileID: 8300000, guid: e775693223e51854789d4460d9f2620f, type: 3}
     - target: {fileID: 114056202854650008, guid: dbaa2973eff7b904fa37c7419cff9038,
         type: 3}
       propertyPath: robotClip3_3.Array.data[1]
@@ -63881,27 +63906,27 @@ PrefabInstance:
         type: 3}
       propertyPath: robotClip4_2.Array.data[0]
       value: 
-      objectReference: {fileID: 8300000, guid: 45a08a1adfbc6f547990b9929129252d, type: 3}
+      objectReference: {fileID: 8300000, guid: c92801ff2388b9c4c93466ede71ac8c9, type: 3}
     - target: {fileID: 114056202854650008, guid: dbaa2973eff7b904fa37c7419cff9038,
         type: 3}
       propertyPath: robotClip4_2.Array.data[1]
       value: 
-      objectReference: {fileID: 8300000, guid: 87569a24ea0a1a24b85fbae1de2be7a5, type: 3}
+      objectReference: {fileID: 8300000, guid: d1932f913cece944da919f0d41b2b983, type: 3}
     - target: {fileID: 114056202854650008, guid: dbaa2973eff7b904fa37c7419cff9038,
         type: 3}
       propertyPath: robotClip4_2.Array.data[2]
       value: 
-      objectReference: {fileID: 8300000, guid: e5d6e210271c7f849bad1684c80a1da9, type: 3}
+      objectReference: {fileID: 8300000, guid: 7fc42f9116a16bc40946cb459265aea1, type: 3}
     - target: {fileID: 114056202854650008, guid: dbaa2973eff7b904fa37c7419cff9038,
         type: 3}
       propertyPath: robotClip4_2.Array.data[3]
       value: 
-      objectReference: {fileID: 8300000, guid: cce6b61ae931ee34a88a2389b176ccd6, type: 3}
+      objectReference: {fileID: 8300000, guid: a202b89eb809069468a8b6e0f079d67c, type: 3}
     - target: {fileID: 114056202854650008, guid: dbaa2973eff7b904fa37c7419cff9038,
         type: 3}
       propertyPath: robotClip4_3.Array.data[0]
       value: 
-      objectReference: {fileID: 8300000, guid: 5fc11ea1287963c4c995227064549c36, type: 3}
+      objectReference: {fileID: 8300000, guid: 45a08a1adfbc6f547990b9929129252d, type: 3}
     - target: {fileID: 114056202854650008, guid: dbaa2973eff7b904fa37c7419cff9038,
         type: 3}
       propertyPath: robotClip5_1.Array.data[0]
@@ -63977,6 +64002,61 @@ PrefabInstance:
       propertyPath: robotClip2_8.Array.data[4]
       value: 
       objectReference: {fileID: 8300000, guid: 92a9fbf7ebf953346b7371c47b4497f0, type: 3}
+    - target: {fileID: 114056202854650008, guid: dbaa2973eff7b904fa37c7419cff9038,
+        type: 3}
+      propertyPath: robotClip3_4.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: c157b8f0f8e2e4d449ecb5c70fc93575, type: 3}
+    - target: {fileID: 114056202854650008, guid: dbaa2973eff7b904fa37c7419cff9038,
+        type: 3}
+      propertyPath: robotClip3_4.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: d2e6c125e78f30943ba0b54baf2e314b, type: 3}
+    - target: {fileID: 114056202854650008, guid: dbaa2973eff7b904fa37c7419cff9038,
+        type: 3}
+      propertyPath: robotClip3_5.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: caa7c4b99b332574fb1b77dfe616b4dc, type: 3}
+    - target: {fileID: 114056202854650008, guid: dbaa2973eff7b904fa37c7419cff9038,
+        type: 3}
+      propertyPath: robotClip3_6.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 5fd3277f71c360b4e89c95a40f8bfe4f, type: 3}
+    - target: {fileID: 114056202854650008, guid: dbaa2973eff7b904fa37c7419cff9038,
+        type: 3}
+      propertyPath: robotClip3_6.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 49eb6f682637bee428bc53adc6fec8ff, type: 3}
+    - target: {fileID: 114056202854650008, guid: dbaa2973eff7b904fa37c7419cff9038,
+        type: 3}
+      propertyPath: robotClip3_6.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 3288f1fd63dcc4a45914093fa8f68e84, type: 3}
+    - target: {fileID: 114056202854650008, guid: dbaa2973eff7b904fa37c7419cff9038,
+        type: 3}
+      propertyPath: robotClip4_2.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 775d55764474ab744b8b23b4a5e3626a, type: 3}
+    - target: {fileID: 114056202854650008, guid: dbaa2973eff7b904fa37c7419cff9038,
+        type: 3}
+      propertyPath: robotClip4_2.Array.data[5]
+      value: 
+      objectReference: {fileID: 8300000, guid: f7695e7845c16be4fbc43fb9300a1e23, type: 3}
+    - target: {fileID: 114056202854650008, guid: dbaa2973eff7b904fa37c7419cff9038,
+        type: 3}
+      propertyPath: robotClip4_4.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 87569a24ea0a1a24b85fbae1de2be7a5, type: 3}
+    - target: {fileID: 114056202854650008, guid: dbaa2973eff7b904fa37c7419cff9038,
+        type: 3}
+      propertyPath: robotClip4_5.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: e5d6e210271c7f849bad1684c80a1da9, type: 3}
+    - target: {fileID: 114056202854650008, guid: dbaa2973eff7b904fa37c7419cff9038,
+        type: 3}
+      propertyPath: robotClip4_5.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: cce6b61ae931ee34a88a2389b176ccd6, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dbaa2973eff7b904fa37c7419cff9038, type: 3}
 --- !u!1 &1302872427
@@ -105454,6 +105534,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4211800657732463003, guid: f40f21c0f7d3db24baa4a25711978885,
         type: 3}
+      propertyPath: robotDialogue.robotSentences4_4.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4211800657732463003, guid: f40f21c0f7d3db24baa4a25711978885,
+        type: 3}
       propertyPath: robotDialogueManager
       value: 
       objectReference: {fileID: 1443352558}
@@ -105693,6 +105778,38 @@ PrefabInstance:
         type: 3}
       propertyPath: robotDialogue.robotSentences2_7.Array.data[0]
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4211800657732463003, guid: f40f21c0f7d3db24baa4a25711978885,
+        type: 3}
+      propertyPath: robotDialogue.robotSentences3_6.Array.data[1]
+      value: "But if you do, you\u2019ll miss the conference call! I\u2019m sure the
+        Venucians won\u2019t be happy about that..."
+      objectReference: {fileID: 0}
+    - target: {fileID: 4211800657732463003, guid: f40f21c0f7d3db24baa4a25711978885,
+        type: 3}
+      propertyPath: robotDialogue.robotSentences4_1.Array.data[1]
+      value: "Let\u2019s just wait for your wife to call and we\u2019ll start, ok? "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4211800657732463003, guid: f40f21c0f7d3db24baa4a25711978885,
+        type: 3}
+      propertyPath: robotDialogue.robotSentences4_2.Array.data[0]
+      value: 'Hm, I guess she told you all she wanted to before you left home, huh? '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4211800657732463003, guid: f40f21c0f7d3db24baa4a25711978885,
+        type: 3}
+      propertyPath: robotDialogue.robotSentences4_2.Array.data[4]
+      value: You can try to arrange the same for other planets too, but the cabinet
+        have not requested that specifically, so it is up to you.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4211800657732463003, guid: f40f21c0f7d3db24baa4a25711978885,
+        type: 3}
+      propertyPath: robotDialogue.robotSentences4_4.Array.data[1]
+      value: I guess she slept late today, huh?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4211800657732463003, guid: f40f21c0f7d3db24baa4a25711978885,
+        type: 3}
+      propertyPath: robotDialogue.robotSentences4_5.Array.data[1]
+      value: "Ok, I\u2019ll add that to the board."
       objectReference: {fileID: 0}
     - target: {fileID: 4105529404903687197, guid: f40f21c0f7d3db24baa4a25711978885,
         type: 3}
