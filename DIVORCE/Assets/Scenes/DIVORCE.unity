@@ -38913,6 +38913,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 114830054115194458, guid: 49ca563e5fb2e2c439093b377f51072a,
         type: 3}
+      propertyPath: dialogue.sentences5.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114830054115194458, guid: 49ca563e5fb2e2c439093b377f51072a,
+        type: 3}
       propertyPath: dialogue.sentences4_1.Array.data[0]
       value: Mr. Prime Moonister, we both knew this call would come.
       objectReference: {fileID: 0}
@@ -39023,6 +39028,24 @@ PrefabInstance:
       propertyPath: dialogue.sentences4_10.Array.data[0]
       value: "You will regret this Mister, the moon will never receive help from the
         earth again!\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114830054115194458, guid: 49ca563e5fb2e2c439093b377f51072a,
+        type: 3}
+      propertyPath: dialogue.sentences5.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114830054115194458, guid: 49ca563e5fb2e2c439093b377f51072a,
+        type: 3}
+      propertyPath: dialogue.sentences5.Array.data[0]
+      value: "Urgh\u2026 Ok\u2026 In addition to the media coverage for our great
+        relationship, we will be willing to offer our continuous food export to the
+        Moon at lower prices then in the past."
+      objectReference: {fileID: 0}
+    - target: {fileID: 114830054115194458, guid: 49ca563e5fb2e2c439093b377f51072a,
+        type: 3}
+      propertyPath: dialogue.sentences5.Array.data[1]
+      value: Surely, you wouldn't be able to refuse ensuring your people are fed to
+        keep that silly hard border up, right? What say you?
       objectReference: {fileID: 0}
     - target: {fileID: 1787261139359026, guid: 49ca563e5fb2e2c439093b377f51072a, type: 3}
       propertyPath: m_IsActive
@@ -43588,6 +43611,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 114700646298782018, guid: a96c07b1be1f31c40ad5bc66d57204cd,
         type: 3}
+      propertyPath: audioClip5.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114700646298782018, guid: a96c07b1be1f31c40ad5bc66d57204cd,
+        type: 3}
       propertyPath: planetText
       value: 
       objectReference: {fileID: 822026009}
@@ -43700,32 +43728,32 @@ PrefabInstance:
         type: 3}
       propertyPath: audioClip4.Array.data[0]
       value: 
-      objectReference: {fileID: 8300000, guid: 321d57c4a5c151849a54100cf45b1482, type: 3}
+      objectReference: {fileID: 8300000, guid: 576aafffe6954dc4ab2444dd5f255907, type: 3}
     - target: {fileID: 114700646298782018, guid: a96c07b1be1f31c40ad5bc66d57204cd,
         type: 3}
       propertyPath: audioClip4.Array.data[1]
       value: 
-      objectReference: {fileID: 8300000, guid: b58d404d5f48b7a46b2cd8486995ac60, type: 3}
+      objectReference: {fileID: 8300000, guid: 6b102571b5efe18428f188180a8f46c9, type: 3}
     - target: {fileID: 114700646298782018, guid: a96c07b1be1f31c40ad5bc66d57204cd,
         type: 3}
       propertyPath: audioClip5.Array.data[0]
       value: 
-      objectReference: {fileID: 8300000, guid: 5c3f7f2a8f494484b83d0e98d1b73762, type: 3}
+      objectReference: {fileID: 8300000, guid: 321d57c4a5c151849a54100cf45b1482, type: 3}
     - target: {fileID: 114700646298782018, guid: a96c07b1be1f31c40ad5bc66d57204cd,
         type: 3}
       propertyPath: audioClip5.Array.data[1]
       value: 
-      objectReference: {fileID: 8300000, guid: 2a30f7fcf9bd2a4488b696a2c129cb23, type: 3}
+      objectReference: {fileID: 8300000, guid: b58d404d5f48b7a46b2cd8486995ac60, type: 3}
     - target: {fileID: 114700646298782018, guid: a96c07b1be1f31c40ad5bc66d57204cd,
         type: 3}
       propertyPath: audioClip7.Array.data[0]
       value: 
-      objectReference: {fileID: 8300000, guid: 576aafffe6954dc4ab2444dd5f255907, type: 3}
+      objectReference: {fileID: 8300000, guid: 5c3f7f2a8f494484b83d0e98d1b73762, type: 3}
     - target: {fileID: 114700646298782018, guid: a96c07b1be1f31c40ad5bc66d57204cd,
         type: 3}
       propertyPath: audioClip7.Array.data[1]
       value: 
-      objectReference: {fileID: 8300000, guid: 6b102571b5efe18428f188180a8f46c9, type: 3}
+      objectReference: {fileID: 8300000, guid: 2a30f7fcf9bd2a4488b696a2c129cb23, type: 3}
     - target: {fileID: 114700646298782018, guid: a96c07b1be1f31c40ad5bc66d57204cd,
         type: 3}
       propertyPath: audioClip9.Array.data[0]
@@ -44091,6 +44119,11 @@ PrefabInstance:
       propertyPath: audioClip4_10.Array.data[0]
       value: 
       objectReference: {fileID: 8300000, guid: 08c734e9b77130b4aa412515d551f98b, type: 3}
+    - target: {fileID: 114700646298782018, guid: a96c07b1be1f31c40ad5bc66d57204cd,
+        type: 3}
+      propertyPath: audioClip5.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a96c07b1be1f31c40ad5bc66d57204cd, type: 3}
 --- !u!1 &911422144
@@ -95468,7 +95501,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1903318401
 Transform:
   m_ObjectHideFlags: 0
