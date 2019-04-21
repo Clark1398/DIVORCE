@@ -21100,6 +21100,56 @@ PrefabInstance:
       propertyPath: rend
       value: 
       objectReference: {fileID: 448664385}
+    - target: {fileID: 114416822403404218, guid: 0317bf0cd41460945a3b84f1f2f28eb1,
+        type: 3}
+      propertyPath: marsPhoneCall
+      value: 
+      objectReference: {fileID: 8300000, guid: db8d20bbf7d655b4883e0aa38fd53a4c, type: 3}
+    - target: {fileID: 114416822403404218, guid: 0317bf0cd41460945a3b84f1f2f28eb1,
+        type: 3}
+      propertyPath: venusPhoneCall
+      value: 
+      objectReference: {fileID: 8300000, guid: 8e0aa47db40c3d241a963e1e01078122, type: 3}
+    - target: {fileID: 114416822403404218, guid: 0317bf0cd41460945a3b84f1f2f28eb1,
+        type: 3}
+      propertyPath: wifePhoneCall
+      value: 
+      objectReference: {fileID: 8300000, guid: 1bdc6b592ec86cb469a6d392b30dd97a, type: 3}
+    - target: {fileID: 114416822403404218, guid: 0317bf0cd41460945a3b84f1f2f28eb1,
+        type: 3}
+      propertyPath: earthPhoneCall
+      value: 
+      objectReference: {fileID: 8300000, guid: d966436703e41d14a8ba1e281177c840, type: 3}
+    - target: {fileID: 114416822403404218, guid: 0317bf0cd41460945a3b84f1f2f28eb1,
+        type: 3}
+      propertyPath: wifePhoneCallHappy
+      value: 
+      objectReference: {fileID: 8300000, guid: d6beaa67798e1dd4db550f0df1072479, type: 3}
+    - target: {fileID: 114416822403404218, guid: 0317bf0cd41460945a3b84f1f2f28eb1,
+        type: 3}
+      propertyPath: wifePhoneCallAngry
+      value: 
+      objectReference: {fileID: 8300000, guid: f21b818c0f45f264fa511331d5d9085b, type: 3}
+    - target: {fileID: 114416822403404218, guid: 0317bf0cd41460945a3b84f1f2f28eb1,
+        type: 3}
+      propertyPath: marsPhoneCall2
+      value: 
+      objectReference: {fileID: 8300000, guid: 48645277f21fb9e45a78768eda2a8d98, type: 3}
+    - target: {fileID: 114416822403404218, guid: 0317bf0cd41460945a3b84f1f2f28eb1,
+        type: 3}
+      propertyPath: wifePhoneCallAngry2
+      value: 
+      objectReference: {fileID: 8300000, guid: ae5692b84b23e6047a56b718ba634513, type: 3}
+    - target: {fileID: 114416822403404218, guid: 0317bf0cd41460945a3b84f1f2f28eb1,
+        type: 3}
+      propertyPath: wifePhoneCallHappy2
+      value: 
+      objectReference: {fileID: 8300000, guid: d79a9d2a0cd769d4e8349a9d41ce0e51, type: 3}
+    - target: {fileID: 114416822403404218, guid: 0317bf0cd41460945a3b84f1f2f28eb1,
+        type: 3}
+      propertyPath: venusPhoneCall2
+      value: 
+      objectReference: {fileID: 8300000, guid: 1bdc6b592ec86cb469a6d392b30dd97a, type: 3}
     - target: {fileID: 82053576743617524, guid: 0317bf0cd41460945a3b84f1f2f28eb1,
         type: 3}
       propertyPath: m_Volume
