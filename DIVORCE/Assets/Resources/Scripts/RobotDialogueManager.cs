@@ -214,6 +214,7 @@ public class RobotDialogueManager : MonoBehaviour {
     bool dialogue5_2;
 
     public bool conferencePhoneRing = false;
+
     bool timer1 = false;
     bool timer2 = false;
     bool timer3 = false;
@@ -2674,20 +2675,21 @@ public class RobotDialogueManager : MonoBehaviour {
         dialogue5_2 = false;
         robotAudioSource.Stop();
         panel.SetActive(false);
+        interactionScript.chairInteractable = true;
     }
 
     #endregion
 
     // Update is called once per frame
-    void Update ()
+    void Update()
     {
-        if(statsScript == null)
+        if (statsScript == null)
         {
             statsScript = GameObject.Find("GameInfoObject").GetComponent<Stats>();
         }
 
         //if (Input.GetKeyDown(KeyCode.E) || Input.GetMouseButtonDown(0))
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && !dayOneScript.answeredPhone)
         {
             if (dialogue1)
             {
@@ -2749,8 +2751,11 @@ public class RobotDialogueManager : MonoBehaviour {
             {
                 DisplayNextRobotSentence14();
             }
+        }
 
-            else if (dialogue2_1)
+        if (Input.GetMouseButtonDown(0) && !interactionScript.answeredPhone)
+        {
+            if (dialogue2_1)
             {
                 DisplayNextRobotSentence2_1();
             }
@@ -2858,6 +2863,15 @@ public class RobotDialogueManager : MonoBehaviour {
                 DisplayNextRobotSentence4_5();
             }
 
+            else if (dialogue5_1)
+            {
+                DisplayNextRobotSentence5_1();
+            }
+            else if (dialogue5_2)
+            {
+                DisplayNextRobotSentence5_2();
+            }
+
             //else if (dialogue15)
             //{
             //    DisplayNextRobotSentence15();
@@ -2876,6 +2890,7 @@ public class RobotDialogueManager : MonoBehaviour {
             //{
             //    DisplayNextRobotSentence16();
             //}
+
         }
 
         if (statsScript.day == 2)

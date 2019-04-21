@@ -165,7 +165,7 @@ public class ChairCameraScript : MonoBehaviour
                     }
                 }
             }
-            else if (hit.collider.gameObject.tag == "MoonFolder" && statsScript.day > 1)
+            else if (hit.collider.gameObject.tag == "MoonFolder" && statsScript.day > 1 && statsScript.day != 5)
             {
                 info.text = "Press 'E' to open";
                 info.gameObject.SetActive(true);
@@ -222,11 +222,16 @@ public class ChairCameraScript : MonoBehaviour
 
                 if (statsScript.day == 1)
                 {
-                    if (firstUse2)
+                    if (firstUse2 && rdt.visited == true)
                     {
                         rdt.TriggerRobotDialogue4();
                         firstUse2 = true;
                     }
+                }
+
+                if (statsScript.day == 5)
+                {
+                    ins.dayFivePrefab = true;
                 }
 
                 player.SetActive(true);

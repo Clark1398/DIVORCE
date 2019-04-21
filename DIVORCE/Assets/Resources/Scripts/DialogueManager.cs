@@ -363,15 +363,24 @@ public class DialogueManager : MonoBehaviour {
         if (statsScript.day == 1 || statsScript.day == 4)
         {
             planetText.text = dialogue.planet1;
+            dayOneScript.answeredPhone = true;
             
         }
         else if (statsScript.day == 2)
         {
             planetText.text = dialogue.planet2;
+            interactionScript.answeredPhone = true;
         }
         else if (statsScript.day == 3)
         {
             planetText.text = dialogue.planet3;
+            interactionScript.answeredPhone = true;
+        }
+        if (statsScript.day == 4)
+        {
+            planetText.text = dialogue.planet1;
+            interactionScript.answeredPhone = true;
+
         }
         dialogue1 = true;
 
@@ -1348,6 +1357,7 @@ public class DialogueManager : MonoBehaviour {
 
         if (statsScript.day == 1)
         {
+            dayOneScript.answeredPhone = false;
             conferenceCall.SetActive(false);
             player.SetActive(true);
             Cursor.lockState = CursorLockMode.Locked;
@@ -2508,12 +2518,14 @@ public class DialogueManager : MonoBehaviour {
         conferenceCall.SetActive(false);
         player.SetActive(true);
         dialogue9 = false;
+
         if (statsScript.day == 1)
         {
             dayOneScript.conferenceCallInteractable = false;
             //dayOneScript.femaleHologram.SetActive(false);
             robotDialogueTrigger.TriggerRobotDialogue14();
             statsScript.conferenceAccept = false;
+            dayOneScript.answeredPhone = false;
             statsScript.connferenceCallDecline.Add("Earth Moonpath");
         }
         else if (statsScript.day == 2)
@@ -2522,6 +2534,7 @@ public class DialogueManager : MonoBehaviour {
             statsScript.connferenceCallAccept.Add("Mars Moon Metals");
             interactionScript.conferenceCallInteractable = false;
             //interactionScript.femaleHologram.SetActive(false);
+            interactionScript.answeredPhone = false;
             robotDialogueTrigger.TriggerRobotDialogue2_15();
         }
         else if (statsScript.day == 3)
@@ -2529,6 +2542,7 @@ public class DialogueManager : MonoBehaviour {
             statsScript.conferenceAccept = true;
             statsScript.connferenceCallAccept.Add("Venus Gun Trade");
             interactionScript.conferenceCallInteractable = false;
+            interactionScript.answeredPhone = false;
             //interactionScript.femaleHologram.SetActive(false);
             statsScript.time--;
         }
@@ -2537,6 +2551,7 @@ public class DialogueManager : MonoBehaviour {
             statsScript.conferenceAccept = true;
             statsScript.connferenceCallAccept.Add("Earth Moon Bill");
             //interactionScript.conferenceCallInteractable = false;
+            interactionScript.answeredPhone = false;
             interactionScript.femaleHologram.SetActive(false);
             statsScript.time--;
         }
@@ -2686,6 +2701,7 @@ public class DialogueManager : MonoBehaviour {
     {
         dialogue10 = false;
         statsScript.conferenceAccept = false;
+        interactionScript.answeredPhone = false;
         conferenceCall.SetActive(false);
         //interactionScript.femaleHologram.SetActive(false);
         player.SetActive(true);

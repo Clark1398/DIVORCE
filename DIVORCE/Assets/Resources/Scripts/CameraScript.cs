@@ -112,7 +112,6 @@ public class CameraScript : MonoBehaviour {
 
             if (statsScript.day == 1 && firstPCUse == true)
             {
-                //robotDialogueTrigger.TriggerRobotDialogue4();
                 firstPCUse = false;
                 dayOneScript.pcActive = false;
             }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 //[RequireComponent(typeof(Phone))]
 
@@ -44,6 +45,11 @@ public class InteractionScript : MonoBehaviour
     public bool pcActive;
     public bool contact;
     public bool door;
+    public bool dayFivePrefab;
+    bool dayFive;
+    bool countdown;
+    bool dayFiveFax;
+    bool dayFiveBin;
 
     bool triggerOnce;
     bool triggerOnce2;
@@ -53,6 +59,7 @@ public class InteractionScript : MonoBehaviour
     float dist;
     public int uses;
     public int contactUses;
+    float timer = 2f;
 
     string item;
 
@@ -345,6 +352,16 @@ public class InteractionScript : MonoBehaviour
                             holdingPhone = false;
                         }
 
+                        if (statsScript.day == 5)
+                        {
+                            if (dayFive)
+                            {
+                                countdown = true;
+                                dayFiveFax = true;
+                                dayFive = false;
+                            }
+                        }
+
                         statsScript.UpdateScreen();
                         statsScript.TimeForward();
 
@@ -428,6 +445,16 @@ public class InteractionScript : MonoBehaviour
                             }
                             holdingContact = false;
                         }
+
+                        if (statsScript.day == 5)
+                        {
+                            if (dayFive)
+                            {
+                                countdown = true;
+                                dayFiveBin = true;
+                                dayFive = false;
+                            }
+                        }
                     }
                 }
             }
@@ -441,7 +468,6 @@ public class InteractionScript : MonoBehaviour
                 //If the phone is ringing
                 if (Input.GetKeyDown(KeyCode.E))
                 {
-                    answeredPhone = false;
 
                     phone.material.SetFloat("Vector1_B78C4234", 100f);
 
@@ -546,9 +572,10 @@ public class InteractionScript : MonoBehaviour
                 answeredPhone = true;
             }
 
-            if ((Input.GetKeyDown(KeyCode.E) || Input.GetMouseButtonDown(0)) && answeredPhone)
-            //if ((Input.GetMouseButtonDown(0)) && answeredPhone)
+            if ((Input.GetMouseButtonDown(0)) && answeredPhone)
             {
+                answeredPhone = false;
+
                 if (statsScript.day == 2)
                 {
                     if (phoneScript.calls == 1)
@@ -755,6 +782,32 @@ public class InteractionScript : MonoBehaviour
                     folderInteractable = false;
                     triggerOnce3 = false;
                 }
+            }
+        }
+
+        if (dayFivePrefab)
+        {
+            holding = true;
+
+            prefab = Instantiate(paper, spawnPos.position, GameObject.Find("MainCamera").transform.rotation);
+            prefab.transform.parent = GameObject.Find("SpawnPos").transform;
+
+            //PolicyScript();
+            robotDialogueTrigger.TriggerRobotDialogue5_2();
+
+            dayFive = true;
+            dayFivePrefab = false;
+        }
+
+        if (countdown)
+        {
+            if (timer > 0)
+            {
+                timer -= Time.deltaTime;
+            }
+            else
+            {
+                SceneManager.LoadScene("EndOfWeek");
             }
         }
     }

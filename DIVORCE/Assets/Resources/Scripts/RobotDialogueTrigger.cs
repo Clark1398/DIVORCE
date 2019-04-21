@@ -7,6 +7,8 @@ public class RobotDialogueTrigger : MonoBehaviour {
     public RobotDialogue robotDialogue;
     public RobotDialogueManager robotDialogueManager;
 
+    public bool visited = false;
+
 	// Use this for initialization
 	void Start ()
     {
@@ -31,6 +33,7 @@ public class RobotDialogueTrigger : MonoBehaviour {
     public void TriggerRobotDialogue3point5()
     {
         robotDialogueManager.StartRobotDialogue3point5(robotDialogue);
+        visited = true;
     }
 
     public void TriggerRobotDialogue4()

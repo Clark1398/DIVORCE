@@ -395,7 +395,7 @@ public class EndOfDayScript : MonoBehaviour
                 task3_3Text.text = task3Fail_3;
             }
 
-            if (statsScript.stats[4] >= 15)
+            if (statsScript.stats[4] <= 15)
             {
                 task4_3Text.text = task4Complete_3;
             }
@@ -693,7 +693,7 @@ public class EndOfDayScript : MonoBehaviour
             }
         }
 
-        if (statsScript.day - 1 == 2)
+        if (statsScript.day - 1 == 4)
         {
             if (statsScript.tEText == "Approved")
             {
@@ -806,11 +806,11 @@ public class EndOfDayScript : MonoBehaviour
             }
             else if (statsScript.day - 1 == 3)
             {
-                task4_1Text.gameObject.SetActive(false);
+                task4_3Text.gameObject.SetActive(false);
                 wife2Text.gameObject.SetActive(true);
                 wife = true;
             }
-            else if (statsScript.day - 1 == 3)
+            else if (statsScript.day - 1 == 4)
             {
                 contact2Text.gameObject.SetActive(false);
                 wife3Text.gameObject.SetActive(true);
@@ -825,12 +825,12 @@ public class EndOfDayScript : MonoBehaviour
                 wife1Text.gameObject.SetActive(false);
                 conference2Text.gameObject.SetActive(true);
             }
-            if (statsScript.day - 1 == 2)
+            if (statsScript.day - 1 == 3)
             {
                 wife2Text.gameObject.SetActive(false);
                 conference3Text.gameObject.SetActive(true);
             }
-            if (statsScript.day - 1 == 2)
+            if (statsScript.day - 1 == 4)
             {
                 wife3Text.gameObject.SetActive(false);
                 conference4Text.gameObject.SetActive(true);

@@ -15,6 +15,9 @@ public class GameOverScript : MonoBehaviour
         textbox = GameObject.Find("Textbox").GetComponent<Text>();
 
         Text();
+
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
 
     void Text()

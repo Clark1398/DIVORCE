@@ -41,6 +41,7 @@ public class Phone : MonoBehaviour
     public AudioClip wifePhoneCallHappy;
     public AudioClip wifePhoneCallAngry;
     public AudioClip marsPhoneCall2;
+    public AudioClip earthPhoneCall2;
 
     [Header("Day 4 Audio")]
     public AudioClip wifePhoneCallHappy2;

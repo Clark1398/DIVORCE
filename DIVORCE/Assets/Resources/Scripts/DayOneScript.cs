@@ -418,7 +418,6 @@ public class DayOneScript : MonoBehaviour {
                 //If the phone is ringing
                 if (Input.GetKeyDown(KeyCode.E))
                 {
-                    answeredPhone = false;
                     info.gameObject.SetActive(false);
                     answered = true;
                     phoneScript.newAudio = true;
@@ -480,7 +479,7 @@ public class DayOneScript : MonoBehaviour {
                 answeredPhone = true;
             }
 
-            if ((Input.GetKeyDown(KeyCode.E) || Input.GetMouseButtonDown(0)) && answeredPhone)
+            if ((Input.GetMouseButtonDown(0)) && answeredPhone)
             {
                 phonePanel.SetActive(false);
 
@@ -497,6 +496,7 @@ public class DayOneScript : MonoBehaviour {
                 policyScript.UpdateBin(phoneScript.binChanges, phoneScript.binChangedNames);
 
                 phoneCanvasOn = false;
+                answeredPhone = false;
 
                 if (phoneScript.firstCall)
                 {
