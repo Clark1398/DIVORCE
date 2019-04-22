@@ -82,6 +82,16 @@ public class FolderScript : MonoBehaviour {
             interactionScript = player.GetComponent<InteractionScript>();
         }
 
+        if(canvas1.activeInHierarchy)
+        {
+            canvas1.SetActive(false);
+        }
+
+        if(canvas2.activeInHierarchy)
+        {
+            canvas2.SetActive(false);
+        }
+
         if(statsScript == null)
         {
             statsScript = GameObject.Find("GameInfoObject").GetComponent<Stats>();
@@ -796,7 +806,6 @@ public class FolderScript : MonoBehaviour {
             interactionScript.folder = false;
 
             //Calls the folder and policy methods within the interaction script
-            interactionScript.FolderOn();
             interactionScript.PolicyScript();
 
             policyScript = interactionScript.prefab.GetComponent<PolicyScript>();
@@ -814,7 +823,6 @@ public class FolderScript : MonoBehaviour {
             dayOneScript.holding = true;
             dayOneScript.folder = false;
 
-            dayOneScript.FolderOn();
             dayOneScript.PolicyScript();
 
             policyScript = dayOneScript.prefab.GetComponent<PolicyScript>();

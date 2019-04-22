@@ -25,6 +25,10 @@ public class PolicyChoices : MonoBehaviour {
         ms = GameObject.Find("Mars Folder DDL");
         vs = GameObject.Find("Venus Folder DDL");
 
+        GameObject.Find("Earth Folder Canvas DDL").name = "Earth Folder Canvas";
+        GameObject.Find("Mars Folder Canvas DDL").name = "Mars Folder Canvas";
+        GameObject.Find("Venus Folder Canvas DDL").name = "Venus Folder Canvas";
+
         gio.name = "GameInfoObject";
         es.name = "EarthFolder";
         ms.name = "MarsFolder";

@@ -132,10 +132,7 @@ public class ChairCameraScript : MonoBehaviour
                     }
 
                     pcCamera.SetActive(true);
-                    statsScript.UpdateScreen();
-                    canvas.SetActive(false);
-
-                    
+                    statsScript.UpdateScreen();                                      
                     gameObject.SetActive(false);
 
                     pcCamera.GetComponent<CameraScript>().earthCanvas.SetActive(false);

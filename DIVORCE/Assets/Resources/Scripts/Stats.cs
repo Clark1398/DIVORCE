@@ -389,6 +389,29 @@ public class Stats : MonoBehaviour {
             GameObject.Find("MarsFolder").name = "Mars Folder DDL";
             GameObject.Find("VenusFolder").name = "Venus Folder DDL";
 
+            if (player.GetComponent<DayOneScript>().enabled)
+            {
+                DayOneScript dos = player.GetComponent<DayOneScript>();
+                dos.earthCanvas.name = "Earth Folder Canvas DDL";
+                dos.marsCanvas.name = "Mars Folder Canvas DDL";
+                dos.venusCanvas.name = "Venus Folder Canvas DDL";
+
+                dos.earthCanvas.SetActive(true);
+                dos.marsCanvas.SetActive(true);
+                dos.venusCanvas.SetActive(true);
+            }
+            else
+            {
+                InteractionScript ins = player.GetComponent<InteractionScript>();
+                ins.earthCanvas.name = "Earth Folder Canvas DDL";
+                ins.marsCanvas.name = "Mars Folder Canvas DDL";
+                ins.venusCanvas.name = "Venus Folder Canvas DDL";
+
+                ins.earthCanvas.SetActive(true);
+                ins.marsCanvas.SetActive(true);
+                ins.venusCanvas.SetActive(true);
+            }
+
             DontDestroyOnLoad(GameObject.Find("GameInfoObject DDL"));
             DontDestroyOnLoad(GameObject.Find("Earth Folder DDL"));
             DontDestroyOnLoad(GameObject.Find("Mars Folder DDL"));

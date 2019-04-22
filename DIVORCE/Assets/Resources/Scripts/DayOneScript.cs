@@ -39,7 +39,6 @@ public class DayOneScript : MonoBehaviour {
     public GameObject canvas, earthCanvas, marsCanvas, venusCanvas, moonCanvas;
     public GameObject earthCamera, marsCamera, venusCamera, folderCamera;
     public GameObject conferenceCamera;
-    public GameObject es;
     public GameObject prefab;
     public GameObject obj;
     public GameObject phonePanel;
@@ -100,7 +99,6 @@ public class DayOneScript : MonoBehaviour {
         {
             gameInfoObject = GameObject.Find("GameInfoObject DDL");
             pcCamera.GetComponent<CameraScript>().statsScript = GameObject.Find("GameInfoObject DDL").GetComponent<Stats>();
-            //pcCamera.GetComponent<CameraScript>().CheckScript();
         }
         else
         {
@@ -270,7 +268,6 @@ public class DayOneScript : MonoBehaviour {
                             statsScript.chosenPlanets.Add(policyScript.planet);
 
                             statsScript.actionsText = statsScript.actionsText + "\n" + policyScript.chosenPolicy + " for " + policyScript.planet;
-                            Debug.Log(statsScript.actionsText);
 
                             uses++;
                             policy = false;
@@ -453,7 +450,6 @@ public class DayOneScript : MonoBehaviour {
                     robotDialogueManager.conferencePhoneRing = false;
                     dialogueTrigger.TriggerDialogue();
                     folder = true;
-                    FolderOn();
                     statsScript.TimeForward();
                     gameObject.SetActive(false);
                     conf.material.SetFloat("Vector1_B78C4234", 100f);
@@ -533,8 +529,6 @@ public class DayOneScript : MonoBehaviour {
         folderScript.enabled = true;
         folder = true;
 
-        FolderOn();
-
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
 
@@ -548,19 +542,6 @@ public class DayOneScript : MonoBehaviour {
         if (firstPolicy)
         {
             robotDialogueTrigger.TriggerRobotDialogue8();
-        }
-    }
-
-    //Used to activate the EventSystem so that the buttons do not get clicked when the folder is inactive
-    public void FolderOn()
-    {
-        if (!folder)
-        {
-            es.SetActive(false);
-        }
-        else
-        {
-            es.SetActive(true);
         }
     }
 

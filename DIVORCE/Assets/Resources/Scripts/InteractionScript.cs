@@ -13,7 +13,6 @@ public class InteractionScript : MonoBehaviour
     public Transform spawnPos;
     public GameObject phonePanel;
     public Text info;
-    GameObject es;
     GameObject paper;
 
     [Header("Cameras")]
@@ -121,11 +120,7 @@ public class InteractionScript : MonoBehaviour
         pcAudio = GameObject.FindGameObjectWithTag("Fax").GetComponent<AudioSource>();
         conferenceCallAudio = GameObject.FindGameObjectWithTag("ConferenceCall").GetComponent<AudioSource>();
 
-        es = GameObject.Find("EventSystem");
-
         paper = (GameObject)Resources.Load("Policy", typeof(GameObject));
-
-        FolderOn();
 
         doorLight1.color = red;
         doorLight2.color = red;
@@ -156,9 +151,19 @@ public class InteractionScript : MonoBehaviour
 
         if (earthCanvas == null)
         {
-            earthCanvas = GameObject.Find("Earth Folder Canvas");
-            marsCanvas = GameObject.Find("Mars Folder Canvas");
-            venusCanvas = GameObject.Find("Venus Folder Canvas");
+            if (GameObject.Find("Earth Folder Canvas DDL") == null)
+            {
+                earthCanvas = GameObject.Find("Earth Folder Canvas");
+                marsCanvas = GameObject.Find("Mars Folder Canvas");
+                venusCanvas = GameObject.Find("Venus Folder Canvas");    
+            }
+            else
+            {
+                earthCanvas = GameObject.Find("Earth Folder Canvas DDL");
+                marsCanvas = GameObject.Find("Mars Folder Canvas DDL");
+                venusCanvas = GameObject.Find("Venus Folder Canvas DDL");
+            }
+
             moonCanvas = GameObject.Find("Moon Folder Canvas");
         }
 
@@ -172,11 +177,7 @@ public class InteractionScript : MonoBehaviour
         {
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
-        }
-        else
-        {
-            es.SetActive(true);
-        }
+        } 
 
         //Sets up a raycast for the position of the mouse
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -521,7 +522,6 @@ public class InteractionScript : MonoBehaviour
                     info.gameObject.SetActive(false);
                     dialogueManager.speakerPanel.SetActive(true);
                     robotDialogueManager.conferencePhoneRing = false;
-                    es.SetActive(true);
                     statsScript.TimeForward();
                     gameObject.SetActive(false);
                     dialogueTrigger.TriggerDialogue();
@@ -812,19 +812,6 @@ public class InteractionScript : MonoBehaviour
         }
     }
 
-    //Used to activate the EventSystem so that the buttons do not get clicked when the folder is inactive
-    public void FolderOn()
-    {
-        if (!folder)
-        {
-            es.SetActive(false);
-        }
-        else
-        {
-            es.SetActive(true);
-        }
-    }
-
     //Used to setup the policy script when the object is created
     public void PolicyScript()
     {
@@ -847,8 +834,6 @@ public class InteractionScript : MonoBehaviour
 
         rot.enabled = false;
         folder = true;
-
-        FolderOn();
 
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;

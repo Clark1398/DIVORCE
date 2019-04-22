@@ -475,9 +475,6 @@ public class CameraScript : MonoBehaviour {
         conSc.cameraScript = this;
         conSc.UpdateContact(contactName, statNames, statApprove, statDecline, planet);
 
-        //Calls the folder and policy methods within the interaction script
-        interactionScript.FolderOn();
-
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
 

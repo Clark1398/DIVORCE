@@ -507,7 +507,6 @@ public class MoonFolderScript : MonoBehaviour {
         interactionScript.moonFolderScript = this;
 
         //Calls the folder and policy methods within the interaction script
-        interactionScript.FolderOn();
         interactionScript.PolicyScript();
 
         policyScript = interactionScript.prefab.GetComponent<PolicyScript>();
