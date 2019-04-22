@@ -47,8 +47,6 @@ public class InteractionScript : MonoBehaviour
     public bool dayFivePrefab;
     bool dayFive;
     bool countdown;
-    bool dayFiveFax;
-    bool dayFiveBin;
 
     bool triggerOnce;
     bool triggerOnce2;
@@ -72,7 +70,9 @@ public class InteractionScript : MonoBehaviour
     public GameObject earthCanvas, marsCanvas, venusCanvas, moonCanvas;
     public GameObject earthCamera, marsCamera, venusCamera, folderCamera;
     public GameObject robotPanel;
-    public GameObject femaleHologram;
+    public GameObject marsCharacter;
+    public GameObject earthCharacter;
+    public GameObject venusCharacter;
 
     PolicyChoices policyChoices;
 
@@ -119,6 +119,10 @@ public class InteractionScript : MonoBehaviour
         faxAudio = GameObject.FindGameObjectWithTag("Fax").GetComponent<AudioSource>();
         pcAudio = GameObject.FindGameObjectWithTag("Fax").GetComponent<AudioSource>();
         conferenceCallAudio = GameObject.FindGameObjectWithTag("ConferenceCall").GetComponent<AudioSource>();
+
+        marsCharacter.SetActive(false);
+        earthCharacter.SetActive(false);
+        venusCharacter.SetActive(false);
 
         paper = (GameObject)Resources.Load("Policy", typeof(GameObject));
 
@@ -358,7 +362,7 @@ public class InteractionScript : MonoBehaviour
                             if (dayFive)
                             {
                                 countdown = true;
-                                dayFiveFax = true;
+                                statsScript.dayFiveFax = true;
                                 dayFive = false;
                             }
                         }
@@ -452,7 +456,7 @@ public class InteractionScript : MonoBehaviour
                             if (dayFive)
                             {
                                 countdown = true;
-                                dayFiveBin = true;
+                                statsScript.dayFiveBin = true;
                                 dayFive = false;
                             }
                         }
@@ -514,6 +518,10 @@ public class InteractionScript : MonoBehaviour
                     marsCanvas.SetActive(false);
                     venusCanvas.SetActive(false);
                     moonCanvas.SetActive(false);
+
+                    marsCharacter.SetActive(true);
+                    earthCharacter.SetActive(true);
+                    venusCharacter.SetActive(true);
 
                     conferenceCallAudio.Stop();
                     conferenceCamera.SetActive(true);
@@ -807,7 +815,7 @@ public class InteractionScript : MonoBehaviour
             }
             else
             {
-                SceneManager.LoadScene("EndOfWeek");
+                statsScript.time = 0;
             }
         }
     }

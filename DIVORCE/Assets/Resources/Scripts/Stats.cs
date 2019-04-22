@@ -52,6 +52,9 @@ public class Stats : MonoBehaviour {
     public bool phone1Accept;
     public bool phone2Accept;
 
+    public bool dayFiveBin;
+    public bool dayFiveFax;
+
     public bool newDay;
 
     GameObject bigHand;
@@ -717,7 +720,15 @@ public class Stats : MonoBehaviour {
 
             day++;
             newDay = true;
-            SceneManager.LoadScene("End Of Day");
+
+            if (day == 5)
+            {
+                SceneManager.LoadScene("EndOfWeek");
+            }
+            else
+            {
+                SceneManager.LoadScene("End Of Day");
+            }
         }
 
         if (SceneManager.GetActiveScene().name == "DIVORCE")

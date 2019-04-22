@@ -43,7 +43,9 @@ public class DayOneScript : MonoBehaviour {
     public GameObject obj;
     public GameObject phonePanel;
     public GameObject robotPanel;
-    public GameObject femaleHologram;
+    public GameObject marsCharacter;
+    public GameObject earthCharacter;
+    public GameObject venusCharacter;
 
     public Transform spawnPos;
 
@@ -92,6 +94,10 @@ public class DayOneScript : MonoBehaviour {
 
         doorLight1.color = red;
         doorLight2.color = red;
+
+        marsCharacter.SetActive(false);
+        earthCharacter.SetActive(false);
+        venusCharacter.SetActive(false);
 
         paper = (GameObject)Resources.Load("Policy", typeof(GameObject));
 
@@ -446,7 +452,9 @@ public class DayOneScript : MonoBehaviour {
                     conferenceCamera.SetActive(true);
                     dialogueManager.speakerPanel.SetActive(true);
                     info.gameObject.SetActive(false);
-                    //femaleHologram.SetActive(true);
+                    marsCharacter.SetActive(true);
+                    earthCharacter.SetActive(true);
+                    venusCharacter.SetActive(true);
                     robotDialogueManager.conferencePhoneRing = false;
                     dialogueTrigger.TriggerDialogue();
                     folder = true;

@@ -2626,6 +2626,7 @@ public class RobotDialogueManager : MonoBehaviour {
         dialogue5_1 = false;
         robotAudioSource.Stop();
         panel.SetActive(false);
+        interactionScript.chairInteractable = true;
     }
 
     public void StartRobotDialogue5_2(RobotDialogue robotDialogue)
@@ -2675,7 +2676,6 @@ public class RobotDialogueManager : MonoBehaviour {
         dialogue5_2 = false;
         robotAudioSource.Stop();
         panel.SetActive(false);
-        interactionScript.chairInteractable = true;
     }
 
     #endregion

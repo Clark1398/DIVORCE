@@ -1359,6 +1359,9 @@ public class DialogueManager : MonoBehaviour {
         {
             dayOneScript.answeredPhone = false;
             conferenceCall.SetActive(false);
+            dayOneScript.marsCharacter.SetActive(false);
+            dayOneScript.earthCharacter.SetActive(false);
+            dayOneScript.venusCharacter.SetActive(false);
             player.SetActive(true);
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
@@ -2522,7 +2525,9 @@ public class DialogueManager : MonoBehaviour {
         if (statsScript.day == 1)
         {
             dayOneScript.conferenceCallInteractable = false;
-            //dayOneScript.femaleHologram.SetActive(false);
+            dayOneScript.marsCharacter.SetActive(false);
+            dayOneScript.earthCharacter.SetActive(false);
+            dayOneScript.venusCharacter.SetActive(false);
             robotDialogueTrigger.TriggerRobotDialogue14();
             statsScript.conferenceAccept = false;
             dayOneScript.answeredPhone = false;
@@ -2533,7 +2538,9 @@ public class DialogueManager : MonoBehaviour {
             statsScript.conferenceAccept = true;
             statsScript.connferenceCallAccept.Add("Mars Moon Metals");
             interactionScript.conferenceCallInteractable = false;
-            //interactionScript.femaleHologram.SetActive(false);
+            interactionScript.marsCharacter.SetActive(false);
+            interactionScript.earthCharacter.SetActive(false);
+            interactionScript.venusCharacter.SetActive(false);
             interactionScript.answeredPhone = false;
             robotDialogueTrigger.TriggerRobotDialogue2_15();
         }
@@ -2543,16 +2550,19 @@ public class DialogueManager : MonoBehaviour {
             statsScript.connferenceCallAccept.Add("Venus Gun Trade");
             interactionScript.conferenceCallInteractable = false;
             interactionScript.answeredPhone = false;
-            //interactionScript.femaleHologram.SetActive(false);
+            interactionScript.marsCharacter.SetActive(false);
+            interactionScript.earthCharacter.SetActive(false);
+            interactionScript.venusCharacter.SetActive(false);
             statsScript.time--;
         }
         else if (statsScript.day == 4)
         {
             statsScript.conferenceAccept = true;
             statsScript.connferenceCallAccept.Add("Earth Moon Bill");
-            //interactionScript.conferenceCallInteractable = false;
+            interactionScript.marsCharacter.SetActive(false);
+            interactionScript.earthCharacter.SetActive(false);
+            interactionScript.venusCharacter.SetActive(false);
             interactionScript.answeredPhone = false;
-            interactionScript.femaleHologram.SetActive(false);
             statsScript.time--;
         }
     }
@@ -2703,7 +2713,9 @@ public class DialogueManager : MonoBehaviour {
         statsScript.conferenceAccept = false;
         interactionScript.answeredPhone = false;
         conferenceCall.SetActive(false);
-        //interactionScript.femaleHologram.SetActive(false);
+        interactionScript.marsCharacter.SetActive(false);
+        interactionScript.earthCharacter.SetActive(false);
+        interactionScript.venusCharacter.SetActive(false);
         player.SetActive(true);
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
