@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Fax
-  m_Shader: {fileID: 4800000, guid: 32ccc602c05829a45a4c9ca861cd5b92, type: 3}
+  m_Shader: {fileID: 4800000, guid: 9263b1874d8d97749a8a2ca6d2dcb18b, type: 3}
   m_ShaderKeywords: _EMISSIVE_COLOR_MAP _MASKMAP _NORMALMAP _NORMALMAP_TANGENT_SPACE
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -34,7 +34,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Texture2D_598CDF6A:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: f0e84f6132a39e844a532eb4e3b4ea06, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Texture2D_E24379BE:
