@@ -273,7 +273,7 @@ public class InteractionScript : MonoBehaviour
                                 statsScript.stats[i] += policyScript.decreases[i];
                             }
 
-                            if (folderScript != null && moonFolderScript == null)
+                            if (policyScript.planet != "Moon")
                             {
                                 folderScript.buttons = policyScript.buttonAmount;
                                 folderScript.type = policyScript.type;
