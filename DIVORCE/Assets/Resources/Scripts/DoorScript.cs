@@ -13,8 +13,11 @@ public class DoorScript : MonoBehaviour
 
     void Start()
     {
-        light1.color = Color.green;
-        light2.color = Color.green;
+        if (lift)
+        {
+            light1.color = Color.green;
+            light2.color = Color.green;
+        }
     }
 
     public void OnTriggerEnter(Collider other)
