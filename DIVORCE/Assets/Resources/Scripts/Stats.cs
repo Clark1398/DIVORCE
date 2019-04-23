@@ -387,38 +387,45 @@ public class Stats : MonoBehaviour {
             Cursor.visible = true;
             time = 10;
 
-            GameObject.Find("GameInfoObject").name = "GameInfoObject DDL";
-            GameObject.Find("EarthFolder").name = "Earth Folder DDL";
-            GameObject.Find("MarsFolder").name = "Mars Folder DDL";
-            GameObject.Find("VenusFolder").name = "Venus Folder DDL";
-
-            if (player.GetComponent<DayOneScript>().enabled)
+            if (SceneManager.GetActiveScene().name == "DIVORCE")
             {
-                DayOneScript dos = player.GetComponent<DayOneScript>();
-                dos.earthCanvas.name = "Earth Folder Canvas DDL";
-                dos.marsCanvas.name = "Mars Folder Canvas DDL";
-                dos.venusCanvas.name = "Venus Folder Canvas DDL";
+                GameObject.Find("GameInfoObject").name = "GameInfoObject DDL";
+                GameObject.Find("EarthFolder").name = "Earth Folder DDL";
+                GameObject.Find("MarsFolder").name = "Mars Folder DDL";
+                GameObject.Find("VenusFolder").name = "Venus Folder DDL";
 
-                dos.earthCanvas.SetActive(true);
-                dos.marsCanvas.SetActive(true);
-                dos.venusCanvas.SetActive(true);
+                if (player.GetComponent<DayOneScript>().enabled)
+                {
+                    DayOneScript dos = player.GetComponent<DayOneScript>();
+                    dos.earthCanvas.name = "Earth Folder Canvas DDL";
+                    dos.marsCanvas.name = "Mars Folder Canvas DDL";
+                    dos.venusCanvas.name = "Venus Folder Canvas DDL";
+
+                    dos.earthCanvas.SetActive(true);
+                    dos.marsCanvas.SetActive(true);
+                    dos.venusCanvas.SetActive(true);
+                }
+                else
+                {
+                    InteractionScript ins = player.GetComponent<InteractionScript>();
+                    ins.earthCanvas.name = "Earth Folder Canvas DDL";
+                    ins.marsCanvas.name = "Mars Folder Canvas DDL";
+                    ins.venusCanvas.name = "Venus Folder Canvas DDL";
+
+                    ins.earthCanvas.SetActive(true);
+                    ins.marsCanvas.SetActive(true);
+                    ins.venusCanvas.SetActive(true);
+                }
+
+                DontDestroyOnLoad(GameObject.Find("GameInfoObject DDL"));
+                DontDestroyOnLoad(GameObject.Find("Earth Folder DDL"));
+                DontDestroyOnLoad(GameObject.Find("Mars Folder DDL"));
+                DontDestroyOnLoad(GameObject.Find("Venus Folder DDL"));
             }
             else
             {
-                InteractionScript ins = player.GetComponent<InteractionScript>();
-                ins.earthCanvas.name = "Earth Folder Canvas DDL";
-                ins.marsCanvas.name = "Mars Folder Canvas DDL";
-                ins.venusCanvas.name = "Venus Folder Canvas DDL";
-
-                ins.earthCanvas.SetActive(true);
-                ins.marsCanvas.SetActive(true);
-                ins.venusCanvas.SetActive(true);
+                return;
             }
-
-            DontDestroyOnLoad(GameObject.Find("GameInfoObject DDL"));
-            DontDestroyOnLoad(GameObject.Find("Earth Folder DDL"));
-            DontDestroyOnLoad(GameObject.Find("Mars Folder DDL"));
-            DontDestroyOnLoad(GameObject.Find("Venus Folder DDL"));
 
             for (int i = 0; i < stats.Length; i++)
             {
@@ -584,7 +591,9 @@ public class Stats : MonoBehaviour {
             }
             else if (day == 5)
             {
+                Debug.Log("Day");     
                 SceneManager.LoadScene("EndOfWeek");
+                return;
             }
 
             if (day > 1)
