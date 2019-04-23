@@ -582,6 +582,10 @@ public class Stats : MonoBehaviour {
                     stats[3] -= 5;
                 }
             }
+            else if (day == 5)
+            {
+                SceneManager.LoadScene("EndOfWeek");
+            }
 
             if (day > 1)
             {
@@ -721,14 +725,8 @@ public class Stats : MonoBehaviour {
             day++;
             newDay = true;
 
-            if (day == 5)
-            {
-                SceneManager.LoadScene("EndOfWeek");
-            }
-            else
-            {
-                SceneManager.LoadScene("End Of Day");
-            }
+            SceneManager.LoadScene("End Of Day");
+
         }
 
         if (SceneManager.GetActiveScene().name == "DIVORCE")
