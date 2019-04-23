@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.32230824, g: 0.3030294, b: 0.2589646, a: 1}
+  m_IndirectSpecularColor: {r: 0.32252505, g: 0.303239, b: 0.2591385, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -47892,7 +47892,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &915279682
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73865,6 +73865,11 @@ PrefabInstance:
       propertyPath: venusCharacter
       value: 
       objectReference: {fileID: 1724639415}
+    - target: {fileID: 5394637832831334084, guid: c6453f8e1f814744d8b94e5a6d1f9942,
+        type: 3}
+      propertyPath: prefab
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1668825532322372315, guid: c6453f8e1f814744d8b94e5a6d1f9942,
         type: 3}
       propertyPath: info
@@ -74005,6 +74010,11 @@ PrefabInstance:
       propertyPath: venusCharacter
       value: 
       objectReference: {fileID: 1724639415}
+    - target: {fileID: 1668825532322372315, guid: c6453f8e1f814744d8b94e5a6d1f9942,
+        type: 3}
+      propertyPath: prefab
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.773
@@ -95844,7 +95854,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1837260032
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -110385,7 +110395,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 64
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2077728627
 MonoBehaviour:
   m_ObjectHideFlags: 0

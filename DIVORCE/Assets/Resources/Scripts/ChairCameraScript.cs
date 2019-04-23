@@ -222,7 +222,7 @@ public class ChairCameraScript : MonoBehaviour
                     if (firstUse2 && rdt.visited == true)
                     {
                         rdt.TriggerRobotDialogue4();
-                        firstUse2 = true;
+                        firstUse2 = false;
                     }
                 }
 
