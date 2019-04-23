@@ -108,11 +108,15 @@ public class FolderScript : MonoBehaviour {
             //If the player hits F while in the folder
             if (Input.GetKeyDown(KeyCode.F))
             {
-                if(dayOneScript != null && dayOneScript.enabled == true)
+                if (dayOneScript != null && dayOneScript.enabled == true)
                 {
                     dayOneScript.policyIntractable = true;
+                    dayOneScript.folder = false;
                 }
-
+                else
+                {
+                    interactionScript.folder = false;
+                }
                 Reset();
 
                 canvas1.SetActive(true);
@@ -131,7 +135,7 @@ public class FolderScript : MonoBehaviour {
                 current.SetActive(true);
 
                 //Activate the player
-                interactionScript.folder = false;
+
                 player.SetActive(true);
 
                 RotationScript rot = this.transform.parent.GetComponent<RotationScript>();

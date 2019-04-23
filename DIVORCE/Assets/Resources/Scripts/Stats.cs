@@ -368,6 +368,18 @@ public class Stats : MonoBehaviour {
 
     void Update()
     {
+        for (int i = 0; i < stats.Length; i++)
+        {
+            if (stats[i] < 0 && i != 4)
+            {
+                stats[i] = 0;
+            }
+            else if (i == 4 && stats[i] > 100)
+            {
+                stats[i] = 100;
+            }
+        }
+
         if (Input.GetKeyDown(KeyCode.Escape) && !pause.activeInHierarchy)
         {
             Cursor.lockState = CursorLockMode.None;
@@ -429,7 +441,7 @@ public class Stats : MonoBehaviour {
 
             for (int i = 0; i < stats.Length; i++)
             {
-                if (stats[i] <= 0)
+                if ((stats[i] <= 0 && i != 4) || (i == 4 && stats[i] >= 100))
                 {
                     gameOver = gameOverText[i];
                     SceneManager.LoadScene("GameOver");

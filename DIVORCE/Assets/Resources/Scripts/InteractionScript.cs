@@ -90,7 +90,7 @@ public class InteractionScript : MonoBehaviour
 
     public Animator bin;
 
-    public Renderer phone, confCall;
+    public Renderer phone, confCall, chair;
 
     //Used to setup the objects
     void Start()
@@ -205,6 +205,11 @@ public class InteractionScript : MonoBehaviour
                     {
                         info.gameObject.SetActive(false);
                         chairCamera.SetActive(true);
+
+                        if(chairCamera.GetComponent<ChairCameraScript>().moonFolderFirst == true)
+                        {
+                            chair.material.SetFloat("Vector1_B78C4234", 100f);
+                        }
                     }
                 }
             }

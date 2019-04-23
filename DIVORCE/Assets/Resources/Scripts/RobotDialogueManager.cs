@@ -1388,6 +1388,13 @@ public class RobotDialogueManager : MonoBehaviour {
             return;
         }
 
+        if (robotSentences2_3.Count == 1)
+        {
+            fpc.enabled = false;
+            LookAtScript.target = GameObject.FindGameObjectWithTag("Chair");
+            chair.material.SetFloat("Vector1_B78C4234", 0.5f);
+        }
+
         string robotSentence2_3 = robotSentences2_3.Dequeue();
         StopAllCoroutines();
         StartCoroutine(TypeSentence(robotSentence2_3));
@@ -1409,7 +1416,9 @@ public class RobotDialogueManager : MonoBehaviour {
         statsScript.Family();
         interactionScript.chairInteractable = true;
         chairCameraScript.moonFolderFirst = true;
-        panel.SetActive(false);
+        fpc.enabled = false;
+        LookAtScript.target = null;
+    panel.SetActive(false);
     }
 
     public void StartRobotDialogue2_4(RobotDialogue robotDialogue)
