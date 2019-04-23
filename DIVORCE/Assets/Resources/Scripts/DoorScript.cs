@@ -6,8 +6,16 @@ public class DoorScript : MonoBehaviour
 {
     public Animator anim;
 
+    public Light light1, light2;
+
     public bool lift;
     public bool up;
+
+    void Start()
+    {
+        light1.color = Color.green;
+        light2.color = Color.green;
+    }
 
     public void OnTriggerEnter(Collider other)
     {
@@ -21,6 +29,7 @@ public class DoorScript : MonoBehaviour
             else
             {
                 anim.Play("Open");
+                StartCoroutine(GoUp());
             }
         }
         else
@@ -44,13 +53,35 @@ public class DoorScript : MonoBehaviour
         }
     }
 
+    IEnumerator GoUp()
+    {
+        light1.color = Color.red + Color.yellow;
+        light2.color = Color.red + Color.yellow;
+
+        yield return new WaitForSeconds(2.75f);
+
+        light1.color = Color.green;
+        light2.color = Color.green;
+    }
+
     IEnumerator SwitchOn(Collider col)
     {
+        light1.color = Color.red + Color.yellow;
+        light2.color = Color.red + Color.yellow;
+
         col.enabled = false;
+
+        yield return new WaitForSeconds(2.75f);
+
+        up = false;
+
+        light1.color = Color.red;
+        light2.color = Color.red;
 
         yield return new WaitForSeconds(5f);
 
-        up = false;
+        light1.color = Color.green;
+        light2.color = Color.green;
 
         col.enabled = true;
     }
