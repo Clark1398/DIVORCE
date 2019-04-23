@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: 36aba0d577f27ed4393297319f7aee9d
+guid: b497b32c7f43b5c4e8f1a2ee8d238048
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: clockArm_hours
+    100000: clockArm_hours:clockArm_hours
     100002: //RootNode
-    400000: clockArm_hours
+    400000: clockArm_hours:clockArm_hours
     400002: //RootNode
-    2100000: clockArm_hoursMat
-    2300000: clockArm_hours
-    3300000: clockArm_hours
-    4300000: clockArm_hours
+    2100000: clockArm_hours_clockArm_hoursMat
+    2300000: clockArm_hours:clockArm_hours
+    3300000: clockArm_hours:clockArm_hours
+    4300000: clockArm_hours:clockArm_hours
   externalObjects: {}
   materials:
     importMaterials: 1
