@@ -399,15 +399,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   videoPlayer: {fileID: 1350958097}
-  goodDeal: {fileID: 0}
-  badDeal: {fileID: 0}
-  noDeal: {fileID: 0}
-  noIndependence: {fileID: 0}
+  goodDeal: {fileID: 32900000, guid: 628b67c39b8d69e4bb6a166ca1be3b1f, type: 3}
+  badDeal: {fileID: 32900000, guid: 1fa1731fd2f146d46b26e51329b93f8b, type: 3}
+  noDeal: {fileID: 32900000, guid: 6d0c848f76530d64cb567a7a938f1852, type: 3}
+  noIndependence: {fileID: 32900000, guid: 2ef343006c93f9441b1200c4ea7bf697, type: 3}
   audioSource: {fileID: 1350958096}
-  goodDealAudio: {fileID: 0}
-  badDealAudio: {fileID: 0}
-  noDealAudio: {fileID: 0}
-  noIndependenceAudio: {fileID: 0}
+  goodDealAudio: {fileID: 8300000, guid: 7db7cca1859956b4792b0ca5554515b0, type: 3}
+  badDealAudio: {fileID: 8300000, guid: 7d62ced1c9245a5408924c09a1c91aaf, type: 3}
+  noDealAudio: {fileID: 8300000, guid: db1005f37ab2e9646ac68fdb6d140557, type: 3}
+  noIndependenceAudio: {fileID: 8300000, guid: bdeafdf284bba704d945720ac6033f99, type: 3}
 --- !u!4 &1350958095
 Transform:
   m_ObjectHideFlags: 0
@@ -529,12 +529,12 @@ VideoPlayer:
   m_VideoClip: {fileID: 0}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
-  m_TargetCamera: {fileID: 0}
+  m_TargetCamera: {fileID: 1305823019}
   m_TargetTexture: {fileID: 0}
   m_TimeReference: 0
   m_TargetMaterialRenderer: {fileID: 0}
   m_TargetMaterialProperty: _MainTex
-  m_RenderMode: 2
+  m_RenderMode: 1
   m_AspectRatio: 2
   m_DataSource: 0
   m_PlaybackSpeed: 1
