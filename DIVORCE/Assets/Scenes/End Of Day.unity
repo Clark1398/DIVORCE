@@ -1777,17 +1777,17 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 05f3f41477f446f4a88226b60eec97d9, type: 3}
-    m_FontSize: 20
+    m_FontSize: 17
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 1
     m_MaxSize: 225
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 2
+    m_LineSpacing: 1.5
   m_Text: Test text
 --- !u!1 &108677631
 GameObject:
@@ -12644,17 +12644,17 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 05f3f41477f446f4a88226b60eec97d9, type: 3}
-    m_FontSize: 20
+    m_FontSize: 17
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 1
     m_MaxSize: 225
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 2
+    m_LineSpacing: 1.5
   m_Text: Test text
 --- !u!1 &682792910
 GameObject:
@@ -12723,17 +12723,17 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 05f3f41477f446f4a88226b60eec97d9, type: 3}
-    m_FontSize: 20
+    m_FontSize: 17
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 1
     m_MaxSize: 225
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 2
+    m_LineSpacing: 1.5
   m_Text: Test text
 --- !u!1 &683066543
 GameObject:
@@ -13647,17 +13647,17 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 05f3f41477f446f4a88226b60eec97d9, type: 3}
-    m_FontSize: 20
+    m_FontSize: 17
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 1
     m_MaxSize: 225
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 2
+    m_LineSpacing: 1.5
   m_Text: Test text
 --- !u!1 &718391057
 GameObject:
@@ -14306,17 +14306,17 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 05f3f41477f446f4a88226b60eec97d9, type: 3}
-    m_FontSize: 20
+    m_FontSize: 17
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 1
     m_MaxSize: 225
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 2
+    m_LineSpacing: 1.5
   m_Text: Test text
 --- !u!222 &738363593
 CanvasRenderer:
@@ -16024,17 +16024,17 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 05f3f41477f446f4a88226b60eec97d9, type: 3}
-    m_FontSize: 20
+    m_FontSize: 17
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 1
     m_MaxSize: 225
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 2
+    m_LineSpacing: 1.5
   m_Text: Test text
 --- !u!1001 &826881802
 PrefabInstance:
@@ -22664,17 +22664,17 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 05f3f41477f446f4a88226b60eec97d9, type: 3}
-    m_FontSize: 20
+    m_FontSize: 17
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 1
     m_MaxSize: 225
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 2
+    m_LineSpacing: 1.5
   m_Text: Test text
 --- !u!1 &1145337412
 GameObject:
@@ -25499,17 +25499,17 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 05f3f41477f446f4a88226b60eec97d9, type: 3}
-    m_FontSize: 20
+    m_FontSize: 17
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 1
     m_MaxSize: 225
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 2
+    m_LineSpacing: 1.5
   m_Text: Test text
 --- !u!222 &1283451277
 CanvasRenderer:
@@ -25812,17 +25812,17 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 05f3f41477f446f4a88226b60eec97d9, type: 3}
-    m_FontSize: 20
+    m_FontSize: 17
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 1
     m_MaxSize: 225
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 2
+    m_LineSpacing: 1.5
   m_Text: Test text
 --- !u!1001 &1314268860
 PrefabInstance:
@@ -27198,17 +27198,17 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 05f3f41477f446f4a88226b60eec97d9, type: 3}
-    m_FontSize: 20
+    m_FontSize: 17
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 1
     m_MaxSize: 225
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 2
+    m_LineSpacing: 1.5
   m_Text: Test text
 --- !u!1 &1387587660
 GameObject:
@@ -27965,17 +27965,17 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 05f3f41477f446f4a88226b60eec97d9, type: 3}
-    m_FontSize: 20
+    m_FontSize: 17
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 1
     m_MaxSize: 225
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 2
+    m_LineSpacing: 1.5
   m_Text: Test text
 --- !u!1 &1438045690
 GameObject:
@@ -28190,17 +28190,17 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 05f3f41477f446f4a88226b60eec97d9, type: 3}
-    m_FontSize: 20
+    m_FontSize: 17
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 1
     m_MaxSize: 225
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 2
+    m_LineSpacing: 1.5
   m_Text: Test text
 --- !u!1 &1441899808
 GameObject:
@@ -30207,17 +30207,17 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 05f3f41477f446f4a88226b60eec97d9, type: 3}
-    m_FontSize: 20
+    m_FontSize: 17
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 1
     m_MaxSize: 225
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 2
+    m_LineSpacing: 1.5
   m_Text: Test text
 --- !u!1 &1524209208
 GameObject:
@@ -30552,14 +30552,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1636090164}
     m_Modifications:
-    - target: {fileID: 400002, guid: 93fb1cff223298a449d1f6734f820647, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.16
-      objectReference: {fileID: 0}
-    - target: {fileID: 2300000, guid: 93fb1cff223298a449d1f6734f820647, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 90f50e95e6713d44983ef8e7c16f732f, type: 2}
     - target: {fileID: 100000, guid: 93fb1cff223298a449d1f6734f820647, type: 3}
       propertyPath: m_Name
       value: mouse_low_poly
@@ -30620,6 +30612,14 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.06382106
       objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 93fb1cff223298a449d1f6734f820647, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 93fb1cff223298a449d1f6734f820647, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 90f50e95e6713d44983ef8e7c16f732f, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 93fb1cff223298a449d1f6734f820647, type: 3}
 --- !u!4 &1543230331
@@ -31405,17 +31405,17 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 05f3f41477f446f4a88226b60eec97d9, type: 3}
-    m_FontSize: 20
+    m_FontSize: 17
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 1
     m_MaxSize: 225
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 2
+    m_LineSpacing: 1.5
   m_Text: Test text
 --- !u!1001 &1585835246
 PrefabInstance:
@@ -32780,17 +32780,17 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 05f3f41477f446f4a88226b60eec97d9, type: 3}
-    m_FontSize: 20
+    m_FontSize: 17
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 1
     m_MaxSize: 225
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 2
+    m_LineSpacing: 1.5
   m_Text: Test text
 --- !u!1 &1647384704
 GameObject:
@@ -33486,17 +33486,17 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 05f3f41477f446f4a88226b60eec97d9, type: 3}
-    m_FontSize: 20
+    m_FontSize: 17
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 1
     m_MaxSize: 225
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 2
+    m_LineSpacing: 1.5
   m_Text: Test text
 --- !u!1 &1688133817
 GameObject:
@@ -38468,17 +38468,17 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 05f3f41477f446f4a88226b60eec97d9, type: 3}
-    m_FontSize: 20
+    m_FontSize: 17
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 1
     m_MaxSize: 225
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 2
+    m_LineSpacing: 1.5
   m_Text: Test text
 --- !u!1 &1914593973
 GameObject:
@@ -38985,17 +38985,17 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 05f3f41477f446f4a88226b60eec97d9, type: 3}
-    m_FontSize: 20
+    m_FontSize: 17
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 1
     m_MaxSize: 225
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 2
+    m_LineSpacing: 1.5
   m_Text: Test text
 --- !u!1 &1932078458
 GameObject:
@@ -40128,17 +40128,17 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 05f3f41477f446f4a88226b60eec97d9, type: 3}
-    m_FontSize: 20
+    m_FontSize: 17
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 1
     m_MaxSize: 225
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 2
+    m_LineSpacing: 1.5
   m_Text: Test text
 --- !u!1001 &1987624952
 PrefabInstance:
@@ -41458,17 +41458,17 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 05f3f41477f446f4a88226b60eec97d9, type: 3}
-    m_FontSize: 20
+    m_FontSize: 17
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 1
     m_MaxSize: 225
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 2
+    m_LineSpacing: 1.5
   m_Text: Test text
 --- !u!222 &2054786703
 CanvasRenderer:
@@ -41895,17 +41895,17 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 05f3f41477f446f4a88226b60eec97d9, type: 3}
-    m_FontSize: 20
+    m_FontSize: 17
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 1
     m_MaxSize: 225
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 2
+    m_LineSpacing: 1.5
   m_Text: Test text
 --- !u!222 &2081710019
 CanvasRenderer:
@@ -42980,17 +42980,17 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 05f3f41477f446f4a88226b60eec97d9, type: 3}
-    m_FontSize: 20
+    m_FontSize: 17
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 1
     m_MaxSize: 225
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 2
+    m_LineSpacing: 1.5
   m_Text: Test text
 --- !u!1 &2121186720
 GameObject:
@@ -43225,17 +43225,17 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 05f3f41477f446f4a88226b60eec97d9, type: 3}
-    m_FontSize: 20
+    m_FontSize: 17
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 1
     m_MaxSize: 225
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 2
+    m_LineSpacing: 1.5
   m_Text: Test text
 --- !u!1 &2125756327
 GameObject:
