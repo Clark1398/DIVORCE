@@ -1574,7 +1574,7 @@ public class RobotDialogueManager : MonoBehaviour {
 
         foreach (AudioClip clip in robotClip2_7)
         {
-            robotAudio2.Enqueue(clip);
+            robotAudio2_7.Enqueue(clip);
         }
 
         DisplayNextRobotSentence2_7();
