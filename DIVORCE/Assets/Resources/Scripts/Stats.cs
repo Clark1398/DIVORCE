@@ -170,10 +170,10 @@ public class Stats : MonoBehaviour {
     {
         for (int i = 0; i < statDisplay.Length; i++)
         {
-            statDisplay[i] = statNames[i] + "(%)";
+            statDisplay[i] = statNames[i] + " (%)";
         }
 
-        statDisplay[1] = statNames[1] + "(Billion_Moon_Bucks)";
+        statDisplay[1] = statNames[1] + " (Billion)";
 
         hEText = "Open";
         tEText = "Open";
