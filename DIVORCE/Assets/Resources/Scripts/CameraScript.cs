@@ -450,7 +450,7 @@ public class CameraScript : MonoBehaviour {
     void ReturnToPlayer()
     {
         //Gets the policy page prefab from the resources folder
-        prefab = (GameObject)Resources.Load("Paper", typeof(GameObject));
+        prefab = (GameObject)Resources.Load("Policy", typeof(GameObject));
 
         player.SetActive(true);
 

@@ -453,6 +453,11 @@ public class Phone : MonoBehaviour
                         audioSource.clip = marsPhoneCall2;
                         audioSource.PlayOneShot(marsPhoneCall2);
                     }
+                    else if (calls == 3)
+                    {
+                        audioSource.clip = earthPhoneCall2;
+                        audioSource.PlayOneShot(earthPhoneCall2);
+                    }
                 }
                 else if (statsScript.day == 4)
                 {
