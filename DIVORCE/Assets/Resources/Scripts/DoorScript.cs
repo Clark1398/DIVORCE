@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.Characters.FirstPerson;
 
 public class DoorScript : MonoBehaviour
 {
@@ -15,10 +16,14 @@ public class DoorScript : MonoBehaviour
     public bool lift;
     public bool up;
 
+    GameObject player, pos;
+
     void Start()
     {
         if (lift)
         {
+            player = GameObject.Find("PlayerController");
+            pos = GameObject.Find("PlayerPosition");
             light1.color = Color.green;
             light2.color = Color.green;
         }
@@ -30,13 +35,21 @@ public class DoorScript : MonoBehaviour
         {
             if (up)
             {
+                player.transform.parent = pos.transform;
+                player.transform.rotation = pos.transform.rotation;
+                player.GetComponent<Rigidbody>().useGravity = false;
+                player.GetComponent<RigidbodyFirstPersonController>().enabled = false;
                 anim.Play("Down");
-                audioSource.clip = liftSFX;
-                audioSource.Play();
+                //audioSource.clip = liftSFX;
+                //audioSource.Play();
                 StartCoroutine(SwitchOn(this.GetComponent<Collider>()));
             }
             else
             {
+                player.transform.parent = pos.transform;
+                player.transform.rotation = pos.transform.rotation;
+                player.GetComponent<Rigidbody>().useGravity = false;
+                player.GetComponent<RigidbodyFirstPersonController>().enabled = false;
                 anim.Play("Open");
                 StartCoroutine(GoUp());
             }
@@ -75,6 +88,10 @@ public class DoorScript : MonoBehaviour
 
         light1.color = Color.green;
         light2.color = Color.green;
+
+        player.transform.parent = null;
+        player.GetComponent<Rigidbody>().useGravity = true;
+        player.GetComponent<RigidbodyFirstPersonController>().enabled = true;
     }
 
     IEnumerator SwitchOn(Collider col)
@@ -84,7 +101,12 @@ public class DoorScript : MonoBehaviour
 
         col.enabled = false;
 
+
         yield return new WaitForSeconds(2.75f);
+
+        player.transform.parent = null;
+        player.GetComponent<Rigidbody>().useGravity = true;
+        player.GetComponent<RigidbodyFirstPersonController>().enabled = true;
 
         up = false;
 

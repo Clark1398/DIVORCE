@@ -9,7 +9,7 @@ public static class SaveLoad {
     public static void SavePlayer (Stats stats)
     {
         BinaryFormatter formatter = new BinaryFormatter();
-        string path = Application.persistentDataPath + "/test.xml";
+        string path = Application.persistentDataPath + "/SaveFile.xml";
         FileStream stream = new FileStream(path, FileMode.Create);
 
         PlayerData data = new PlayerData(stats);
