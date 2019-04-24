@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class MoonFolderScript : MonoBehaviour {
 
     public InteractionScript interactionScript;
+    public AudioSource audioSource;
     RobotDialogueTrigger dialogueTrigger;
     Stats statsScript;
 
@@ -108,6 +109,7 @@ public class MoonFolderScript : MonoBehaviour {
             Cursor.visible = false;
 
             //Close the folder
+            audioSource.Play();
             anim.Play("Close");
             StartCoroutine(TurnBack(animP1));
             StartCoroutine(TurnBack(animP2));
@@ -470,7 +472,8 @@ public class MoonFolderScript : MonoBehaviour {
     }
 
     void ReturnToPlayer()
-    {             
+    {
+        audioSource.Play();
         //Close the folder
         anim.Play("Close");
         StartCoroutine(TurnBack(animP1));
