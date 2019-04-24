@@ -524,10 +524,6 @@ public class InteractionScript : MonoBehaviour
                     venusCanvas.SetActive(false);
                     moonCanvas.SetActive(false);
 
-                    marsCharacter.SetActive(true);
-                    earthCharacter.SetActive(true);
-                    venusCharacter.SetActive(true);
-
                     conferenceCallAudio.Stop();
                     conferenceCamera.SetActive(true);
                     Cursor.lockState = CursorLockMode.None;
@@ -538,6 +534,19 @@ public class InteractionScript : MonoBehaviour
                     statsScript.TimeForward();
                     gameObject.SetActive(false);
                     dialogueTrigger.TriggerDialogue();
+
+                    if (statsScript.day == 2)
+                    {
+                        marsCharacter.SetActive(true);
+                    }
+                    else if (statsScript.day == 3)
+                    {
+                        venusCharacter.SetActive(true);
+                    }
+                    else if (statsScript.day == 4)
+                    {
+                        earthCharacter.SetActive(true);
+                    }
                 }
             }
             else if (hit.collider.gameObject.tag == "Door" && door)

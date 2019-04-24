@@ -109,7 +109,6 @@ public class MoonFolderScript : MonoBehaviour {
             Cursor.visible = false;
 
             //Close the folder
-            audioSource.Play();
             anim.Play("Close");
             StartCoroutine(TurnBack(animP1));
             StartCoroutine(TurnBack(animP2));
@@ -483,7 +482,6 @@ public class MoonFolderScript : MonoBehaviour {
 
     void ReturnToPlayer()
     {
-        audioSource.Play();
         //Close the folder
         anim.Play("Close");
         StartCoroutine(TurnBack(animP1));
@@ -606,6 +604,7 @@ public class MoonFolderScript : MonoBehaviour {
     {
         currentPage.SetActive(false);
 
+        audioSource.Play();
         animP.Play("Page Turn");
 
         yield return new WaitForSeconds(0.25f);
@@ -616,6 +615,7 @@ public class MoonFolderScript : MonoBehaviour {
 
     IEnumerator TurnBack(Animator animP)
     {
+        audioSource.Play();
         animP.Play("Page Back");
 
         new WaitForSeconds(0.5f);

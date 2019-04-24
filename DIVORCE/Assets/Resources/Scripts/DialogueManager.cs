@@ -177,9 +177,6 @@ public class DialogueManager : MonoBehaviour {
     private Queue<AudioClip> audio4_9;
     private Queue<AudioClip> audio4_10;
 
-    //bool conferenceDialogue2Visited;
-    //bool conferenceDialogue4Visited;
-
     bool dialogue1;
     bool dialogue2;
     bool dialogue3;
@@ -1359,9 +1356,7 @@ public class DialogueManager : MonoBehaviour {
         {
             dayOneScript.answeredPhone = false;
             conferenceCall.SetActive(false);
-            dayOneScript.marsCharacter.SetActive(false);
             dayOneScript.earthCharacter.SetActive(false);
-            dayOneScript.venusCharacter.SetActive(false);
             player.SetActive(true);
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
@@ -2354,7 +2349,7 @@ public class DialogueManager : MonoBehaviour {
             {
                 statsScript.stats[5] += 15;
                 statsScript.stats[2] -= 10;
-                statsScript.stats[1] += 1.5f;
+                statsScript.stats[1] -= 1.5f;
                 statsScript.stats[4] -= 10;
             }
             else
@@ -2525,9 +2520,7 @@ public class DialogueManager : MonoBehaviour {
         if (statsScript.day == 1)
         {
             dayOneScript.conferenceCallInteractable = false;
-            dayOneScript.marsCharacter.SetActive(false);
             dayOneScript.earthCharacter.SetActive(false);
-            dayOneScript.venusCharacter.SetActive(false);
             robotDialogueTrigger.TriggerRobotDialogue14();
             statsScript.conferenceAccept = false;
             dayOneScript.answeredPhone = false;
@@ -2539,8 +2532,6 @@ public class DialogueManager : MonoBehaviour {
             statsScript.connferenceCallAccept.Add("Mars Moon Metals");
             interactionScript.conferenceCallInteractable = false;
             interactionScript.marsCharacter.SetActive(false);
-            interactionScript.earthCharacter.SetActive(false);
-            interactionScript.venusCharacter.SetActive(false);
             interactionScript.answeredPhone = false;
             robotDialogueTrigger.TriggerRobotDialogue2_15();
         }
@@ -2550,8 +2541,6 @@ public class DialogueManager : MonoBehaviour {
             statsScript.connferenceCallAccept.Add("Venus Gun Trade");
             interactionScript.conferenceCallInteractable = false;
             interactionScript.answeredPhone = false;
-            interactionScript.marsCharacter.SetActive(false);
-            interactionScript.earthCharacter.SetActive(false);
             interactionScript.venusCharacter.SetActive(false);
             statsScript.time--;
         }
@@ -2560,8 +2549,6 @@ public class DialogueManager : MonoBehaviour {
             statsScript.conferenceAccept = true;
             statsScript.connferenceCallAccept.Add("Earth Moon Bill");
             interactionScript.marsCharacter.SetActive(false);
-            interactionScript.earthCharacter.SetActive(false);
-            interactionScript.venusCharacter.SetActive(false);
             interactionScript.answeredPhone = false;
             statsScript.time--;
         }
@@ -2713,25 +2700,26 @@ public class DialogueManager : MonoBehaviour {
         statsScript.conferenceAccept = false;
         interactionScript.answeredPhone = false;
         conferenceCall.SetActive(false);
-        interactionScript.marsCharacter.SetActive(false);
-        interactionScript.earthCharacter.SetActive(false);
-        interactionScript.venusCharacter.SetActive(false);
         player.SetActive(true);
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         interactionScript.conferenceCallInteractable = false;
+
         if (statsScript.day == 2)
         {
+            interactionScript.marsCharacter.SetActive(false);
             statsScript.connferenceCallDecline.Add("Mars Moon Metals");
             robotDialogueTrigger.TriggerRobotDialogue2_15();
         }
         else if (statsScript.day == 3)
         {
+            interactionScript.venusCharacter.SetActive(false);
             statsScript.connferenceCallDecline.Add("Venus Gun Trade");
             statsScript.time--;
         }
         else if (statsScript.day == 4)
         {
+            interactionScript.earthCharacter.SetActive(false);
             statsScript.connferenceCallDecline.Add("Earth Moon Bill");
             statsScript.time--;
         }
