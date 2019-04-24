@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class CameraScript : MonoBehaviour {
 
-    public GameObject player, chairCamera, canvas, homePage, statsPage, ocPage, currentPage, lastPage, backButton, ocHomePage, earthPage, marsPage, venusPage, actionsPage, moonCanvas, earthCanvas, marsCanvas, venusCanvas, es;
+    public GameObject player, chairCamera, canvas, homePage, statsPage, ocPage, currentPage, lastPage, backButton, ocHomePage, earthPage, marsPage, venusPage, actionsPage, moonCanvas, earthCanvas, marsCanvas, venusCanvas;
     GameObject prefab;
 
     public bool firstPCUse;
@@ -37,10 +37,7 @@ public class CameraScript : MonoBehaviour {
         statNames.Add("Autonomy");
         statNames.Add("Public_Support");
 
-        firstPCUse = true;      
-
-        es.SetActive(true);
-
+        firstPCUse = true;
     }
 
     void Start()
@@ -100,8 +97,6 @@ public class CameraScript : MonoBehaviour {
 
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
-
-        es.SetActive(true);
 
         //if the player hits F then activate the player and deactivate the PC camera/screen
         if (Input.GetKeyDown(KeyCode.F))
@@ -465,7 +460,7 @@ public class CameraScript : MonoBehaviour {
         currentPage.SetActive(true);
 
         //Sets up the prefab to be spawned on the player
-        interactionScript.prefab = Instantiate(prefab, interactionScript.spawnPos.transform.position, GameObject.Find("MainCamera").transform.rotation);
+        interactionScript.prefab = Instantiate(prefab, interactionScript.spawnPos.transform.position, interactionScript.spawnPos.transform.rotation);
         interactionScript.prefab.transform.parent = GameObject.Find("SpawnPos").transform;
         interactionScript.holding = true;
         interactionScript.holdingContact = true;

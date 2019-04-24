@@ -33,24 +33,26 @@ public class DoorScript : MonoBehaviour
     {
         if (lift)
         {
+            audioSource.clip = liftSFX;
+
             if (up)
             {
                 player.transform.parent = pos.transform;
-                player.transform.rotation = pos.transform.rotation;
+                player.transform.position = pos.transform.position;
                 player.GetComponent<Rigidbody>().useGravity = false;
                 player.GetComponent<RigidbodyFirstPersonController>().enabled = false;
-                anim.Play("Down");
-                //audioSource.clip = liftSFX;
-                //audioSource.Play();
+                anim.Play("Down");               
+                audioSource.Play();
                 StartCoroutine(SwitchOn(this.GetComponent<Collider>()));
             }
             else
             {
                 player.transform.parent = pos.transform;
-                player.transform.rotation = pos.transform.rotation;
+                player.transform.position = pos.transform.position;
                 player.GetComponent<Rigidbody>().useGravity = false;
                 player.GetComponent<RigidbodyFirstPersonController>().enabled = false;
                 anim.Play("Open");
+                audioSource.Play();
                 StartCoroutine(GoUp());
             }
         }
