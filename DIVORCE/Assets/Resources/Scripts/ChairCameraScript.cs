@@ -190,7 +190,6 @@ public class ChairCameraScript : MonoBehaviour
                     moonCamera.SetActive(true);
 
                     moonCamera.GetComponent<MoonFolderScript>().anim.Play("Open");
-                    moonCamera.GetComponent<MoonFolderScript>().es.SetActive(true);
 
                     Cursor.lockState = CursorLockMode.None;
                     Cursor.visible = true;

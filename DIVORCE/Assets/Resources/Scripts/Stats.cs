@@ -255,6 +255,10 @@ public class Stats : MonoBehaviour {
             {
                 familyText.text = "Wife's request: Leave the office at 5PM to make dinner";
             }
+            else if (day == 4)
+            {
+                familyText.text = "Wife's request: Organise travel for Moon citizens to Mars";
+            }
         }
     }
 
