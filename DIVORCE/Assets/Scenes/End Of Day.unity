@@ -1787,7 +1787,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1.5
+    m_LineSpacing: 2
   m_Text: Test text
 --- !u!1 &108677631
 GameObject:
@@ -12654,7 +12654,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1.5
+    m_LineSpacing: 2
   m_Text: Test text
 --- !u!1 &682792910
 GameObject:
@@ -12733,7 +12733,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1.5
+    m_LineSpacing: 2
   m_Text: Test text
 --- !u!1 &683066543
 GameObject:
@@ -13657,7 +13657,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1.5
+    m_LineSpacing: 2
   m_Text: Test text
 --- !u!1 &718391057
 GameObject:
@@ -14316,7 +14316,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1.5
+    m_LineSpacing: 2
   m_Text: Test text
 --- !u!222 &738363593
 CanvasRenderer:
@@ -16034,7 +16034,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1.5
+    m_LineSpacing: 2
   m_Text: Test text
 --- !u!1001 &826881802
 PrefabInstance:
@@ -22801,7 +22801,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1.5
+    m_LineSpacing: 2
   m_Text: Test text
 --- !u!1 &1145337412
 GameObject:
@@ -25636,7 +25636,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1.5
+    m_LineSpacing: 2
   m_Text: Test text
 --- !u!222 &1283451277
 CanvasRenderer:
@@ -25949,7 +25949,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1.5
+    m_LineSpacing: 2
   m_Text: Test text
 --- !u!1001 &1314268860
 PrefabInstance:
@@ -27335,7 +27335,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1.5
+    m_LineSpacing: 2
   m_Text: Test text
 --- !u!1 &1387587660
 GameObject:
@@ -28102,7 +28102,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1.5
+    m_LineSpacing: 2
   m_Text: Test text
 --- !u!1 &1438045690
 GameObject:
@@ -28327,7 +28327,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1.5
+    m_LineSpacing: 2
   m_Text: Test text
 --- !u!1 &1441899808
 GameObject:
@@ -30344,7 +30344,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1.5
+    m_LineSpacing: 2
   m_Text: Test text
 --- !u!1 &1524209208
 GameObject:
@@ -31542,7 +31542,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1.5
+    m_LineSpacing: 2
   m_Text: Test text
 --- !u!1001 &1585835246
 PrefabInstance:
@@ -32917,7 +32917,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1.5
+    m_LineSpacing: 2
   m_Text: Test text
 --- !u!1 &1647384704
 GameObject:
@@ -33623,7 +33623,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1.5
+    m_LineSpacing: 2
   m_Text: Test text
 --- !u!1 &1688133817
 GameObject:
@@ -38605,7 +38605,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1.5
+    m_LineSpacing: 2
   m_Text: Test text
 --- !u!1 &1914593973
 GameObject:
@@ -39122,7 +39122,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1.5
+    m_LineSpacing: 2
   m_Text: Test text
 --- !u!1 &1932078458
 GameObject:
@@ -40265,7 +40265,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1.5
+    m_LineSpacing: 2
   m_Text: Test text
 --- !u!1001 &1987624952
 PrefabInstance:
@@ -41595,7 +41595,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1.5
+    m_LineSpacing: 2
   m_Text: Test text
 --- !u!222 &2054786703
 CanvasRenderer:
@@ -42032,7 +42032,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1.5
+    m_LineSpacing: 2
   m_Text: Test text
 --- !u!222 &2081710019
 CanvasRenderer:
@@ -43117,7 +43117,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1.5
+    m_LineSpacing: 2
   m_Text: Test text
 --- !u!1 &2121186720
 GameObject:
@@ -43362,7 +43362,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1.5
+    m_LineSpacing: 2
   m_Text: Test text
 --- !u!1 &2125756327
 GameObject:

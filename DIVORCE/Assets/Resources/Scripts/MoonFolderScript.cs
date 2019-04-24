@@ -618,7 +618,7 @@ public class MoonFolderScript : MonoBehaviour {
     {
         animP.Play("Page Back");
 
-        yield return new WaitForSeconds(0.5f);
+        new WaitForSeconds(0.5f);
 
         currentPage.SetActive(false);
 

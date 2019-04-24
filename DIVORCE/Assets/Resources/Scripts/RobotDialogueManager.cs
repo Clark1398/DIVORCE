@@ -358,8 +358,8 @@ public class RobotDialogueManager : MonoBehaviour {
         robotSentences1.Clear();
         robotAudio1.Clear();
 
-        fpc.enabled = false;
-        LookAtScript.target = GameObject.FindGameObjectWithTag("Robot");
+        //fpc.enabled = false;
+        //LookAtScript.target = GameObject.FindGameObjectWithTag("Robot");
 
         foreach (string sentence in robotDialogue.robotSentences1)
         {
