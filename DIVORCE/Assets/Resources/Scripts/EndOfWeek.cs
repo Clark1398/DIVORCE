@@ -9,12 +9,7 @@ public class EndOfWeek : MonoBehaviour
 
     int counter;
 
-    public VideoPlayer videoPlayer;
-
-    public VideoClip goodDeal;
-    public VideoClip badDeal;
-    public VideoClip noDeal;
-    public VideoClip noIndependence;
+    public GameObject goodDeal, badDeal, noDeal, noIndependence;
 
     public AudioSource audioSource;
 
@@ -28,18 +23,9 @@ public class EndOfWeek : MonoBehaviour
     {
         statsScript = GameObject.FindObjectOfType<Stats>();
 
-        videoPlayer.renderMode = UnityEngine.Video.VideoRenderMode.CameraNearPlane;
-
         EndOfWeekCheck();
 
-        videoPlayer.Play();
         audioSource.Play();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void EndOfWeekCheck()
@@ -59,14 +45,14 @@ public class EndOfWeek : MonoBehaviour
             if (counter >= 4)
             {
                 Debug.Log("good deal");
-                videoPlayer.clip = goodDeal;
+                goodDeal.SetActive(true);
                 audioSource.clip = goodDealAudio;
                 
             }
             else
             {
                 Debug.Log("bad deal");
-                videoPlayer.clip = badDeal;
+                badDeal.SetActive(true);
                 audioSource.clip = badDealAudio;
             }
         }
@@ -75,13 +61,13 @@ public class EndOfWeek : MonoBehaviour
             if (statsScript.stats[5] >= 50)
             {
                 Debug.Log("no independence");
-                videoPlayer.clip = noIndependence;
+                noIndependence.SetActive(true);
                 audioSource.clip = noIndependenceAudio;
             }
             else
             {
                 Debug.Log("no deal");
-                videoPlayer.clip = noDeal;
+                noDeal.SetActive(true);
                 audioSource.clip = noDealAudio;
             }
         }
