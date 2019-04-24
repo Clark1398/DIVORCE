@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Video;
+using UnityEngine.SceneManagement;
 
 public class EndOfWeek : MonoBehaviour
 {
@@ -17,6 +18,8 @@ public class EndOfWeek : MonoBehaviour
     public AudioClip badDealAudio;
     public AudioClip noDealAudio;
     public AudioClip noIndependenceAudio;
+
+    public GameObject panel;
 
     // Start is called before the first frame update
     void Start()
@@ -44,14 +47,12 @@ public class EndOfWeek : MonoBehaviour
         {
             if (counter >= 4)
             {
-                Debug.Log("good deal");
                 goodDeal.SetActive(true);
                 audioSource.clip = goodDealAudio;
                 
             }
             else
             {
-                Debug.Log("bad deal");
                 badDeal.SetActive(true);
                 audioSource.clip = badDealAudio;
             }
@@ -60,16 +61,32 @@ public class EndOfWeek : MonoBehaviour
         {
             if (statsScript.stats[5] >= 50)
             {
-                Debug.Log("no independence");
                 noIndependence.SetActive(true);
                 audioSource.clip = noIndependenceAudio;
             }
             else
             {
-                Debug.Log("no deal");
                 noDeal.SetActive(true);
                 audioSource.clip = noDealAudio;
             }
+        }
+    }
+
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("MainMenuScene");
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            panel.gameObject.SetActive(true);
         }
     }
 }
