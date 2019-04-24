@@ -5,9 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class PauseScript : MonoBehaviour
 {
+    public bool isPaused;
+
     public void Continue()
     {
         Time.timeScale = 1;
+        isPaused = false;
         this.gameObject.SetActive(false);      
     }
 

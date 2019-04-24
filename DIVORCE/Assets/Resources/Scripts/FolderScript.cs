@@ -10,6 +10,8 @@ public class FolderScript : MonoBehaviour {
     RobotDialogueTrigger dialogueTrigger;
     public Stats statsScript;
 
+    public AudioSource audioSource;
+
     [Header ("Animations")]
     public Animator anim, animP1, animP2;
 
@@ -886,6 +888,8 @@ public class FolderScript : MonoBehaviour {
     {
         current.SetActive(false);
 
+        audioSource.Play();
+
         animP.Play("Page Turn");
 
         yield return new WaitForSeconds(0.25f);
@@ -896,6 +900,8 @@ public class FolderScript : MonoBehaviour {
 
     IEnumerator TurnBack(Animator animP)
     {
+        audioSource.Play();
+
         animP.Play("Page Back");
 
         new WaitForSeconds(0.5f);

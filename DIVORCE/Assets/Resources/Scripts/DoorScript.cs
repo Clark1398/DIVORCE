@@ -5,6 +5,10 @@ using UnityEngine;
 public class DoorScript : MonoBehaviour
 {
     public Animator anim;
+    public AudioSource audioSource;
+
+    public AudioClip doorSFX;
+    public AudioClip liftSFX;
 
     public Light light1, light2;
 
@@ -27,6 +31,8 @@ public class DoorScript : MonoBehaviour
             if (up)
             {
                 anim.Play("Down");
+                audioSource.clip = liftSFX;
+                audioSource.Play();
                 StartCoroutine(SwitchOn(this.GetComponent<Collider>()));
             }
             else
@@ -38,6 +44,8 @@ public class DoorScript : MonoBehaviour
         else
         {
             anim.Play("Open");
+            audioSource.clip = doorSFX;
+            audioSource.Play();
         }
     }
 
@@ -53,6 +61,8 @@ public class DoorScript : MonoBehaviour
         else
         {
             anim.Play("Close");
+            audioSource.clip = doorSFX;
+            audioSource.Play();
         }
     }
 

@@ -26,7 +26,6 @@ public class RobotDialogueManager : MonoBehaviour {
     private Queue<string> robotSentences12;
     private Queue<string> robotSentences13;
     private Queue<string> robotSentences14;
-    //private Queue<string> robotSentences16;
 
     private Queue<string> robotSentences2_1;
     private Queue<string> robotSentences2_2;
@@ -130,7 +129,6 @@ public class RobotDialogueManager : MonoBehaviour {
     private Queue<AudioClip> robotAudio12;
     private Queue<AudioClip> robotAudio13;
     private Queue<AudioClip> robotAudio14;
-    //private Queue<AudioClip> robotAudio16;
 
     private Queue<AudioClip> robotAudio2_1;
     private Queue<AudioClip> robotAudio2_2;
@@ -179,7 +177,6 @@ public class RobotDialogueManager : MonoBehaviour {
     bool dialogue12;
     bool dialogue13;
     bool dialogue14;
-    //bool dialogue16;
 
     bool dialogue2_1;
     bool dialogue2_2;
@@ -227,6 +224,7 @@ public class RobotDialogueManager : MonoBehaviour {
     InteractionScript interactionScript;
     Phone phoneScript;
     LookAtScript LookAtScript;
+    public PauseScript pauseScript;
 
     public GameObject player;
     public RigidbodyFirstPersonController fpc;
@@ -265,7 +263,6 @@ public class RobotDialogueManager : MonoBehaviour {
         robotSentences12 = new Queue<string>();
         robotSentences13 = new Queue<string>();
         robotSentences14 = new Queue<string>();
-        //robotSentences16 = new Queue<string>();
 
         robotSentences2_1 = new Queue<string>();
         robotSentences2_2 = new Queue<string>();
@@ -315,7 +312,6 @@ public class RobotDialogueManager : MonoBehaviour {
         robotAudio12 = new Queue<AudioClip>();
         robotAudio13 = new Queue<AudioClip>();
         robotAudio14 = new Queue<AudioClip>();
-        //robotAudio16 = new Queue<AudioClip>();
 
         robotAudio2_1 = new Queue<AudioClip>();
         robotAudio2_2 = new Queue<AudioClip>();
@@ -362,6 +358,9 @@ public class RobotDialogueManager : MonoBehaviour {
         robotSentences1.Clear();
         robotAudio1.Clear();
 
+        fpc.enabled = false;
+        LookAtScript.target = GameObject.FindGameObjectWithTag("Robot");
+
         foreach (string sentence in robotDialogue.robotSentences1)
         {
             robotSentences1.Enqueue(sentence);
@@ -394,6 +393,12 @@ public class RobotDialogueManager : MonoBehaviour {
             AudioClip robotAudio = robotAudio1.Dequeue();
             robotAudioSource.clip = robotAudio;
             robotAudioSource.PlayOneShot(robotAudio);
+        }
+
+        if (robotSentences1.Count == 3)
+        {
+            fpc.enabled = true;
+            LookAtScript.target = null;
         }
     }
 
@@ -1205,56 +1210,6 @@ public class RobotDialogueManager : MonoBehaviour {
 
         statsScript.time--;
     }
-
-    //public void StartRobotDialogue16(RobotDialogue robotDialogue)
-    //{
-    //    dialogue16 = true;
-    //    robotSentences15.Clear();
-    //    robotAudio15.Clear();
-
-    //    foreach (string sentence in robotDialogue.robotSentences16)
-    //    {
-    //        robotSentences16.Enqueue(sentence);
-    //    }
-
-    //    foreach (AudioClip clip in robotClip16)
-    //    {
-    //        robotAudio16.Enqueue(clip);
-    //    }
-
-    //    DisplayNextRobotSentence16();
-    //}
-
-    //public void DisplayNextRobotSentence16()
-    //{
-    //    if (robotSentences16.Count == 0)
-    //    {
-    //        EndRobotDialogue16();
-    //        return;
-    //    }
-
-    //    string robotSentence = robotSentences16.Dequeue();
-    //    StopAllCoroutines();
-    //    StartCoroutine(TypeSentence(robotSentence));
-
-    //    robotAudioSource.Stop();
-
-    //    if (robotAudio16.Count > 0)
-    //    {
-    //        AudioClip robotAudio = robotAudio16.Dequeue();
-    //        robotAudioSource.clip = robotAudio;
-    //        robotAudioSource.PlayOneShot(robotAudio);
-    //    }
-    //}
-
-    //public void EndRobotDialogue16()
-    //{
-    //    dialogue16 = false;
-    //    panel.SetActive(false);
-    //    robotAudioSource.Stop();
-    //    phoneScript.phoneIsActive = true;
-    //    phoneScript.firstCall = true;
-    //}
 
     #endregion
 
@@ -2704,8 +2659,7 @@ public class RobotDialogueManager : MonoBehaviour {
             statsScript = GameObject.Find("GameInfoObject").GetComponent<Stats>();
         }
 
-        //if (Input.GetKeyDown(KeyCode.E) || Input.GetMouseButtonDown(0))
-        if (Input.GetMouseButtonDown(0) && !dayOneScript.answeredPhone)
+        if (Input.GetMouseButtonDown(0) && !dayOneScript.answeredPhone && !pauseScript.isPaused)
         {
             if (dialogue1)
             {
@@ -2769,7 +2723,7 @@ public class RobotDialogueManager : MonoBehaviour {
             }
         }
 
-        if (Input.GetMouseButtonDown(0) && !interactionScript.answeredPhone)
+        if (Input.GetMouseButtonDown(0) && !interactionScript.answeredPhone && !pauseScript.isPaused)
         {
             if (dialogue2_1)
             {
@@ -2887,26 +2841,6 @@ public class RobotDialogueManager : MonoBehaviour {
             {
                 DisplayNextRobotSentence5_2();
             }
-
-            //else if (dialogue15)
-            //{
-            //    DisplayNextRobotSentence15();
-
-            //    if(timerForDialogue > 0)
-            //    {
-            //        timerForDialogue -= Time.deltaTime;
-            //    }
-            //    else
-            //    {
-            //        robotDialogueTrigger.TriggerRobotDialogue16();
-            //        timerForDialogue = 5f;
-            //    }
-            //}
-            //else if (dialogue16)
-            //{
-            //    DisplayNextRobotSentence16();
-            //}
-
         }
 
         if (statsScript.day == 2)
@@ -3042,20 +2976,6 @@ public class RobotDialogueManager : MonoBehaviour {
                 }
             }
         }
-
-        //if (dayOneScript.clockActive == true)
-        //{
-        //    if (timerForDialogue > 0)
-        //    {
-        //        timerForDialogue -= Time.deltaTime;
-        //    }
-        //    else
-        //    {
-        //        dayOneScript.clockActive = false;
-        //        robotDialogueTrigger.TriggerRobotDialogue7();
-        //        timerForDialogue = 5f;
-        //    }
-        //}
     }
 
     IEnumerator ScreenHighlight()
