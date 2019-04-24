@@ -10,7 +10,7 @@ public class MoonFolderScript : MonoBehaviour {
     Stats statsScript;
 
     [Header("Animations")]
-    public Animator anim;
+    public Animator anim, animP1, animP2;
 
     [Header("GameObjects")]
     public GameObject frontPage, player, chair, currentPage, lastPage, eduPage, healPage, nsPage, bcPage, wrPage, fundsPage, page1, page2, page3, pageMain;
@@ -109,6 +109,9 @@ public class MoonFolderScript : MonoBehaviour {
 
             //Close the folder
             anim.Play("Close");
+            StartCoroutine(TurnBack(animP1));
+            StartCoroutine(TurnBack(animP2));
+
             gameObject.SetActive(false);
 
             canvas1.SetActive(true);
@@ -389,6 +392,8 @@ public class MoonFolderScript : MonoBehaviour {
         page1.SetActive(false);
         page2.SetActive(false);
         page3.SetActive(false);
+
+        StartCoroutine(TurnBack(animP2));
     }
 
     #endregion
@@ -397,6 +402,8 @@ public class MoonFolderScript : MonoBehaviour {
     public void Back()
     {
         Reset();
+
+        StartCoroutine(TurnBack(animP1));
 
         //Sets the current to be deactivated
         currentPage.SetActive(false);
@@ -466,6 +473,8 @@ public class MoonFolderScript : MonoBehaviour {
     {             
         //Close the folder
         anim.Play("Close");
+        StartCoroutine(TurnBack(animP1));
+        StartCoroutine(TurnBack(animP2));
 
         statsScript.TimeForward();
 
@@ -578,5 +587,30 @@ public class MoonFolderScript : MonoBehaviour {
 
             }
         }
+    }
+
+    IEnumerator TurnPage(Animator animP)
+    {
+        currentPage.SetActive(false);
+
+        animP.Play("Page Turn");
+
+        yield return new WaitForSeconds(0.25f);
+
+        currentPage.SetActive(true);
+
+    }
+
+    IEnumerator TurnBack(Animator animP)
+    {
+        animP.Play("Page Back");
+
+        new WaitForSeconds(0.5f);
+
+        currentPage.SetActive(false);
+
+        yield return new WaitForSeconds(1.0f);
+
+        currentPage.SetActive(true);
     }
 }
