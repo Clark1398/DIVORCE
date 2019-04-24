@@ -235,6 +235,8 @@ public class RobotDialogueManager : MonoBehaviour {
 
     public Renderer whiteboard, chair, screens, screens2, fax, bin, clock, folder, phone, doorL, doorR, conf;
 
+    public Light doorOL1, doorOL2, doorOR1, doorOR2;
+
     // Use this for initialization
     void Awake ()
     {
@@ -1416,9 +1418,9 @@ public class RobotDialogueManager : MonoBehaviour {
         statsScript.Family();
         interactionScript.chairInteractable = true;
         chairCameraScript.moonFolderFirst = true;
-        fpc.enabled = false;
+        fpc.enabled = true;
         LookAtScript.target = null;
-    panel.SetActive(false);
+        panel.SetActive(false);
     }
 
     public void StartRobotDialogue2_4(RobotDialogue robotDialogue)
@@ -2281,6 +2283,11 @@ public class RobotDialogueManager : MonoBehaviour {
         robotSentences3_6.Clear();
         robotAudio3_6.Clear();
         conf.material.SetFloat("Vector1_B78C4234", 0.5f);
+
+        doorOL1.color = Color.green;
+        doorOL2.color = Color.green;
+        doorOR1.color = Color.green;
+        doorOR2.color = Color.green;
 
         foreach (string sentence in robotDialogue.robotSentences3_6)
         {
