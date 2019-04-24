@@ -137,6 +137,7 @@ public class MoonFolderScript : MonoBehaviour {
         type = "Education";
         buttons = 1;
         currentPage.SetActive(true);
+        StartCoroutine(TurnPage(animP1));
     }
 
     public void Healthcare()
@@ -147,6 +148,7 @@ public class MoonFolderScript : MonoBehaviour {
         type = "Healthcare";
         buttons = 1;
         currentPage.SetActive(true);
+        StartCoroutine(TurnPage(animP1));
     }
 
     public void NationalServices()
@@ -157,6 +159,7 @@ public class MoonFolderScript : MonoBehaviour {
         type = "National Services";
         buttons = 1;
         currentPage.SetActive(true);
+        StartCoroutine(TurnPage(animP1));
     }
 
     public void BorderControl()
@@ -165,8 +168,9 @@ public class MoonFolderScript : MonoBehaviour {
         lastPage = currentPage;
         currentPage = bcPage;
         type = "Border Control";
-        buttons = 1;
+        buttons = 1;       
         currentPage.SetActive(true);
+        StartCoroutine(TurnPage(animP1));
     }
 
     public void WorkerRegulations()
@@ -177,6 +181,7 @@ public class MoonFolderScript : MonoBehaviour {
         type = "Worker Regulations";
         buttons = 1;
         currentPage.SetActive(true);
+        StartCoroutine(TurnPage(animP1));
     }
 
     public void PopFunds()
@@ -192,6 +197,8 @@ public class MoonFolderScript : MonoBehaviour {
         page1.SetActive(false);
         page2.SetActive(false);
         page3.SetActive(false);
+
+        StartCoroutine(TurnPage(animP1));
     }
 
     #endregion
@@ -282,6 +289,7 @@ public class MoonFolderScript : MonoBehaviour {
     {
         pageMain.SetActive(false);
         page1.SetActive(true);
+        StartCoroutine(TurnPage(animP2));
     }
 
     public void WageInc()
@@ -320,6 +328,7 @@ public class MoonFolderScript : MonoBehaviour {
     {
         pageMain.SetActive(false);
         page2.SetActive(true);
+        StartCoroutine(TurnPage(animP2));
     }
 
     public void PenInc()
@@ -356,6 +365,7 @@ public class MoonFolderScript : MonoBehaviour {
     {
         pageMain.SetActive(false);
         page3.SetActive(true);
+        StartCoroutine(TurnPage(animP2));
     }
 
     public void TaxInc()
@@ -405,14 +415,14 @@ public class MoonFolderScript : MonoBehaviour {
     {
         Reset();
 
-        StartCoroutine(TurnBack(animP1));
-
         //Sets the current to be deactivated
         currentPage.SetActive(false);
 
         currentPage = lastPage;
 
         currentPage.SetActive(true);
+
+        StartCoroutine(TurnBack(animP1));
     }
 
     //Disables the buttons on a page if the player has selected a policy
@@ -608,7 +618,7 @@ public class MoonFolderScript : MonoBehaviour {
     {
         animP.Play("Page Back");
 
-        new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.5f);
 
         currentPage.SetActive(false);
 
