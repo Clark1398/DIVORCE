@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.32252505, g: 0.303239, b: 0.2591385, a: 1}
+  m_IndirectSpecularColor: {r: 0.32230824, g: 0.3030294, b: 0.2589646, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4351,7 +4351,7 @@ MonoBehaviour:
     m_RichText: 0
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
-    m_LineSpacing: 1
+    m_LineSpacing: 0.75
   m_Text: hello
 --- !u!222 &78013408
 CanvasRenderer:
@@ -8093,7 +8093,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0007647225, y: -250.00038}
+  m_AnchoredPosition: {x: -0.0007647225, y: -242}
   m_SizeDelta: {x: 1040, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &156620380
@@ -8118,10 +8118,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 05f3f41477f446f4a88226b60eec97d9, type: 3}
-    m_FontSize: 65
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 6
+    m_MinSize: 5
     m_MaxSize: 103
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -16918,7 +16918,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.532712, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.9254902, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -17025,17 +17025,17 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 05f3f41477f446f4a88226b60eec97d9, type: 3}
-    m_FontSize: 65
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 6
+    m_MinSize: 5
     m_MaxSize: 103
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 1.5
   m_Text: Chosen Policy
 --- !u!222 &332890976
 CanvasRenderer:
@@ -17726,7 +17726,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9339623, g: 0.76332104, b: 0.048460312, a: 1}
+  m_Color: {r: 0, g: 0.9254902, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -17735,7 +17735,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 05f3f41477f446f4a88226b60eec97d9, type: 3}
-    m_FontSize: 40
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -17745,8 +17745,8 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: Press 'F' to quit
+    m_LineSpacing: 1.25
+  m_Text: Press 'F' to close folder
 --- !u!222 &354894240
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -19683,7 +19683,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 05f3f41477f446f4a88226b60eec97d9, type: 3}
-    m_FontSize: 18
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -20840,10 +20840,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 05f3f41477f446f4a88226b60eec97d9, type: 3}
-    m_FontSize: 65
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 6
+    m_MinSize: 5
     m_MaxSize: 103
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -30438,11 +30438,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 05f3f41477f446f4a88226b60eec97d9, type: 3}
-    m_FontSize: 65
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 6
-    m_MaxSize: 103
+    m_MinSize: 0
+    m_MaxSize: 300
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -31201,7 +31201,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.9160186, b: 0, a: 1}
+  m_Color: {r: 0, g: 0.9254902, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -31221,7 +31221,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Press 'F' to quit
+  m_Text: Press 'F' to close folder
 --- !u!222 &619511647
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -47629,10 +47629,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 05f3f41477f446f4a88226b60eec97d9, type: 3}
-    m_FontSize: 65
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 6
+    m_MinSize: 5
     m_MaxSize: 103
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -49129,10 +49129,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 05f3f41477f446f4a88226b60eec97d9, type: 3}
-    m_FontSize: 65
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 6
+    m_MinSize: 5
     m_MaxSize: 103
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -58027,17 +58027,17 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 05f3f41477f446f4a88226b60eec97d9, type: 3}
-    m_FontSize: 65
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 6
+    m_MinSize: 5
     m_MaxSize: 103
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 1.5
   m_Text: Chosen Policy
 --- !u!222 &1102196858
 CanvasRenderer:
@@ -66540,7 +66540,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9339623, g: 0.76332104, b: 0.048460312, a: 1}
+  m_Color: {r: 0, g: 0.9254902, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -66549,7 +66549,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 05f3f41477f446f4a88226b60eec97d9, type: 3}
-    m_FontSize: 40
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -66559,8 +66559,8 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 2
-  m_Text: Press 'F' to quit
+    m_LineSpacing: 1.25
+  m_Text: Press 'F' to close folder
 --- !u!222 &1265199516
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -67506,7 +67506,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0007647225, y: -250.00038}
+  m_AnchoredPosition: {x: -0.0007647225, y: -242}
   m_SizeDelta: {x: 1040, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1276178249
@@ -67531,10 +67531,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 05f3f41477f446f4a88226b60eec97d9, type: 3}
-    m_FontSize: 65
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 6
+    m_MinSize: 5
     m_MaxSize: 103
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -74668,7 +74668,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0007647225, y: -250.00038}
+  m_AnchoredPosition: {x: -0.0007647225, y: -242}
   m_SizeDelta: {x: 1040, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1429951224
@@ -74693,10 +74693,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 05f3f41477f446f4a88226b60eec97d9, type: 3}
-    m_FontSize: 65
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 6
+    m_MinSize: 2
     m_MaxSize: 103
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -78902,10 +78902,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 05f3f41477f446f4a88226b60eec97d9, type: 3}
-    m_FontSize: 65
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 6
+    m_MinSize: 5
     m_MaxSize: 103
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -79453,10 +79453,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 05f3f41477f446f4a88226b60eec97d9, type: 3}
-    m_FontSize: 65
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 6
+    m_MinSize: 5
     m_MaxSize: 103
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -86295,7 +86295,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9339623, g: 0.76332104, b: 0.048460312, a: 1}
+  m_Color: {r: 0, g: 0.9254902, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -86304,7 +86304,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 05f3f41477f446f4a88226b60eec97d9, type: 3}
-    m_FontSize: 40
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -86314,8 +86314,8 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: Press 'F' to quit
+    m_LineSpacing: 1.25
+  m_Text: Press 'F' to close folder
 --- !u!222 &1637295441
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -87209,10 +87209,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 05f3f41477f446f4a88226b60eec97d9, type: 3}
-    m_FontSize: 65
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 6
+    m_MinSize: 5
     m_MaxSize: 103
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -106509,10 +106509,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 05f3f41477f446f4a88226b60eec97d9, type: 3}
-    m_FontSize: 65
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 6
+    m_MinSize: 5
     m_MaxSize: 103
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -110366,10 +110366,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 05f3f41477f446f4a88226b60eec97d9, type: 3}
-    m_FontSize: 65
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 6
+    m_MinSize: 5
     m_MaxSize: 103
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -112831,17 +112831,17 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 05f3f41477f446f4a88226b60eec97d9, type: 3}
-    m_FontSize: 65
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 6
+    m_MinSize: 5
     m_MaxSize: 103
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 1.5
   m_Text: Chosen Policy
 --- !u!222 &2084141639
 CanvasRenderer:
@@ -115524,7 +115524,7 @@ PrefabInstance:
     - target: {fileID: 1245718540898435326, guid: c503ce7b30369954d9410f26c340a7b7,
         type: 3}
       propertyPath: m_FontData.m_FontSize
-      value: 60
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 1245718540898435326, guid: c503ce7b30369954d9410f26c340a7b7,
         type: 3}
@@ -115534,7 +115534,7 @@ PrefabInstance:
     - target: {fileID: 1245718540898435326, guid: c503ce7b30369954d9410f26c340a7b7,
         type: 3}
       propertyPath: m_Color.g
-      value: 0.53333336
+      value: 0.9254902
       objectReference: {fileID: 0}
     - target: {fileID: 1245718540898435326, guid: c503ce7b30369954d9410f26c340a7b7,
         type: 3}
@@ -115570,7 +115570,7 @@ PrefabInstance:
     - target: {fileID: 1096437361906534895, guid: c503ce7b30369954d9410f26c340a7b7,
         type: 3}
       propertyPath: m_Color.g
-      value: 0.53333336
+      value: 0.9254902
       objectReference: {fileID: 0}
     - target: {fileID: 1096437361906534895, guid: c503ce7b30369954d9410f26c340a7b7,
         type: 3}
@@ -115587,6 +115587,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_FontData.m_FontStyle
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1096437361906534895, guid: c503ce7b30369954d9410f26c340a7b7,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 9175108290567421916, guid: c503ce7b30369954d9410f26c340a7b7,
         type: 3}
@@ -116055,7 +116060,7 @@ PrefabInstance:
     - target: {fileID: 1999182755711747021, guid: e404baa40e53c964aac7325725e51fda,
         type: 3}
       propertyPath: m_Color.g
-      value: 0.53333336
+      value: 0.9254902
       objectReference: {fileID: 0}
     - target: {fileID: 1999182755711747021, guid: e404baa40e53c964aac7325725e51fda,
         type: 3}
@@ -116066,6 +116071,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_FontData.m_FontSize
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1999182755711747021, guid: e404baa40e53c964aac7325725e51fda,
+        type: 3}
+      propertyPath: m_Text
+      value: Press "F" to stop using computer
       objectReference: {fileID: 0}
     - target: {fileID: 7996069554192612588, guid: e404baa40e53c964aac7325725e51fda,
         type: 3}
@@ -117875,7 +117885,7 @@ PrefabInstance:
     - target: {fileID: 1256328576243569044, guid: e404baa40e53c964aac7325725e51fda,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 75
+      value: 181
       objectReference: {fileID: 0}
     - target: {fileID: 1256328576243569044, guid: e404baa40e53c964aac7325725e51fda,
         type: 3}
@@ -117890,7 +117900,7 @@ PrefabInstance:
     - target: {fileID: 1256328576243569044, guid: e404baa40e53c964aac7325725e51fda,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -20
+      value: -42
       objectReference: {fileID: 0}
     - target: {fileID: 1256328576243569044, guid: e404baa40e53c964aac7325725e51fda,
         type: 3}
@@ -117901,6 +117911,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 1256328576243569044, guid: e404baa40e53c964aac7325725e51fda,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8718917023043305442, guid: e404baa40e53c964aac7325725e51fda,
         type: 3}
