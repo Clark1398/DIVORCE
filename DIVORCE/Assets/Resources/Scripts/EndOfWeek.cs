@@ -35,7 +35,7 @@ public class EndOfWeek : MonoBehaviour
     {
         for (int i = 0; i < statsScript.stats.Length; i++)
         {
-            if (i >= 50)
+            if (statsScript.stats[i] >= 50)
             {
                 counter++;
             }

@@ -40,7 +40,7 @@ public class DoorScript : MonoBehaviour
                 player.transform.parent = pos.transform;
                 player.transform.position = pos.transform.position;
                 player.GetComponent<Rigidbody>().useGravity = false;
-                player.GetComponent<RigidbodyFirstPersonController>().enabled = false;
+                player.GetComponent<RigidbodyFirstPersonController>().enabled = false;       
                 anim.Play("Down");               
                 audioSource.Play();
                 StartCoroutine(SwitchOn(this.GetComponent<Collider>()));
@@ -51,6 +51,7 @@ public class DoorScript : MonoBehaviour
                 player.transform.position = pos.transform.position;
                 player.GetComponent<Rigidbody>().useGravity = false;
                 player.GetComponent<RigidbodyFirstPersonController>().enabled = false;
+                player.GetComponent<SphereCollider>().enabled = false;
                 anim.Play("Open");
                 audioSource.Play();
                 StartCoroutine(GoUp());
@@ -116,6 +117,8 @@ public class DoorScript : MonoBehaviour
         light2.color = Color.red;
 
         yield return new WaitForSeconds(5f);
+
+        player.GetComponent<SphereCollider>().enabled = true;
 
         light1.color = Color.green;
         light2.color = Color.green;
